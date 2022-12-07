@@ -27,14 +27,14 @@ namespace QLNH_Winform
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            pnMenu.Controls.Add(leftBorderBtn); 
+            pnMenu.Controls.Add(leftBorderBtn);
             //OpenChildForm(new Forms.FormThongKe());
 
             //Form
-            //this.Text = string.Empty;
-            //this.ControlBox = false;
-            //this.DoubleBuffered = true;
-            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         private void ActivateButton(object btnSender, Color color)
@@ -172,6 +172,16 @@ namespace QLNH_Winform
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

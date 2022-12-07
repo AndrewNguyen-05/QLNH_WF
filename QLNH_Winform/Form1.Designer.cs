@@ -37,6 +37,8 @@
             this.pnLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnTitleBar = new System.Windows.Forms.Panel();
+            this.btnCurrentChildForm = new FontAwesome.Sharp.IconButton();
+            this.lblCurentChildForm = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnDesktop = new System.Windows.Forms.Panel();
             this.pnMenu.SuspendLayout();
@@ -110,7 +112,7 @@
             this.btnMonAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMonAn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMonAn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMonAn.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.btnMonAn.IconChar = FontAwesome.Sharp.IconChar.Cutlery;
             this.btnMonAn.IconColor = System.Drawing.Color.White;
             this.btnMonAn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMonAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,7 +134,7 @@
             this.btnBanAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBanAn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBanAn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBanAn.IconChar = FontAwesome.Sharp.IconChar.HouseChimney;
+            this.btnBanAn.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             this.btnBanAn.IconColor = System.Drawing.Color.White;
             this.btnBanAn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBanAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -193,7 +195,9 @@
             // 
             // pnTitleBar
             // 
-            this.pnTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(93)))), ((int)(((byte)(236)))));
+            this.pnTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.pnTitleBar.Controls.Add(this.btnCurrentChildForm);
+            this.pnTitleBar.Controls.Add(this.lblCurentChildForm);
             this.pnTitleBar.Controls.Add(this.lblTitle);
             this.pnTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTitleBar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -202,12 +206,36 @@
             this.pnTitleBar.Name = "pnTitleBar";
             this.pnTitleBar.Size = new System.Drawing.Size(867, 100);
             this.pnTitleBar.TabIndex = 1;
+            this.pnTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTitleBar_MouseDown);
+            // 
+            // btnCurrentChildForm
+            // 
+            this.btnCurrentChildForm.FlatAppearance.BorderSize = 0;
+            this.btnCurrentChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.btnCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple;
+            this.btnCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCurrentChildForm.Location = new System.Drawing.Point(25, 23);
+            this.btnCurrentChildForm.Name = "btnCurrentChildForm";
+            this.btnCurrentChildForm.Size = new System.Drawing.Size(41, 42);
+            this.btnCurrentChildForm.TabIndex = 3;
+            this.btnCurrentChildForm.UseVisualStyleBackColor = true;
+            // 
+            // lblCurentChildForm
+            // 
+            this.lblCurentChildForm.AutoSize = true;
+            this.lblCurentChildForm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurentChildForm.Location = new System.Drawing.Point(72, 35);
+            this.lblCurentChildForm.Name = "lblCurentChildForm";
+            this.lblCurentChildForm.Size = new System.Drawing.Size(73, 30);
+            this.lblCurentChildForm.TabIndex = 2;
+            this.lblCurentChildForm.Text = "Home";
             // 
             // lblTitle
             // 
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(380, 31);
+            this.lblTitle.Location = new System.Drawing.Point(379, 23);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(101, 38);
             this.lblTitle.TabIndex = 0;
@@ -216,10 +244,11 @@
             // 
             // pnDesktop
             // 
-            this.pnDesktop.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnDesktop.Location = new System.Drawing.Point(330, 124);
+            this.pnDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.pnDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnDesktop.Location = new System.Drawing.Point(330, 100);
             this.pnDesktop.Name = "pnDesktop";
-            this.pnDesktop.Size = new System.Drawing.Size(867, 595);
+            this.pnDesktop.Size = new System.Drawing.Size(867, 642);
             this.pnDesktop.TabIndex = 2;
             // 
             // FormMainMenu
@@ -247,12 +276,14 @@
         private System.Windows.Forms.Panel pnTitleBar;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel pnDesktop;
         private FontAwesome.Sharp.IconButton btnKhoHang;
         private FontAwesome.Sharp.IconButton btnNhanVien;
         private FontAwesome.Sharp.IconButton btnMonAn;
         private FontAwesome.Sharp.IconButton btnBanAn;
         private FontAwesome.Sharp.IconButton btnThongKe;
+        private System.Windows.Forms.Label lblCurentChildForm;
+        private FontAwesome.Sharp.IconButton btnCurrentChildForm;
+        private System.Windows.Forms.Panel pnDesktop;
     }
 }
 

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +18,7 @@ namespace QLNH_Winform
     {
         //Fields
         private IconButton currentButton;
-        private Form activeForm;
+        private Form currentChildForm;
         private Panel leftBorderBtn;
 
 
@@ -26,15 +27,16 @@ namespace QLNH_Winform
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            //leftBorderBtn.Size = new Size(9, 101);
             pnMenu.Controls.Add(leftBorderBtn); 
-            OpenChildForm(new Forms.FormThongKe(), btnThongKe);
+            //OpenChildForm(new Forms.FormThongKe());
+
+            //Form
+            //this.Text = string.Empty;
+            //this.ControlBox = false;
+            //this.DoubleBuffered = true;
+            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-        //private Color SelectThemeColor()
-        //{
-
-        //}
         private void ActivateButton(object btnSender, Color color)
         {
             if(btnSender != null)
@@ -52,33 +54,27 @@ namespace QLNH_Winform
                     //currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
                     //currentButton.ImageAlign = ContentAlignment.MiddleRight;
 
-                    pnTitleBar.BackColor = Color.FromArgb(128, 128, 255);
-                    pnTitleBar.ForeColor = Color.White;
-                    pnLogo.BackColor = ThemeColor.ChangeColorBrightness(Color.FromArgb(128, 128, 255), 0.3);
+                    //pnTitleBar.BackColor = Color.FromArgb(128, 128, 255);
+                    //pnTitleBar.ForeColor = Color.White;
+                    //pnLogo.BackColor = ThemeColor.ChangeColorBrightness(Color.FromArgb(128, 128, 255), 0.3);
                     leftBorderBtn.Size = new Size(9, currentButton.Size.Height);
+
                     //Left Border Button
                     leftBorderBtn.BackColor = color;
                     leftBorderBtn.Location = new Point(0, currentButton.Location.Y);
                     leftBorderBtn.Visible = true;
                     leftBorderBtn.BringToFront();
 
+                    //Button Current Child Form
+                    btnCurrentChildForm.IconChar = currentButton.IconChar;
+                    btnCurrentChildForm.IconColor = color;
+
                 }    
             }    
         }
 
         private void DeactivateButton()
-        {
-            //foreach(Control previousBtn in pnMenu.Controls)
-            //{
-            //    if(previousBtn.GetType() == typeof(Button))
-            //    {
-            //        previousBtn.BackColor = Color.Gainsboro;
-            //        previousBtn.ForeColor = Color.FromArgb(31,30,68);
-                    
-            //        previousBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //    }    
-                
-            //}    
+        {  
             if(currentButton != null)
             {
                 
@@ -102,14 +98,15 @@ namespace QLNH_Winform
             public static Color color5 = Color.FromArgb(249, 88, 155);
             public static Color color6 = Color.FromArgb(24, 161, 251);
         }
-        private void OpenChildForm(Form childForm, object btnSender)
+        private void OpenChildForm(Form childForm)
         {
-            if(activeForm != null)
+            if(currentChildForm != null)
             {
-                activeForm.Close();
+                //Chi mo form
+                currentChildForm.Close();
             }
             //ActivateButton(btnSender);
-            activeForm = childForm;
+            currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -117,39 +114,64 @@ namespace QLNH_Winform
             this.pnDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblTitle.Text = childForm.Text;
+            lblCurentChildForm.Text = childForm.Text;
 
         }
 
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new Forms.FormThongKe(), sender);
+            
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new Forms.FormThongKe());
         }
 
         private void btnBanAn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new Forms.FormBanAn(), sender);
+            
             ActivateButton(sender, RGBColors.color2);
+            OpenChildForm(new Forms.FormBanAn());
         }
 
         private void btnMonAn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new Forms.FormMonAn(), sender);
+            
             ActivateButton(sender, RGBColors.color3);
+            OpenChildForm(new Forms.FormMonAn());
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new Forms.FormNhanVien(), sender);
+            
             ActivateButton(sender, RGBColors.color4);
+            OpenChildForm(new Forms.FormNhanVien());
         }
 
         private void btnKhoHang_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new Forms.FormKhoHang(), sender);
+            
             ActivateButton(sender, RGBColors.color5);
+            OpenChildForm(new Forms.FormKhoHang());
+        }
+
+        private void Reset()
+        {
+            DeactivateButton();
+            leftBorderBtn.Visible = false;
+            btnCurrentChildForm.IconChar = IconChar.Home;
+            btnCurrentChildForm.IconColor = Color.MediumPurple;
+            lblCurentChildForm.Text = "Home";
+        }
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void pnTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

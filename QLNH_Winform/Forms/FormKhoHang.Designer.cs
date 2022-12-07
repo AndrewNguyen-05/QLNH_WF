@@ -34,9 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FormKhoHang";
-            this.Text = "KHO HÀNG";
+            this.Text = "Kho hàng";
             this.ResumeLayout(false);
 
         }

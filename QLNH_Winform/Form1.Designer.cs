@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.pnMenu = new System.Windows.Forms.Panel();
+            this.btnKhoHang = new FontAwesome.Sharp.IconButton();
+            this.btnNhanVien = new FontAwesome.Sharp.IconButton();
+            this.btnMonAn = new FontAwesome.Sharp.IconButton();
+            this.btnBanAn = new FontAwesome.Sharp.IconButton();
+            this.btnThongKe = new FontAwesome.Sharp.IconButton();
             this.pnLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnDesktop = new System.Windows.Forms.Panel();
-            this.btnThongKe = new FontAwesome.Sharp.IconButton();
-            this.btnBanAn = new FontAwesome.Sharp.IconButton();
-            this.btnMonAn = new FontAwesome.Sharp.IconButton();
-            this.btnNhanVien = new FontAwesome.Sharp.IconButton();
-            this.btnKhoHang = new FontAwesome.Sharp.IconButton();
             this.pnMenu.SuspendLayout();
             this.pnLogo.SuspendLayout();
             this.pnTitleBar.SuspendLayout();
@@ -58,6 +58,116 @@
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.Size = new System.Drawing.Size(330, 742);
             this.pnMenu.TabIndex = 0;
+            // 
+            // btnKhoHang
+            // 
+            this.btnKhoHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKhoHang.FlatAppearance.BorderSize = 0;
+            this.btnKhoHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhoHang.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhoHang.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnKhoHang.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
+            this.btnKhoHang.IconColor = System.Drawing.Color.White;
+            this.btnKhoHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKhoHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhoHang.Location = new System.Drawing.Point(0, 464);
+            this.btnKhoHang.Name = "btnKhoHang";
+            this.btnKhoHang.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnKhoHang.Size = new System.Drawing.Size(330, 91);
+            this.btnKhoHang.TabIndex = 26;
+            this.btnKhoHang.Text = "Kho hàng";
+            this.btnKhoHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhoHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKhoHang.UseVisualStyleBackColor = true;
+            this.btnKhoHang.Click += new System.EventHandler(this.btnKhoHang_Click);
+            // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhanVien.FlatAppearance.BorderSize = 0;
+            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanVien.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnNhanVien.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.btnNhanVien.IconColor = System.Drawing.Color.White;
+            this.btnNhanVien.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanVien.Location = new System.Drawing.Point(0, 373);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnNhanVien.Size = new System.Drawing.Size(330, 91);
+            this.btnNhanVien.TabIndex = 22;
+            this.btnNhanVien.Text = "Nhân Viên";
+            this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNhanVien.UseVisualStyleBackColor = true;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
+            // 
+            // btnMonAn
+            // 
+            this.btnMonAn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMonAn.FlatAppearance.BorderSize = 0;
+            this.btnMonAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMonAn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMonAn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMonAn.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.btnMonAn.IconColor = System.Drawing.Color.White;
+            this.btnMonAn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMonAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMonAn.Location = new System.Drawing.Point(0, 282);
+            this.btnMonAn.Name = "btnMonAn";
+            this.btnMonAn.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnMonAn.Size = new System.Drawing.Size(330, 91);
+            this.btnMonAn.TabIndex = 17;
+            this.btnMonAn.Text = "Món ăn";
+            this.btnMonAn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMonAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMonAn.UseVisualStyleBackColor = true;
+            this.btnMonAn.Click += new System.EventHandler(this.btnMonAn_Click);
+            // 
+            // btnBanAn
+            // 
+            this.btnBanAn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBanAn.FlatAppearance.BorderSize = 0;
+            this.btnBanAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBanAn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBanAn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnBanAn.IconChar = FontAwesome.Sharp.IconChar.HouseChimney;
+            this.btnBanAn.IconColor = System.Drawing.Color.White;
+            this.btnBanAn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBanAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBanAn.Location = new System.Drawing.Point(0, 191);
+            this.btnBanAn.Name = "btnBanAn";
+            this.btnBanAn.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnBanAn.Size = new System.Drawing.Size(330, 91);
+            this.btnBanAn.TabIndex = 11;
+            this.btnBanAn.Text = "Bàn ăn";
+            this.btnBanAn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBanAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBanAn.UseVisualStyleBackColor = true;
+            this.btnBanAn.Click += new System.EventHandler(this.btnBanAn_Click);
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongKe.FlatAppearance.BorderSize = 0;
+            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnThongKe.IconChar = FontAwesome.Sharp.IconChar.ChartSimple;
+            this.btnThongKe.IconColor = System.Drawing.Color.White;
+            this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.Location = new System.Drawing.Point(0, 100);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnThongKe.Size = new System.Drawing.Size(330, 91);
+            this.btnThongKe.TabIndex = 0;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // pnLogo
             // 
@@ -111,116 +221,6 @@
             this.pnDesktop.Name = "pnDesktop";
             this.pnDesktop.Size = new System.Drawing.Size(867, 595);
             this.pnDesktop.TabIndex = 2;
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThongKe.FlatAppearance.BorderSize = 0;
-            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnThongKe.IconChar = FontAwesome.Sharp.IconChar.ChartSimple;
-            this.btnThongKe.IconColor = System.Drawing.Color.White;
-            this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 100);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnThongKe.Size = new System.Drawing.Size(330, 91);
-            this.btnThongKe.TabIndex = 0;
-            this.btnThongKe.Text = "Thống kê";
-            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThongKe.UseVisualStyleBackColor = true;
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
-            // 
-            // btnBanAn
-            // 
-            this.btnBanAn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBanAn.FlatAppearance.BorderSize = 0;
-            this.btnBanAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBanAn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanAn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBanAn.IconChar = FontAwesome.Sharp.IconChar.HouseChimney;
-            this.btnBanAn.IconColor = System.Drawing.Color.White;
-            this.btnBanAn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBanAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBanAn.Location = new System.Drawing.Point(0, 191);
-            this.btnBanAn.Name = "btnBanAn";
-            this.btnBanAn.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnBanAn.Size = new System.Drawing.Size(330, 91);
-            this.btnBanAn.TabIndex = 11;
-            this.btnBanAn.Text = "Bàn ăn";
-            this.btnBanAn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBanAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBanAn.UseVisualStyleBackColor = true;
-            this.btnBanAn.Click += new System.EventHandler(this.btnBanAn_Click);
-            // 
-            // btnMonAn
-            // 
-            this.btnMonAn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMonAn.FlatAppearance.BorderSize = 0;
-            this.btnMonAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMonAn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonAn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMonAn.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
-            this.btnMonAn.IconColor = System.Drawing.Color.White;
-            this.btnMonAn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMonAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMonAn.Location = new System.Drawing.Point(0, 282);
-            this.btnMonAn.Name = "btnMonAn";
-            this.btnMonAn.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnMonAn.Size = new System.Drawing.Size(330, 91);
-            this.btnMonAn.TabIndex = 17;
-            this.btnMonAn.Text = "Món ăn";
-            this.btnMonAn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMonAn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMonAn.UseVisualStyleBackColor = true;
-            this.btnMonAn.Click += new System.EventHandler(this.btnMonAn_Click);
-            // 
-            // btnNhanVien
-            // 
-            this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNhanVien.FlatAppearance.BorderSize = 0;
-            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanVien.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnNhanVien.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.btnNhanVien.IconColor = System.Drawing.Color.White;
-            this.btnNhanVien.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(0, 373);
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnNhanVien.Size = new System.Drawing.Size(330, 91);
-            this.btnNhanVien.TabIndex = 22;
-            this.btnNhanVien.Text = "Nhân Viên";
-            this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhanVien.UseVisualStyleBackColor = true;
-            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
-            // 
-            // btnKhoHang
-            // 
-            this.btnKhoHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKhoHang.FlatAppearance.BorderSize = 0;
-            this.btnKhoHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhoHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhoHang.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnKhoHang.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
-            this.btnKhoHang.IconColor = System.Drawing.Color.White;
-            this.btnKhoHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnKhoHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhoHang.Location = new System.Drawing.Point(0, 464);
-            this.btnKhoHang.Name = "btnKhoHang";
-            this.btnKhoHang.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnKhoHang.Size = new System.Drawing.Size(330, 91);
-            this.btnKhoHang.TabIndex = 26;
-            this.btnKhoHang.Text = "Kho hàng";
-            this.btnKhoHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhoHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKhoHang.UseVisualStyleBackColor = true;
-            this.btnKhoHang.Click += new System.EventHandler(this.btnKhoHang_Click);
             // 
             // FormMainMenu
             // 

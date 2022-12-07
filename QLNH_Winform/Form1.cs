@@ -44,11 +44,11 @@ namespace QLNH_Winform
                     //Button
                     DeactivateButton();
                     currentButton = (IconButton)btnSender;
-                    currentButton.BackColor = Color.FromArgb(95, 77, 221);
+                    currentButton.BackColor = Color.FromArgb(37,36,81);
                     currentButton.ForeColor = color;
                     currentButton.TextAlign = ContentAlignment.MiddleCenter;
                     currentButton.IconColor = color;
-                    currentButton.Font = new System.Drawing.Font("Segoe UI", 13.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    currentButton.Font = new System.Drawing.Font("Segoe UI", 11.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     //currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
                     //currentButton.ImageAlign = ContentAlignment.MiddleRight;
 
@@ -88,6 +88,7 @@ namespace QLNH_Winform
                 currentButton.IconColor = Color.Gainsboro; 
                 currentButton.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentButton.ImageAlign = ContentAlignment.MiddleLeft;
+                currentButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
 
@@ -124,13 +125,13 @@ namespace QLNH_Winform
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             //OpenChildForm(new Forms.FormThongKe(), sender);
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.color1);
         }
 
         private void btnBanAn_Click(object sender, EventArgs e)
         {
             //OpenChildForm(new Forms.FormBanAn(), sender);
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.color2);
         }
 
         private void btnMonAn_Click(object sender, EventArgs e)
@@ -142,13 +143,13 @@ namespace QLNH_Winform
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             //OpenChildForm(new Forms.FormNhanVien(), sender);
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.color4);
         }
 
         private void btnKhoHang_Click(object sender, EventArgs e)
         {
             //OpenChildForm(new Forms.FormKhoHang(), sender);
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.color5);
         }
     }
 }

@@ -9,7 +9,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using System.Windows.Media;
 
 
 namespace QLNH_Winform
@@ -51,8 +50,6 @@ namespace QLNH_Winform
                     currentButton.TextAlign = ContentAlignment.MiddleCenter;
                     currentButton.IconColor = color;
                     currentButton.Font = new System.Drawing.Font("Segoe UI", 11.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    //currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
-                    //currentButton.ImageAlign = ContentAlignment.MiddleRight;
 
                     //pnTitleBar.BackColor = Color.FromArgb(128, 128, 255);
                     //pnTitleBar.ForeColor = Color.White;
@@ -162,6 +159,7 @@ namespace QLNH_Winform
             btnCurrentChildForm.IconColor = Color.MediumPurple;
             lblCurentChildForm.Text = "Home";
         }
+
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

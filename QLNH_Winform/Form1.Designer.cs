@@ -244,9 +244,9 @@
             this.btnCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.btnCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple;
             this.btnCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCurrentChildForm.Location = new System.Drawing.Point(25, 23);
+            this.btnCurrentChildForm.Location = new System.Drawing.Point(18, 21);
             this.btnCurrentChildForm.Name = "btnCurrentChildForm";
-            this.btnCurrentChildForm.Size = new System.Drawing.Size(41, 42);
+            this.btnCurrentChildForm.Size = new System.Drawing.Size(60, 53);
             this.btnCurrentChildForm.TabIndex = 3;
             this.btnCurrentChildForm.UseVisualStyleBackColor = true;
             // 

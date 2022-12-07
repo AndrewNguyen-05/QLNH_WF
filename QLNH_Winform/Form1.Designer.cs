@@ -43,6 +43,7 @@
             this.btnCurrentChildForm = new FontAwesome.Sharp.IconButton();
             this.lblCurentChildForm = new System.Windows.Forms.Label();
             this.pnDesktop = new System.Windows.Forms.Panel();
+            this.ellipseControl1 = new QLNH_Winform.EllipseControl();
             this.pnMenu.SuspendLayout();
             this.pnLogo.SuspendLayout();
             this.pnTitleBar.SuspendLayout();
@@ -217,7 +218,7 @@
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(778, 3);
+            this.btnMinimize.Location = new System.Drawing.Point(760, 3);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(47, 43);
             this.btnMinimize.TabIndex = 4;
@@ -230,9 +231,9 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(816, 3);
+            this.btnExit.Location = new System.Drawing.Point(795, 3);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(48, 43);
+            this.btnExit.Size = new System.Drawing.Size(60, 43);
             this.btnExit.TabIndex = 4;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -269,6 +270,11 @@
             this.pnDesktop.Size = new System.Drawing.Size(867, 642);
             this.pnDesktop.TabIndex = 2;
             // 
+            // ellipseControl1
+            // 
+            this.ellipseControl1.CornerRadius = 70;
+            this.ellipseControl1.TargetControl = this;
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -277,7 +283,9 @@
             this.Controls.Add(this.pnDesktop);
             this.Controls.Add(this.pnTitleBar);
             this.Controls.Add(this.pnMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnMenu.ResumeLayout(false);
             this.pnLogo.ResumeLayout(false);
             this.pnLogo.PerformLayout();
@@ -303,6 +311,7 @@
         private System.Windows.Forms.Panel pnDesktop;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnExit;
+        private EllipseControl ellipseControl1;
     }
 }
 

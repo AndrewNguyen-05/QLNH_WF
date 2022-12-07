@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(845, 586);
+            this.ClientSize = new System.Drawing.Size(867, 642);
             this.Name = "FormBanAn";
             this.Text = "Bàn ăn";
             this.ResumeLayout(false);

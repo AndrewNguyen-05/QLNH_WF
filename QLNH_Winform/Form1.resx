@@ -134,7 +134,7 @@
   <data name="btnExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7BAAAOwQG4kWvtAAAAB3RJ
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA68AAAOvAGVvHJJAAAAB3RJ
         TUUH5gwHDBAmxTvpTwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFYSURBVDhP
         pZUNbsIwDIVX0QNMQgLBZXu/NQNpXIZp09j7LLs4BdL9VPp4qWO/pEprnkopwziOF+lB7AWx3rVD41Ie
         dK69615Qe5EOFJ3FFwFxFBtBfOVqpl4cZivXjaCGWjhTMPrNu+tJbEVlqsK52Va8aS7XjiTvhG1ZsFuU
@@ -144,4 +144,10 @@
         NVglHAVNc26G5nGY3m2wg98cNEk7JzHauxnExZjYLGf6CyilDN8urE7PxFkhvgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="ellipseControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>82</value>
+  </metadata>
 </root>

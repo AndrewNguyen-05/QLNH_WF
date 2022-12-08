@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace QLNH_Winform
 {
-    class EllipseControl : Component
+    public class EllipseControl : Component
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn

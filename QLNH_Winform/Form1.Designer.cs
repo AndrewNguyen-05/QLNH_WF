@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.pnMenu = new System.Windows.Forms.Panel();
             this.btnKhoHang = new FontAwesome.Sharp.IconButton();
@@ -43,7 +44,7 @@
             this.btnCurrentChildForm = new FontAwesome.Sharp.IconButton();
             this.lblCurentChildForm = new System.Windows.Forms.Label();
             this.pnDesktop = new System.Windows.Forms.Panel();
-            this.ellipseControl1 = new QLNH_Winform.EllipseControl();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnMenu.SuspendLayout();
             this.pnLogo.SuspendLayout();
             this.pnTitleBar.SuspendLayout();
@@ -282,10 +283,10 @@
             this.pnDesktop.Size = new System.Drawing.Size(771, 514);
             this.pnDesktop.TabIndex = 2;
             // 
-            // ellipseControl1
+            // guna2Elipse1
             // 
-            this.ellipseControl1.CornerRadius = 70;
-            this.ellipseControl1.TargetControl = this;
+            this.guna2Elipse1.BorderRadius = 70;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // FormMainMenu
             // 
@@ -324,7 +325,7 @@
         private System.Windows.Forms.Panel pnDesktop;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnExit;
-        private EllipseControl ellipseControl1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
 

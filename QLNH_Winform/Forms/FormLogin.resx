@@ -117,37 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnMinimize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAB3RJ
-        TUUH5gwHDBMsDsNTkgAAAXxJREFUOE/tkrtOAlEQhucsGAsbCypBC57A+AgWvoSFr6Bi5YNYWJhIohFj
-        YG/s/QLhosZColYmmlBYWhmRS8j6n+VgKMGKgkm+TGZ2/jlnzwwtbA5NLxuklQ3mel7S9/0lb0Zijecn
-        y4bJDNMismyHVSoVCR8oDEMmzpnagiBgXFutViXHcRkpmk5FWVlFsOe63qHjugeA+9wInpskzh2N4HVe
-        DrpdWdFWdMMkOjk9W8bVG7hdBIbCz0Ks8f1AjaIBkW07OzyB3+7DD+BnApq+8BGeb5tMy94SSd703wRh
-        2MVQNqlRrxMmfIzH7YIe+AmCsIOCMd848A8eCzqj2ljTRY/9eq1GhO7sttkkWdVSGFBW1fR1rBEng5XK
-        4KHTgjXE6QkyqN+ALltS1NTD/V3cCxNWsTZhIoqGrPf1SS9PralX57n1yNpvr/TRfuerl8hfXDEq3JTo
-        uijzpZSwnBL3psWxYyyOLRC5MbweN439OZrlLwviqIXNkRH9AlnH2aHhE6OBAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA68AAAOvAGVvHJJAAAAB3RJ
-        TUUH5gwHDBAmxTvpTwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFYSURBVDhP
-        pZUNbsIwDIVX0QNMQgLBZXu/NQNpXIZp09j7LLs4BdL9VPp4qWO/pEprnkopwziOF+lB7AWx3rVD41Ie
-        dK69615Qe5EOFJ3FFwFxFBtBfOVqpl4cZivXjaCGWjhTMPrNu+tJbEVlqsK52Va8aS7XjiTvhG1ZsFuU
-        xMq0YRY1eOwoAB6TnT00XTCbnorkOAAC88TJtGGWF+75sR243jNl9bWMoPkUKAM7xQiIG1MZvUCOiRsz
-        0fFjA9fKVCYUfgo0j++aoXblgIiEZ/EqMPhwGBNjLudezbhyUPzPMAdEJPz9kWMgKjNBYRwAB/KrQ2mZ
-        nbTTtRR+9NosvtgyZL6ZI8wrEhc/PeeRqX16LEzCYnNIO2yZTs2hal8q5nRtNREGHNx0eD6Xv+uqfbGC
-        NVglHAVNc26G5nGY3m2wg98cNEk7JzHauxnExZjYLGf6CyilDN8urE7PxFkhvgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>38</value>
-  </metadata>
 </root>

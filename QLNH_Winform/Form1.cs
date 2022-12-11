@@ -181,5 +181,6 @@ namespace QLNH_Winform
         {
             WindowState = FormWindowState.Minimized;
         }
+
     }
 }

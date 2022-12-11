@@ -16,7 +16,7 @@ namespace QLNH_Winform.Forms
         {
             InitializeComponent();
         }
-
+         
         private void dataGridTable_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

@@ -61,8 +61,9 @@
             this.pnMenu.Controls.Add(this.pnLogo);
             this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(330, 742);
+            this.pnMenu.Size = new System.Drawing.Size(293, 594);
             this.pnMenu.TabIndex = 0;
             // 
             // btnKhoHang
@@ -76,10 +77,11 @@
             this.btnKhoHang.IconColor = System.Drawing.Color.White;
             this.btnKhoHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnKhoHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhoHang.Location = new System.Drawing.Point(0, 464);
+            this.btnKhoHang.Location = new System.Drawing.Point(0, 372);
+            this.btnKhoHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnKhoHang.Name = "btnKhoHang";
-            this.btnKhoHang.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnKhoHang.Size = new System.Drawing.Size(330, 91);
+            this.btnKhoHang.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnKhoHang.Size = new System.Drawing.Size(293, 73);
             this.btnKhoHang.TabIndex = 26;
             this.btnKhoHang.Text = "Kho hàng";
             this.btnKhoHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -98,10 +100,11 @@
             this.btnNhanVien.IconColor = System.Drawing.Color.White;
             this.btnNhanVien.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(0, 373);
+            this.btnNhanVien.Location = new System.Drawing.Point(0, 299);
+            this.btnNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnNhanVien.Size = new System.Drawing.Size(330, 91);
+            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnNhanVien.Size = new System.Drawing.Size(293, 73);
             this.btnNhanVien.TabIndex = 22;
             this.btnNhanVien.Text = "Nhân Viên";
             this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -120,10 +123,11 @@
             this.btnMonAn.IconColor = System.Drawing.Color.White;
             this.btnMonAn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMonAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMonAn.Location = new System.Drawing.Point(0, 282);
+            this.btnMonAn.Location = new System.Drawing.Point(0, 226);
+            this.btnMonAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMonAn.Name = "btnMonAn";
-            this.btnMonAn.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnMonAn.Size = new System.Drawing.Size(330, 91);
+            this.btnMonAn.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnMonAn.Size = new System.Drawing.Size(293, 73);
             this.btnMonAn.TabIndex = 17;
             this.btnMonAn.Text = "Món ăn";
             this.btnMonAn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -142,10 +146,11 @@
             this.btnBanAn.IconColor = System.Drawing.Color.White;
             this.btnBanAn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBanAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBanAn.Location = new System.Drawing.Point(0, 191);
+            this.btnBanAn.Location = new System.Drawing.Point(0, 153);
+            this.btnBanAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBanAn.Name = "btnBanAn";
-            this.btnBanAn.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnBanAn.Size = new System.Drawing.Size(330, 91);
+            this.btnBanAn.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnBanAn.Size = new System.Drawing.Size(293, 73);
             this.btnBanAn.TabIndex = 11;
             this.btnBanAn.Text = "Bàn ăn";
             this.btnBanAn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -164,10 +169,11 @@
             this.btnThongKe.IconColor = System.Drawing.Color.White;
             this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 100);
+            this.btnThongKe.Location = new System.Drawing.Point(0, 80);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnThongKe.Size = new System.Drawing.Size(330, 91);
+            this.btnThongKe.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnThongKe.Size = new System.Drawing.Size(293, 73);
             this.btnThongKe.TabIndex = 0;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,8 +188,9 @@
             this.pnLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnLogo.ForeColor = System.Drawing.Color.Blue;
             this.pnLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnLogo.Name = "pnLogo";
-            this.pnLogo.Size = new System.Drawing.Size(330, 100);
+            this.pnLogo.Size = new System.Drawing.Size(293, 80);
             this.pnLogo.TabIndex = 0;
             // 
             // label1
@@ -191,9 +198,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(61, 9);
+            this.label1.Location = new System.Drawing.Point(54, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 81);
+            this.label1.Size = new System.Drawing.Size(171, 67);
             this.label1.TabIndex = 0;
             this.label1.Text = "QLNH";
             // 
@@ -207,9 +214,10 @@
             this.pnTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTitleBar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnTitleBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pnTitleBar.Location = new System.Drawing.Point(330, 0);
+            this.pnTitleBar.Location = new System.Drawing.Point(293, 0);
+            this.pnTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnTitleBar.Name = "pnTitleBar";
-            this.pnTitleBar.Size = new System.Drawing.Size(867, 100);
+            this.pnTitleBar.Size = new System.Drawing.Size(771, 80);
             this.pnTitleBar.TabIndex = 1;
             this.pnTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTitleBar_MouseDown);
             // 
@@ -219,9 +227,10 @@
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(760, 3);
+            this.btnMinimize.Location = new System.Drawing.Point(676, 2);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(47, 43);
+            this.btnMinimize.Size = new System.Drawing.Size(42, 34);
             this.btnMinimize.TabIndex = 4;
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -232,9 +241,10 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(795, 3);
+            this.btnExit.Location = new System.Drawing.Point(707, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(60, 43);
+            this.btnExit.Size = new System.Drawing.Size(53, 34);
             this.btnExit.TabIndex = 4;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -246,9 +256,10 @@
             this.btnCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.btnCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple;
             this.btnCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCurrentChildForm.Location = new System.Drawing.Point(18, 21);
+            this.btnCurrentChildForm.Location = new System.Drawing.Point(16, 17);
+            this.btnCurrentChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCurrentChildForm.Name = "btnCurrentChildForm";
-            this.btnCurrentChildForm.Size = new System.Drawing.Size(60, 53);
+            this.btnCurrentChildForm.Size = new System.Drawing.Size(53, 42);
             this.btnCurrentChildForm.TabIndex = 3;
             this.btnCurrentChildForm.UseVisualStyleBackColor = true;
             // 
@@ -256,9 +267,9 @@
             // 
             this.lblCurentChildForm.AutoSize = true;
             this.lblCurentChildForm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurentChildForm.Location = new System.Drawing.Point(72, 35);
+            this.lblCurentChildForm.Location = new System.Drawing.Point(64, 28);
             this.lblCurentChildForm.Name = "lblCurentChildForm";
-            this.lblCurentChildForm.Size = new System.Drawing.Size(73, 30);
+            this.lblCurentChildForm.Size = new System.Drawing.Size(62, 25);
             this.lblCurentChildForm.TabIndex = 2;
             this.lblCurentChildForm.Text = "Home";
             // 
@@ -266,9 +277,10 @@
             // 
             this.pnDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.pnDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDesktop.Location = new System.Drawing.Point(330, 100);
+            this.pnDesktop.Location = new System.Drawing.Point(293, 80);
+            this.pnDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnDesktop.Name = "pnDesktop";
-            this.pnDesktop.Size = new System.Drawing.Size(867, 642);
+            this.pnDesktop.Size = new System.Drawing.Size(771, 514);
             this.pnDesktop.TabIndex = 2;
             // 
             // guna2Elipse1
@@ -278,13 +290,14 @@
             // 
             // FormMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 742);
+            this.ClientSize = new System.Drawing.Size(1064, 594);
             this.Controls.Add(this.pnDesktop);
             this.Controls.Add(this.pnTitleBar);
             this.Controls.Add(this.pnMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnMenu.ResumeLayout(false);

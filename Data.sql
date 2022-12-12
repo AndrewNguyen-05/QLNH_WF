@@ -81,8 +81,29 @@ AS
 BEGIN
 	SELECT * FROM Account WHERE UserName = @userName
 END
+GO
 
 EXEC USP_GetAccountByUserName @userName = N'Anh0505'
 GO
 
-SELECT * FROM Account WHERE UserName = N'Admin' AND PassWord = N'1'
+CREATE PROC USP_Login
+@userName NVARCHAR(100), @passWord NVARCHAR(100)
+AS
+BEGIN
+	SELECT * FROM Account WHERE UserName = @userName AND PassWord = @passWord
+END
+GO
+
+DECLARE @i INT = 0
+
+WHILE @i <= 10
+BEGIN
+	INSERT INTO TableFood (name) VALUES (N'Bàn ' + CAST(@i AS NVARCHAR(100)))
+	SET @i = @i + 1
+END
+
+CREATE PROC USP_GetTableList
+AS SELECT * FROM TableFood
+GO
+
+EXEC USP_GetTableList

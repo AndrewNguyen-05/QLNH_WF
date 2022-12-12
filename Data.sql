@@ -70,3 +70,19 @@ CREATE TABLE BillInfo
 	FOREIGN KEY (idBill) REFERENCES dbo.Bill(id)
 )
 GO
+
+INSERT INTO Account (UserName, DisplayName, PassWord, Type) VALUES ('Admin', 'Administrator', '1', 1)
+INSERT INTO Account VALUES ('Anh0505', 'Anh', '1', 0)
+GO
+
+CREATE PROC USP_GetAccountByUserName
+@userName NVARCHAR(100)
+AS 
+BEGIN
+	SELECT * FROM Account WHERE UserName = @userName
+END
+
+EXEC USP_GetAccountByUserName @userName = N'Anh0505'
+GO
+
+SELECT * FROM Account WHERE UserName = N'Admin' AND PassWord = N'1'

@@ -281,10 +281,10 @@
             this.btnCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.btnCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple;
             this.btnCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCurrentChildForm.Location = new System.Drawing.Point(14, 9);
+            this.btnCurrentChildForm.Location = new System.Drawing.Point(6, 35);
             this.btnCurrentChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCurrentChildForm.Name = "btnCurrentChildForm";
-            this.btnCurrentChildForm.Size = new System.Drawing.Size(53, 42);
+            this.btnCurrentChildForm.Size = new System.Drawing.Size(53, 61);
             this.btnCurrentChildForm.TabIndex = 3;
             this.btnCurrentChildForm.UseVisualStyleBackColor = true;
             // 
@@ -292,7 +292,7 @@
             // 
             this.lblCurentChildForm.AutoSize = true;
             this.lblCurentChildForm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurentChildForm.Location = new System.Drawing.Point(64, 20);
+            this.lblCurentChildForm.Location = new System.Drawing.Point(55, 55);
             this.lblCurentChildForm.Name = "lblCurentChildForm";
             this.lblCurentChildForm.Size = new System.Drawing.Size(62, 25);
             this.lblCurentChildForm.TabIndex = 2;
@@ -315,8 +315,7 @@
             // 
             // FormMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1156, 592);
             this.Controls.Add(this.pnDesktop);
             this.Controls.Add(this.pnTitleBar);

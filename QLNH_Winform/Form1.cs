@@ -115,38 +115,37 @@ namespace QLNH_Winform
 
         }
 
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+            OpenChildForm(new Forms.FormGoiMon());
+        }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            
             ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new Forms.FormThongKe());
         }
 
         private void btnBanAn_Click(object sender, EventArgs e)
         {
-            
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new Forms.FormBanAn());
         }
 
         private void btnMonAn_Click(object sender, EventArgs e)
         {
-            
             ActivateButton(sender, RGBColors.color3);
             OpenChildForm(new Forms.FormMonAn());
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            
             ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new Forms.FormNhanVien());
         }
-
         private void btnKhoHang_Click(object sender, EventArgs e)
         {
-            
             ActivateButton(sender, RGBColors.color5);
             OpenChildForm(new Forms.FormKhoHang());
         }
@@ -182,5 +181,6 @@ namespace QLNH_Winform
             WindowState = FormWindowState.Minimized;
         }
 
+        
     }
 }

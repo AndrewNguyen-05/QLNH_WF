@@ -285,6 +285,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormGoiMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGoiMon.Designer.cs">
+      <DependentUpon>FormGoiMon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormKhoHang.cs">
       <SubType>Form</SubType>
     </Compile>

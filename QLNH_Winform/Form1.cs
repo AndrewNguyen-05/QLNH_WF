@@ -173,14 +173,16 @@ namespace QLNH_Winform
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
-
-        
+        private void FormMainMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

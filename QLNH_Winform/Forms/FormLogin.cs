@@ -16,6 +16,7 @@ namespace QLNH_Winform.Forms
         public FormLogin()
         {
             InitializeComponent();
+            this.DialogResult = DialogResult.Cancel;
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -23,10 +24,7 @@ namespace QLNH_Winform.Forms
             string password = txbPassWord.Text;
             if (Login(username, password))
             {
-                FormMainMenu f = new FormMainMenu();
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
+                this.DialogResult = DialogResult.OK;
             }
             else
             {
@@ -46,9 +44,12 @@ namespace QLNH_Winform.Forms
 
         private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.OK)
+            if (this.DialogResult == DialogResult.Cancel)
             {
-                e.Cancel = true;
+                if (MessageBox.Show("Bạn có muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.OK)
+                {
+                    e.Cancel = true;
+                }
             }
         }
     }

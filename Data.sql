@@ -96,7 +96,7 @@ GO
 
 DECLARE @i INT = 0
 
-WHILE @i <= 10
+WHILE @i <= 20
 BEGIN
 	INSERT INTO TableFood (name) VALUES (N'Bàn ' + CAST(@i AS NVARCHAR(100)))
 	SET @i = @i + 1
@@ -109,3 +109,5 @@ GO
 
 EXEC USP_GetTableList
 GO
+
+DELETE FROM TableFood

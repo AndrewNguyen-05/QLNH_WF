@@ -28,6 +28,17 @@ namespace QLNH_Winform.Forms
             {
                 Button btn = new Button() { Width = TableDAO.TableWidth, Height = TableDAO.TableHeight };
                 btn.Text = item.Name + Environment.NewLine + item.Status;
+
+                switch (item.Status)
+                {
+                    case "Trống":
+                        btn.BackColor = Color.Lime;
+                        break;
+                    case "Có người":
+                        btn.BackColor = Color.Aqua;
+                        break;
+                }
+
                 flpTable.Controls.Add(btn);
 
             }

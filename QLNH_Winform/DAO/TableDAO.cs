@@ -22,8 +22,8 @@ namespace QLNH_Winform.DAO
             set => instance = value;
         }
 
-        public static int TableWidth = 100;
-        public static int TableHeight = 100;
+        public static int TableWidth = 120;
+        public static int TableHeight = 120;
 
         private TableDAO() { }
 

@@ -54,6 +54,7 @@ namespace QLNH_Winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new FormGoiMon());
             Application.Run(new QLNHApplicationContext());
         }
     }

@@ -53,7 +53,7 @@
             // 
             // pnMenu
             // 
-            this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.pnMenu.Controls.Add(this.btnThongKe);
             this.pnMenu.Controls.Add(this.btnKhoHang);
             this.pnMenu.Controls.Add(this.btnNhanVien);
@@ -65,12 +65,11 @@
             this.pnMenu.Location = new System.Drawing.Point(0, 0);
             this.pnMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(293, 592);
+            this.pnMenu.Size = new System.Drawing.Size(287, 752);
             this.pnMenu.TabIndex = 0;
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThongKe.FlatAppearance.BorderSize = 0;
             this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -79,7 +78,7 @@
             this.btnThongKe.IconColor = System.Drawing.Color.White;
             this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 472);
+            this.btnThongKe.Location = new System.Drawing.Point(0, 107);
             this.btnThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
@@ -93,7 +92,6 @@
             // 
             // btnKhoHang
             // 
-            this.btnKhoHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKhoHang.FlatAppearance.BorderSize = 0;
             this.btnKhoHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKhoHang.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,7 +100,7 @@
             this.btnKhoHang.IconColor = System.Drawing.Color.White;
             this.btnKhoHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnKhoHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhoHang.Location = new System.Drawing.Point(0, 399);
+            this.btnKhoHang.Location = new System.Drawing.Point(0, 476);
             this.btnKhoHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnKhoHang.Name = "btnKhoHang";
             this.btnKhoHang.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
@@ -116,7 +114,6 @@
             // 
             // btnNhanVien
             // 
-            this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhanVien.FlatAppearance.BorderSize = 0;
             this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,7 +122,7 @@
             this.btnNhanVien.IconColor = System.Drawing.Color.White;
             this.btnNhanVien.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(0, 326);
+            this.btnNhanVien.Location = new System.Drawing.Point(0, 399);
             this.btnNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
@@ -139,7 +136,6 @@
             // 
             // btnMonAn
             // 
-            this.btnMonAn.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMonAn.FlatAppearance.BorderSize = 0;
             this.btnMonAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMonAn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -162,7 +158,6 @@
             // 
             // btnBanAn
             // 
-            this.btnBanAn.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBanAn.FlatAppearance.BorderSize = 0;
             this.btnBanAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBanAn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -185,7 +180,6 @@
             // 
             // btnOrder
             // 
-            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnOrder.FlatAppearance.BorderSize = 0;
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,7 +188,7 @@
             this.btnOrder.IconColor = System.Drawing.Color.White;
             this.btnOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrder.Location = new System.Drawing.Point(0, 107);
+            this.btnOrder.Location = new System.Drawing.Point(0, 322);
             this.btnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
@@ -208,14 +202,14 @@
             // 
             // pnLogo
             // 
-            this.pnLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.pnLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.pnLogo.Controls.Add(this.label1);
             this.pnLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnLogo.ForeColor = System.Drawing.Color.Blue;
             this.pnLogo.Location = new System.Drawing.Point(0, 0);
             this.pnLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnLogo.Name = "pnLogo";
-            this.pnLogo.Size = new System.Drawing.Size(293, 107);
+            this.pnLogo.Size = new System.Drawing.Size(287, 107);
             this.pnLogo.TabIndex = 0;
             // 
             // label1
@@ -223,7 +217,8 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 21);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.label1.Location = new System.Drawing.Point(37, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 81);
             this.label1.TabIndex = 0;
@@ -239,10 +234,10 @@
             this.pnTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTitleBar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnTitleBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pnTitleBar.Location = new System.Drawing.Point(293, 0);
+            this.pnTitleBar.Location = new System.Drawing.Point(287, 0);
             this.pnTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnTitleBar.Name = "pnTitleBar";
-            this.pnTitleBar.Size = new System.Drawing.Size(863, 107);
+            this.pnTitleBar.Size = new System.Drawing.Size(869, 107);
             this.pnTitleBar.TabIndex = 1;
             this.pnTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTitleBar_MouseDown);
             // 
@@ -252,7 +247,7 @@
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(767, 2);
+            this.btnMinimize.Location = new System.Drawing.Point(773, 2);
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(41, 34);
@@ -266,7 +261,7 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(799, 2);
+            this.btnExit.Location = new System.Drawing.Point(805, 2);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(53, 34);
@@ -300,12 +295,12 @@
             // 
             // pnDesktop
             // 
-            this.pnDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.pnDesktop.BackColor = System.Drawing.Color.White;
             this.pnDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDesktop.Location = new System.Drawing.Point(293, 107);
+            this.pnDesktop.Location = new System.Drawing.Point(287, 107);
             this.pnDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnDesktop.Name = "pnDesktop";
-            this.pnDesktop.Size = new System.Drawing.Size(863, 485);
+            this.pnDesktop.Size = new System.Drawing.Size(869, 645);
             this.pnDesktop.TabIndex = 2;
             // 
             // guna2Elipse1
@@ -316,7 +311,7 @@
             // FormMainMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1156, 592);
+            this.ClientSize = new System.Drawing.Size(1156, 752);
             this.Controls.Add(this.pnDesktop);
             this.Controls.Add(this.pnTitleBar);
             this.Controls.Add(this.pnMenu);

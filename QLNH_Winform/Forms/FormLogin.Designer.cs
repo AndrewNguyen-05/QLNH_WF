@@ -106,8 +106,9 @@
             this.txbPassWord.Location = new System.Drawing.Point(209, 4);
             this.txbPassWord.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbPassWord.Name = "txbPassWord";
-            this.txbPassWord.Size = new System.Drawing.Size(314, 34);
+            this.txbPassWord.Size = new System.Drawing.Size(314, 39);
             this.txbPassWord.TabIndex = 1;
+            this.txbPassWord.Text = "1";
             this.txbPassWord.UseSystemPasswordChar = true;
             // 
             // label1
@@ -117,7 +118,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 27);
+            this.label1.Size = new System.Drawing.Size(139, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mật khẩu";
             // 
@@ -139,8 +140,9 @@
             this.txbUserName.Location = new System.Drawing.Point(209, 10);
             this.txbUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbUserName.Name = "txbUserName";
-            this.txbUserName.Size = new System.Drawing.Size(314, 34);
+            this.txbUserName.Size = new System.Drawing.Size(314, 39);
             this.txbUserName.TabIndex = 0;
+            this.txbUserName.Text = "Admin";
             // 
             // userName
             // 
@@ -149,7 +151,7 @@
             this.userName.ForeColor = System.Drawing.Color.White;
             this.userName.Location = new System.Drawing.Point(3, 17);
             this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(180, 27);
+            this.userName.Size = new System.Drawing.Size(216, 33);
             this.userName.TabIndex = 0;
             this.userName.Text = "Tên đăng nhập";
             // 
@@ -161,7 +163,7 @@
             this.label2.ForeColor = System.Drawing.Color.Blue;
             this.label2.Location = new System.Drawing.Point(227, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 67);
+            this.label2.Size = new System.Drawing.Size(204, 81);
             this.label2.TabIndex = 2;
             this.label2.Text = "QLNH";
             // 

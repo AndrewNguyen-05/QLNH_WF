@@ -225,7 +225,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(55, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 67);
+            this.label1.Size = new System.Drawing.Size(204, 81);
             this.label1.TabIndex = 0;
             this.label1.Text = "QLNH";
             // 
@@ -294,7 +294,7 @@
             this.lblCurentChildForm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurentChildForm.Location = new System.Drawing.Point(55, 55);
             this.lblCurentChildForm.Name = "lblCurentChildForm";
-            this.lblCurentChildForm.Size = new System.Drawing.Size(62, 25);
+            this.lblCurentChildForm.Size = new System.Drawing.Size(73, 30);
             this.lblCurentChildForm.TabIndex = 2;
             this.lblCurentChildForm.Text = "Home";
             // 

@@ -101,9 +101,11 @@ BEGIN
 	INSERT INTO TableFood (name) VALUES (N'Bàn ' + CAST(@i AS NVARCHAR(100)))
 	SET @i = @i + 1
 END
+GO
 
 CREATE PROC USP_GetTableList
 AS SELECT * FROM TableFood
 GO
 
 EXEC USP_GetTableList
+GO

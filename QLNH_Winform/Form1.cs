@@ -27,6 +27,7 @@ namespace QLNH_Winform
             InitializeComponent();
             leftBorderBtn = new Panel();
             pnMenu.Controls.Add(leftBorderBtn);
+            btnOrder_Click(btnOrder, EventArgs.Empty);
             //OpenChildForm(new Forms.FormThongKe());
 
             //Form

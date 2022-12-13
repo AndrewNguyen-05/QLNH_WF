@@ -46,7 +46,7 @@ namespace QLNH_Winform
                     //Button
                     DeactivateButton();
                     currentButton = (IconButton)btnSender;
-                    currentButton.BackColor = Color.FromArgb(37,36,81);
+                    currentButton.BackColor = Color.FromArgb(41, 39, 40);
                     currentButton.ForeColor = color;
                     currentButton.TextAlign = ContentAlignment.MiddleCenter;
                     currentButton.IconColor = color;
@@ -76,7 +76,7 @@ namespace QLNH_Winform
             if(currentButton != null)
             {
                 
-                currentButton.BackColor = Color.FromArgb(31,30,68);
+                currentButton.BackColor = Color.FromArgb(41, 39, 40);
                 currentButton.ForeColor = Color.Gainsboro;
                 currentButton.TextAlign = ContentAlignment.MiddleLeft;
                 currentButton.IconColor = Color.Gainsboro; 
@@ -89,12 +89,12 @@ namespace QLNH_Winform
         //Structs
         private struct RGBColors
         {
-            public static Color color1 = Color.FromArgb(172, 126, 241);
-            public static Color color2 = Color.FromArgb(249, 118, 176);
-            public static Color color3 = Color.FromArgb(253, 138, 114);
-            public static Color color4 = Color.FromArgb(95, 77, 221);
-            public static Color color5 = Color.FromArgb(249, 88, 155);
-            public static Color color6 = Color.FromArgb(24, 161, 251);
+            public static Color color1 = Color.FromArgb(178, 8, 55);
+            public static Color color2 = Color.FromArgb(178, 8, 55);
+            public static Color color3 = Color.FromArgb(178, 8, 55);
+            public static Color color4 = Color.FromArgb(178, 8, 55);
+            public static Color color5 = Color.FromArgb(178, 8, 55);
+            public static Color color6 = Color.FromArgb(178, 8, 55);
         }
         private void OpenChildForm(Form childForm)
         {

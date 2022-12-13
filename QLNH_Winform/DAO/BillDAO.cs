@@ -36,5 +36,22 @@ namespace QLNH_Winform.DAO
             }
             return -1;
         }
+
+        public void InsertBill(int id)
+        {
+            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @idTable", new object[] { id });
+        }
+
+        public int GetMaxIDBill()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExcuteScalar("");
+            }
+            catch
+            {
+                return 1;
+            }
+        }
     }
 }

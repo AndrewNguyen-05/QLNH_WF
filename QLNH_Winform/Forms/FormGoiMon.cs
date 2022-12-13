@@ -19,8 +19,23 @@ namespace QLNH_Winform.Forms
         {
             InitializeComponent();
             LoadTable();
+            LoadCategory();
         }
         #region Method
+
+        void LoadCategory()
+        {
+            List<FoodCategory> listCategory = FoodCategoryDAO.Instance.GetListCategory();
+            cbCategory.DataSource = listCategory;
+            cbCategory.DisplayMember = "Name";
+        }
+
+        void LoadFoodListByCategoryID(int id)
+        {
+            List<Food> listFood = FoodDAO.Instance.GetFoodByCategoryID(id);
+            cbFood.DataSource = listFood;
+            cbFood.DisplayMember = "Name";
+        }
         void LoadTable()
         {
             List<Table> tableList = TableDAO.Instance.LoadTableList();
@@ -47,8 +62,6 @@ namespace QLNH_Winform.Forms
             }
         }
 
-        
-
         void ShowBill(int id)
         {
             lsvBill.Items.Clear();
@@ -65,13 +78,26 @@ namespace QLNH_Winform.Forms
             }
         }
         #endregion
-        
+
         #region Events
         private void Btn_Click(object sender, EventArgs e)
         {
-            int tableID = ((sender as Button).Tag as Table).ID;
-            ShowBill(tableID);
+
+        }
+        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+            ComboBox cb = sender as ComboBox;
+            if (cb.SelectedItem == null) return;
+            FoodCategory selected = cb.SelectedItem as FoodCategory;
+            id = selected.ID;
+            LoadFoodListByCategoryID(id);
         }
         #endregion
+
+        private void btnAddFood_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

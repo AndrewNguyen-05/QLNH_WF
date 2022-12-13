@@ -29,6 +29,9 @@ namespace QLNH_Winform.Forms
                 Button btn = new Button() { Width = TableDAO.TableWidth, Height = TableDAO.TableHeight };
                 btn.Text = item.Name + Environment.NewLine + item.Status;
 
+                btn.Click += Btn_Click;
+                btn.Tag = item;
+
                 switch (item.Status)
                 {
                     case "Trống":
@@ -42,6 +45,32 @@ namespace QLNH_Winform.Forms
                 flpTable.Controls.Add(btn);
 
             }
+        }
+
+        
+
+        void ShowBill(int id)
+        {
+            lsvBill.Items.Clear();
+            List<MenuFood> listBillInfo = MenuFoodDAO.Instance.GetListMenuByTable(id);
+
+            foreach (MenuFood item in listBillInfo)
+            {
+                ListViewItem lsvitem = new ListViewItem(item.FoodName.ToString());
+                lsvitem.SubItems.Add(item.Count.ToString());
+                lsvitem.SubItems.Add(item.Price.ToString());
+                lsvitem.SubItems.Add(item.TotalPrice.ToString());
+
+                lsvBill.Items.Add(lsvitem);
+            }
+        }
+        #endregion
+        
+        #region Events
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            int tableID = ((sender as Button).Tag as Table).ID;
+            ShowBill(tableID);
         }
         #endregion
     }

@@ -94,6 +94,7 @@ BEGIN
 END
 GO
 
+--Thêm bàn
 DECLARE @i INT = 0
 
 WHILE @i <= 20
@@ -110,4 +111,60 @@ GO
 EXEC USP_GetTableList
 GO
 
-DELETE FROM TableFood
+--Thêm Food Category
+INSERT INTO FoodCategory (name) VALUES (N'Hải sản/Seafood')
+INSERT INTO FoodCategory (name) VALUES (N'Gỏi/Salad')
+INSERT INTO FoodCategory (name) VALUES (N'Mì/Noodle')
+INSERT INTO FoodCategory (name) VALUES (N'Cơm/Rice')
+INSERT INTO FoodCategory (name) VALUES (N'Nước giải khát/Drinks')
+GO
+
+--Thêm Food 
+INSERT INTO Food (name, idCategory, price) VALUES (N'Cua nướng muối ớt', 1 , 130000 )
+INSERT INTO Food (name, idCategory, price) VALUES (N'Tôm hùm nướng phô mai', 1 , 250000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Canh cá chua', 1, 150000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Canh cua cà pháo', 1 , 70000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Gỏi xoài tôm khô', 2, 100000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Gỏi xoài khô mực', 2, 100000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Gỏi cá trích', 2, 120000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Mì xào bò', 3, 75000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Mì xào hải sản', 3, 80000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Cơm chiên dương châu', 4, 90000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Cơm chiên thập cẩm', 4, 85000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Cơm trắng', 4, 20000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Coca Cola', 5, 15000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Sữa đậu nành', 5, 12000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Fanta', 5, 15000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'7Up', 5, 15000)
+INSERT INTO Food (name, idCategory, price) VALUES (N'Nước lọc', 5, 10000)
+GO
+
+--Thêm bill
+INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 55, 0)
+INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 60, 0)
+INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 59, 1)
+
+--Thêm Bill Info
+INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 2, 3)
+INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 3, 4)
+INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 4, 2)
+INSERT INTO BillInfo (idBill, idFood, count) VALUES (2, 3, 1)
+INSERT INTO BillInfo (idBill, idFood, count) VALUES (2, 5, 2)
+INSERT INTO BillInfo (idBill, idFood, count) VALUES (2, 1, 2)
+INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 2, 3)
+INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 4, 5)
+INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 5, 2)
+
+SELECT * FROM Bill WHERE idTable = 55 AND status = 1
+
+SELECT * FROM Bill
+SELECT * FROM BillInfo
+SELECT * FROM Food
+SELECT * FROM FoodCategory
+SELECT * FROM TableFood
+
+SELECT * FROM BillInfo WHERE idBill = 3
+
+SELECT f.name, bi.count, f.price, f.price * bi.count AS totalPrice
+FROM BillInfo bi, Bill b, Food f
+WHERE bi.idBill = b.id AND bi.idFood = f.id AND b.idTable = 55

@@ -202,9 +202,9 @@ BEGIN
 
 	IF (@isExitsBillInfo > 0)
 	BEGIN
-		DECLARE @newCount INT = @foodCount + @count
+		DECLARE @newCount INT = @FoodCount + @count
 		IF (@newCount > 0)
-			UPDATE dbo.BillInfo SET count = @FoodCount + @count
+			UPDATE dbo.BillInfo SET count = @FoodCount + @count WHERE idBill = @idBill AND idFood = @idFood
 		ELSE
 			DELETE dbo.BillInfo WHERE idBill = @idBill AND idFood = @idFood
 	END 

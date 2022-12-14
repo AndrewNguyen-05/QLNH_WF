@@ -43,10 +43,10 @@ namespace QLNH_Winform.DAO
         }
 
         public int GetMaxIDBill()
-        {
+        { 
             try
             {
-                return (int)DataProvider.Instance.ExcuteScalar("");
+                return (int)DataProvider.Instance.ExcuteScalar("SELECT MAX(id) FROM dbo.Bill");
             }
             catch
             {

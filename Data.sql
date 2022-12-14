@@ -97,7 +97,7 @@ GO
 --Thêm bàn
 DECLARE @i INT = 0
 
-WHILE @i <= 20
+WHILE @i <= 100
 BEGIN
 	INSERT INTO TableFood (name) VALUES (N'Bàn ' + CAST(@i AS NVARCHAR(100)))
 	SET @i = @i + 1
@@ -143,7 +143,7 @@ GO
 INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 55, 0)
 INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 60, 0)
 INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 59, 1)
-
+GO
 --Thêm Bill Info
 INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 2, 3)
 INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 3, 4)
@@ -154,6 +154,7 @@ INSERT INTO BillInfo (idBill, idFood, count) VALUES (2, 1, 2)
 INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 2, 3)
 INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 4, 5)
 INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 5, 2)
+GO
 
 SELECT * FROM Bill WHERE idTable = 55 AND status = 1
 
@@ -168,3 +169,50 @@ SELECT * FROM BillInfo WHERE idBill = 3
 SELECT f.name, bi.count, f.price, f.price * bi.count AS totalPrice
 FROM BillInfo bi, Bill b, Food f
 WHERE bi.idBill = b.id AND bi.idFood = f.id AND b.idTable = 55
+
+GO
+
+CREATE PROC USP_InsertBill
+@idTable INT
+AS
+BEGIN
+	INSERT dbo.Bill 
+		( DateCheckIn,
+	      DateCheckOut,
+		  idTable,
+		  status
+		)
+	VALUES (GETDATE(),
+			NULL,
+			@idTable,
+			0
+		   )
+END 
+GO
+
+CREATE PROC USP_InsertBillInfo
+@idBill INT, @idFood INT, @count INT
+AS
+BEGIN
+	DECLARE @isExitsBillInfo INT
+	DECLARE @FoodCount INT = 1
+	SELECT @isExitsBillInfo = id, @FoodCount = dbb.count 
+	FROM dbo.BillInfo AS dbb
+	WHERE idBill = @idBill AND idFood = @idFood
+
+	IF (@isExitsBillInfo > 0)
+	BEGIN
+		DECLARE @newCount INT = @foodCount + @count
+		IF (@newCount > 0)
+			UPDATE dbo.BillInfo SET count = @FoodCount + @count
+		ELSE
+			DELETE dbo.BillInfo WHERE idBill = @idBill AND idFood = @idFood
+	END 
+	ELSE
+	BEGIN
+		INSERT dbo.BillInfo
+			( idBill, idFood, count)
+		VALUES (@idBill, @idFood, @count)
+	END
+END 
+GO

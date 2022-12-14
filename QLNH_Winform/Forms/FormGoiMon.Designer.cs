@@ -44,8 +44,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
+            this.nmFoodCount = new System.Windows.Forms.NumericUpDown();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -74,7 +76,7 @@
             this.label1.ForeColor = System.Drawing.Color.Tomato;
             this.label1.Location = new System.Drawing.Point(14, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 28);
+            this.label1.Size = new System.Drawing.Size(191, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "RESTAURANT ORDERS";
             // 
@@ -83,6 +85,7 @@
             this.guna2GradientPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.guna2GradientPanel4.BorderRadius = 30;
             this.guna2GradientPanel4.BorderThickness = 5;
+            this.guna2GradientPanel4.Controls.Add(this.nmFoodCount);
             this.guna2GradientPanel4.Controls.Add(this.btnAddFood);
             this.guna2GradientPanel4.Controls.Add(this.cbFood);
             this.guna2GradientPanel4.Controls.Add(this.cbCategory);
@@ -118,6 +121,7 @@
             this.btnAddFood.Size = new System.Drawing.Size(202, 67);
             this.btnAddFood.TabIndex = 8;
             this.btnAddFood.Text = "Thêm món ăn";
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // cbFood
             // 
@@ -127,7 +131,7 @@
             this.cbFood.Location = new System.Drawing.Point(19, 100);
             this.cbFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbFood.Name = "cbFood";
-            this.cbFood.Size = new System.Drawing.Size(220, 40);
+            this.cbFood.Size = new System.Drawing.Size(220, 36);
             this.cbFood.TabIndex = 7;
             // 
             // cbCategory
@@ -138,7 +142,7 @@
             this.cbCategory.Location = new System.Drawing.Point(19, 52);
             this.cbCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(220, 40);
+            this.cbCategory.Size = new System.Drawing.Size(220, 36);
             this.cbCategory.TabIndex = 6;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
@@ -233,6 +237,23 @@
             this.flpTable.Size = new System.Drawing.Size(537, 726);
             this.flpTable.TabIndex = 1;
             // 
+            // nmFoodCount
+            // 
+            this.nmFoodCount.Location = new System.Drawing.Point(245, 66);
+            this.nmFoodCount.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.nmFoodCount.Name = "nmFoodCount";
+            this.nmFoodCount.Size = new System.Drawing.Size(93, 22);
+            this.nmFoodCount.TabIndex = 9;
+            this.nmFoodCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // FormGoiMon
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -248,6 +269,7 @@
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             this.guna2GradientPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +291,6 @@
         private System.Windows.Forms.ComboBox cbFood;
         private System.Windows.Forms.ComboBox cbCategory;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddFood;
+        private System.Windows.Forms.NumericUpDown nmFoodCount;
     }
 }

@@ -24,7 +24,7 @@ namespace QLNH_Winform.DAO
         public List<Food> GetFoodByCategoryID(int id)
         {
             List<Food> list = new List<Food>();
-            string query = " ";
+            string query = "SELECT * FROM Food WHERE idCategory = " + id;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)

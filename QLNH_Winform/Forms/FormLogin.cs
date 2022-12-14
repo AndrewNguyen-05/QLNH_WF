@@ -20,8 +20,8 @@ namespace QLNH_Winform.Forms
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            string username = txbUsername.Text;
+            string password = txbPassword.Text;
             if (Login(username, password))
             {
                 this.DialogResult = DialogResult.OK;

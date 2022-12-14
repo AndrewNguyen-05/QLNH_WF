@@ -97,7 +97,7 @@ namespace QLNH_Winform.Forms
 
         private void btnAddFood_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

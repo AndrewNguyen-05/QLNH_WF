@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace QLNH_Winform.DTO
 {
-    public class Category
+    public class FoodCategory
     {
         private int iD;
         private string name;
-        public Category(int id, string name)
+        public FoodCategory(int id, string name)
         {
             this.ID = id;
             this.Name = name;
         }
 
-        public Category(DataRow row)
+        public FoodCategory(DataRow row)
         {
             this.ID = (int)row["ID"];
             this.Name = row["Name"].ToString();

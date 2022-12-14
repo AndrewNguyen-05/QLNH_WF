@@ -8,27 +8,27 @@ using QLNH_Winform.DTO;
 
 namespace QLNH_Winform.DAO
 {
-    public class CategoryDAO
+    public class FoodCategoryDAO
     {
-        private static CategoryDAO instance;
-        public static CategoryDAO Instance
+        private static FoodCategoryDAO instance;
+        public static FoodCategoryDAO Instance
         {
-            get { if (instance == null) instance = new CategoryDAO(); return CategoryDAO.instance; }
-            private set { CategoryDAO.instance = value; }
+            get { if (instance == null) instance = new FoodCategoryDAO(); return FoodCategoryDAO.instance; }
+            private set { FoodCategoryDAO.instance = value; }
         }
-        private CategoryDAO()
+        private FoodCategoryDAO()
         {
 
         }
 
-        public List<Category> GetListCategory()
+        public List<FoodCategory> GetListCategory()
         {
-            List<Category> list = new List<Category>();
+            List<FoodCategory> list = new List<FoodCategory>();
             string query = " SELECT * FROM foodcategory";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows) 
             {
-                Category category = new Category(item);
+                FoodCategory category = new FoodCategory(item);
                 list.Add(category);
             }
             return list;

@@ -75,6 +75,7 @@ namespace QLNH_Winform.Forms
                 totalPrice += item.TotalPrice;
                 lsvBill.Items.Add(lsvitem);
             }
+            lblTotalPrice.Text = totalPrice.ToString();
         }
         #endregion
 

@@ -25,6 +25,9 @@ namespace QLNH_Winform
         public FormMainMenu()
         {
             InitializeComponent();
+
+            this.ClientSize = new System.Drawing.Size(1450, 800);
+
             leftBorderBtn = new Panel();
             pnMenu.Controls.Add(leftBorderBtn);
             btnOrder_Click(btnOrder, EventArgs.Empty);

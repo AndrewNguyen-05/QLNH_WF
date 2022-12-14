@@ -60,7 +60,7 @@
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 3);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(576, 524);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(576, 520);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 3;
             this.guna2PictureBox1.TabStop = false;
@@ -91,7 +91,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.BorderRadius = 8;
+            this.txtPassword.BorderRadius = 12;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "1";
             this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -100,7 +100,7 @@
             this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtPassword.Font = new System.Drawing.Font("Cambria", 12F);
             this.txtPassword.ForeColor = System.Drawing.Color.Silver;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconLeft")));
@@ -195,11 +195,11 @@
             // lblQLNH
             // 
             this.lblQLNH.AutoSize = true;
-            this.lblQLNH.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblQLNH.Font = new System.Drawing.Font("iCielBC Cubano Normal", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQLNH.ForeColor = System.Drawing.Color.Black;
-            this.lblQLNH.Location = new System.Drawing.Point(670, 90);
+            this.lblQLNH.Location = new System.Drawing.Point(667, 90);
             this.lblQLNH.Name = "lblQLNH";
-            this.lblQLNH.Size = new System.Drawing.Size(137, 58);
+            this.lblQLNH.Size = new System.Drawing.Size(142, 58);
             this.lblQLNH.TabIndex = 8;
             this.lblQLNH.Text = "QLNH";
             // 

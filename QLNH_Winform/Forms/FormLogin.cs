@@ -20,8 +20,8 @@ namespace QLNH_Winform.Forms
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txbUserName.Text;
-            string password = txbPassWord.Text;
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
             if (Login(username, password))
             {
                 this.DialogResult = DialogResult.OK;
@@ -37,11 +37,6 @@ namespace QLNH_Winform.Forms
             return AccountDAO.Instance.Login(username, password);
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (this.DialogResult == DialogResult.Cancel)
@@ -50,6 +45,15 @@ namespace QLNH_Winform.Forms
                 {
                     e.Cancel = true;
                 }
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Bạn có muốn thoát chương trình?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(res == DialogResult.OK)
+            {
+                Application.Exit();
             }
         }
     }

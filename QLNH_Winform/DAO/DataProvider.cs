@@ -20,7 +20,7 @@ namespace QLNH_Winform.DAO
 
         private DataProvider() { }
 
-        private string connectionSTR = @"Data Source=lazysama;Initial Catalog=QLNH;Integrated Security=True";
+        private string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLNH;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

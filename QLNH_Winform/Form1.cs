@@ -26,7 +26,7 @@ namespace QLNH_Winform
         {
             InitializeComponent();
 
-            this.ClientSize = new System.Drawing.Size(1450, 800);
+            this.ClientSize = new System.Drawing.Size(1440, 800);
 
             leftBorderBtn = new Panel();
             pnMenu.Controls.Add(leftBorderBtn);

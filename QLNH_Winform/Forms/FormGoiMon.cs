@@ -18,8 +18,10 @@ namespace QLNH_Winform.Forms
         public FormGoiMon()
         {
             InitializeComponent();
+
             LoadTable();
             LoadCategory();
+
         }
         #region Method
 
@@ -38,6 +40,7 @@ namespace QLNH_Winform.Forms
         }
         void LoadTable()
         {
+            flpTable.Controls.Clear();
             List<Table> tableList = TableDAO.Instance.LoadTableList();
             foreach (Table item in tableList)
             {
@@ -49,15 +52,13 @@ namespace QLNH_Winform.Forms
                 switch (item.Status)
                 {
                     case "Trống":
-                        btn.BackColor = Color.Lime;
+                        btn.BackColor = Color.OldLace;
                         break;
                     case "Có người":
-                        btn.BackColor = Color.Aqua;
+                        btn.BackColor = Color.Pink;
                         break;
                 }
-
                 flpTable.Controls.Add(btn);
-
             }
         }
 
@@ -75,7 +76,7 @@ namespace QLNH_Winform.Forms
                 totalPrice += item.TotalPrice;
                 lsvBill.Items.Add(lsvitem);
             }
-            lblTotalPrice.Text = totalPrice.ToString();
+            lblTotalPrice.Text = totalPrice.ToString() + " VND";
         }
         #endregion
 
@@ -111,7 +112,25 @@ namespace QLNH_Winform.Forms
                 BillInfoDAO.Instance.InsertBillInfo(idBill, foodID, count);
             }
             ShowBill(table.ID);
+            LoadTable();
         }
         #endregion
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            Table table = lsvBill.Tag as Table;
+            int idBill = BillDAO.Instance.GetUncheckBillIDbyTableID(table.ID);
+            if (idBill != -1)
+            {
+                DialogResult res = MessageBox.Show("Bạn muốn thanh toán hóa đơn cho bàn " + table.Name + " ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (res == DialogResult.OK)
+                {
+                    BillDAO.Instance.CheckOut(idBill);
+                    ShowBill(table.ID);
+
+                    LoadTable();
+                }
+            }
+        }
     }
 }

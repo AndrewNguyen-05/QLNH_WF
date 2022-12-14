@@ -32,6 +32,7 @@
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.nmFoodCount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btnAddFood = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cbFood = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
@@ -44,7 +45,6 @@
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.nmFoodCount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
@@ -80,7 +80,7 @@
             this.label1.ForeColor = System.Drawing.Color.Tomato;
             this.label1.Location = new System.Drawing.Point(14, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 28);
+            this.label1.Size = new System.Drawing.Size(191, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "RESTAURANT ORDERS";
             // 
@@ -105,6 +105,29 @@
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
             this.guna2GradientPanel4.Size = new System.Drawing.Size(610, 726);
             this.guna2GradientPanel4.TabIndex = 3;
+            // 
+            // nmFoodCount
+            // 
+            this.nmFoodCount.BackColor = System.Drawing.Color.Transparent;
+            this.nmFoodCount.BorderRadius = 6;
+            this.nmFoodCount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nmFoodCount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nmFoodCount.Location = new System.Drawing.Point(262, 63);
+            this.nmFoodCount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmFoodCount.Name = "nmFoodCount";
+            this.nmFoodCount.Size = new System.Drawing.Size(100, 36);
+            this.nmFoodCount.TabIndex = 10;
+            this.nmFoodCount.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.nmFoodCount.UpDownButtonForeColor = System.Drawing.Color.Indigo;
+            this.nmFoodCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnAddFood
             // 
@@ -136,7 +159,7 @@
             this.cbFood.Location = new System.Drawing.Point(36, 114);
             this.cbFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbFood.Name = "cbFood";
-            this.cbFood.Size = new System.Drawing.Size(220, 46);
+            this.cbFood.Size = new System.Drawing.Size(220, 39);
             this.cbFood.TabIndex = 7;
             // 
             // cbCategory
@@ -147,7 +170,7 @@
             this.cbCategory.Location = new System.Drawing.Point(36, 63);
             this.cbCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(220, 46);
+            this.cbCategory.Size = new System.Drawing.Size(220, 39);
             this.cbCategory.TabIndex = 6;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
@@ -243,29 +266,6 @@
             this.flpTable.Name = "flpTable";
             this.flpTable.Size = new System.Drawing.Size(537, 726);
             this.flpTable.TabIndex = 1;
-            // 
-            // nmFoodCount
-            // 
-            this.nmFoodCount.BackColor = System.Drawing.Color.Transparent;
-            this.nmFoodCount.BorderRadius = 6;
-            this.nmFoodCount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nmFoodCount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nmFoodCount.Location = new System.Drawing.Point(262, 63);
-            this.nmFoodCount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nmFoodCount.Name = "nmFoodCount";
-            this.nmFoodCount.Size = new System.Drawing.Size(100, 36);
-            this.nmFoodCount.TabIndex = 10;
-            this.nmFoodCount.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.nmFoodCount.UpDownButtonForeColor = System.Drawing.Color.Indigo;
-            this.nmFoodCount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // FormGoiMon
             // 

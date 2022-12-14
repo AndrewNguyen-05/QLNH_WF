@@ -33,5 +33,17 @@ namespace QLNH_Winform.DAO
             }
             return list;
         }
+        public FoodCategory GetCategoryByID(int id)
+        {
+            FoodCategory category = null;
+            string query = " SELECT * FROM foodcategory WHERE id = " + id;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                category = new FoodCategory(item);
+                return category;
+            }
+            return category;
+        }
     }
 }

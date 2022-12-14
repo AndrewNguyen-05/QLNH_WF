@@ -99,6 +99,11 @@ namespace QLNH_Winform.Forms
         private void btnAddFood_Click(object sender, EventArgs e)
         {
             Table table = lsvBill.Tag as Table;
+            if (table is null)
+            {
+                MessageBox.Show("Vui lòng chọn bàn");
+                return;
+            } 
             int idBill = BillDAO.Instance.GetUncheckBillIDbyTableID(table.ID);
             int foodID = (cbFood.SelectedItem as Food).ID;
             int count = (int)nmFoodCount.Value;

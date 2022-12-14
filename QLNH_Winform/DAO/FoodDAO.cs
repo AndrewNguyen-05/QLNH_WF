@@ -24,7 +24,7 @@ namespace QLNH_Winform.DAO
         public List<Food> GetFoodByCategoryID(int id)
         {
             List<Food> list = new List<Food>();
-            string query = "SELECT * FROM Food WHERE idCategory = " + id;
+            string query = "SELECT * FROM Food WHERE isHidden = 0 AND idCategory = " + id;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)
@@ -34,6 +34,57 @@ namespace QLNH_Winform.DAO
             }
 
             return list;
+        }
+
+        public List<Food> GetListFood()
+        {
+            List<Food> list = new List<Food>();
+            string query = "SELECT * FROM Food WHERE isHidden = 0";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Food food = new Food(item);
+                list.Add(food);
+            }
+
+            return list;
+        }
+        public List<Food> GetListFood(string name)
+        {
+            List<Food> list = new List<Food>();
+            string query = string.Format("SELECT * FROM Food WHERE isHidden = 0 AND name like N'%{0}%'", name);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Food food = new Food(item);
+                list.Add(food);
+            }
+
+            return list;
+        }
+
+        public bool InsertFood(string name, int id, float price)
+        {
+            string query = string.Format("INSERT Food ( name, idCategory, price) VALUES (N'{0}', {1}, {2})", name, id, price);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+        public bool UpdateFood(int idFood, string name, int id, float price)
+        {
+            string query = string.Format("UPDATE Food SET name = N'{0}', idCategory = {1}, price = {2} WHERE id = {3}", name, id, price, idFood);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+        public bool DeleteFood(int idFood)
+        {
+            string query = string.Format("UPDATE Food SET isHidden = 1 WHERE id = {0}", idFood);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
         }
     }
 }

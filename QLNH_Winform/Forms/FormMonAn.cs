@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLNH_Winform.DTO;
 using System.Xml.Linq;
+using System.Diagnostics;
 
 namespace QLNH_Winform.Forms
 {
@@ -20,6 +21,7 @@ namespace QLNH_Winform.Forms
         {
             InitializeComponent();
             LoadListFood();
+            LoadCategoryIntoCombobox(cbFoodCategory);
             dtgvFood.DataSource = foodList;
             dtgvFood.Columns["ID"].Visible = false;
         }
@@ -28,7 +30,12 @@ namespace QLNH_Winform.Forms
         {
 
         }
-
+        void LoadCategoryIntoCombobox(ComboBox cb)
+        {
+            cb.DataSource = FoodCategoryDAO.Instance.GetListCategory();
+            cb.DisplayMember = "Name";
+        }
+        
         void LoadListFood()
         {
             foodList.DataSource = FoodDAO.Instance.GetListFood();
@@ -74,13 +81,62 @@ namespace QLNH_Winform.Forms
             }
         }
 
-        private void btnSearchFood_Click(object sender, EventArgs e)
-        {
-        }
-
         private void txbSearchFood_TextChanged(object sender, EventArgs e)
         {
             LoadListFood(txbSearchFood.Text);
+        }
+
+        private void dtgvFood_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dtgvFood.SelectedCells.Count > 0)
+            {
+                if (dtgvFood.SelectedCells.Count == 1)
+                {
+                    DataGridViewCell dgvc = dtgvFood.SelectedCells[0];
+                    int categoryID = (int) dgvc.OwningRow.Cells[2].Value;
+                    FoodCategory foodCategory = FoodCategoryDAO.Instance.GetCategoryByID(categoryID);
+                    int i = 0;
+                    for (i = 0; i < cbFoodCategory.Items.Count; i++)
+                    {
+                        if (foodCategory.ID == (cbFoodCategory.Items[i] as FoodCategory).ID)
+                        {
+                            break;
+                        }
+                    }
+                    cbFoodCategory.SelectedIndex = i;
+                }
+                else
+                {
+                    cbFoodCategory.Text = "";
+                }
+            }
+        }
+
+        private void cbFoodCategory_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (dtgvFood.SelectedCells.Count > 0)
+            {
+                foreach (DataGridViewCell dgvc in dtgvFood.SelectedCells)
+                {
+                    DataGridViewRow dgvr = dgvc.OwningRow;
+                    int idFood = (int)dgvr.Cells[1].Value;
+                    string Name = dgvr.Cells[0].Value.ToString();
+                    int id = (cbFoodCategory.SelectedItem as FoodCategory).ID;
+                    float price = (float)dgvr.Cells[3].Value;
+                    FoodDAO.Instance.UpdateFood(idFood, Name, id, price);
+                }
+            }
+            LoadListFood(txbSearchFood.Text);
+        }
+
+        private void dtgvFood_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+            if (e.ColumnIndex == 2)
+            {
+                e.Value = FoodCategoryDAO.Instance.GetCategoryByID((int)e.Value).Name;
+                dgv[e.ColumnIndex, e.RowIndex].ReadOnly = true;
+            }
         }
     }
 }

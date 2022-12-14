@@ -60,14 +60,14 @@
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(444, 388);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(576, 524);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 3;
             this.guna2PictureBox1.TabStop = false;
             // 
             // txtUsername
             // 
-            this.txtUsername.BorderRadius = 8;
+            this.txtUsername.BorderRadius = 12;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "Admin";
             this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -76,17 +76,17 @@
             this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUsername.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Font = new System.Drawing.Font("Cambria", 9F);
+            this.txtUsername.Font = new System.Drawing.Font("Cambria", 12F);
             this.txtUsername.ForeColor = System.Drawing.Color.Silver;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUsername.IconLeft")));
-            this.txtUsername.Location = new System.Drawing.Point(446, 135);
+            this.txtUsername.Location = new System.Drawing.Point(593, 173);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Tên tài khoản";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(244, 39);
+            this.txtUsername.Size = new System.Drawing.Size(290, 45);
             this.txtUsername.TabIndex = 4;
             // 
             // txtPassword
@@ -100,17 +100,17 @@
             this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Font = new System.Drawing.Font("Cambria", 9F);
+            this.txtPassword.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtPassword.ForeColor = System.Drawing.Color.Silver;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconLeft")));
-            this.txtPassword.Location = new System.Drawing.Point(446, 184);
+            this.txtPassword.Location = new System.Drawing.Point(593, 234);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.PlaceholderText = "Mật khẩu";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(244, 39);
+            this.txtPassword.Size = new System.Drawing.Size(290, 45);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -118,7 +118,7 @@
             // 
             this.btnLogin.Animated = true;
             this.btnLogin.AutoRoundedCorners = true;
-            this.btnLogin.BorderRadius = 19;
+            this.btnLogin.BorderRadius = 20;
             this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -126,13 +126,13 @@
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
             this.btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(104)))), ((int)(((byte)(143)))));
-            this.btnLogin.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnLogin.Location = new System.Drawing.Point(446, 257);
+            this.btnLogin.Location = new System.Drawing.Point(593, 308);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(244, 40);
+            this.btnLogin.Size = new System.Drawing.Size(290, 43);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -142,20 +142,20 @@
             this.btnExit.Animated = true;
             this.btnExit.AutoRoundedCorners = true;
             this.btnExit.BorderColor = System.Drawing.Color.DimGray;
-            this.btnExit.BorderRadius = 19;
+            this.btnExit.BorderRadius = 20;
             this.btnExit.BorderThickness = 1;
             this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnExit.FillColor = System.Drawing.Color.Transparent;
-            this.btnExit.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold);
+            this.btnExit.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnExit.ForeColor = System.Drawing.Color.DimGray;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnExit.Location = new System.Drawing.Point(446, 303);
+            this.btnExit.Location = new System.Drawing.Point(593, 367);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(244, 40);
+            this.btnExit.Size = new System.Drawing.Size(290, 43);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Thoát chương trình";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -168,7 +168,7 @@
             this.pnControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnControl.Location = new System.Drawing.Point(0, 0);
             this.pnControl.Name = "pnControl";
-            this.pnControl.Size = new System.Drawing.Size(725, 33);
+            this.pnControl.Size = new System.Drawing.Size(929, 33);
             this.pnControl.TabIndex = 9;
             // 
             // ControlMinimize
@@ -177,7 +177,7 @@
             this.ControlMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.ControlMinimize.FillColor = System.Drawing.Color.White;
             this.ControlMinimize.IconColor = System.Drawing.Color.DimGray;
-            this.ControlMinimize.Location = new System.Drawing.Point(659, 0);
+            this.ControlMinimize.Location = new System.Drawing.Point(863, 0);
             this.ControlMinimize.Name = "ControlMinimize";
             this.ControlMinimize.Size = new System.Drawing.Size(33, 33);
             this.ControlMinimize.TabIndex = 1;
@@ -187,7 +187,7 @@
             this.ControlClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.ControlClose.FillColor = System.Drawing.Color.White;
             this.ControlClose.IconColor = System.Drawing.Color.DimGray;
-            this.ControlClose.Location = new System.Drawing.Point(692, 0);
+            this.ControlClose.Location = new System.Drawing.Point(896, 0);
             this.ControlClose.Name = "ControlClose";
             this.ControlClose.Size = new System.Drawing.Size(33, 33);
             this.ControlClose.TabIndex = 0;
@@ -195,11 +195,11 @@
             // lblQLNH
             // 
             this.lblQLNH.AutoSize = true;
-            this.lblQLNH.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblQLNH.Font = new System.Drawing.Font("iCielBC Cubano Normal", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQLNH.ForeColor = System.Drawing.Color.Black;
-            this.lblQLNH.Location = new System.Drawing.Point(526, 74);
+            this.lblQLNH.Location = new System.Drawing.Point(670, 90);
             this.lblQLNH.Name = "lblQLNH";
-            this.lblQLNH.Size = new System.Drawing.Size(85, 32);
+            this.lblQLNH.Size = new System.Drawing.Size(137, 58);
             this.lblQLNH.TabIndex = 8;
             this.lblQLNH.Text = "QLNH";
             // 
@@ -208,7 +208,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(725, 389);
+            this.ClientSize = new System.Drawing.Size(929, 522);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.pnControl);
             this.Controls.Add(this.lblQLNH);

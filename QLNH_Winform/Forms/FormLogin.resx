@@ -928,7 +928,7 @@
         QmCC
 </value>
   </data>
-  <data name="txtPassword.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txbPassword.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAATVJREFUSEvt
         lj9OAnEQRrdXaEy8DlghofUEW+2fbGGyxtbEA2k8gEcAzgAU0FiInYn4rXlUzmjcnWDDS14I85v5hl1C
@@ -939,7 +939,7 @@
         +QQGqYgSWGeYNQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="txtUsername.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txbUsername.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAUhJREFUSEvt
         lE1KA0EQhQcXZqlLxbVeQS8y4gnm15Y5wqx0I4oH0qXR1QQPoBsxrhQZ0aW+gheQtrsxVqOC8+AjIan3

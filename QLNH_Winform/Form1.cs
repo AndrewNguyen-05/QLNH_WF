@@ -1,5 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using QLNH_Winform.DTO;
+using QLNH_Winform.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

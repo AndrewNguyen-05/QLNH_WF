@@ -55,7 +55,8 @@ namespace QLNH_Winform.Forms
             {
                 LoadListFood();
                 txbSearchFood.Clear();
-                dtgvFood.CurrentCell = dtgvFood.Rows[dtgvFood.Rows.Count - 1].Cells["Name"];
+                dtgvFood.CurrentCell = dtgvFood.Rows[dtgvFood.Rows.Count - 1].Cells["Name"]; 
+                dtgvFood.Rows[dtgvFood.Rows.Count - 1].Selected = true;
             }
             
         }
@@ -111,7 +112,7 @@ namespace QLNH_Winform.Forms
                 }
                 else 
                 {
-                    cbFoodCategory.Text = "";
+                    cbFoodCategory.SelectedIndex = -1;
                 }
             }
         }
@@ -125,7 +126,7 @@ namespace QLNH_Winform.Forms
                     DataGridViewRow dgvr = dgvc.OwningRow;
                     int idFood = (int)dgvr.Cells["ID"].Value;
                     string Name = dgvr.Cells["Name"].Value.ToString();
-                    int id = (int)dgvr.Cells["CategoryID"].Value;
+                    int id = (cbFoodCategory.SelectedItem as FoodCategory).ID;
                     float price = (float)dgvr.Cells["Price"].Value;
                     FoodDAO.Instance.UpdateFood(idFood, Name, id, price);
                 }

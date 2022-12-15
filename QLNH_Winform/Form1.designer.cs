@@ -90,6 +90,7 @@
             this.btnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTaiKhoan.UseVisualStyleBackColor = true;
+            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
             // btnThongKe
             // 

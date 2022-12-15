@@ -80,7 +80,7 @@
             this.label1.ForeColor = System.Drawing.Color.Tomato;
             this.label1.Location = new System.Drawing.Point(14, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 23);
+            this.label1.Size = new System.Drawing.Size(225, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "RESTAURANT ORDERS";
             // 
@@ -111,7 +111,7 @@
             this.nmFoodCount.BackColor = System.Drawing.Color.Transparent;
             this.nmFoodCount.BorderRadius = 6;
             this.nmFoodCount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nmFoodCount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nmFoodCount.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmFoodCount.Location = new System.Drawing.Point(262, 63);
             this.nmFoodCount.Minimum = new decimal(new int[] {
             1,
@@ -159,7 +159,7 @@
             this.cbFood.Location = new System.Drawing.Point(36, 114);
             this.cbFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbFood.Name = "cbFood";
-            this.cbFood.Size = new System.Drawing.Size(220, 39);
+            this.cbFood.Size = new System.Drawing.Size(220, 46);
             this.cbFood.TabIndex = 7;
             // 
             // cbCategory
@@ -170,7 +170,7 @@
             this.cbCategory.Location = new System.Drawing.Point(36, 63);
             this.cbCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(220, 39);
+            this.cbCategory.Size = new System.Drawing.Size(220, 46);
             this.cbCategory.TabIndex = 6;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 

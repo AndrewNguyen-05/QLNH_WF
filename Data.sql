@@ -216,3 +216,32 @@ BEGIN
 	END
 END 
 GO
+
+CREATE TRIGGER UTG_UpdateBillInfo
+ON BillInfo FOR INSERT, UPDATE
+AS 
+BEGIN
+	DECLARE @idBill INT
+	SELECT @idBill = idBill FROM Inserted
+	DECLARE @idTable INT
+	SELECT @idTable = idTable FROM Bill WHERE id = @idBill AND status = 0
+	UPDATE TableFood SET status = N'Có Người' WHERE id = @idTable
+END
+GO
+
+CREATE TRIGGER UTG_UpdateBill
+ON Bill FOR UPDATE
+AS 
+BEGIN
+	DECLARE @idBill INT
+	SELECT @idBill = id FROM Inserted
+
+	DECLARE @idTable INT
+	SELECT @idTable = idTable FROM Bill WHERE id = @idBill
+
+	DECLARE @count INT = 0
+	SELECT @count = COUNT(*) FROM Bill WHERE idTable = @idTable and status = 0
+	IF (@count = 0)
+		UPDATE TableFood SET status = N'Trống' WHERE id = @idTable
+END
+GO

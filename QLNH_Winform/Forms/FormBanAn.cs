@@ -6,96 +6,76 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
 using System.Windows.Forms;
+using QLNH_Winform.DAO;
+using QLNH_Winform.DTO;
 
 namespace QLNH_Winform.Forms
 {
     public partial class FormBanAn : Form
     {
+        BindingSource tableList = new BindingSource();
         public FormBanAn()
         {
             InitializeComponent();
+            LoadListTable();
+            dtgvTable.DataSource = tableList;
+            dtgvTable.Columns["ID"].Visible = false;
         }
-         
-        private void dataGridTable_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        
+        void LoadListTable()
         {
-            if (e.RowIndex >= 0)
+            tableList.DataSource = TableDAO.Instance.LoadTableList();
+        }
+        void LoadListTable(string name)
+        {
+            tableList.DataSource = TableDAO.Instance.LoadTableList(name);
+        }
+
+        private void btnAddTable_Click(object sender, EventArgs e)
+        {
+            if (TableDAO.Instance.InsertTable(""))
             {
-                dataGridTable.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(249, 118, 176);
-                dataGridTable.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.FromArgb(23, 22, 37);
+                LoadListTable();
+                dtgvTable.CurrentCell = dtgvTable.Rows[dtgvTable.Rows.Count - 1].Cells["Name"];
             }
         }
 
-        private void dataGridTable_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        private void btnDelTable_Click(object sender, EventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (dtgvTable.SelectedCells.Count <= 0) return;
+            foreach (DataGridViewCell dgvc in dtgvTable.SelectedCells)
             {
-                dataGridTable.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(34, 33, 74);
-                dataGridTable.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.White;
+                TableDAO.Instance.DeleteTable((int)dgvc.OwningRow.Cells[0].Value);
+            }
+            LoadListTable(txbSearchTable.Text);
+        }
+
+        private void dtgvTable_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (sender is null) return;
+            DataGridViewRow dgvr = (sender as DataGridView).Rows[e.RowIndex];
+            int id = (int)dgvr.Cells["ID"].Value;
+            string name = dgvr.Cells["Name"].Value.ToString();
+
+            if (TableDAO.Instance.UpdateTable(id, name))
+            {
+                LoadListTable(txbSearchTable.Text);
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void txbSearchTable_TextChanged(object sender, EventArgs e)
         {
-            DataGridViewRow tmp = new DataGridViewRow();
-            tmp.Height = 30;
-            dataGridTable.Rows.Add(tmp);
+            LoadListTable(txbSearchTable.Text);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void dtgvTable_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            //dataGridTable.Rows.Remove
-            for (int i = dataGridTable.RowCount - 1; i >= 0; i--) 
+            DataGridView dgv = sender as DataGridView;
+            if (e.ColumnIndex == 2)
             {
-                if ((dataGridTable.Rows[i].Cells[3].Value is null) == false)
-                {
-                    if (dataGridTable.Rows[i].Cells[3].Value.ToString() == "*")
-                    {
-                        dataGridTable.Rows.RemoveAt(i);
-                    }
-                }
-            }
-        }
-
-        private void dataGridTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridView dgt = sender as DataGridView;
-            if (e.RowIndex < 0 || e.RowIndex > dgt.RowCount - 1)
-            {
-                return;
-            }
-            if (e.ColumnIndex == 1)
-            {
-                if (e.RowIndex <= 0) return;
-                DataGridViewRow tmp = dgt.Rows[e.RowIndex];
-                dgt.Rows.RemoveAt(e.RowIndex);
-                dgt.Rows.Insert(e.RowIndex - 1, tmp);
-            }
-            else if (e.ColumnIndex == 2)
-            {
-                if (e.RowIndex >= dgt.RowCount - 1) return;
-                DataGridViewRow tmp = dgt.Rows[e.RowIndex + 1];
-                dgt.Rows.RemoveAt(e.RowIndex + 1);
-                dgt.Rows.Insert(e.RowIndex, tmp);
-            }
-        }
-
-        private void dataGridTable_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 3)
-            {
-                if (dataGridTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value is null)
-                {
-                    dataGridTable[e.ColumnIndex, e.RowIndex].Value = "*";
-                }
-                else if (dataGridTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "")
-                {
-                    dataGridTable[e.ColumnIndex, e.RowIndex].Value = "*";
-                }
-                else
-                {
-                    dataGridTable[e.ColumnIndex, e.RowIndex].Value = "";
-                }
+                dgv[e.ColumnIndex, e.RowIndex].ReadOnly = true;
             }
         }
     }

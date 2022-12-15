@@ -15,8 +15,8 @@ CREATE TABLE TableFood
 (
 	id INT IDENTITY PRIMARY KEY,
 	name NVARCHAR(100) NOT NULL DEFAULT N'Chưa đặt tên' ,
-	status NVARCHAR(100) NOT NULL DEFAULT N'Trống'--Trống || Có người
-
+	status NVARCHAR(100) NOT NULL DEFAULT N'Trống',--Trống || Có người
+	isHidden INT NOT NULL DEFAULT 0
 )
 GO
 
@@ -105,7 +105,7 @@ END
 GO
 
 CREATE PROC USP_GetTableList
-AS SELECT * FROM TableFood
+AS SELECT * FROM TableFood WHERE isHidden = 0
 GO
 
 EXEC USP_GetTableList

@@ -245,4 +245,10 @@ BEGIN
 		UPDATE TableFood SET status = N'Trống' WHERE id = @idTable
 END
 GO
- 
+
+CREATE PROC USP_GetAccountInfo
+AS
+BEGIN
+	SELECT UserName, DisplayName, [Type] FROM Account
+END
+

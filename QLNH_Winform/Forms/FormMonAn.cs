@@ -91,9 +91,9 @@ namespace QLNH_Winform.Forms
 
         private void dtgvFood_SelectionChanged(object sender, EventArgs e)
         {
-            if (dtgvFood.SelectedCells.Count > 0)
+            if (dtgvFood.SelectedRows.Count > 0)
             {
-                if (dtgvFood.SelectedCells.Count == 1)
+                if (dtgvFood.SelectedRows.Count == 1)
                 {
                     DataGridViewCell dgvc = dtgvFood.SelectedCells[0];
                     int categoryID = (int) dgvc.OwningRow.Cells[2].Value;
@@ -108,7 +108,7 @@ namespace QLNH_Winform.Forms
                     }
                     cbFoodCategory.SelectedIndex = i;
                 }
-                else
+                else 
                 {
                     cbFoodCategory.Text = "";
                 }

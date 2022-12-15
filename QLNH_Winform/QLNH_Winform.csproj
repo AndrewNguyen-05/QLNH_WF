@@ -65,6 +65,7 @@
     <Compile Include="DAO\FoodDAO.cs" />
     <Compile Include="DAO\MenuFoodDAO.cs" />
     <Compile Include="DAO\TableDAO.cs" />
+    <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Bill.cs" />
     <Compile Include="DTO\BillInfo.cs" />
     <Compile Include="DTO\FoodCategory.cs" />

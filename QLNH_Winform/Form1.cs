@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using QLNH_Winform.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,16 +16,25 @@ namespace QLNH_Winform
 {
     public partial class FormMainMenu : Form
     {
+        private Account loginAccount;
+
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; }
+        }
+
         //Fields
         private IconButton currentButton;
         private Form currentChildForm;
         private Panel leftBorderBtn;
 
-
         //Constructor
-        public FormMainMenu()
+        public FormMainMenu(Account acc)
         {
             InitializeComponent();
+
+            this.LoginAccount = acc; 
 
             this.ClientSize = new System.Drawing.Size(1440, 800);
 
@@ -42,9 +52,9 @@ namespace QLNH_Winform
 
         private void ActivateButton(object btnSender, Color color)
         {
-            if(btnSender != null)
+            if (btnSender != null)
             {
-                if(currentButton != (IconButton)btnSender)
+                if (currentButton != (IconButton)btnSender)
                 {
                     //Button
                     DeactivateButton();
@@ -70,19 +80,19 @@ namespace QLNH_Winform
                     btnCurrentChildForm.IconChar = currentButton.IconChar;
                     btnCurrentChildForm.IconColor = color;
 
-                }    
-            }    
+                }
+            }
         }
 
         private void DeactivateButton()
-        {  
-            if(currentButton != null)
+        {
+            if (currentButton != null)
             {
-                
+
                 currentButton.BackColor = Color.FromArgb(41, 39, 40);
                 currentButton.ForeColor = Color.Gainsboro;
                 currentButton.TextAlign = ContentAlignment.MiddleLeft;
-                currentButton.IconColor = Color.Gainsboro; 
+                currentButton.IconColor = Color.Gainsboro;
                 currentButton.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentButton.ImageAlign = ContentAlignment.MiddleLeft;
                 currentButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -101,7 +111,7 @@ namespace QLNH_Winform
         //}
         private void OpenChildForm(Form childForm)
         {
-            if(currentChildForm != null)
+            if (currentChildForm != null)
             {
                 //Chi mo form
                 currentChildForm.Close();
@@ -194,6 +204,6 @@ namespace QLNH_Winform
             this.Hide();
         }
 
-        
+
     }
 }

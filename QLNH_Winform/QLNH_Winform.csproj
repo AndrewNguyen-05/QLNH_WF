@@ -185,5 +185,32 @@
   <ItemGroup>
     <None Include="Resources\Plus.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuFood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuFood1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuFood2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuFood3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

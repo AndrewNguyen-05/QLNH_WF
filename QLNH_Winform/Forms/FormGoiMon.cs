@@ -132,7 +132,6 @@ namespace QLNH_Winform.Forms
                 {
                     BillDAO.Instance.CheckOut(idBill);
                     ShowBill(table.ID);
-
                     LoadTable();
                 }
             }

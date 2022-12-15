@@ -24,6 +24,8 @@ namespace QLNH_Winform.Forms
             LoadCategoryIntoCombobox(cbFoodCategory);
             dtgvFood.DataSource = foodList;
             dtgvFood.Columns["ID"].Visible = false;
+            // Tool tip 
+            toolTip1.SetToolTip(cbFoodCategory, "Chọn để sửa");
         }
 
         void AddFoodBinding()
@@ -54,6 +56,7 @@ namespace QLNH_Winform.Forms
                 LoadListFood();
                 txbSearchFood.Clear();
             }
+            
         }
 
         private void btnDelFood_Click(object sender, EventArgs e)

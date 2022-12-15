@@ -18,10 +18,10 @@ namespace QLNH_Winform
             {
                 formMainMenu = new FormMainMenu[2];
                 formLogin = new FormLogin();
-                formMainMenu[0] = new FormMainMenu();
                 formNumber = 0;
                 if (formLogin.ShowDialog() == DialogResult.OK)
                 {
+                    formMainMenu[formNumber] = new FormMainMenu(formLogin.loginAccount);
                     formMainMenu[formNumber].Show();
                     this.formMainMenuClosed += QLNHApplicationContext_formMainMenuClosed;
                 }
@@ -31,9 +31,9 @@ namespace QLNH_Winform
                 this.formMainMenuClosed -= QLNHApplicationContext_formMainMenuClosed;
                 formNumber = (formNumber + 1) % 2;
                 formLogin = new FormLogin();
-                formMainMenu[formNumber] = new FormMainMenu();
                 if (formLogin.ShowDialog() == DialogResult.OK)
                 {
+                    formMainMenu[formNumber] = new FormMainMenu(formLogin.loginAccount);
                     formMainMenu[formNumber].Show();
                     this.formMainMenuClosed += QLNHApplicationContext_formMainMenuClosed;
                 }

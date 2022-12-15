@@ -15,24 +15,21 @@ namespace QLNH_Winform.Forms
 {
     public partial class FormLogin : Form
     {
+        internal Account loginAccount;
         public FormLogin()
         {
             InitializeComponent();
-            //this.DialogResult = DialogResult.Cancel;
+            this.DialogResult = DialogResult.Cancel;
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
+            loginAccount = null;
             if (Login(username, password))
             {
-                Account loginAccount = AccountDAO.Instance.GetAccountByUserName(username);
-
-                //this.DialogResult = DialogResult.OK;
-                FormMainMenu f = new FormMainMenu(loginAccount);
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
+                loginAccount = AccountDAO.Instance.GetAccountByUserName(username);
+                this.DialogResult = DialogResult.OK;
             }
             else
             {

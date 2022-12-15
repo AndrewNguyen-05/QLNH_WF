@@ -53,7 +53,6 @@ namespace QLNH_Winform
         void ChangeAccount(int type)
         {
             btnNhanVien.Visible = (type == 1);
-            btnTaiKhoan.Visible = (type == 1);
             btnThongKe.Visible = (type == 1);
         }
 

@@ -16,5 +16,6 @@ namespace QLNH_Winform.Forms
         {
             InitializeComponent();
         }
+
     }
 }

@@ -195,11 +195,11 @@
             // lblQLNH
             // 
             this.lblQLNH.AutoSize = true;
-            this.lblQLNH.Font = new System.Drawing.Font("iCielBC Cubano Normal", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQLNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQLNH.ForeColor = System.Drawing.Color.Black;
             this.lblQLNH.Location = new System.Drawing.Point(667, 90);
             this.lblQLNH.Name = "lblQLNH";
-            this.lblQLNH.Size = new System.Drawing.Size(142, 58);
+            this.lblQLNH.Size = new System.Drawing.Size(239, 82);
             this.lblQLNH.TabIndex = 8;
             this.lblQLNH.Text = "QLNH";
             // 
@@ -222,6 +222,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormLogin_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnControl.ResumeLayout(false);
             this.ResumeLayout(false);

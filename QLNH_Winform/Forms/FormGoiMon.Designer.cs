@@ -61,7 +61,7 @@
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1185, 60);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1185, 45);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // guna2GradientPanel2
@@ -78,7 +78,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Tomato;
-            this.label1.Location = new System.Drawing.Point(14, 12);
+            this.label1.Location = new System.Drawing.Point(7, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(225, 28);
             this.label1.TabIndex = 0;
@@ -100,10 +100,10 @@
             this.guna2GradientPanel4.Controls.Add(this.label3);
             this.guna2GradientPanel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2GradientPanel4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(575, 60);
+            this.guna2GradientPanel4.Location = new System.Drawing.Point(575, 45);
             this.guna2GradientPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(610, 726);
+            this.guna2GradientPanel4.Size = new System.Drawing.Size(610, 741);
             this.guna2GradientPanel4.TabIndex = 3;
             // 
             // nmFoodCount
@@ -114,10 +114,10 @@
             this.nmFoodCount.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmFoodCount.Location = new System.Drawing.Point(262, 63);
             this.nmFoodCount.Minimum = new decimal(new int[] {
-            1,
+            100,
             0,
             0,
-            0});
+            -2147483648});
             this.nmFoodCount.Name = "nmFoodCount";
             this.nmFoodCount.Size = new System.Drawing.Size(100, 36);
             this.nmFoodCount.TabIndex = 10;
@@ -144,7 +144,7 @@
             this.btnAddFood.FillColor2 = System.Drawing.Color.Transparent;
             this.btnAddFood.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFood.ForeColor = System.Drawing.Color.Brown;
-            this.btnAddFood.Location = new System.Drawing.Point(379, 63);
+            this.btnAddFood.Location = new System.Drawing.Point(379, 70);
             this.btnAddFood.Name = "btnAddFood";
             this.btnAddFood.Size = new System.Drawing.Size(202, 67);
             this.btnAddFood.TabIndex = 8;
@@ -156,7 +156,7 @@
             this.cbFood.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbFood.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFood.FormattingEnabled = true;
-            this.cbFood.Location = new System.Drawing.Point(36, 114);
+            this.cbFood.Location = new System.Drawing.Point(36, 121);
             this.cbFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbFood.Name = "cbFood";
             this.cbFood.Size = new System.Drawing.Size(220, 46);
@@ -167,7 +167,7 @@
             this.cbCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbCategory.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(36, 63);
+            this.cbCategory.Location = new System.Drawing.Point(36, 70);
             this.cbCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(220, 46);
@@ -186,7 +186,7 @@
             this.lsvBill.ForeColor = System.Drawing.Color.Indigo;
             this.lsvBill.GridLines = true;
             this.lsvBill.HideSelection = false;
-            this.lsvBill.Location = new System.Drawing.Point(36, 171);
+            this.lsvBill.Location = new System.Drawing.Point(36, 178);
             this.lsvBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lsvBill.Name = "lsvBill";
             this.lsvBill.Size = new System.Drawing.Size(545, 362);
@@ -226,7 +226,7 @@
             this.btnPay.FillColor2 = System.Drawing.Color.MediumPurple;
             this.btnPay.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Location = new System.Drawing.Point(36, 609);
+            this.btnPay.Location = new System.Drawing.Point(36, 616);
             this.btnPay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(545, 60);
@@ -238,7 +238,7 @@
             // 
             this.lblTotalPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(364, 549);
+            this.lblTotalPrice.Location = new System.Drawing.Point(364, 556);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(217, 48);
             this.lblTotalPrice.TabIndex = 4;
@@ -249,7 +249,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 549);
+            this.label3.Location = new System.Drawing.Point(31, 556);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(171, 49);
             this.label3.TabIndex = 3;
@@ -261,10 +261,10 @@
             this.flpTable.AutoScroll = true;
             this.flpTable.BackColor = System.Drawing.Color.White;
             this.flpTable.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flpTable.Location = new System.Drawing.Point(0, 60);
+            this.flpTable.Location = new System.Drawing.Point(0, 45);
             this.flpTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(537, 726);
+            this.flpTable.Size = new System.Drawing.Size(537, 741);
             this.flpTable.TabIndex = 1;
             // 
             // FormGoiMon

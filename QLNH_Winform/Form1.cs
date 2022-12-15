@@ -90,15 +90,15 @@ namespace QLNH_Winform
         }
 
         //Structs
-        private struct RGBColors
-        {
-            public static Color color1 = Color.FromArgb(178, 8, 55);
-            public static Color color2 = Color.FromArgb(178, 8, 55);
-            public static Color color3 = Color.FromArgb(178, 8, 55);
-            public static Color color4 = Color.FromArgb(178, 8, 55);
-            public static Color color5 = Color.FromArgb(178, 8, 55);
-            public static Color color6 = Color.FromArgb(178, 8, 55);
-        }
+        //private struct RGBColors
+        //{
+        //    public static Color color1 = Color.FromArgb(178, 8, 55);
+        //    public static Color color2 = Color.FromArgb(178, 8, 55);
+        //    public static Color color3 = Color.FromArgb(178, 8, 55);
+        //    public static Color color4 = Color.FromArgb(178, 8, 55);
+        //    public static Color color5 = Color.FromArgb(178, 8, 55);
+        //    public static Color color6 = Color.FromArgb(178, 8, 55);
+        //}
         private void OpenChildForm(Form childForm)
         {
             if(currentChildForm != null)
@@ -121,39 +121,44 @@ namespace QLNH_Winform
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color6);
+            ActivateButton(sender, Color.FromArgb(178, 8, 55));
             OpenChildForm(new Forms.FormGoiMon());
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, Color.FromArgb(178, 8, 55));
             OpenChildForm(new Forms.FormThongKe());
         }
 
         private void btnBanAn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color2);
+            ActivateButton(sender, Color.FromArgb(178, 8, 55));
             OpenChildForm(new Forms.FormBanAn());
         }
 
         private void btnMonAn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, Color.FromArgb(178, 8, 55));
             OpenChildForm(new Forms.FormMonAn());
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color4);
+            ActivateButton(sender, Color.FromArgb(178, 8, 55));
             OpenChildForm(new Forms.FormNhanVien());
         }
         private void btnKhoHang_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color5);
+            ActivateButton(sender, Color.FromArgb(178, 8, 55));
             OpenChildForm(new Forms.FormKhoHang());
         }
 
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.FromArgb(178, 8, 55));
+            OpenChildForm(new Forms.FormTaiKhoan());
+        }
         private void Reset()
         {
             DeactivateButton();
@@ -188,5 +193,7 @@ namespace QLNH_Winform
         {
             this.Hide();
         }
+
+        
     }
 }

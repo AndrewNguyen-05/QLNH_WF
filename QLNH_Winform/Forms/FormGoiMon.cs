@@ -101,7 +101,7 @@ namespace QLNH_Winform.Forms
             Table table = lsvBill.Tag as Table;
             if (table is null)
             {
-                MessageBox.Show("Vui lòng chọn bàn");
+                MessageBox.Show("Vui lòng chọn bàn", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return;
             } 
             int idBill = BillDAO.Instance.GetUncheckBillIDbyTableID(table.ID);

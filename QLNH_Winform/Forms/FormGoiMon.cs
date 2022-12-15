@@ -54,7 +54,7 @@ namespace QLNH_Winform.Forms
                     case "Trống":
                         btn.BackColor = Color.OldLace;
                         break;
-                    case "Có người":
+                    case "Có Người":
                         btn.BackColor = Color.Pink;
                         break;
                 }

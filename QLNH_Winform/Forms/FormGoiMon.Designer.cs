@@ -112,7 +112,7 @@
             this.nmFoodCount.BorderRadius = 6;
             this.nmFoodCount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nmFoodCount.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nmFoodCount.Location = new System.Drawing.Point(262, 63);
+            this.nmFoodCount.Location = new System.Drawing.Point(262, 70);
             this.nmFoodCount.Minimum = new decimal(new int[] {
             100,
             0,

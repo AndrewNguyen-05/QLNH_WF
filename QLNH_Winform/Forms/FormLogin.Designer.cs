@@ -171,6 +171,7 @@
             this.pnControl.Name = "pnControl";
             this.pnControl.Size = new System.Drawing.Size(929, 33);
             this.pnControl.TabIndex = 9;
+            this.pnControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnControl_MouseDown);
             // 
             // ControlMinimize
             // 

@@ -27,14 +27,14 @@ namespace QLNH_Winform.DTO
         }
         private string name;
         private int id;
-        private int CategoryID;
+        private int categoryID;
         private float price;
 
         [DisplayName("Tên Món")]
         public string Name { get => name; set => name = value; }
         public int ID { get => id; set => id = value; }
         [DisplayName("Danh Mục")]
-        public int CategoryID1 { get => CategoryID; set => CategoryID = value; }
+        public int CategoryID { get => categoryID; set => categoryID = value; }
         [DisplayName("Giá Tiền")]
         public float Price { get => price; set => price = value; }
     }

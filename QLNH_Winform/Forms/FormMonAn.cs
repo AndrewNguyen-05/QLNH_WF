@@ -55,6 +55,7 @@ namespace QLNH_Winform.Forms
             {
                 LoadListFood();
                 txbSearchFood.Clear();
+                dtgvFood.CurrentCell = dtgvFood.Rows[dtgvFood.Rows.Count - 1].Cells["Name"];
             }
             
         }
@@ -73,10 +74,10 @@ namespace QLNH_Winform.Forms
         {
             if (sender is null) return;
             DataGridViewRow dgvr = (sender as DataGridView).Rows[e.RowIndex];
-            int idFood = (int)dgvr.Cells[1].Value;
-            string Name = dgvr.Cells[0].Value.ToString();
-            int id = (int)dgvr.Cells[2].Value;
-            float price = (float)dgvr.Cells[3].Value;
+            int idFood = (int)dgvr.Cells["ID"].Value;
+            string Name = dgvr.Cells["Name"].Value.ToString();
+            int id = (int)dgvr.Cells["CategoryID"].Value;
+            float price = (float)dgvr.Cells["Price"].Value;
 
             if (FoodDAO.Instance.UpdateFood(idFood, Name, id, price))
             {
@@ -96,7 +97,7 @@ namespace QLNH_Winform.Forms
                 if (dtgvFood.SelectedRows.Count == 1)
                 {
                     DataGridViewCell dgvc = dtgvFood.SelectedCells[0];
-                    int categoryID = (int) dgvc.OwningRow.Cells[2].Value;
+                    int categoryID = (int) dgvc.OwningRow.Cells["CategoryID"].Value;
                     FoodCategory foodCategory = FoodCategoryDAO.Instance.GetCategoryByID(categoryID);
                     int i = 0;
                     for (i = 0; i < cbFoodCategory.Items.Count; i++)
@@ -122,10 +123,10 @@ namespace QLNH_Winform.Forms
                 foreach (DataGridViewCell dgvc in dtgvFood.SelectedCells)
                 {
                     DataGridViewRow dgvr = dgvc.OwningRow;
-                    int idFood = (int)dgvr.Cells[1].Value;
-                    string Name = dgvr.Cells[0].Value.ToString();
-                    int id = (cbFoodCategory.SelectedItem as FoodCategory).ID;
-                    float price = (float)dgvr.Cells[3].Value;
+                    int idFood = (int)dgvr.Cells["ID"].Value;
+                    string Name = dgvr.Cells["Name"].Value.ToString();
+                    int id = (int)dgvr.Cells["CategoryID"].Value;
+                    float price = (float)dgvr.Cells["Price"].Value;
                     FoodDAO.Instance.UpdateFood(idFood, Name, id, price);
                 }
             }

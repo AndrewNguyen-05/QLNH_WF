@@ -52,9 +52,9 @@ namespace QLNH_Winform
 
         void ChangeAccount(int type)
         {
-            btnNhanVien.Enabled = (type == 1);
-            btnTaiKhoan.Enabled = (type == 1);
-            btnThongKe.Enabled = (type == 1);
+            btnNhanVien.Visible = (type == 1);
+            btnTaiKhoan.Visible = (type == 1);
+            btnThongKe.Visible = (type == 1);
         }
 
         private void ActivateButton(object btnSender, Color color)

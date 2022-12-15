@@ -34,7 +34,7 @@ namespace QLNH_Winform.DAO
 
         public Account GetAccountByUserName(string userName)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM account WHERE userName = " + userName);
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM account WHERE userName = '" + userName + "'");
             foreach(DataRow item in data.Rows)
             {
                 return new Account(item);

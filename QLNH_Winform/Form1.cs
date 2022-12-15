@@ -21,7 +21,7 @@ namespace QLNH_Winform
         public Account LoginAccount
         {
             get { return loginAccount; }
-            set { loginAccount = value; }
+            set { loginAccount = value; ChangeAccount(loginAccount.Typee); }
         }
 
         //Fields
@@ -48,6 +48,13 @@ namespace QLNH_Winform
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+        }
+
+        void ChangeAccount(int type)
+        {
+            btnNhanVien.Enabled = (type == 1);
+            btnTaiKhoan.Enabled = (type == 1);
+            btnThongKe.Enabled = (type == 1);
         }
 
         private void ActivateButton(object btnSender, Color color)

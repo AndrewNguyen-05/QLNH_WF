@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace QLNH_Winform.DTO
 {
-    internal class Account
+    public class Account
     {
         public Account(string userName, string displayName, int type, string passWord = null)
         {
@@ -23,7 +23,7 @@ namespace QLNH_Winform.DTO
             this.UserName = row["userName"].ToString();
             this.DisplayName = row["displayName"].ToString();
             this.Typee = (int)row["type"];
-            this.UserName = row["userName"].ToString();
+            this.UserName = row["passWord"].ToString();
 
         }
 

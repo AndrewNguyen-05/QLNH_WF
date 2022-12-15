@@ -1,4 +1,5 @@
 ﻿using QLNH_Winform.DAO;
+using QLNH_Winform.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace QLNH_Winform.Forms
         public FormLogin()
         {
             InitializeComponent();
-            this.DialogResult = DialogResult.Cancel;
+            //this.DialogResult = DialogResult.Cancel;
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -25,7 +26,13 @@ namespace QLNH_Winform.Forms
             string password = txtPassword.Text;
             if (Login(username, password))
             {
-                this.DialogResult = DialogResult.OK;
+                Account loginAccount = AccountDAO.Instance.GetAccountByUserName(username);
+
+                //this.DialogResult = DialogResult.OK;
+                FormMainMenu f = new FormMainMenu(loginAccount);
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
             }
             else
             {

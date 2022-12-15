@@ -158,6 +158,7 @@ GO
 
 SELECT * FROM Bill WHERE idTable = 55 AND status = 1
 
+SELECT * FROM Account
 SELECT * FROM Bill
 SELECT * FROM BillInfo
 SELECT * FROM Food

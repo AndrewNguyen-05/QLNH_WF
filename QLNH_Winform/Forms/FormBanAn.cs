@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Data;
+﻿using QLNH_Winform.DAO;
+using System;
 using System.Windows.Forms;
-using QLNH_Winform.DAO;
-using QLNH_Winform.DTO;
 
 namespace QLNH_Winform.Forms
 {

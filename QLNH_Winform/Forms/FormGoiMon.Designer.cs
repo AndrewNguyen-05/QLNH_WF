@@ -80,7 +80,7 @@
             this.label1.ForeColor = System.Drawing.Color.Tomato;
             this.label1.Location = new System.Drawing.Point(7, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 28);
+            this.label1.Size = new System.Drawing.Size(156, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "RESTAURANT ORDERS";
             // 
@@ -113,7 +113,7 @@
             this.nmFoodCount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nmFoodCount.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmFoodCount.Location = new System.Drawing.Point(262, 70);
-            this.nmFoodCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nmFoodCount.Margin = new System.Windows.Forms.Padding(4);
             this.nmFoodCount.Minimum = new decimal(new int[] {
             100,
             0,
@@ -160,7 +160,7 @@
             this.cbFood.Location = new System.Drawing.Point(36, 121);
             this.cbFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbFood.Name = "cbFood";
-            this.cbFood.Size = new System.Drawing.Size(220, 46);
+            this.cbFood.Size = new System.Drawing.Size(220, 33);
             this.cbFood.TabIndex = 7;
             // 
             // cbCategory
@@ -171,7 +171,7 @@
             this.cbCategory.Location = new System.Drawing.Point(36, 70);
             this.cbCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(220, 46);
+            this.cbCategory.Size = new System.Drawing.Size(220, 33);
             this.cbCategory.TabIndex = 6;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
@@ -218,6 +218,9 @@
             // btnPay
             // 
             this.btnPay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPay.Animated = true;
+            this.btnPay.AutoRoundedCorners = true;
+            this.btnPay.BorderRadius = 29;
             this.btnPay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnPay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnPay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -225,7 +228,7 @@
             this.btnPay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnPay.FillColor = System.Drawing.Color.Tomato;
             this.btnPay.FillColor2 = System.Drawing.Color.MediumPurple;
-            this.btnPay.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnPay.ForeColor = System.Drawing.Color.White;
             this.btnPay.Location = new System.Drawing.Point(36, 616);
             this.btnPay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

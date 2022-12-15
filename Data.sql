@@ -42,7 +42,7 @@ CREATE TABLE Food
 	name NVARCHAR(100) NOT NULL DEFAULT N'Chưa đặt tên',
 	idCategory INT NOT NULL,
 	price FLOAT NOT NULL DEFAULT 0,
-
+	isHidden INT NOT NULL DEFAULT 0,
 	FOREIGN KEY (idCategory) REFERENCES dbo.FoodCategory(id)
 )
 GO
@@ -216,3 +216,4 @@ BEGIN
 	END
 END 
 GO
+ 

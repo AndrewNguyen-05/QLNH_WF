@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -76,7 +77,10 @@ namespace QLNH_Winform.Forms
                 totalPrice += item.TotalPrice;
                 lsvBill.Items.Add(lsvitem);
             }
-            lblTotalPrice.Text = totalPrice.ToString() + " VND";
+            //CultureInfo culture = new CultureInfo("vi-VN");
+
+            //lblTotalPrice.Text = totalPrice.ToString("c", culture);
+            lblTotalPrice.Text = totalPrice.ToString();
         }
         #endregion
 
@@ -101,7 +105,7 @@ namespace QLNH_Winform.Forms
             Table table = lsvBill.Tag as Table;
             if (table is null)
             {
-                MessageBox.Show("Vui lòng chọn bàn", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn bàn!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return;
             } 
             int idBill = BillDAO.Instance.GetUncheckBillIDbyTableID(table.ID);
@@ -124,13 +128,24 @@ namespace QLNH_Winform.Forms
         private void btnPay_Click(object sender, EventArgs e)
         {
             Table table = lsvBill.Tag as Table;
+            if (table is null)
+            {
+                MessageBox.Show("Vui lòng chọn bàn cần thanh toán!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                return;
+            }
             int idBill = BillDAO.Instance.GetUncheckBillIDbyTableID(table.ID);
+            int discount = (int)nmDiscount.Value;
+            //double totalPrice = Convert.ToDouble(lblTotalPrice.Text.Split(',')[0]);
+            //double totalPrice = double.Parse(lblTotalPrice.Text, NumberStyles.Currency, new CultureInfo("vi-VN"));
+            double totalPrice = Convert.ToDouble(lblTotalPrice.Text);
+            double finalTotalPrice = totalPrice - (totalPrice / 100) * discount;
+
             if (idBill != -1)
             {
-                DialogResult res = MessageBox.Show("Bạn muốn thanh toán hóa đơn cho bàn " + table.Name + " ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult res = MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0} ?\nHóa đơn đã được giảm {2}%\nTổng tiền cần thanh toán là: {1} VND", table.Name, finalTotalPrice, discount), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (res == DialogResult.OK)
                 {
-                    BillDAO.Instance.CheckOut(idBill);
+                    BillDAO.Instance.CheckOut(idBill, discount);
                     ShowBill(table.ID);
                     LoadTable();
                 }

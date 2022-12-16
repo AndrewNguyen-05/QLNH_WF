@@ -9,12 +9,13 @@ namespace QLNH_Winform.DTO
 {
     internal class Bill
     {
-        public Bill(int id, DateTime? datecheckin, DateTime? datecheckout, int status)
+        public Bill(int id, DateTime? datecheckin, DateTime? datecheckout, int status, int discount)
         {
             this.ID = id;
             this.DateCheckIn = datecheckin;
             this.DateCheckOut = datecheckout;
             this.Status = status;
+            this.Discount = discount;
         }
 
         public Bill(DataRow row)
@@ -26,7 +27,11 @@ namespace QLNH_Winform.DTO
             if (dateCheckOutTmp.ToString() != "")
                 this.DateCheckOut = (DateTime?)row["DateCheckOut"];
             this.Status = (int)row["status"];
+            this.Discount = (int)row["discount"];
         }
+        private int discount;
+        public int Discount { get => discount; set => discount = value; }
+
         private DateTime? dateCheckOut;
         public DateTime? DateCheckOut { get => dateCheckOut; set => dateCheckOut = value; }
 

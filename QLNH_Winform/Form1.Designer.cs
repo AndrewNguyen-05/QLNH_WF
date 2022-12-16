@@ -323,7 +323,7 @@
             this.pnDesktop.Location = new System.Drawing.Point(287, 107);
             this.pnDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnDesktop.Name = "pnDesktop";
-            this.pnDesktop.Size = new System.Drawing.Size(1150, 688);
+            this.pnDesktop.Size = new System.Drawing.Size(1150, 690);
             this.pnDesktop.TabIndex = 2;
             // 
             // guna2Elipse1

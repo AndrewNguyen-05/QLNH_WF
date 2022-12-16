@@ -334,6 +334,7 @@
             // FormMainMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(1437, 797);
             this.Controls.Add(this.pnDesktop);
             this.Controls.Add(this.pnTitleBar);

@@ -145,6 +145,7 @@
             this.btnExit.BorderColor = System.Drawing.Color.DimGray;
             this.btnExit.BorderRadius = 20;
             this.btnExit.BorderThickness = 1;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -207,9 +208,11 @@
             // 
             // FormLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(929, 522);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.pnControl);

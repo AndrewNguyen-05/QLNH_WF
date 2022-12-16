@@ -49,6 +49,8 @@
             this.lblDiscount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbSwitchTable = new System.Windows.Forms.ComboBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
@@ -99,12 +101,14 @@
             this.guna2GradientPanel4.Controls.Add(this.nmFoodCount);
             this.guna2GradientPanel4.Controls.Add(this.btnAddFood);
             this.guna2GradientPanel4.Controls.Add(this.cbFood);
+            this.guna2GradientPanel4.Controls.Add(this.cbSwitchTable);
             this.guna2GradientPanel4.Controls.Add(this.cbCategory);
             this.guna2GradientPanel4.Controls.Add(this.lsvBill);
             this.guna2GradientPanel4.Controls.Add(this.btnPay);
             this.guna2GradientPanel4.Controls.Add(this.label4);
             this.guna2GradientPanel4.Controls.Add(this.label2);
             this.guna2GradientPanel4.Controls.Add(this.lblTotalPrice);
+            this.guna2GradientPanel4.Controls.Add(this.label5);
             this.guna2GradientPanel4.Controls.Add(this.lblDiscount);
             this.guna2GradientPanel4.Controls.Add(this.label3);
             this.guna2GradientPanel4.Dock = System.Windows.Forms.DockStyle.Right;
@@ -288,23 +292,13 @@
             this.nmDiscount.BorderRadius = 6;
             this.nmDiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nmDiscount.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.nmDiscount.Location = new System.Drawing.Point(429, 519);
+            this.nmDiscount.Location = new System.Drawing.Point(429, 506);
             this.nmDiscount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.nmDiscount.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
             this.nmDiscount.Name = "nmDiscount";
-            this.nmDiscount.Size = new System.Drawing.Size(93, 31);
+            this.nmDiscount.Size = new System.Drawing.Size(99, 44);
             this.nmDiscount.TabIndex = 10;
             this.nmDiscount.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.nmDiscount.UpDownButtonForeColor = System.Drawing.Color.Indigo;
-            this.nmDiscount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // lblDiscount
             // 
@@ -332,12 +326,35 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(536, 519);
+            this.label4.Location = new System.Drawing.Point(536, 512);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 38);
             this.label4.TabIndex = 4;
             this.label4.Text = "%";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(48, 489);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(145, 49);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Chuyển bàn ";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cbSwitchTable
+            // 
+            this.cbSwitchTable.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbSwitchTable.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSwitchTable.FormattingEnabled = true;
+            this.cbSwitchTable.Location = new System.Drawing.Point(53, 542);
+            this.cbSwitchTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbSwitchTable.Name = "cbSwitchTable";
+            this.cbSwitchTable.Size = new System.Drawing.Size(220, 46);
+            this.cbSwitchTable.TabIndex = 6;
+            this.cbSwitchTable.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // FormGoiMon
             // 
@@ -383,5 +400,7 @@
         private System.Windows.Forms.Label lblDiscount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbSwitchTable;
+        private System.Windows.Forms.Label label5;
     }
 }

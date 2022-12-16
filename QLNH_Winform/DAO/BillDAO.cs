@@ -39,7 +39,7 @@ namespace QLNH_Winform.DAO
 
         public void CheckOut(int id, int discount)
         {
-            string query = "UPDATE Bill SET status = 1, " + "discount = " + discount + " WHERE id = " + id.ToString();
+            string query = "UPDATE Bill SET DateCheckOut = GETDATE(), status = 1, " + "discount = " + discount + " WHERE id = " + id.ToString();
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 

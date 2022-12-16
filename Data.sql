@@ -181,11 +181,13 @@ BEGIN
 		( DateCheckIn,
 	      DateCheckOut,
 		  idTable,
-		  status
+		  status,
+		  discount
 		)
 	VALUES (GETDATE(),
 			NULL,
 			@idTable,
+			0,
 			0
 		   )
 END 
@@ -253,3 +255,8 @@ BEGIN
 	SELECT UserName, DisplayName, [Type] FROM Account
 END
 
+ALTER TABLE Bill ADD discount INT
+
+UPDATE Bill SET discount = 0
+
+SELECT * FROM Bill

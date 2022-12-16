@@ -22,7 +22,7 @@ namespace QLNH_Winform.Forms
 
             LoadTable();
             LoadCategory();
-
+            LoadComboboxTable(cbSwitchTable);
         }
         #region Method
 
@@ -55,7 +55,7 @@ namespace QLNH_Winform.Forms
                     case "Trống":
                         btn.BackColor = Color.OldLace;
                         break;
-                    case "Có Người":
+                    case "Có người":
                         btn.BackColor = Color.Pink;
                         break;
                 }
@@ -81,6 +81,12 @@ namespace QLNH_Winform.Forms
 
             //lblTotalPrice.Text = totalPrice.ToString("c", culture);
             lblTotalPrice.Text = totalPrice.ToString();
+        }
+
+        void LoadComboboxTable(ComboBox cb)
+        {
+            cb.DataSource = TableDAO.Instance.LoadTableList();
+            cb.DisplayMember = "Name";
         }
         #endregion
 
@@ -149,6 +155,20 @@ namespace QLNH_Winform.Forms
                     ShowBill(table.ID);
                     LoadTable();
                 }
+            }
+        }
+
+        private void btnSwitchTable_Click(object sender, EventArgs e)
+        {
+            int id1 = (lsvBill.Tag as Table).ID;
+
+            int id2 = (cbSwitchTable.SelectedItem as Table).ID;
+
+            if (MessageBox.Show(string.Format("Bạn có thật sự muốn chuyển từ {0} qua {1} không?", (lsvBill.Tag as Table).Name, (cbSwitchTable.SelectedItem as Table).Name), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                TableDAO.Instance.SwitchTable(id1, id2);
+
+                LoadTable();
             }
         }
     }

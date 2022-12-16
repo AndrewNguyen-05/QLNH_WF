@@ -54,6 +54,7 @@ CREATE TABLE Bill
 	DateCheckOut DATE,
 	idTable INT NOT NULL,
 	status INT NOT NULL DEFAULT 0, --1: Đã thanh toán && 0: Chưa thanh toán
+	discount INT NOT NULL DEFAULT 0,
 
 	FOREIGN KEY (idTable) REFERENCES dbo.TableFood(id)
 )
@@ -224,11 +225,35 @@ CREATE TRIGGER UTG_UpdateBillInfo
 ON BillInfo FOR INSERT, UPDATE
 AS 
 BEGIN
-	DECLARE @idBill INT
+DECLARE @idBill INT
+	
 	SELECT @idBill = idBill FROM Inserted
+	
 	DECLARE @idTable INT
-	SELECT @idTable = idTable FROM Bill WHERE id = @idBill AND status = 0
-	UPDATE TableFood SET status = N'Có Người' WHERE id = @idTable
+	
+	SELECT @idTable = idTable FROM dbo.Bill WHERE id = @idBill AND status = 0	
+	
+	DECLARE @count INT
+	SELECT @count = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idBill
+	
+	IF (@count > 0)
+	BEGIN
+	
+		PRINT @idTable
+		PRINT @idBill
+		PRINT @count
+		
+		UPDATE dbo.TableFood SET status = N'Có người' WHERE id = @idTable		
+		
+	END		
+	ELSE
+	BEGIN
+	PRINT @idTable
+		PRINT @idBill
+		PRINT @count
+	UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable	
+	END
+	
 END
 GO
 
@@ -237,15 +262,19 @@ ON Bill FOR UPDATE
 AS 
 BEGIN
 	DECLARE @idBill INT
-	SELECT @idBill = id FROM Inserted
-
+	
+	SELECT @idBill = id FROM Inserted	
+	
 	DECLARE @idTable INT
-	SELECT @idTable = idTable FROM Bill WHERE id = @idBill
-
-	DECLARE @count INT = 0
-	SELECT @count = COUNT(*) FROM Bill WHERE idTable = @idTable and status = 0
+	
+	SELECT @idTable = idTable FROM dbo.Bill WHERE id = @idBill
+	
+	DECLARE @count int = 0
+	
+	SELECT @count = COUNT(*) FROM dbo.Bill WHERE idTable = @idTable AND status = 0
+	
 	IF (@count = 0)
-		UPDATE TableFood SET status = N'Trống' WHERE id = @idTable
+		UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable
 END
 GO
 
@@ -254,9 +283,78 @@ AS
 BEGIN
 	SELECT UserName, DisplayName, [Type] FROM Account
 END
+GO
 
-ALTER TABLE Bill ADD discount INT
 
-UPDATE Bill SET discount = 0
+CREATE PROC USP_SwitchTable
+@idTable1 INT, @idTable2 int
+AS BEGIN
 
-SELECT * FROM Bill
+	DECLARE @idFirstBill int
+	DECLARE @idSecondBill INT
+	
+	DECLARE @isFirstTablEmpty INT = 1
+	DECLARE @isSecondTablEmpty INT = 1
+	
+	
+	SELECT @idSecondBill = id FROM dbo.Bill WHERE idTable = @idTable2 AND status = 0
+	SELECT @idFirstBill = id FROM dbo.Bill WHERE idTable = @idTable1 AND status = 0
+	
+	IF (@idFirstBill IS NULL)
+	BEGIN
+		INSERT dbo.Bill
+		        ( DateCheckIn ,
+		          DateCheckOut ,
+		          idTable ,
+		          status
+		        )
+		VALUES  ( GETDATE() , -- DateCheckIn - date
+		          NULL , -- DateCheckOut - date
+		          @idTable1 , -- idTable - int
+		          0  -- status - int
+		        )
+		        
+		SELECT @idFirstBill = MAX(id) FROM dbo.Bill WHERE idTable = @idTable1 AND status = 0
+		
+	END
+	
+	SELECT @isFirstTablEmpty = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idFirstBill
+	
+	PRINT @idFirstBill
+	PRINT @idSecondBill
+	PRINT '-----------'
+	
+	IF (@idSecondBill IS NULL)
+	BEGIN
+		INSERT dbo.Bill
+		        ( DateCheckIn ,
+		          DateCheckOut ,
+		          idTable ,
+		          status
+		        )
+		VALUES  ( GETDATE() , -- DateCheckIn - date
+		          NULL , -- DateCheckOut - date
+		          @idTable2 , -- idTable - int
+		          0  -- status - int
+		        )
+		SELECT @idSecondBill = MAX(id) FROM dbo.Bill WHERE idTable = @idTable2 AND status = 0
+		
+	END
+	
+	SELECT @isSecondTablEmpty = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idSecondBill
+
+	SELECT id INTO IDBillInfoTable FROM dbo.BillInfo WHERE idBill = @idSecondBill
+	
+	UPDATE dbo.BillInfo SET idBill = @idSecondBill WHERE idBill = @idFirstBill
+	
+	UPDATE dbo.BillInfo SET idBill = @idFirstBill WHERE id IN (SELECT * FROM IDBillInfoTable)
+	
+	DROP TABLE IDBillInfoTable
+	
+	IF (@isFirstTablEmpty = 0)
+		UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable2
+		
+	IF (@isSecondTablEmpty= 0)
+		UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable1
+END
+GO

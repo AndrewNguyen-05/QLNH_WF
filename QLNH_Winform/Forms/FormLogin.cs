@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -23,12 +24,13 @@ namespace QLNH_Winform.Forms
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            loginAccount = null;
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            loginAccount = null;
             if (Login(username, password))
             {
                 loginAccount = AccountDAO.Instance.GetAccountByUserName(username);
+                MessageBox.Show(loginAccount.UserName);
                 this.DialogResult = DialogResult.OK;
             }
             else

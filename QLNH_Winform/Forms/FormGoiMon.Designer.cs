@@ -34,7 +34,6 @@
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.nmDiscount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.nmFoodCount = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.btnAddFood = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cbFood = new System.Windows.Forms.ComboBox();
             this.cbSwitchTable = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
@@ -99,6 +98,7 @@
             this.guna2GradientPanel4.BorderThickness = 2;
             this.guna2GradientPanel4.Controls.Add(this.nmDiscount);
             this.guna2GradientPanel4.Controls.Add(this.nmFoodCount);
+            this.guna2GradientPanel4.Controls.Add(this.btnSwitchTable);
             this.guna2GradientPanel4.Controls.Add(this.btnAddFood);
             this.guna2GradientPanel4.Controls.Add(this.cbFood);
             this.guna2GradientPanel4.Controls.Add(this.cbSwitchTable);
@@ -108,7 +108,6 @@
             this.guna2GradientPanel4.Controls.Add(this.label4);
             this.guna2GradientPanel4.Controls.Add(this.label2);
             this.guna2GradientPanel4.Controls.Add(this.lblTotalPrice);
-            this.guna2GradientPanel4.Controls.Add(this.label5);
             this.guna2GradientPanel4.Controls.Add(this.lblDiscount);
             this.guna2GradientPanel4.Controls.Add(this.label3);
             this.guna2GradientPanel4.Dock = System.Windows.Forms.DockStyle.Right;
@@ -142,7 +141,7 @@
             this.nmFoodCount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nmFoodCount.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmFoodCount.Location = new System.Drawing.Point(278, 70);
-            this.nmFoodCount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.nmFoodCount.Margin = new System.Windows.Forms.Padding(5);
             this.nmFoodCount.Minimum = new decimal(new int[] {
             100,
             0,
@@ -158,28 +157,6 @@
             0,
             0,
             0});
-            // 
-            // btnAddFood
-            // 
-            this.btnAddFood.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddFood.BorderColor = System.Drawing.Color.RosyBrown;
-            this.btnAddFood.BorderRadius = 6;
-            this.btnAddFood.BorderThickness = 2;
-            this.btnAddFood.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddFood.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddFood.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddFood.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddFood.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnAddFood.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFood.ForeColor = System.Drawing.Color.Brown;
-            this.btnAddFood.Location = new System.Drawing.Point(379, 70);
-            this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(202, 90);
-            this.btnAddFood.TabIndex = 8;
-            this.btnAddFood.Text = "Thêm món ăn";
-            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // cbFood
             // 
@@ -231,7 +208,7 @@
             this.lsvBill.Location = new System.Drawing.Point(36, 178);
             this.lsvBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lsvBill.Name = "lsvBill";
-            this.lsvBill.Size = new System.Drawing.Size(545, 251);
+            this.lsvBill.Size = new System.Drawing.Size(545, 295);
             this.lsvBill.TabIndex = 0;
             this.lsvBill.UseCompatibleStateImageBehavior = false;
             this.lsvBill.View = System.Windows.Forms.View.Details;
@@ -394,13 +371,13 @@
         private System.Windows.Forms.FlowLayoutPanel flpTable;
         private System.Windows.Forms.ComboBox cbFood;
         private System.Windows.Forms.ComboBox cbCategory;
-        private Guna.UI2.WinForms.Guna2GradientButton btnAddFood;
         private Guna.UI2.WinForms.Guna2NumericUpDown nmFoodCount;
         private Guna.UI2.WinForms.Guna2NumericUpDown nmDiscount;
         private System.Windows.Forms.Label lblDiscount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbSwitchTable;
-        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSwitchTable;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAddFood;
     }
 }

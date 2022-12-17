@@ -34,7 +34,6 @@
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.nmDiscount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.nmFoodCount = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.btnAddFood = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cbFood = new System.Windows.Forms.ComboBox();
             this.cbSwitchTable = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
@@ -47,10 +46,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAddFood = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnSwitchTable = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).BeginInit();
@@ -87,7 +87,7 @@
             this.label1.ForeColor = System.Drawing.Color.Tomato;
             this.label1.Location = new System.Drawing.Point(7, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 23);
+            this.label1.Size = new System.Drawing.Size(225, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "RESTAURANT ORDERS";
             // 
@@ -99,6 +99,7 @@
             this.guna2GradientPanel4.BorderThickness = 2;
             this.guna2GradientPanel4.Controls.Add(this.nmDiscount);
             this.guna2GradientPanel4.Controls.Add(this.nmFoodCount);
+            this.guna2GradientPanel4.Controls.Add(this.btnSwitchTable);
             this.guna2GradientPanel4.Controls.Add(this.btnAddFood);
             this.guna2GradientPanel4.Controls.Add(this.cbFood);
             this.guna2GradientPanel4.Controls.Add(this.cbSwitchTable);
@@ -108,7 +109,6 @@
             this.guna2GradientPanel4.Controls.Add(this.label4);
             this.guna2GradientPanel4.Controls.Add(this.label2);
             this.guna2GradientPanel4.Controls.Add(this.lblTotalPrice);
-            this.guna2GradientPanel4.Controls.Add(this.label5);
             this.guna2GradientPanel4.Controls.Add(this.lblDiscount);
             this.guna2GradientPanel4.Controls.Add(this.label3);
             this.guna2GradientPanel4.Dock = System.Windows.Forms.DockStyle.Right;
@@ -127,7 +127,7 @@
             this.nmDiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nmDiscount.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.nmDiscount.Location = new System.Drawing.Point(429, 506);
-            this.nmDiscount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.nmDiscount.Margin = new System.Windows.Forms.Padding(5);
             this.nmDiscount.Name = "nmDiscount";
             this.nmDiscount.Size = new System.Drawing.Size(99, 44);
             this.nmDiscount.TabIndex = 10;
@@ -142,7 +142,7 @@
             this.nmFoodCount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nmFoodCount.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmFoodCount.Location = new System.Drawing.Point(278, 70);
-            this.nmFoodCount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.nmFoodCount.Margin = new System.Windows.Forms.Padding(5);
             this.nmFoodCount.Minimum = new decimal(new int[] {
             100,
             0,
@@ -159,28 +159,6 @@
             0,
             0});
             // 
-            // btnAddFood
-            // 
-            this.btnAddFood.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddFood.BorderColor = System.Drawing.Color.RosyBrown;
-            this.btnAddFood.BorderRadius = 6;
-            this.btnAddFood.BorderThickness = 2;
-            this.btnAddFood.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddFood.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddFood.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddFood.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddFood.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnAddFood.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFood.ForeColor = System.Drawing.Color.Brown;
-            this.btnAddFood.Location = new System.Drawing.Point(379, 70);
-            this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(202, 90);
-            this.btnAddFood.TabIndex = 8;
-            this.btnAddFood.Text = "Thêm món ăn";
-            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
-            // 
             // cbFood
             // 
             this.cbFood.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -189,7 +167,7 @@
             this.cbFood.Location = new System.Drawing.Point(36, 121);
             this.cbFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbFood.Name = "cbFood";
-            this.cbFood.Size = new System.Drawing.Size(220, 39);
+            this.cbFood.Size = new System.Drawing.Size(220, 46);
             this.cbFood.TabIndex = 7;
             // 
             // cbSwitchTable
@@ -197,12 +175,11 @@
             this.cbSwitchTable.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbSwitchTable.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSwitchTable.FormattingEnabled = true;
-            this.cbSwitchTable.Location = new System.Drawing.Point(53, 542);
+            this.cbSwitchTable.Location = new System.Drawing.Point(53, 552);
             this.cbSwitchTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbSwitchTable.Name = "cbSwitchTable";
-            this.cbSwitchTable.Size = new System.Drawing.Size(220, 39);
+            this.cbSwitchTable.Size = new System.Drawing.Size(220, 46);
             this.cbSwitchTable.TabIndex = 6;
-            this.cbSwitchTable.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // cbCategory
             // 
@@ -212,7 +189,7 @@
             this.cbCategory.Location = new System.Drawing.Point(36, 70);
             this.cbCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(220, 39);
+            this.cbCategory.Size = new System.Drawing.Size(220, 46);
             this.cbCategory.TabIndex = 6;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
@@ -231,7 +208,7 @@
             this.lsvBill.Location = new System.Drawing.Point(36, 178);
             this.lsvBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lsvBill.Name = "lsvBill";
-            this.lsvBill.Size = new System.Drawing.Size(545, 251);
+            this.lsvBill.Size = new System.Drawing.Size(545, 295);
             this.lsvBill.TabIndex = 0;
             this.lsvBill.UseCompatibleStateImageBehavior = false;
             this.lsvBill.View = System.Windows.Forms.View.Details;
@@ -312,17 +289,6 @@
             this.lblTotalPrice.Text = "0";
             this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(48, 489);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 49);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Chuyển bàn ";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // lblDiscount
             // 
             this.lblDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -355,6 +321,50 @@
             this.flpTable.Name = "flpTable";
             this.flpTable.Size = new System.Drawing.Size(537, 741);
             this.flpTable.TabIndex = 1;
+            // 
+            // btnAddFood
+            // 
+            this.btnAddFood.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddFood.BorderColor = System.Drawing.Color.RosyBrown;
+            this.btnAddFood.BorderRadius = 6;
+            this.btnAddFood.BorderThickness = 2;
+            this.btnAddFood.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddFood.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddFood.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddFood.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddFood.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnAddFood.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFood.ForeColor = System.Drawing.Color.Brown;
+            this.btnAddFood.Location = new System.Drawing.Point(379, 70);
+            this.btnAddFood.Name = "btnAddFood";
+            this.btnAddFood.Size = new System.Drawing.Size(202, 90);
+            this.btnAddFood.TabIndex = 8;
+            this.btnAddFood.Text = "Thêm món ăn";
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
+            // 
+            // btnSwitchTable
+            // 
+            this.btnSwitchTable.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSwitchTable.BorderColor = System.Drawing.Color.RosyBrown;
+            this.btnSwitchTable.BorderRadius = 6;
+            this.btnSwitchTable.BorderThickness = 2;
+            this.btnSwitchTable.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSwitchTable.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSwitchTable.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSwitchTable.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSwitchTable.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSwitchTable.FillColor = System.Drawing.Color.Transparent;
+            this.btnSwitchTable.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnSwitchTable.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSwitchTable.ForeColor = System.Drawing.Color.Brown;
+            this.btnSwitchTable.Location = new System.Drawing.Point(53, 487);
+            this.btnSwitchTable.Name = "btnSwitchTable";
+            this.btnSwitchTable.Size = new System.Drawing.Size(202, 48);
+            this.btnSwitchTable.TabIndex = 8;
+            this.btnSwitchTable.Text = "Chuyển bàn";
+            this.btnSwitchTable.Click += new System.EventHandler(this.btnSwitchTable_Click);
             // 
             // FormGoiMon
             // 
@@ -394,13 +404,13 @@
         private System.Windows.Forms.FlowLayoutPanel flpTable;
         private System.Windows.Forms.ComboBox cbFood;
         private System.Windows.Forms.ComboBox cbCategory;
-        private Guna.UI2.WinForms.Guna2GradientButton btnAddFood;
         private Guna.UI2.WinForms.Guna2NumericUpDown nmFoodCount;
         private Guna.UI2.WinForms.Guna2NumericUpDown nmDiscount;
         private System.Windows.Forms.Label lblDiscount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbSwitchTable;
-        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSwitchTable;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAddFood;
     }
 }

@@ -33,5 +33,12 @@ namespace QLNH_Winform.Forms
             dtgvBill.DataSource = BillDAO.Instance.GetBillListByDate(checkIn, checkOut);
         }
         #endregion
+
+        #region Events
+        private void btnViewBill_Click(object sender, EventArgs e)
+        {
+            LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
+        }
+        #endregion
     }
 }

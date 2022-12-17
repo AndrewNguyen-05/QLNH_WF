@@ -81,6 +81,11 @@ namespace QLNH_Winform.Forms
         {
             UpdateAccountInfo();
         }
+
+        private void lblDisplayName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class AccountEvent : EventArgs

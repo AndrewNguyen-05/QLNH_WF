@@ -348,7 +348,6 @@ AS BEGIN
 END
 GO
 
-SELECT * FROM Bill
 
 CREATE PROC USP_GetListBillByDate
 @checkIn date, @checkOut date

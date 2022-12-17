@@ -32,14 +32,20 @@ namespace QLNH_Winform.DAO
             return result.Rows.Count > 0;
         }
 
+        public bool UpdateAccount(string userName, string displayName, string pass, string newpass)
+        {
+            int result  = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName , @displayName , @password , @newPassword", new object[] {userName, displayName, pass, newpass});
+            return result > 0;
+        }
+
         public Account GetAccountByUserName(string userName)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM account WHERE userName = '" + userName + "'");
-            foreach(DataRow item in data.Rows)
+            foreach (DataRow item in data.Rows)
             {
                 return new Account(item);
-            }    
+            }
             return null;
-        }    
+        }
     }
 }

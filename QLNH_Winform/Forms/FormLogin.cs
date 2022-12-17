@@ -30,7 +30,6 @@ namespace QLNH_Winform.Forms
             if (Login(username, password))
             {
                 loginAccount = AccountDAO.Instance.GetAccountByUserName(username);
-                MessageBox.Show(loginAccount.UserName);
                 this.DialogResult = DialogResult.OK;
             }
             else

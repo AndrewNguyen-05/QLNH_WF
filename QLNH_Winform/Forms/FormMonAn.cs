@@ -105,10 +105,14 @@ namespace QLNH_Winform.Forms
                     {
                         if (foodCategory.ID == (cbFoodCategory.Items[i] as FoodCategory).ID)
                         {
+                            cbFoodCategory.SelectedIndex = i;
                             break;
                         }
                     }
-                    cbFoodCategory.SelectedIndex = i;
+                    if (i == cbFoodCategory.Items.Count)
+                    {
+                        cbFoodCategory.SelectedIndex = -1;
+                    }
                 }
                 else 
                 {
@@ -143,5 +147,6 @@ namespace QLNH_Winform.Forms
                 dgv[e.ColumnIndex, e.RowIndex].ReadOnly = true;
             }
         }
+
     }
 }

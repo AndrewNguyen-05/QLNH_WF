@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,13 @@ namespace QLNH_Winform
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+        }
+        //Event bubble
+        private FormMonAn cuurrentFormMonAn;
+        event EventHandler btnEditCategoryClicked
+        {
+            add { this.cuurrentFormMonAn.btnEditCategory.Click += value; }
+            remove { this.cuurrentFormMonAn.btnEditCategory.Click -= value; }
         }
 
         void ChangeAccount(int type)
@@ -157,9 +165,15 @@ namespace QLNH_Winform
         private void btnMonAn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
-            OpenChildForm(new Forms.FormMonAn());
+            cuurrentFormMonAn = new Forms.FormMonAn();
+            btnEditCategoryClicked += btnDanhMuc_Click;
+            OpenChildForm(cuurrentFormMonAn);
         }
 
+        private void btnDanhMuc_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormDanhMuc());
+        }
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(178, 8, 55));

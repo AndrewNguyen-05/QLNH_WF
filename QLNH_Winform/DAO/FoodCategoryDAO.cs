@@ -24,9 +24,21 @@ namespace QLNH_Winform.DAO
         public List<FoodCategory> GetListCategory()
         {
             List<FoodCategory> list = new List<FoodCategory>();
-            string query = " SELECT * FROM foodcategory";
+            string query = " SELECT * FROM foodcategory WHERE isHidden = 0";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows) 
+            {
+                FoodCategory category = new FoodCategory(item);
+                list.Add(category);
+            }
+            return list;
+        }
+        public List<FoodCategory> GetListCategory(string name)
+        {
+            List<FoodCategory> list = new List<FoodCategory>();
+            string query = string.Format("SELECT * FROM foodcategory WHERE isHidden = 0 AND name like N'%{0}%'", name);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in data.Rows)
             {
                 FoodCategory category = new FoodCategory(item);
                 list.Add(category);
@@ -44,6 +56,28 @@ namespace QLNH_Winform.DAO
                 return category;
             }
             return category;
+        }
+
+        public bool InsertCategory(string name)
+        {
+            string query = string.Format("INSERT FoodCategory (name) VALUES (N'{0}')", name);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool UpdateCategory(int id, string name)
+        {
+            string query = string.Format("UPDATE FoodCategory SET name = N'{1}' WHERE id = {0}", id, name);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+        public bool DeleteCategory(int id)
+        {
+
+            string query = string.Format("UPDATE FoodCategory SET isHidden = 1 WHERE id = {0}", id);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
         }
     }
 }

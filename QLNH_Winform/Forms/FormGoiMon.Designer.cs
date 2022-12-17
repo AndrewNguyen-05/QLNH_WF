@@ -32,9 +32,11 @@
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.nmDiscount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.nmFoodCount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btnAddFood = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cbFood = new System.Windows.Forms.ComboBox();
+            this.cbSwitchTable = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.lsvBill = new System.Windows.Forms.ListView();
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,19 +44,17 @@
             this.colPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnPay = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblDiscount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.nmDiscount = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.lblDiscount = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbSwitchTable = new System.Windows.Forms.ComboBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -87,7 +87,7 @@
             this.label1.ForeColor = System.Drawing.Color.Tomato;
             this.label1.Location = new System.Drawing.Point(7, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 28);
+            this.label1.Size = new System.Drawing.Size(191, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "RESTAURANT ORDERS";
             // 
@@ -118,6 +118,21 @@
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
             this.guna2GradientPanel4.Size = new System.Drawing.Size(610, 741);
             this.guna2GradientPanel4.TabIndex = 3;
+            // 
+            // nmDiscount
+            // 
+            this.nmDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nmDiscount.BackColor = System.Drawing.Color.Transparent;
+            this.nmDiscount.BorderRadius = 6;
+            this.nmDiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nmDiscount.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.nmDiscount.Location = new System.Drawing.Point(429, 506);
+            this.nmDiscount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.nmDiscount.Name = "nmDiscount";
+            this.nmDiscount.Size = new System.Drawing.Size(99, 44);
+            this.nmDiscount.TabIndex = 10;
+            this.nmDiscount.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.nmDiscount.UpDownButtonForeColor = System.Drawing.Color.Indigo;
             // 
             // nmFoodCount
             // 
@@ -174,8 +189,20 @@
             this.cbFood.Location = new System.Drawing.Point(36, 121);
             this.cbFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbFood.Name = "cbFood";
-            this.cbFood.Size = new System.Drawing.Size(220, 46);
+            this.cbFood.Size = new System.Drawing.Size(220, 39);
             this.cbFood.TabIndex = 7;
+            // 
+            // cbSwitchTable
+            // 
+            this.cbSwitchTable.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbSwitchTable.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSwitchTable.FormattingEnabled = true;
+            this.cbSwitchTable.Location = new System.Drawing.Point(53, 542);
+            this.cbSwitchTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbSwitchTable.Name = "cbSwitchTable";
+            this.cbSwitchTable.Size = new System.Drawing.Size(220, 39);
+            this.cbSwitchTable.TabIndex = 6;
+            this.cbSwitchTable.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // cbCategory
             // 
@@ -185,7 +212,7 @@
             this.cbCategory.Location = new System.Drawing.Point(36, 70);
             this.cbCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(220, 46);
+            this.cbCategory.Size = new System.Drawing.Size(220, 39);
             this.cbCategory.TabIndex = 6;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
@@ -252,6 +279,28 @@
             this.btnPay.Text = "Thanh Toán";
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(536, 512);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 38);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "%";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(536, 560);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 38);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "VND";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // lblTotalPrice
             // 
             this.lblTotalPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -262,6 +311,28 @@
             this.lblTotalPrice.TabIndex = 4;
             this.lblTotalPrice.Text = "0";
             this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(48, 489);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(145, 49);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Chuyển bàn ";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDiscount
+            // 
+            this.lblDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscount.Location = new System.Drawing.Point(307, 506);
+            this.lblDiscount.Name = "lblDiscount";
+            this.lblDiscount.Size = new System.Drawing.Size(113, 49);
+            this.lblDiscount.TabIndex = 3;
+            this.lblDiscount.Text = "Giảm giá :";
+            this.lblDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
@@ -285,77 +356,6 @@
             this.flpTable.Size = new System.Drawing.Size(537, 741);
             this.flpTable.TabIndex = 1;
             // 
-            // nmDiscount
-            // 
-            this.nmDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nmDiscount.BackColor = System.Drawing.Color.Transparent;
-            this.nmDiscount.BorderRadius = 6;
-            this.nmDiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nmDiscount.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.nmDiscount.Location = new System.Drawing.Point(429, 506);
-            this.nmDiscount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.nmDiscount.Name = "nmDiscount";
-            this.nmDiscount.Size = new System.Drawing.Size(99, 44);
-            this.nmDiscount.TabIndex = 10;
-            this.nmDiscount.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.nmDiscount.UpDownButtonForeColor = System.Drawing.Color.Indigo;
-            // 
-            // lblDiscount
-            // 
-            this.lblDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscount.Location = new System.Drawing.Point(307, 506);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(113, 49);
-            this.lblDiscount.TabIndex = 3;
-            this.lblDiscount.Text = "Giảm giá :";
-            this.lblDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(536, 560);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 38);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "VND";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(536, 512);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 38);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "%";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(48, 489);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 49);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Chuyển bàn ";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbSwitchTable
-            // 
-            this.cbSwitchTable.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbSwitchTable.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSwitchTable.FormattingEnabled = true;
-            this.cbSwitchTable.Location = new System.Drawing.Point(53, 542);
-            this.cbSwitchTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbSwitchTable.Name = "cbSwitchTable";
-            this.cbSwitchTable.Size = new System.Drawing.Size(220, 46);
-            this.cbSwitchTable.TabIndex = 6;
-            this.cbSwitchTable.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
-            // 
             // FormGoiMon
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -372,8 +372,8 @@
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             this.guna2GradientPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).EndInit();
             this.ResumeLayout(false);
 
         }

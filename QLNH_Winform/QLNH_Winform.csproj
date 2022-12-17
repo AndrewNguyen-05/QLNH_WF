@@ -90,6 +90,12 @@
     <Compile Include="Forms\FormBanAn.designer.cs">
       <DependentUpon>FormBanAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormDanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDanhMuc.Designer.cs">
+      <DependentUpon>FormDanhMuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormGoiMon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormBanAn.resx">
       <DependentUpon>FormBanAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDanhMuc.resx">
+      <DependentUpon>FormDanhMuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormGoiMon.resx">
       <DependentUpon>FormGoiMon.cs</DependentUpon>

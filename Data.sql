@@ -32,7 +32,8 @@ GO
 CREATE TABLE FoodCategory
 (
 	id INT IDENTITY PRIMARY KEY,
-	name NVARCHAR(100) NOT NULL DEFAULT N'Chưa đặt tên'
+	name NVARCHAR(100) NOT NULL DEFAULT N'Chưa đặt tên',
+	isHidden INT NOT NULL DEFAULT 0
 )
 GO
 
@@ -260,3 +261,7 @@ ALTER TABLE Bill ADD discount INT
 UPDATE Bill SET discount = 0
 
 SELECT * FROM Bill
+go
+ALTER TABLE Foodcategory ADD 
+go
+

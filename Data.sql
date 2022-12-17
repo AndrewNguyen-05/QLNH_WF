@@ -374,7 +374,7 @@ BEGIN
 			UPDATE Account SET DisplayName = @displayName WHERE UserName = @userName
 		END 
 		ELSE 
-			UPDATE Account SET DisplayName = @displayName ,PassWord = @password WHERE UserName = @userName
+			UPDATE Account SET DisplayName = @displayName ,PassWord = @newpassword WHERE UserName = @userName
 	END 
 END 
 GO 

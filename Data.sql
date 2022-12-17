@@ -55,6 +55,7 @@ CREATE TABLE Bill
 	idTable INT NOT NULL,
 	status INT NOT NULL DEFAULT 0, --1: Đã thanh toán && 0: Chưa thanh toán
 	discount INT NOT NULL DEFAULT 0,
+	totalPrice FLOAT,
 
 	FOREIGN KEY (idTable) REFERENCES dbo.TableFood(id)
 )
@@ -140,33 +141,24 @@ INSERT INTO Food (name, idCategory, price) VALUES (N'7Up', 5, 15000)
 INSERT INTO Food (name, idCategory, price) VALUES (N'Nước lọc', 5, 10000)
 GO
 
---Thêm bill
-INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 55, 0)
-INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 60, 0)
-INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 59, 1)
-GO
---Thêm Bill Info
-INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 2, 3)
-INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 3, 4)
-INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 4, 2)
-INSERT INTO BillInfo (idBill, idFood, count) VALUES (2, 3, 1)
-INSERT INTO BillInfo (idBill, idFood, count) VALUES (2, 5, 2)
-INSERT INTO BillInfo (idBill, idFood, count) VALUES (2, 1, 2)
-INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 2, 3)
-INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 4, 5)
-INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 5, 2)
-GO
+----Thêm bill
+--INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 55, 0)
+--INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 60, 0)
+--INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 59, 1)
+--GO
+----Thêm Bill Info
+--INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 2, 3)
+--INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 3, 4)
+--INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 4, 2)
+--INSERT INTO BillInfo (idBill, idFood, count) VALUES (2, 3, 1)
+--INSERT INTO BillInfo (idBill, idFood, count) VALUES (2, 5, 2)
+--INSERT INTO BillInfo (idBill, idFood, count) VALUES (2, 1, 2)
+--INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 2, 3)
+--INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 4, 5)
+--INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 5, 2)
+--GO
 
-SELECT * FROM Bill WHERE idTable = 55 AND status = 1
 
-SELECT * FROM Account
-SELECT * FROM Bill
-SELECT * FROM BillInfo
-SELECT * FROM Food
-SELECT * FROM FoodCategory
-SELECT * FROM TableFood
-
-SELECT * FROM BillInfo WHERE idBill = 3
 
 SELECT f.name, bi.count, f.price, f.price * bi.count AS totalPrice
 FROM BillInfo bi, Bill b, Food f
@@ -320,10 +312,6 @@ AS BEGIN
 	
 	SELECT @isFirstTablEmpty = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idFirstBill
 	
-	PRINT @idFirstBill
-	PRINT @idSecondBill
-	PRINT '-----------'
-	
 	IF (@idSecondBill IS NULL)
 	BEGIN
 		INSERT dbo.Bill
@@ -358,3 +346,24 @@ AS BEGIN
 		UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable1
 END
 GO
+
+SELECT * FROM Bill
+
+CREATE PROC USP_GetListBillByDate
+@checkIn date, @checkOut date
+AS
+BEGIN
+	SELECT t.name AS [Tên bàn], b.totalPrice AS [Tổng tiền], DateCheckIn AS [Ngày vào], DateCheckOut AS [Ngày ra], discount AS [Giảm giá]
+	FROM Bill AS b, TableFood AS t
+	WHERE DateCheckIn >= @checkIn AND DateCheckOut <= @checkOut AND b.status = 1
+	AND t.id = b.idTable
+END
+GO
+
+
+SELECT * FROM Account
+SELECT * FROM Bill
+SELECT * FROM BillInfo
+SELECT * FROM Food
+SELECT * FROM FoodCategory
+SELECT * FROM TableFood

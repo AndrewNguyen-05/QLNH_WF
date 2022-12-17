@@ -367,3 +367,4 @@ SELECT * FROM BillInfo
 SELECT * FROM Food
 SELECT * FROM FoodCategory
 SELECT * FROM TableFood
+

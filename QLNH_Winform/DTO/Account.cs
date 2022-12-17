@@ -15,7 +15,7 @@ namespace QLNH_Winform.DTO
             this.UserName = userName;
             this.DisplayName = displayName;
             this.Typee = type;
-            this.PassWord = passWord;
+            this.Password = passWord;
         }
         
         public Account(DataRow row)
@@ -24,19 +24,17 @@ namespace QLNH_Winform.DTO
             this.DisplayName = row["displayName"].ToString();
             this.Typee = (int)row["type"];
             this.UserName = row["passWord"].ToString();
-
         }
 
         private int type;
         public int Typee
         {
             get { return type; }
-            set
-            { type = value; }
+            set { type = value; }
         }
 
         private string passWord;
-        public string PassWord
+        public string Password
         {
             get { return passWord; }
             set { passWord = value; }

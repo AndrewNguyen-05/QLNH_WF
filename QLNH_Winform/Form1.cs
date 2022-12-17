@@ -174,7 +174,7 @@ namespace QLNH_Winform
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
-            OpenChildForm(new Forms.FormTaiKhoan());
+            OpenChildForm(new Forms.FormTaiKhoan(LoginAccount));
         }
         private void Reset()
         {

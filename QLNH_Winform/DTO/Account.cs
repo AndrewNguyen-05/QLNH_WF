@@ -23,7 +23,7 @@ namespace QLNH_Winform.DTO
             this.UserName = row["userName"].ToString();
             this.DisplayName = row["displayName"].ToString();
             this.Typee = (int)row["type"];
-            this.UserName = row["passWord"].ToString();
+            this.Password = row["passWord"].ToString();
         }
 
         private int type;

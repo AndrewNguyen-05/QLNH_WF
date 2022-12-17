@@ -123,6 +123,7 @@
             // 
             this.txtPassWord.Location = new System.Drawing.Point(351, 218);
             this.txtPassWord.Name = "txtPassWord";
+            this.txtPassWord.PasswordChar = '●';
             this.txtPassWord.Size = new System.Drawing.Size(368, 26);
             this.txtPassWord.TabIndex = 2;
             // 
@@ -130,6 +131,7 @@
             // 
             this.txtNewPassWord.Location = new System.Drawing.Point(351, 320);
             this.txtNewPassWord.Name = "txtNewPassWord";
+            this.txtNewPassWord.PasswordChar = '●';
             this.txtNewPassWord.Size = new System.Drawing.Size(368, 26);
             this.txtNewPassWord.TabIndex = 2;
             // 
@@ -137,6 +139,7 @@
             // 
             this.txtConfirmPW.Location = new System.Drawing.Point(351, 403);
             this.txtConfirmPW.Name = "txtConfirmPW";
+            this.txtConfirmPW.PasswordChar = '●';
             this.txtConfirmPW.Size = new System.Drawing.Size(368, 26);
             this.txtConfirmPW.TabIndex = 2;
             // 
@@ -178,10 +181,10 @@
             this.guna2GradientPanel2.Controls.Add(this.txtPassWord);
             this.guna2GradientPanel2.Controls.Add(this.label6);
             this.guna2GradientPanel2.Controls.Add(this.txtUserName);
-            this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 70);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(1128, 500);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(1128, 564);
             this.guna2GradientPanel2.TabIndex = 5;
             // 
             // FormTaiKhoan

@@ -195,7 +195,7 @@ namespace QLNH_Winform
 
         private void F_UpdateAccount(object sender, EventArgs e)
         {
-            
+            // Update DisplayName at FormMain
         }
 
         private void Reset()

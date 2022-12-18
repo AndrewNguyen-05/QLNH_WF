@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.pnMenu = new System.Windows.Forms.Panel();
             this.btnTaiKhoan = new FontAwesome.Sharp.IconButton();
             this.btnThongKe = new FontAwesome.Sharp.IconButton();
@@ -44,9 +43,9 @@
             this.pnDesktop = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.Button();
             this.pnControl = new System.Windows.Forms.Panel();
+            this.ControlMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.ControlClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnTitleBar = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pnMenu.SuspendLayout();
             this.pnLogo.SuspendLayout();
@@ -272,45 +271,42 @@
             // 
             this.guna2ShadowForm1.TargetForm = this;
             // 
-            // btnExit
-            // 
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(1097, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(53, 40);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(1056, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(41, 40);
-            this.btnMinimize.TabIndex = 4;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
             // pnControl
             // 
             this.pnControl.BackColor = System.Drawing.Color.Transparent;
-            this.pnControl.Controls.Add(this.btnMinimize);
-            this.pnControl.Controls.Add(this.btnExit);
+            this.pnControl.Controls.Add(this.ControlMinimize);
+            this.pnControl.Controls.Add(this.ControlClose);
             this.pnControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnControl.Location = new System.Drawing.Point(0, 0);
             this.pnControl.Name = "pnControl";
             this.pnControl.Size = new System.Drawing.Size(1150, 40);
             this.pnControl.TabIndex = 4;
+            this.pnControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTitleBar_MouseDown);
+            // 
+            // ControlMinimize
+            // 
+            this.ControlMinimize.Animated = true;
+            this.ControlMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.ControlMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ControlMinimize.FillColor = System.Drawing.Color.Transparent;
+            this.ControlMinimize.ForeColor = System.Drawing.Color.Black;
+            this.ControlMinimize.IconColor = System.Drawing.Color.White;
+            this.ControlMinimize.Location = new System.Drawing.Point(1060, 0);
+            this.ControlMinimize.Name = "ControlMinimize";
+            this.ControlMinimize.Size = new System.Drawing.Size(45, 40);
+            this.ControlMinimize.TabIndex = 6;
+            // 
+            // ControlClose
+            // 
+            this.ControlClose.Animated = true;
+            this.ControlClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ControlClose.FillColor = System.Drawing.Color.Transparent;
+            this.ControlClose.ForeColor = System.Drawing.Color.Black;
+            this.ControlClose.IconColor = System.Drawing.Color.White;
+            this.ControlClose.Location = new System.Drawing.Point(1105, 0);
+            this.ControlClose.Name = "ControlClose";
+            this.ControlClose.Size = new System.Drawing.Size(45, 40);
+            this.ControlClose.TabIndex = 5;
             // 
             // pnTitleBar
             // 
@@ -327,7 +323,6 @@
             // FormMainMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(1437, 797);
             this.Controls.Add(this.pnTitleBar);
             this.Controls.Add(this.pnDesktop);
@@ -365,10 +360,10 @@
         private FontAwesome.Sharp.IconButton btnThongKe;
         private FontAwesome.Sharp.IconButton btnTaiKhoan;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
-        private System.Windows.Forms.Button btnMinimize;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel pnControl;
         private Guna.UI2.WinForms.Guna2GradientPanel pnTitleBar;
+        private Guna.UI2.WinForms.Guna2ControlBox ControlMinimize;
+        private Guna.UI2.WinForms.Guna2ControlBox ControlClose;
     }
 }
 

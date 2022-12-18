@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -41,7 +40,6 @@
             this.ControlMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ControlClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lblQLNH = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnControl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,20 +52,9 @@
             // 
             this.guna2ShadowForm1.TargetForm = this;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 3);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(576, 520);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 3;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.guna2PictureBox1_MouseDown);
-            // 
             // txtUsername
             // 
+            this.txtUsername.BackColor = System.Drawing.Color.Transparent;
             this.txtUsername.BorderRadius = 12;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "Admin";
@@ -75,16 +62,17 @@
             this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.txtUsername.FillColor = System.Drawing.Color.Transparent;
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Font = new System.Drawing.Font("Cambria", 12F);
-            this.txtUsername.ForeColor = System.Drawing.Color.DimGray;
+            this.txtUsername.ForeColor = System.Drawing.Color.White;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUsername.IconLeft")));
+            this.txtUsername.IconLeft = global::QLNH_Winform.Properties.Resources.Login;
             this.txtUsername.Location = new System.Drawing.Point(593, 173);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.txtUsername.PlaceholderText = "Tên tài khoản";
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(290, 45);
@@ -92,6 +80,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.BackColor = System.Drawing.Color.Transparent;
             this.txtPassword.BorderRadius = 12;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "1";
@@ -99,16 +88,17 @@
             this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.txtPassword.FillColor = System.Drawing.Color.Transparent;
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Font = new System.Drawing.Font("Cambria", 12F);
-            this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconLeft")));
+            this.txtPassword.IconLeft = global::QLNH_Winform.Properties.Resources.Password;
             this.txtPassword.Location = new System.Drawing.Point(593, 234);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
+            this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.txtPassword.PlaceholderText = "Mật khẩu";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(290, 45);
@@ -119,6 +109,7 @@
             // 
             this.btnLogin.Animated = true;
             this.btnLogin.AutoRoundedCorners = true;
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.BorderRadius = 20;
             this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -126,7 +117,7 @@
             this.btnLogin.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(237)))), ((int)(((byte)(146)))));
-            this.btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(104)))), ((int)(((byte)(143)))));
+            this.btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLogin.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
@@ -142,6 +133,7 @@
             // 
             this.btnExit.Animated = true;
             this.btnExit.AutoRoundedCorners = true;
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.BorderColor = System.Drawing.Color.DimGray;
             this.btnExit.BorderRadius = 20;
             this.btnExit.BorderThickness = 1;
@@ -150,7 +142,7 @@
             this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnExit.FillColor = System.Drawing.Color.Transparent;
+            this.btnExit.FillColor = System.Drawing.Color.WhiteSmoke;
             this.btnExit.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnExit.ForeColor = System.Drawing.Color.DimGray;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
@@ -176,35 +168,41 @@
             // 
             // ControlMinimize
             // 
+            this.ControlMinimize.BorderColor = System.Drawing.Color.DimGray;
             this.ControlMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.ControlMinimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ControlMinimize.FillColor = System.Drawing.Color.White;
-            this.ControlMinimize.IconColor = System.Drawing.Color.DimGray;
+            this.ControlMinimize.FillColor = System.Drawing.Color.Transparent;
+            this.ControlMinimize.IconColor = System.Drawing.Color.White;
             this.ControlMinimize.Location = new System.Drawing.Point(863, 0);
             this.ControlMinimize.Name = "ControlMinimize";
             this.ControlMinimize.Size = new System.Drawing.Size(33, 33);
             this.ControlMinimize.TabIndex = 1;
+            this.ControlMinimize.UseTransparentBackground = true;
             // 
             // ControlClose
             // 
+            this.ControlClose.BackColor = System.Drawing.Color.Transparent;
+            this.ControlClose.BorderColor = System.Drawing.Color.DimGray;
             this.ControlClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ControlClose.FillColor = System.Drawing.Color.White;
-            this.ControlClose.IconColor = System.Drawing.Color.DimGray;
+            this.ControlClose.FillColor = System.Drawing.Color.Transparent;
+            this.ControlClose.IconColor = System.Drawing.Color.White;
             this.ControlClose.Location = new System.Drawing.Point(896, 0);
             this.ControlClose.Name = "ControlClose";
             this.ControlClose.Size = new System.Drawing.Size(33, 33);
             this.ControlClose.TabIndex = 0;
+            this.ControlClose.UseTransparentBackground = true;
             // 
             // lblQLNH
             // 
             this.lblQLNH.AutoSize = true;
+            this.lblQLNH.BackColor = System.Drawing.Color.Transparent;
             this.lblQLNH.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQLNH.ForeColor = System.Drawing.Color.Black;
-            this.lblQLNH.Location = new System.Drawing.Point(667, 90);
+            this.lblQLNH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lblQLNH.Location = new System.Drawing.Point(588, 86);
             this.lblQLNH.Name = "lblQLNH";
-            this.lblQLNH.Size = new System.Drawing.Size(162, 55);
+            this.lblQLNH.Size = new System.Drawing.Size(260, 98);
             this.lblQLNH.TabIndex = 8;
-            this.lblQLNH.Text = "QLNH";
+            this.lblQLNH.Text = "Login";
             // 
             // FormLogin
             // 
@@ -212,9 +210,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(929, 522);
-            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.pnControl);
             this.Controls.Add(this.lblQLNH);
             this.Controls.Add(this.btnExit);
@@ -228,7 +227,6 @@
             this.Text = "Đăng Nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormLogin_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -238,7 +236,6 @@
         #endregion
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2GradientButton btnLogin;

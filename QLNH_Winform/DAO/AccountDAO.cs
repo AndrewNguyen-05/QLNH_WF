@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QLNH_Winform.DAO
 {
@@ -38,6 +40,11 @@ namespace QLNH_Winform.DAO
             return result > 0;
         }
 
+        public DataTable GetListAccount()
+        {
+            return DataProvider.Instance.ExecuteQuery("SELECT UserName, DisplayName, Type FROM Account");
+        }
+
         public Account GetAccountByUserName(string userName)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM account WHERE userName = '" + userName + "'");
@@ -47,5 +54,33 @@ namespace QLNH_Winform.DAO
             }
             return null;
         }
+
+        public bool InsertAccount(string userName, string displayName, int type)
+        {
+            string query = string.Format("INSERT Account ( UserName, DisplayName, Type ) VALUES (N'{0}', N'{1}', {2})", userName, displayName, type);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool UpdateAccount(string userName, string displayName, int type)
+        {
+            string query = string.Format("UPDATE Account SET DisplayName = N'{1}', Type = {2} WHERE UserName = N'{0}'", userName, displayName, type);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool DeleteAccount(string userName)
+        {
+            string query = string.Format("DELETE Account WHERE UserName = N'{0}'", userName);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool ResetPassWord(string userName)
+        {
+            string query = string.Format("UPDATE Account SET password = N'0' WHERE UserName = N'{0}'", userName);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }    
     }
 }

@@ -37,6 +37,8 @@ namespace QLNH_Winform
             InitializeComponent();
 
             this.LoginAccount = acc; 
+            
+            
 
             this.ClientSize = new System.Drawing.Size(1440, 800);
 
@@ -176,8 +178,10 @@ namespace QLNH_Winform
         }
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
+            FormNhanVien form = new FormNhanVien();
+            form.loginAcc = LoginAccount;
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
-            OpenChildForm(new Forms.FormNhanVien());
+            OpenChildForm(form);
         }
         private void btnKhoHang_Click(object sender, EventArgs e)
         {

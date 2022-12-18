@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLNH_Winform.DAO;
+using QLNH_Winform.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,96 +14,127 @@ namespace QLNH_Winform.Forms
 {
     public partial class FormNhanVien : Form
     {
+        BindingSource accountList = new BindingSource();
+
+        public Account loginAcc;
+
         public FormNhanVien()
         {
             InitializeComponent();
+            Load();
         }
 
-        private void FormNhanVien_Load(object sender, EventArgs e)
+        #region Methods
+        void Load()
         {
-
+            dtgvListAccount.DataSource = accountList;
+            LoadAccount();
+            AddAccountBinding();
         }
 
-        private void dataGridTable_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        void AddAccountBinding()
         {
-            if (e.RowIndex >= 0)
+            txtUserName.DataBindings.Add(new Binding("Text", dtgvListAccount.DataSource, "UserName", true, DataSourceUpdateMode.Never));
+            txtDisplayName.DataBindings.Add(new Binding("Text", dtgvListAccount.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
+            nmPermission.DataBindings.Add(new Binding("Value", dtgvListAccount.DataSource, "Type", true, DataSourceUpdateMode.Never));
+        }
+
+        void LoadAccount()
+        {
+            accountList.DataSource = AccountDAO.Instance.GetListAccount();
+        }
+
+        void AddAcount(string userName, string displayName, int type)
+        {
+            if(AccountDAO.Instance.InsertAccount(userName, displayName, type))
             {
-                dataGridTable.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(249, 118, 176);
-                dataGridTable.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.FromArgb(23, 22, 37);
+                MessageBox.Show("Thêm tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void dataGridTable_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
+            else
             {
-                dataGridTable.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(34, 33, 74);
-                dataGridTable.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.White;
+                MessageBox.Show("Thêm tài khoản thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            LoadAccount();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        void EditAcount(string userName, string displayName, int type)
         {
-            DataGridViewRow tmp = new DataGridViewRow();
-            tmp.Height = 30;
-            dataGridTable.Rows.Add(tmp);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //dataGridTable.Rows.Remove
-            for (int i = dataGridTable.RowCount - 1; i >= 0; i--)
+            if (AccountDAO.Instance.UpdateAccount(userName, displayName, type))
             {
-                if ((dataGridTable.Rows[i].Cells[5].Value is null) == false)
-                {
-                    if (dataGridTable.Rows[i].Cells[5].Value.ToString() == "*")
-                    {
-                        dataGridTable.Rows.RemoveAt(i);
-                    }
-                }
+                MessageBox.Show("Cập nhật tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                MessageBox.Show("Cập nhật tài khoản thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            LoadAccount();
         }
 
-        private void dataGridTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        void DeleteAcount(string userName)
         {
-            DataGridView dgt = sender as DataGridView;
-            if (e.RowIndex < 0 || e.RowIndex > dgt.RowCount - 1)
+            if(loginAcc.UserName.Equals(userName))
             {
+                MessageBox.Show("Vui lòng không xóa tài khoản chính chủ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (e.ColumnIndex == 3)
+            if (AccountDAO.Instance.DeleteAccount(userName))
             {
-                if (e.RowIndex <= 0) return;
-                DataGridViewRow tmp = dgt.Rows[e.RowIndex];
-                dgt.Rows.RemoveAt(e.RowIndex);
-                dgt.Rows.Insert(e.RowIndex - 1, tmp);
+                MessageBox.Show("Xóa tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (e.ColumnIndex == 4)
+            else
             {
-                if (e.RowIndex >= dgt.RowCount - 1) return;
-                DataGridViewRow tmp = dgt.Rows[e.RowIndex + 1];
-                dgt.Rows.RemoveAt(e.RowIndex + 1);
-                dgt.Rows.Insert(e.RowIndex, tmp);
+                MessageBox.Show("Xóa tài khoản thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            LoadAccount();
+        }
+
+        void ResetPassword(string userName)
+        {
+            if (AccountDAO.Instance.ResetPassWord(userName))
+            {
+                MessageBox.Show("Đặt lại mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Đặt lại mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void dataGridTable_CellClick(object sender, DataGridViewCellEventArgs e)
+        #endregion
+
+        #region Events
+        private void btnAddStaff_Click(object sender, EventArgs e)
         {
-            if (e.ColumnIndex == 5)
-            {
-                if (dataGridTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value is null)
-                {
-                    dataGridTable[e.ColumnIndex, e.RowIndex].Value = "*";
-                }
-                else if (dataGridTable.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "")
-                {
-                    dataGridTable[e.ColumnIndex, e.RowIndex].Value = "*";
-                }
-                else
-                {
-                    dataGridTable[e.ColumnIndex, e.RowIndex].Value = "";
-                }
-            }
+            string userName = txtUserName.Text;
+            string displayName = txtDisplayName.Text;
+            int type = (int)nmPermission.Value;
+            AddAcount(userName, displayName, type);
+        }
+
+        private void btnDeleteStaff_Click(object sender, EventArgs e)
+        {
+            string userName = txtUserName.Text;
+            DeleteAcount(userName);
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            string userName = txtUserName.Text;
+            string displayName = txtDisplayName.Text;
+            int type = (int)nmPermission.Value;
+            EditAcount(userName, displayName, type);
+        }
+
+        private void btnShowListAcc_Click(object sender, EventArgs e)
+        {
+            LoadAccount();
+        }
+        #endregion
+
+        private void btnResetPassword_Click(object sender, EventArgs e)
+        {
+            string userName = txtUserName.Text;
+            ResetPassword(userName);
         }
     }
 }

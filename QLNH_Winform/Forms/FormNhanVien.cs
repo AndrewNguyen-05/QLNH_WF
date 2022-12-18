@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace QLNH_Winform.Forms
@@ -17,15 +18,16 @@ namespace QLNH_Winform.Forms
         BindingSource accountList = new BindingSource();
 
         public Account loginAcc;
+        string editingUserName;
 
         public FormNhanVien()
         {
             InitializeComponent();
-            Load();
+            LoadNhanVien();
         }
 
         #region Methods
-        void Load()
+        void LoadNhanVien()
         {
             dtgvListAccount.DataSource = accountList;
             LoadAccount();
@@ -34,9 +36,9 @@ namespace QLNH_Winform.Forms
 
         void AddAccountBinding()
         {
-            txtUserName.DataBindings.Add(new Binding("Text", dtgvListAccount.DataSource, "UserName", true, DataSourceUpdateMode.Never));
-            txtDisplayName.DataBindings.Add(new Binding("Text", dtgvListAccount.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
-            nmPermission.DataBindings.Add(new Binding("Value", dtgvListAccount.DataSource, "Type", true, DataSourceUpdateMode.Never));
+            //txtUserName.DataBindings.Add(new Binding("Text", dtgvListAccount.DataSource, "UserName", true, DataSourceUpdateMode.Never));
+            //txtDisplayName.DataBindings.Add(new Binding("Text", dtgvListAccount.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
+            //nmPermission.DataBindings.Add(new Binding("Value", dtgvListAccount.DataSource, "Type", true, DataSourceUpdateMode.Never));
         }
 
         void LoadAccount()
@@ -46,6 +48,11 @@ namespace QLNH_Winform.Forms
 
         void AddAcount(string userName, string displayName, int type)
         {
+            if (AccountDAO.Instance.GetAccountByUserName(userName) != null)
+            {
+                MessageBox.Show("Tên tài khoản bị trùng, vui lòng chọn tên tài khoản khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if(AccountDAO.Instance.InsertAccount(userName, displayName, type))
             {
                 MessageBox.Show("Thêm tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -57,9 +64,9 @@ namespace QLNH_Winform.Forms
             LoadAccount();
         }
 
-        void EditAcount(string userName, string displayName, int type)
+        void EditAcount(string userName, string editingUserName, string displayName, int type)
         {
-            if (AccountDAO.Instance.UpdateAccount(userName, displayName, type))
+            if (AccountDAO.Instance.UpdateAccount(userName, editingUserName, displayName, type))
             {
                 MessageBox.Show("Cập nhật tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -106,28 +113,45 @@ namespace QLNH_Winform.Forms
         private void btnAddStaff_Click(object sender, EventArgs e)
         {
             string userName = txtUserName.Text;
-            string displayName = txtDisplayName.Text;
-            int type = (int)nmPermission.Value;
-            AddAcount(userName, displayName, type);
+            AddAcount(userName, "None", 0);
         }
-
+        private void dtgvListAccount_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            if (sender is null) return;
+            DataGridViewRow dgvr = (sender as DataGridView).Rows[e.RowIndex];
+            editingUserName = dgvr.Cells["UserName"].Value.ToString();
+        }
+        private void dtgvListAccount_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (sender is null) return;
+            DataGridViewRow dgvr = (sender as DataGridView).Rows[e.RowIndex];
+            string userName = dgvr.Cells["UserName"].Value.ToString();
+            string displayName = dgvr.Cells["DisplayName"].Value.ToString();
+            int type = (int)dgvr.Cells["Type"].Value;
+            if (type != 0 && type != 1)
+            {
+                MessageBox.Show("Tài khoản chỉ có hai loại: 0 - Nhan Vien, 1 - Admin");
+                LoadAccount();
+                return;
+            }
+            EditAcount(userName, editingUserName, displayName, type);
+            LoadAccount();
+        }
         private void btnDeleteStaff_Click(object sender, EventArgs e)
         {
-            string userName = txtUserName.Text;
-            DeleteAcount(userName);
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            string userName = txtUserName.Text;
-            string displayName = txtDisplayName.Text;
-            int type = (int)nmPermission.Value;
-            EditAcount(userName, displayName, type);
-        }
-
-        private void btnShowListAcc_Click(object sender, EventArgs e)
-        {
-            LoadAccount();
+            foreach (DataGridViewCell dc in dtgvListAccount.SelectedCells)
+            {
+                string userName = dc.OwningRow.Cells["UserName"].Value.ToString();
+                if (loginAcc.UserName.Equals(userName))
+                {
+                    DeleteAcount(userName); return;
+                }
+            }
+            foreach (DataGridViewCell dc in dtgvListAccount.SelectedCells)
+            {
+                string userName = dc.OwningRow.Cells["UserName"].Value.ToString();
+                DeleteAcount(userName);
+            }
         }
         #endregion
 
@@ -136,5 +160,6 @@ namespace QLNH_Winform.Forms
             string userName = txtUserName.Text;
             ResetPassword(userName);
         }
+
     }
 }

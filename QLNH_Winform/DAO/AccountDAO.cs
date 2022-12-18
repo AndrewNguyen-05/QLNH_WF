@@ -68,6 +68,12 @@ namespace QLNH_Winform.DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+        public bool UpdateAccount(string userName, string oldUserName, string displayName, int type)
+        {
+            string query = string.Format("UPDATE Account SET UserName = N'{0}', DisplayName = N'{1}', Type = {2} WHERE UserName = N'{3}'", userName, displayName, type, oldUserName);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
 
         public bool DeleteAccount(string userName)
         {

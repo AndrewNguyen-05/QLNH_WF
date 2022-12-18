@@ -44,6 +44,8 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnControl = new System.Windows.Forms.Panel();
+            this.ControlMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.ControlClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnTitleBar = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.ControlClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ControlMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -281,6 +283,32 @@
             this.pnControl.Name = "pnControl";
             this.pnControl.Size = new System.Drawing.Size(1150, 40);
             this.pnControl.TabIndex = 4;
+            this.pnControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTitleBar_MouseDown);
+            // 
+            // ControlMinimize
+            // 
+            this.ControlMinimize.Animated = true;
+            this.ControlMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.ControlMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ControlMinimize.FillColor = System.Drawing.Color.Transparent;
+            this.ControlMinimize.ForeColor = System.Drawing.Color.Black;
+            this.ControlMinimize.IconColor = System.Drawing.Color.White;
+            this.ControlMinimize.Location = new System.Drawing.Point(1060, 0);
+            this.ControlMinimize.Name = "ControlMinimize";
+            this.ControlMinimize.Size = new System.Drawing.Size(45, 40);
+            this.ControlMinimize.TabIndex = 6;
+            // 
+            // ControlClose
+            // 
+            this.ControlClose.Animated = true;
+            this.ControlClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ControlClose.FillColor = System.Drawing.Color.Transparent;
+            this.ControlClose.ForeColor = System.Drawing.Color.Black;
+            this.ControlClose.IconColor = System.Drawing.Color.White;
+            this.ControlClose.Location = new System.Drawing.Point(1105, 0);
+            this.ControlClose.Name = "ControlClose";
+            this.ControlClose.Size = new System.Drawing.Size(45, 40);
+            this.ControlClose.TabIndex = 5;
             // 
             // pnTitleBar
             // 

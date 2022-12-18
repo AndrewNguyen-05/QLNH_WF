@@ -24,7 +24,7 @@ namespace QLNH_Winform
         public Account LoginAccount
         {
             get { return loginAccount; }
-            set { loginAccount = value; ChangeAccount(loginAccount.Typee); }
+            set { loginAccount = value; ChangeAccount(loginAccount.Type); }
         }
 
         //Fields

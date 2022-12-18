@@ -35,15 +35,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblDisplayName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.txtConfirmPW = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNewPassWord = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassWord = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDisplayName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblDisplayName = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -107,6 +107,7 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdate.Animated = true;
             this.btnUpdate.AutoRoundedCorners = true;
             this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
@@ -138,8 +139,80 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(1132, 643);
             this.guna2GradientPanel2.TabIndex = 5;
             // 
+            // guna2GradientPanel3
+            // 
+            this.guna2GradientPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientPanel3.BorderRadius = 30;
+            this.guna2GradientPanel3.Controls.Add(this.lblDisplayName);
+            this.guna2GradientPanel3.Controls.Add(this.pictureBox1);
+            this.guna2GradientPanel3.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2GradientPanel3.Controls.Add(this.txtConfirmPW);
+            this.guna2GradientPanel3.Controls.Add(this.txtNewPassWord);
+            this.guna2GradientPanel3.Controls.Add(this.txtPassWord);
+            this.guna2GradientPanel3.Controls.Add(this.txtDisplayName);
+            this.guna2GradientPanel3.Controls.Add(this.txtUserName);
+            this.guna2GradientPanel3.Controls.Add(this.label2);
+            this.guna2GradientPanel3.Controls.Add(this.btnUpdate);
+            this.guna2GradientPanel3.Controls.Add(this.label3);
+            this.guna2GradientPanel3.Controls.Add(this.label4);
+            this.guna2GradientPanel3.Controls.Add(this.label5);
+            this.guna2GradientPanel3.Controls.Add(this.label6);
+            this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(200)))));
+            this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(200)))));
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(91, 41);
+            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(963, 602);
+            this.guna2GradientPanel3.TabIndex = 7;
+            // 
+            // lblDisplayName
+            // 
+            this.lblDisplayName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDisplayName.BackColor = System.Drawing.Color.Transparent;
+            this.lblDisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisplayName.ForeColor = System.Drawing.Color.Black;
+            this.lblDisplayName.Location = new System.Drawing.Point(252, 128);
+            this.lblDisplayName.Name = "lblDisplayName";
+            this.lblDisplayName.Size = new System.Drawing.Size(461, 40);
+            this.lblDisplayName.TabIndex = 0;
+            this.lblDisplayName.Text = "Tên hiển thị";
+            this.lblDisplayName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDisplayName.Click += new System.EventHandler(this.lblDisplayName_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::QLNH_Winform.Properties.Resources.account;
+            this.pictureBox1.Location = new System.Drawing.Point(656, 524);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::QLNH_Winform.Properties.Resources.user;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(434, 30);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(95, 95);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 1;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
             // txtConfirmPW
             // 
+            this.txtConfirmPW.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConfirmPW.Animated = true;
             this.txtConfirmPW.AutoRoundedCorners = true;
             this.txtConfirmPW.BackColor = System.Drawing.Color.Transparent;
@@ -166,6 +239,8 @@
             // 
             // txtNewPassWord
             // 
+            this.txtNewPassWord.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNewPassWord.Animated = true;
             this.txtNewPassWord.AutoRoundedCorners = true;
             this.txtNewPassWord.BackColor = System.Drawing.Color.Transparent;
@@ -192,6 +267,8 @@
             // 
             // txtPassWord
             // 
+            this.txtPassWord.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassWord.Animated = true;
             this.txtPassWord.AutoRoundedCorners = true;
             this.txtPassWord.BackColor = System.Drawing.Color.Transparent;
@@ -218,6 +295,8 @@
             // 
             // txtDisplayName
             // 
+            this.txtDisplayName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDisplayName.Animated = true;
             this.txtDisplayName.AutoRoundedCorners = true;
             this.txtDisplayName.BackColor = System.Drawing.Color.Transparent;
@@ -243,6 +322,8 @@
             // 
             // txtUserName
             // 
+            this.txtUserName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUserName.Animated = true;
             this.txtUserName.AutoRoundedCorners = true;
             this.txtUserName.BackColor = System.Drawing.Color.Transparent;
@@ -265,68 +346,6 @@
             this.txtUserName.SelectedText = "";
             this.txtUserName.Size = new System.Drawing.Size(669, 44);
             this.txtUserName.TabIndex = 1;
-            // 
-            // guna2GradientPanel3
-            // 
-            this.guna2GradientPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientPanel3.BorderRadius = 30;
-            this.guna2GradientPanel3.Controls.Add(this.lblDisplayName);
-            this.guna2GradientPanel3.Controls.Add(this.pictureBox1);
-            this.guna2GradientPanel3.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2GradientPanel3.Controls.Add(this.txtConfirmPW);
-            this.guna2GradientPanel3.Controls.Add(this.txtNewPassWord);
-            this.guna2GradientPanel3.Controls.Add(this.txtPassWord);
-            this.guna2GradientPanel3.Controls.Add(this.txtDisplayName);
-            this.guna2GradientPanel3.Controls.Add(this.txtUserName);
-            this.guna2GradientPanel3.Controls.Add(this.label2);
-            this.guna2GradientPanel3.Controls.Add(this.btnUpdate);
-            this.guna2GradientPanel3.Controls.Add(this.label3);
-            this.guna2GradientPanel3.Controls.Add(this.label4);
-            this.guna2GradientPanel3.Controls.Add(this.label5);
-            this.guna2GradientPanel3.Controls.Add(this.label6);
-            this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(200)))));
-            this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(200)))));
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(91, 41);
-            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(963, 602);
-            this.guna2GradientPanel3.TabIndex = 7;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::QLNH_Winform.Properties.Resources.account;
-            this.pictureBox1.Location = new System.Drawing.Point(656, 524);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblDisplayName
-            // 
-            this.lblDisplayName.BackColor = System.Drawing.Color.Transparent;
-            this.lblDisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplayName.ForeColor = System.Drawing.Color.Black;
-            this.lblDisplayName.Location = new System.Drawing.Point(252, 128);
-            this.lblDisplayName.Name = "lblDisplayName";
-            this.lblDisplayName.Size = new System.Drawing.Size(461, 40);
-            this.lblDisplayName.TabIndex = 0;
-            this.lblDisplayName.Text = "Tên hiển thị";
-            this.lblDisplayName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblDisplayName.Click += new System.EventHandler(this.lblDisplayName_Click);
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::QLNH_Winform.Properties.Resources.user;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(434, 30);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(95, 95);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 1;
-            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // FormTaiKhoan
             // 

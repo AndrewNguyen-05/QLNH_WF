@@ -33,7 +33,6 @@
             this.pnMenu = new System.Windows.Forms.Panel();
             this.btnTaiKhoan = new FontAwesome.Sharp.IconButton();
             this.btnThongKe = new FontAwesome.Sharp.IconButton();
-            this.btnKhoHang = new FontAwesome.Sharp.IconButton();
             this.btnNhanVien = new FontAwesome.Sharp.IconButton();
             this.btnMonAn = new FontAwesome.Sharp.IconButton();
             this.btnBanAn = new FontAwesome.Sharp.IconButton();
@@ -57,7 +56,6 @@
             this.pnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.pnMenu.Controls.Add(this.btnTaiKhoan);
             this.pnMenu.Controls.Add(this.btnThongKe);
-            this.pnMenu.Controls.Add(this.btnKhoHang);
             this.pnMenu.Controls.Add(this.btnNhanVien);
             this.pnMenu.Controls.Add(this.btnMonAn);
             this.pnMenu.Controls.Add(this.btnBanAn);
@@ -80,7 +78,7 @@
             this.btnTaiKhoan.IconColor = System.Drawing.Color.White;
             this.btnTaiKhoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaiKhoan.Location = new System.Drawing.Point(-6, 513);
+            this.btnTaiKhoan.Location = new System.Drawing.Point(-6, 359);
             this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTaiKhoan.Name = "btnTaiKhoan";
             this.btnTaiKhoan.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
@@ -102,7 +100,7 @@
             this.btnThongKe.IconColor = System.Drawing.Color.White;
             this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(-6, 590);
+            this.btnThongKe.Location = new System.Drawing.Point(-9, 513);
             this.btnThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
@@ -113,28 +111,6 @@
             this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThongKe.UseVisualStyleBackColor = true;
             this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
-            // 
-            // btnKhoHang
-            // 
-            this.btnKhoHang.FlatAppearance.BorderSize = 0;
-            this.btnKhoHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhoHang.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhoHang.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnKhoHang.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
-            this.btnKhoHang.IconColor = System.Drawing.Color.White;
-            this.btnKhoHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnKhoHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhoHang.Location = new System.Drawing.Point(-6, 359);
-            this.btnKhoHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnKhoHang.Name = "btnKhoHang";
-            this.btnKhoHang.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnKhoHang.Size = new System.Drawing.Size(293, 73);
-            this.btnKhoHang.TabIndex = 32;
-            this.btnKhoHang.Text = "Kho hàng";
-            this.btnKhoHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhoHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKhoHang.UseVisualStyleBackColor = true;
-            this.btnKhoHang.Click += new System.EventHandler(this.btnKhoHang_Click);
             // 
             // btnNhanVien
             // 
@@ -281,6 +257,7 @@
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
@@ -367,7 +344,6 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnExit;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private FontAwesome.Sharp.IconButton btnKhoHang;
         private FontAwesome.Sharp.IconButton btnNhanVien;
         private FontAwesome.Sharp.IconButton btnMonAn;
         private FontAwesome.Sharp.IconButton btnBanAn;

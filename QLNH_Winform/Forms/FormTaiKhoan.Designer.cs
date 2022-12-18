@@ -115,7 +115,7 @@
             this.btnUpdate.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(195)))), ((int)(((byte)(176)))));
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(722, 518);
+            this.btnUpdate.Location = new System.Drawing.Point(722, 502);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(205, 56);
@@ -157,9 +157,9 @@
             this.guna2GradientPanel3.Controls.Add(this.label6);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(200)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(200)))));
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(91, 41);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(89, 29);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(963, 602);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(963, 586);
             this.guna2GradientPanel3.TabIndex = 7;
             // 
             // lblDisplayName
@@ -182,7 +182,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::QLNH_Winform.Properties.Resources.account;
-            this.pictureBox1.Location = new System.Drawing.Point(656, 524);
+            this.pictureBox1.Location = new System.Drawing.Point(656, 508);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

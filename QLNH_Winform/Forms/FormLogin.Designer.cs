@@ -78,7 +78,7 @@
             this.txtUsername.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Font = new System.Drawing.Font("Cambria", 12F);
-            this.txtUsername.ForeColor = System.Drawing.Color.Silver;
+            this.txtUsername.ForeColor = System.Drawing.Color.DimGray;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUsername.IconLeft")));
             this.txtUsername.Location = new System.Drawing.Point(593, 173);
@@ -102,7 +102,7 @@
             this.txtPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Font = new System.Drawing.Font("Cambria", 12F);
-            this.txtPassword.ForeColor = System.Drawing.Color.Silver;
+            this.txtPassword.ForeColor = System.Drawing.Color.DimGray;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconLeft")));
             this.txtPassword.Location = new System.Drawing.Point(593, 234);
@@ -202,7 +202,7 @@
             this.lblQLNH.ForeColor = System.Drawing.Color.Black;
             this.lblQLNH.Location = new System.Drawing.Point(667, 90);
             this.lblQLNH.Name = "lblQLNH";
-            this.lblQLNH.Size = new System.Drawing.Size(239, 82);
+            this.lblQLNH.Size = new System.Drawing.Size(162, 55);
             this.lblQLNH.TabIndex = 8;
             this.lblQLNH.Text = "QLNH";
             // 

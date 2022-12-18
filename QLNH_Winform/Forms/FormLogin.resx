@@ -4112,6 +4112,35 @@
         rkJggg==
 </value>
   </data>
+  <data name="txtPassword.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAExSURBVFhH7ZdBTgJBFERnxUZPIpGdmsj9QDaieByPoV7AgAdAE12YfF+lazaSzshMo4npl1QC
+        Rf2aPwMMoansS0SM0RI9ojdLj+WNHSsP5SN0hz5RDr22QiOPlUGF6B6Jd3SDztGRpcfyPpBQttwSlOnM
+        xTM6tb0Dr02cESvbw6BI77kurc48e/AWMlpCV0IzJ7b7Q4k+XGJpqxOyt2kkrm31h5Kn1BVntjohe5FG
+        4sFWfyh5TV1xbKsTZdNIbG31x0Xhpz/GY3vP7eCe31uAGX3nF+hFBYXYoCvUfW9w8FDMfZg8hLStuLQ1
+        GLqmqTI2tvI4OPzD8w3Xdvc6VxeoC9QF6gJ/ukB7K57aGoy6UmWsbeUhNE/ZgzDzYfIQ0s+xlmivRAnW
+        aIbK/l+o/AOa5gtgdFjH4B56YgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="txtUsername.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAALpSURBVGhD7Zm7bhNBFIZNUKCAABJFqlByabgV0NHRcEuQwkNwKakSaBPBC0BNAgICT4AEDTQ8
+        AIRrgSgAiSKEBhCY75/5V4wWWbbX3t2A9pN+yTpnzsXrmZ3ZdauhoWF4tNvtUXQG3ULL6KulzzeRfKMe
+        vragsdPoFeqGxkw5rH5oZgRdUWd9Mo9GnKY+aCLf/Ac0g/ahTdZ+NIvkS5l3mnqgAU2blNtos91/gW8M
+        3dHAhEm7q4XCG1A659X8Ors7ojHorgLMS1T9wqao7igZmhodr3wexuqX+KhAM21XdVBUt8qMGZt7hphL
+        MTSwaHN1UPRFrB3Ya3PPEKOFnbFsc3VQdDXWDvQ8fTIUE0MDqzZXh4rG2oEiX2BLDA2s2FwdFP3np5DO
+        NhmzNvcMMZdjaGDB5uqgaP42OmZXVxir6fNJgaaW26hOnulGph22141sSQGmno1MUHgqtPAH7bAdfwl8
+        uvJp87/QKbvrgQZ0qkzRDqtN6gDSrVLSZ835dNqIOaepD5rQcTr/JbqhKz+H6j9OZ9DMJNJ87obG1Dtt
+        OkFjWtjTaBE9R9rspGdoAcm3Nh8pGxr+Z1h4E+ge+oLKRjW02U24/GAoEfqMqkY1B/8SJNGVr4slt1Ec
+        kqTT5pDNpUGNw7FUYPAHHScK2FQ6LhewqTjk+BlTBUrfRVUjlorYXBxypCfInTaXBjV2xVIRm4tDjgcx
+        VeCczaVBjQuxVOC6zcUhydmYK/AObbVr6JB7G3qvQuaoXcUhid4up0kfo75fo3SDnHrd+EQFzFO03u7B
+        INExlC7m1+iI3QOjXOiNEpvv6KDdw4GEmpt6kkrR+jiO+r47KQadcI6UH6ictxQk1lNX/rlWrKD76CLS
+        r6U7yXakV/Ab/Vk2+TRGYxWTR7lPulw5UGAc6elKV2pYaMrcQOMuUz4U24GuoreoKIrVX1TDOXkWhQb2
+        IK2Ra+gR0oLUafKbpc9a+A+RxpxHux3e0NBQmFbrNwDdLqLpK+WrAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="guna2ShadowForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>141, 17</value>
   </metadata>

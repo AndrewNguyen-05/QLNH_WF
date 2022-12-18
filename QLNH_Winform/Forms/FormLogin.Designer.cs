@@ -67,7 +67,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Cambria", 12F);
             this.txtUsername.ForeColor = System.Drawing.Color.White;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.IconLeft = global::QLNH_Winform.Properties.Resources.Login;
+            this.txtUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUsername.IconLeft")));
             this.txtUsername.Location = new System.Drawing.Point(593, 173);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(5);
             this.txtUsername.Name = "txtUsername";
@@ -93,7 +93,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Cambria", 12F);
             this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.IconLeft = global::QLNH_Winform.Properties.Resources.Password;
+            this.txtPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconLeft")));
             this.txtPassword.Location = new System.Drawing.Point(593, 234);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
@@ -200,7 +200,7 @@
             this.lblQLNH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.lblQLNH.Location = new System.Drawing.Point(588, 86);
             this.lblQLNH.Name = "lblQLNH";
-            this.lblQLNH.Size = new System.Drawing.Size(260, 98);
+            this.lblQLNH.Size = new System.Drawing.Size(147, 55);
             this.lblQLNH.TabIndex = 8;
             this.lblQLNH.Text = "Login";
             // 

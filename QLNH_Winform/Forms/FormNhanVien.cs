@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QLNH_Winform.Forms
 {
@@ -103,7 +104,7 @@ namespace QLNH_Winform.Forms
             }
             else
             {
-                MessageBox.Show("Đặt lại mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Đặt lại mật khẩu thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -134,7 +135,18 @@ namespace QLNH_Winform.Forms
                 LoadAccount();
                 return;
             }
-            EditAcount(userName, editingUserName, displayName, type);
+            if (loginAcc.UserName.Equals(editingUserName))
+            {
+                EditAcount(userName, editingUserName, displayName, type);
+                if (updateAccount != null)
+                {
+                    updateAccount(this, new AccountEvent(AccountDAO.Instance.GetAccountByUserName(userName)));
+                }
+            }
+            else
+            {
+                EditAcount(userName, editingUserName, displayName, type);
+            }
             LoadAccount();
         }
         private void btnDeleteStaff_Click(object sender, EventArgs e)
@@ -153,13 +165,24 @@ namespace QLNH_Winform.Forms
                 DeleteAcount(userName);
             }
         }
-        #endregion
-
         private void btnResetPassword_Click(object sender, EventArgs e)
         {
-            string userName = txtUserName.Text;
-            ResetPassword(userName);
+            foreach (DataGridViewCell dc in dtgvListAccount.SelectedCells)
+            {
+                string userName = dc.OwningRow.Cells["UserName"].Value.ToString();
+                ResetPassword(userName);
+                if (updateAccount != null && loginAcc.UserName.Equals(userName))
+                {
+                    updateAccount(this, new AccountEvent(AccountDAO.Instance.GetAccountByUserName(userName)));
+                }
+            }
         }
-
+        #endregion
+        private event EventHandler<AccountEvent> updateAccount;
+        public event EventHandler<AccountEvent> UpdateAccount
+        {
+            add { updateAccount += value; }
+            remove { updateAccount -= value; }
+        }
     }
 }

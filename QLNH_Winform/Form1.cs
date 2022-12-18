@@ -192,10 +192,17 @@ namespace QLNH_Winform
             pnTitleBar.FillColor = Color.White;
             pnTitleBar.FillColor2 = Color.White;
             FormNhanVien form = new FormNhanVien();
-            form.loginAcc = LoginAccount;
+            form.loginAcc = loginAccount;
+            form.UpdateAccount += Form_UpdateAccount;
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
             OpenChildForm(form);
         }
+
+        private void Form_UpdateAccount(object sender, AccountEvent e)
+        {
+            loginAccount = e.Acc;
+        }
+
         private void btnKhoHang_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(178, 8, 55));

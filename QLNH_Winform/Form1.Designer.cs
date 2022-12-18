@@ -39,15 +39,18 @@
             this.btnOrder = new FontAwesome.Sharp.IconButton();
             this.pnLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnTitleBar = new System.Windows.Forms.Panel();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnCurrentChildForm = new FontAwesome.Sharp.IconButton();
             this.lblCurentChildForm = new System.Windows.Forms.Label();
             this.pnDesktop = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.pnControl = new System.Windows.Forms.Panel();
+            this.pnTitleBar = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pnMenu.SuspendLayout();
             this.pnLogo.SuspendLayout();
+            this.pnControl.SuspendLayout();
             this.pnTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -215,81 +218,38 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.label1.Location = new System.Drawing.Point(40, 26);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(59, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 81);
+            this.label1.Size = new System.Drawing.Size(169, 65);
             this.label1.TabIndex = 0;
             this.label1.Text = "QLNH";
             // 
-            // pnTitleBar
-            // 
-            this.pnTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.pnTitleBar.Controls.Add(this.btnMinimize);
-            this.pnTitleBar.Controls.Add(this.btnExit);
-            this.pnTitleBar.Controls.Add(this.btnCurrentChildForm);
-            this.pnTitleBar.Controls.Add(this.lblCurentChildForm);
-            this.pnTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTitleBar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnTitleBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pnTitleBar.Location = new System.Drawing.Point(287, 0);
-            this.pnTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnTitleBar.Name = "pnTitleBar";
-            this.pnTitleBar.Size = new System.Drawing.Size(1150, 107);
-            this.pnTitleBar.TabIndex = 1;
-            this.pnTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTitleBar_MouseDown);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(1054, 2);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(41, 34);
-            this.btnMinimize.TabIndex = 4;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(1086, 2);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(53, 34);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // btnCurrentChildForm
             // 
+            this.btnCurrentChildForm.BackColor = System.Drawing.Color.Transparent;
             this.btnCurrentChildForm.FlatAppearance.BorderSize = 0;
             this.btnCurrentChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.btnCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple;
             this.btnCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCurrentChildForm.Location = new System.Drawing.Point(6, 35);
+            this.btnCurrentChildForm.Location = new System.Drawing.Point(6, 31);
             this.btnCurrentChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCurrentChildForm.Name = "btnCurrentChildForm";
             this.btnCurrentChildForm.Size = new System.Drawing.Size(53, 61);
             this.btnCurrentChildForm.TabIndex = 3;
-            this.btnCurrentChildForm.UseVisualStyleBackColor = true;
+            this.btnCurrentChildForm.UseVisualStyleBackColor = false;
             // 
             // lblCurentChildForm
             // 
             this.lblCurentChildForm.AutoSize = true;
-            this.lblCurentChildForm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurentChildForm.Location = new System.Drawing.Point(55, 55);
+            this.lblCurentChildForm.BackColor = System.Drawing.Color.Transparent;
+            this.lblCurentChildForm.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCurentChildForm.ForeColor = System.Drawing.Color.Tomato;
+            this.lblCurentChildForm.Location = new System.Drawing.Point(65, 50);
             this.lblCurentChildForm.Name = "lblCurentChildForm";
-            this.lblCurentChildForm.Size = new System.Drawing.Size(73, 30);
+            this.lblCurentChildForm.Size = new System.Drawing.Size(49, 17);
             this.lblCurentChildForm.TabIndex = 2;
             this.lblCurentChildForm.Text = "Home";
             // 
@@ -305,16 +265,72 @@
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 70;
+            this.guna2Elipse1.BorderRadius = 16;
             this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
+            // btnExit
+            // 
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(1097, 0);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(53, 40);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(1056, 0);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(41, 40);
+            this.btnMinimize.TabIndex = 4;
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // pnControl
+            // 
+            this.pnControl.BackColor = System.Drawing.Color.Transparent;
+            this.pnControl.Controls.Add(this.btnMinimize);
+            this.pnControl.Controls.Add(this.btnExit);
+            this.pnControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnControl.Location = new System.Drawing.Point(0, 0);
+            this.pnControl.Name = "pnControl";
+            this.pnControl.Size = new System.Drawing.Size(1150, 40);
+            this.pnControl.TabIndex = 4;
+            // 
+            // pnTitleBar
+            // 
+            this.pnTitleBar.Controls.Add(this.lblCurentChildForm);
+            this.pnTitleBar.Controls.Add(this.btnCurrentChildForm);
+            this.pnTitleBar.Controls.Add(this.pnControl);
+            this.pnTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTitleBar.Location = new System.Drawing.Point(287, 0);
+            this.pnTitleBar.Name = "pnTitleBar";
+            this.pnTitleBar.Size = new System.Drawing.Size(1150, 109);
+            this.pnTitleBar.TabIndex = 3;
+            this.pnTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTitleBar_MouseDown);
             // 
             // FormMainMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(1437, 797);
-            this.Controls.Add(this.pnDesktop);
             this.Controls.Add(this.pnTitleBar);
+            this.Controls.Add(this.pnDesktop);
             this.Controls.Add(this.pnMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -325,6 +341,7 @@
             this.pnMenu.ResumeLayout(false);
             this.pnLogo.ResumeLayout(false);
             this.pnLogo.PerformLayout();
+            this.pnControl.ResumeLayout(false);
             this.pnTitleBar.ResumeLayout(false);
             this.pnTitleBar.PerformLayout();
             this.ResumeLayout(false);
@@ -336,13 +353,10 @@
 
         private System.Windows.Forms.Panel pnMenu;
         private System.Windows.Forms.Panel pnLogo;
-        private System.Windows.Forms.Panel pnTitleBar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCurentChildForm;
         private FontAwesome.Sharp.IconButton btnCurrentChildForm;
         private System.Windows.Forms.Panel pnDesktop;
-        private System.Windows.Forms.Button btnMinimize;
-        private System.Windows.Forms.Button btnExit;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private FontAwesome.Sharp.IconButton btnNhanVien;
         private FontAwesome.Sharp.IconButton btnMonAn;
@@ -350,6 +364,11 @@
         private FontAwesome.Sharp.IconButton btnOrder;
         private FontAwesome.Sharp.IconButton btnThongKe;
         private FontAwesome.Sharp.IconButton btnTaiKhoan;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Panel pnControl;
+        private Guna.UI2.WinForms.Guna2GradientPanel pnTitleBar;
     }
 }
 

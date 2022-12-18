@@ -72,7 +72,7 @@
             this.txtUsername.Margin = new System.Windows.Forms.Padding(5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PlaceholderForeColor = System.Drawing.Color.Transparent;
+            this.txtUsername.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtUsername.PlaceholderText = "Tên tài khoản";
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(290, 45);
@@ -98,7 +98,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
-            this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Transparent;
+            this.txtPassword.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtPassword.PlaceholderText = "Mật khẩu";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(290, 45);

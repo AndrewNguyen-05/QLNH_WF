@@ -26,28 +26,31 @@ namespace QLNH_Winform.DAO
         }
         private AccountDAO() { }
 
-
-
-        public bool Login(string username, string password)
+        private string toMD5Hash(string password)
         {
             byte[] passwordBytes = ASCIIEncoding.ASCII.GetBytes(password);
             byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(passwordBytes);
 
             string hasPass = "";
-            foreach(byte b in hasData)
+            foreach (byte b in hasData)
             {
                 hasPass += b;
-            }    
+            }
+            return hasPass;
+        }
+
+        public bool Login(string username, string password)
+        {
             string query = "USP_Login @userName , @passWord";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, hasPass });
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, toMD5Hash(password) });
             return result.Rows.Count > 0;
         }
 
-        public bool UpdateAccount(string userName, string displayName, string pass, string newpass)
-        {
-            int result  = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName , @displayName , @password , @newPassword", new object[] {userName, displayName, pass, newpass});
-            return result > 0;
-        }
+        //public bool UpdateAccount(string userName, string displayName, string pass, string newpass)
+        //{
+        //    int result  = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName , @displayName , @password , @newPassword", new object[] {userName, displayName, toMD5Hash(pass), toMD5Hash(newpass) });
+        //    return result > 0;
+        //}
 
         public DataTable GetListAccount()
         {
@@ -71,19 +74,27 @@ namespace QLNH_Winform.DAO
             return result > 0;
         }
 
-        public bool UpdateAccount(string userName, string displayName, int type)
-        {
-            string query = string.Format("UPDATE Account SET DisplayName = N'{1}', Type = {2} WHERE UserName = N'{0}'", userName, displayName, type);
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
-            return result > 0;
-        }
+        //public bool UpdateAccount(string userName, string displayName, int type)
+        //{
+        //    string query = string.Format("UPDATE Account SET DisplayName = N'{1}', Type = {2} WHERE UserName = N'{0}'", userName, displayName, type);
+        //    int result = DataProvider.Instance.ExecuteNonQuery(query);
+        //    return result > 0;
+        //}
         public bool UpdateAccount(string userName, string oldUserName, string displayName, int type)
         {
-            string query = string.Format("UPDATE Account SET UserName = N'{0}', DisplayName = N'{1}', Type = {2} WHERE UserName = N'{3}'", userName, displayName, type, oldUserName);
+            string query = string.Format("UPDATE Account SET UserName = N'{0}', DisplayName = N'{1}', Type = {2} WHERE UserName = N'{3}'", 
+                                        userName, displayName, type, oldUserName);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
+        public bool UpdateAccount(string userName, string oldUserName, string displayName, string pass, string newpass)
+        {
+            string query = string.Format("UPDATE Account SET UserName = N'{0}', DisplayName = N'{1}', PassWord = N'{2}' WHERE UserName = N'{3}' AND PassWord = N'{4}'", 
+                                        userName, displayName, toMD5Hash(newpass), oldUserName, toMD5Hash(pass));
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
         public bool DeleteAccount(string userName)
         {
             string query = string.Format("DELETE Account WHERE UserName = N'{0}'", userName);

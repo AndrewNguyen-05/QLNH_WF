@@ -138,9 +138,10 @@ namespace QLNH_Winform.Forms
             if (loginAcc.UserName.Equals(editingUserName))
             {
                 EditAcount(userName, editingUserName, displayName, type);
+                loginAcc = AccountDAO.Instance.GetAccountByUserName(userName);
                 if (updateAccount != null)
                 {
-                    updateAccount(this, new AccountEvent(AccountDAO.Instance.GetAccountByUserName(userName)));
+                    updateAccount(this, new AccountEvent(loginAcc));
                 }
             }
             else

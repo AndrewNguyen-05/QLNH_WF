@@ -219,9 +219,9 @@ namespace QLNH_Winform
             OpenChildForm(f);
         }
 
-        private void F_UpdateAccount(object sender, EventArgs e)
+        private void F_UpdateAccount(object sender, AccountEvent e)
         {
-            // Update DisplayName at FormMain
+            loginAccount = e.Acc;
         }
 
         private void Reset()

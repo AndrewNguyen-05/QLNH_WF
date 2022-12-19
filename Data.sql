@@ -74,10 +74,6 @@ CREATE TABLE BillInfo
 )
 GO
 
-INSERT INTO Account (UserName, DisplayName, PassWord, Type) VALUES ('Admin', 'Administrator', '1', 1)
-INSERT INTO Account VALUES ('Anh0505', 'Anh', '1', 0)
-GO
-
 CREATE PROC USP_GetAccountByUserName
 @userName NVARCHAR(100)
 AS 
@@ -179,6 +175,20 @@ GO
 --INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 4, 5)
 --INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 5, 2)
 --GO
+
+-- Thêm tài khoản
+INSERT INTO Account (UserName, DisplayName, PassWord, Type) VALUES (N'Admin', N'Trương Văn Bình', 'AD', 1)
+INSERT INTO Account VALUES (N'Phuoc', N'Phan Ngọc Phước', 'ST1', 0)
+INSERT INTO Account VALUES (N'Manh', N'Hoàng Đức Mạnh', 'ST2', 0)
+INSERT INTO Account VALUES (N'Duy', N'Trường Hoàng Bảo Duy', 'ST3', 0)
+INSERT INTO Account VALUES (N'Anh', N'Nguyễn Văn Hoàng Anh', 'ST4', 0)
+INSERT INTO Account VALUES (N'Duong', N'Nguyễn Quốc Thái Dương', 'ST5', 0)
+INSERT INTO Account VALUES (N'Den', N'Đen Vâu', 'ST6', 0)
+INSERT INTO Account VALUES (N'Vu', N'Hoàng Thái Vũ', 'ST7', 0)
+INSERT INTO Account VALUES (N'Tung', N'Sơn Tùng MTP', 'ST8', 0)
+INSERT INTO Account VALUES (N'Dinh', N'Thái Đinh', 'ST9', 0)
+INSERT INTO Account VALUES (N'Quynh', N'Phan Mạnh Quỳnh', 'ST10', 0)
+INSERT INTO Account VALUES (N'Linh', N'Bùi Trường Linh', 'ST11', 0)
 
 
 

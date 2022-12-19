@@ -219,9 +219,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(59, 31);
+            this.label1.Location = new System.Drawing.Point(12, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 65);
+            this.label1.Size = new System.Drawing.Size(250, 96);
             this.label1.TabIndex = 0;
             this.label1.Text = "QLNH";
             // 
@@ -248,7 +248,7 @@
             this.lblCurentChildForm.ForeColor = System.Drawing.Color.Tomato;
             this.lblCurentChildForm.Location = new System.Drawing.Point(65, 50);
             this.lblCurentChildForm.Name = "lblCurentChildForm";
-            this.lblCurentChildForm.Size = new System.Drawing.Size(49, 17);
+            this.lblCurentChildForm.Size = new System.Drawing.Size(74, 27);
             this.lblCurentChildForm.TabIndex = 2;
             this.lblCurentChildForm.Text = "Home";
             // 

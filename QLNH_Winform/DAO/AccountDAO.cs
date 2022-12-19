@@ -36,10 +36,8 @@ namespace QLNH_Winform.DAO
             string hasPass = "";
             foreach(byte b in hasData)
             {
-                hasPass += b.ToString();
+                hasPass += b;
             }    
-
-
             string query = "USP_Login @userName , @passWord";
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, hasPass });
             return result.Rows.Count > 0;

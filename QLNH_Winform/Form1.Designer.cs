@@ -47,8 +47,6 @@
             this.ControlMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ControlClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnTitleBar = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.ControlClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.ControlMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnMenu.SuspendLayout();
             this.pnLogo.SuspendLayout();
             this.pnControl.SuspendLayout();
@@ -221,9 +219,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(59, 31);
+            this.label1.Location = new System.Drawing.Point(12, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 65);
+            this.label1.Size = new System.Drawing.Size(250, 96);
             this.label1.TabIndex = 0;
             this.label1.Text = "QLNH";
             // 
@@ -250,7 +248,7 @@
             this.lblCurentChildForm.ForeColor = System.Drawing.Color.Tomato;
             this.lblCurentChildForm.Location = new System.Drawing.Point(65, 50);
             this.lblCurentChildForm.Name = "lblCurentChildForm";
-            this.lblCurentChildForm.Size = new System.Drawing.Size(49, 17);
+            this.lblCurentChildForm.Size = new System.Drawing.Size(74, 27);
             this.lblCurentChildForm.TabIndex = 2;
             this.lblCurentChildForm.Text = "Home";
             // 
@@ -321,31 +319,6 @@
             this.pnTitleBar.Size = new System.Drawing.Size(1150, 109);
             this.pnTitleBar.TabIndex = 3;
             this.pnTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTitleBar_MouseDown);
-            // 
-            // ControlClose
-            // 
-            this.ControlClose.Animated = true;
-            this.ControlClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ControlClose.FillColor = System.Drawing.Color.Transparent;
-            this.ControlClose.ForeColor = System.Drawing.Color.Black;
-            this.ControlClose.IconColor = System.Drawing.Color.White;
-            this.ControlClose.Location = new System.Drawing.Point(1105, 0);
-            this.ControlClose.Name = "ControlClose";
-            this.ControlClose.Size = new System.Drawing.Size(45, 40);
-            this.ControlClose.TabIndex = 5;
-            // 
-            // ControlMinimize
-            // 
-            this.ControlMinimize.Animated = true;
-            this.ControlMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.ControlMinimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ControlMinimize.FillColor = System.Drawing.Color.Transparent;
-            this.ControlMinimize.ForeColor = System.Drawing.Color.Black;
-            this.ControlMinimize.IconColor = System.Drawing.Color.White;
-            this.ControlMinimize.Location = new System.Drawing.Point(1060, 0);
-            this.ControlMinimize.Name = "ControlMinimize";
-            this.ControlMinimize.Size = new System.Drawing.Size(45, 40);
-            this.ControlMinimize.TabIndex = 6;
             // 
             // FormMainMenu
             // 

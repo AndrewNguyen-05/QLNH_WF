@@ -200,7 +200,7 @@
             this.lblQLNH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.lblQLNH.Location = new System.Drawing.Point(588, 86);
             this.lblQLNH.Name = "lblQLNH";
-            this.lblQLNH.Size = new System.Drawing.Size(147, 55);
+            this.lblQLNH.Size = new System.Drawing.Size(180, 69);
             this.lblQLNH.TabIndex = 8;
             this.lblQLNH.Text = "Login";
             // 

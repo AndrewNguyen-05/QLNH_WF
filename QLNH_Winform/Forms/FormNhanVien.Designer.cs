@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhanVien));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btnResetPassword = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnDeleteStaff = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnAddStaff = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvListAccount = new System.Windows.Forms.DataGridView();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnAddStaff = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnDelTable = new Guna.UI2.WinForms.Guna2Button();
+            this.btnResetPassword = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.lblEmployeeName = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvListAccount)).BeginInit();
@@ -43,119 +48,208 @@
             // 
             // guna2GradientPanel1
             // 
-            this.guna2GradientPanel1.Controls.Add(this.txtUserName);
-            this.guna2GradientPanel1.Controls.Add(this.label1);
+            this.guna2GradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.guna2GradientPanel1.Controls.Add(this.lblEmployeeName);
             this.guna2GradientPanel1.Controls.Add(this.btnResetPassword);
-            this.guna2GradientPanel1.Controls.Add(this.btnDeleteStaff);
+            this.guna2GradientPanel1.Controls.Add(this.btnDelTable);
             this.guna2GradientPanel1.Controls.Add(this.btnAddStaff);
+            this.guna2GradientPanel1.Controls.Add(this.txtUserName);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1003, 129);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1003, 84);
             this.guna2GradientPanel1.TabIndex = 0;
-            // 
-            // btnResetPassword
-            // 
-            this.btnResetPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnResetPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnResetPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnResetPassword.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnResetPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnResetPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnResetPassword.ForeColor = System.Drawing.Color.White;
-            this.btnResetPassword.Location = new System.Drawing.Point(778, 21);
-            this.btnResetPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnResetPassword.Name = "btnResetPassword";
-            this.btnResetPassword.Size = new System.Drawing.Size(121, 68);
-            this.btnResetPassword.TabIndex = 1;
-            this.btnResetPassword.Text = "Đặt lại mật khẩu";
-            this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
-            // 
-            // btnDeleteStaff
-            // 
-            this.btnDeleteStaff.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeleteStaff.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDeleteStaff.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDeleteStaff.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDeleteStaff.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDeleteStaff.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDeleteStaff.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteStaff.Location = new System.Drawing.Point(542, 21);
-            this.btnDeleteStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDeleteStaff.Name = "btnDeleteStaff";
-            this.btnDeleteStaff.Size = new System.Drawing.Size(121, 68);
-            this.btnDeleteStaff.TabIndex = 0;
-            this.btnDeleteStaff.Text = "Xóa";
-            this.btnDeleteStaff.Click += new System.EventHandler(this.btnDeleteStaff_Click);
-            // 
-            // btnAddStaff
-            // 
-            this.btnAddStaff.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddStaff.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddStaff.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddStaff.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddStaff.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddStaff.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddStaff.ForeColor = System.Drawing.Color.White;
-            this.btnAddStaff.Location = new System.Drawing.Point(325, 21);
-            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAddStaff.Name = "btnAddStaff";
-            this.btnAddStaff.Size = new System.Drawing.Size(121, 68);
-            this.btnAddStaff.TabIndex = 0;
-            this.btnAddStaff.Text = "Thêm";
-            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.panel1.Controls.Add(this.dtgvListAccount);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 129);
+            this.panel1.Location = new System.Drawing.Point(0, 84);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1003, 378);
+            this.panel1.Size = new System.Drawing.Size(1003, 593);
             this.panel1.TabIndex = 1;
             // 
             // dtgvListAccount
             // 
+            this.dtgvListAccount.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dtgvListAccount.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgvListAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgvListAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvListAccount.Location = new System.Drawing.Point(0, 0);
-            this.dtgvListAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgvListAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvListAccount.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.dtgvListAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvListAccount.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dtgvListAccount.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvListAccount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dtgvListAccount.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvListAccount.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dtgvListAccount.EnableHeadersVisualStyles = false;
+            this.dtgvListAccount.Location = new System.Drawing.Point(11, 0);
+            this.dtgvListAccount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtgvListAccount.Name = "dtgvListAccount";
-            this.dtgvListAccount.RowHeadersWidth = 62;
-            this.dtgvListAccount.RowTemplate.Height = 28;
-            this.dtgvListAccount.Size = new System.Drawing.Size(1003, 378);
-            this.dtgvListAccount.TabIndex = 0;
+            this.dtgvListAccount.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvListAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dtgvListAccount.RowHeadersWidth = 51;
+            this.dtgvListAccount.RowTemplate.Height = 24;
+            this.dtgvListAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvListAccount.Size = new System.Drawing.Size(981, 590);
+            this.dtgvListAccount.TabIndex = 11;
             this.dtgvListAccount.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dtgvListAccount_CellBeginEdit);
             this.dtgvListAccount.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvListAccount_CellValueChanged);
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(119, 67);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUserName.Animated = true;
+            this.txtUserName.BorderColor = System.Drawing.Color.DimGray;
+            this.txtUserName.BorderRadius = 8;
+            this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUserName.DefaultText = "";
+            this.txtUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserName.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtUserName.ForeColor = System.Drawing.Color.DimGray;
+            this.txtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserName.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUserName.IconLeft")));
+            this.txtUserName.Location = new System.Drawing.Point(281, 19);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(200, 22);
-            this.txtUserName.TabIndex = 1;
+            this.txtUserName.PasswordChar = '\0';
+            this.txtUserName.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtUserName.PlaceholderText = "Nhập tên tài khoản mới";
+            this.txtUserName.SelectedText = "";
+            this.txtUserName.Size = new System.Drawing.Size(288, 44);
+            this.txtUserName.TabIndex = 2;
             // 
-            // label1
+            // btnAddStaff
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên tài khoản";
+            this.btnAddStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddStaff.Animated = true;
+            this.btnAddStaff.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddStaff.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
+            this.btnAddStaff.BorderRadius = 8;
+            this.btnAddStaff.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddStaff.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddStaff.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddStaff.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddStaff.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddStaff.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.btnAddStaff.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.btnAddStaff.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddStaff.ForeColor = System.Drawing.Color.White;
+            this.btnAddStaff.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.btnAddStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStaff.Image")));
+            this.btnAddStaff.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnAddStaff.Location = new System.Drawing.Point(576, 19);
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.Size = new System.Drawing.Size(143, 44);
+            this.btnAddStaff.TabIndex = 12;
+            this.btnAddStaff.Text = "Thêm";
+            this.btnAddStaff.UseTransparentBackground = true;
+            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
+            // 
+            // btnDelTable
+            // 
+            this.btnDelTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelTable.Animated = true;
+            this.btnDelTable.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelTable.BorderColor = System.Drawing.Color.DimGray;
+            this.btnDelTable.BorderRadius = 8;
+            this.btnDelTable.BorderThickness = 1;
+            this.btnDelTable.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelTable.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelTable.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelTable.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelTable.FillColor = System.Drawing.Color.White;
+            this.btnDelTable.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.btnDelTable.Image = ((System.Drawing.Image)(resources.GetObject("btnDelTable.Image")));
+            this.btnDelTable.Location = new System.Drawing.Point(947, 19);
+            this.btnDelTable.Name = "btnDelTable";
+            this.btnDelTable.Size = new System.Drawing.Size(44, 44);
+            this.btnDelTable.TabIndex = 13;
+            this.btnDelTable.Click += new System.EventHandler(this.btnDeleteStaff_Click);
+            // 
+            // btnResetPassword
+            // 
+            this.btnResetPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResetPassword.Animated = true;
+            this.btnResetPassword.BackColor = System.Drawing.Color.Transparent;
+            this.btnResetPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
+            this.btnResetPassword.BorderRadius = 8;
+            this.btnResetPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnResetPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnResetPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnResetPassword.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnResetPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnResetPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.btnResetPassword.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.btnResetPassword.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
+            this.btnResetPassword.ForeColor = System.Drawing.Color.White;
+            this.btnResetPassword.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.btnResetPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnResetPassword.Image")));
+            this.btnResetPassword.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnResetPassword.Location = new System.Drawing.Point(725, 19);
+            this.btnResetPassword.Name = "btnResetPassword";
+            this.btnResetPassword.Size = new System.Drawing.Size(216, 44);
+            this.btnResetPassword.TabIndex = 14;
+            this.btnResetPassword.Text = "Cập nhật mật khẩu";
+            this.btnResetPassword.UseTransparentBackground = true;
+            this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
+            // 
+            // lblEmployeeName
+            // 
+            this.lblEmployeeName.AutoSize = true;
+            this.lblEmployeeName.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblEmployeeName.ForeColor = System.Drawing.Color.DimGray;
+            this.lblEmployeeName.Location = new System.Drawing.Point(12, 29);
+            this.lblEmployeeName.Name = "lblEmployeeName";
+            this.lblEmployeeName.Size = new System.Drawing.Size(231, 25);
+            this.lblEmployeeName.TabIndex = 15;
+            this.lblEmployeeName.Text = "DANH MỤC NHÂN VIÊN";
             // 
             // FormNhanVien
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1003, 507);
+            this.ClientSize = new System.Drawing.Size(1003, 677);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2GradientPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormNhanVien";
             this.Text = "Nhân viên";
@@ -170,12 +264,12 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnDeleteStaff;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnAddStaff;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dtgvListAccount;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnResetPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtUserName;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAddStaff;
+        private Guna.UI2.WinForms.Guna2GradientButton btnResetPassword;
+        private Guna.UI2.WinForms.Guna2Button btnDelTable;
+        private System.Windows.Forms.Label lblEmployeeName;
     }
 }

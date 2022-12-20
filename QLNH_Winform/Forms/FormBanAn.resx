@@ -134,17 +134,19 @@
   </data>
   <data name="btnDelTable.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAEBJREFUaEPt
-        zqENAEAIBEHapf8C/g0SgQMxk6y9XAAAAADckpnvUnVrrhvZrG7NdSOb1a25bmSzugUAAABwQsQHSJZA
-        sAJIIYYAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAEQSURBVGhD7ZNLCsIwFEWzCU2pOnYD2ugOFDfl0K3oxD1VhyLqBjSFOGkvIvTe+uEdOLPyzktC
+        nWEYRLLZ2vlwf22xSV9/GW8t/7TLQ2TFKkaPzSXE9sMhXsoybdGCahAKdGOZtmjBzx+gesbPHKJ0vfki
+        bWEYRmvwj6aTDooopYMiSumgiFI6KKKUDooopYMiSumgiFI6KKKUDooopYMiSumgiFI6KKKUDooopYMi
+        SumgiFI6KKKUDooopYMiSumgiFI6KKKUDooopYMiSumgiFI6KKKUDooopePDrRHReUlVIj7saxGhxTZV
+        ieSTcRx+bsbontwgDFOVTD4dOT/bxci1FmUYZ8ably1vGP+Icw8bGPqh2oXVFwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnAddTable.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAIlJREFUaEPt
-        10EKwCAMRFGPV+lF1GPb3qMVSUFca2PkPwiFbMyshjoAAACMF2M8y9whhKt8vaztkMMfmSxrO5rj68ja
-        DgJoI4A2AmhbNkA5pjZse9yI+a2xu4YdPfMb23yA8oifFCKnlA55Rl9/oKztIIA2AmgjgDbzAXb4qf8a
-        e62GBQAA2IZzL7/pgGzQUE1FAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFZJREFUSEvt
+        kzEOACAIA/n/szS+C0G7GQYVJ3uJA1GvSxGSiqo2OxVjPiYfYMwHfgbEwP9zgP31nt8S74lfzjdXFOj2
+        gYAtioGfATHwPw3wPTnvOVkR6cwNDSKt0QgZAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

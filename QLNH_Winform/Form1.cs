@@ -77,20 +77,21 @@ namespace QLNH_Winform
                     //Button
                     DeactivateButton();
                     currentButton = (IconButton)btnSender;
-                    currentButton.BackColor = Color.FromArgb(41, 39, 40);
-                    currentButton.ForeColor = Color.FromArgb(244, 237, 146);
+                    currentButton.BackColor = Color.FromArgb(241, 243, 245);
+                    currentButton.ForeColor = Color.FromArgb(57, 213, 213);
                     currentButton.TextAlign = ContentAlignment.MiddleCenter;
-                    currentButton.IconColor = Color.FromArgb(244, 237, 146);
+                    currentButton.IconColor = Color.FromArgb(57, 213, 213);
                     currentButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
-                    //pnTitleBar.BackColor = Color.FromArgb(128, 128, 255);
+                    pnTitleBar.BackColor = Color.White;
                     //pnTitleBar.ForeColor = Color.White;
                     //pnLogo.BackColor = ThemeColor.ChangeColorBrightness(Color.FromArgb(128, 128, 255), 0.3);
                     leftBorderBtn.Size = new Size(9, currentButton.Size.Height);
 
                     //Left Border Button
-                    leftBorderBtn.FillColor = Color.FromArgb(244, 237, 146);
-                    leftBorderBtn.FillColor2 = Color.FromArgb(25, 104, 143);
+                    //leftBorderBtn.FillColor = Color.FromArgb(244, 237, 146);
+                    //leftBorderBtn.FillColor2 = Color.FromArgb(25, 104, 143);
+                    leftBorderBtn.BackColor = Color.FromArgb(57, 213, 213);
                     leftBorderBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
                     leftBorderBtn.Location = new Point(0, currentButton.Location.Y);
                     leftBorderBtn.Visible = true;
@@ -98,7 +99,7 @@ namespace QLNH_Winform
 
                     //Button Current Child Form
                     btnCurrentChildForm.IconChar = currentButton.IconChar;
-                    btnCurrentChildForm.IconColor = Color.Tomato;
+                    btnCurrentChildForm.IconColor = Color.FromArgb(0, 23, 55);
 
                 }
             }
@@ -109,10 +110,10 @@ namespace QLNH_Winform
             if (currentButton != null)
             {
 
-                currentButton.BackColor = Color.FromArgb(41, 39, 40);
-                currentButton.ForeColor = Color.Gainsboro;
+                currentButton.BackColor = Color.White;
+                currentButton.ForeColor = Color.FromArgb(0, 23, 55);
                 currentButton.TextAlign = ContentAlignment.MiddleLeft;
-                currentButton.IconColor = Color.Gainsboro;
+                currentButton.IconColor = Color.FromArgb(101, 114, 133);
                 currentButton.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentButton.ImageAlign = ContentAlignment.MiddleLeft;
                 currentButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,38 +146,31 @@ namespace QLNH_Winform
             this.pnDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblCurentChildForm.Text = childForm.Text;
+
+            lblCurentChildForm.Text = childForm.Text.ToUpper();
 
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            pnTitleBar.FillColor = Color.FromArgb(255, 224, 192);
-            pnTitleBar.FillColor2 = Color.FromArgb(192, 192, 255);
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
             OpenChildForm(new Forms.FormGoiMon());
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            pnTitleBar.FillColor = Color.White;
-            pnTitleBar.FillColor2 = Color.White;
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
             OpenChildForm(new Forms.FormThongKe());
         }
 
         private void btnBanAn_Click(object sender, EventArgs e)
         {
-            pnTitleBar.FillColor = Color.FromArgb(236, 233, 146);
-            pnTitleBar.FillColor2 = Color.FromArgb(31, 108, 143);
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
             OpenChildForm(new Forms.FormBanAn());
         }
 
         private void btnMonAn_Click(object sender, EventArgs e)
         {
-            pnTitleBar.FillColor = Color.FromArgb(255, 255, 192);
-            pnTitleBar.FillColor2 = Color.FromArgb(192, 255, 255);
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
             cuurrentFormMonAn = new Forms.FormMonAn();
             btnEditCategoryClicked += btnDanhMuc_Click;
@@ -189,8 +183,6 @@ namespace QLNH_Winform
         }
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            pnTitleBar.FillColor = Color.White;
-            pnTitleBar.FillColor2 = Color.White;
             FormNhanVien form = new FormNhanVien();
             form.loginAcc = loginAccount;
             form.UpdateAccount += Form_UpdateAccount;
@@ -211,8 +203,6 @@ namespace QLNH_Winform
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
-            pnTitleBar.FillColor = Color.FromArgb(255, 251, 233);
-            pnTitleBar.FillColor2 = Color.FromArgb(255, 251, 233);
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
             FormTaiKhoan f = new FormTaiKhoan(LoginAccount);
             f.UpdateAccount += F_UpdateAccount;
@@ -258,7 +248,5 @@ namespace QLNH_Winform
         {
             this.Hide();
         }
-
-
     }
 }

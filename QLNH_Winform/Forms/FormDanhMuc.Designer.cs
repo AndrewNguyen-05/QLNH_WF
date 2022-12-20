@@ -52,9 +52,8 @@
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(146)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(108)))), ((int)(((byte)(143)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1384, 450);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(829, 366);
             this.guna2GradientPanel1.TabIndex = 10;
             // 
             // dtgvCategory
@@ -92,8 +91,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvCategory.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvCategory.EnableHeadersVisualStyles = false;
-            this.dtgvCategory.Location = new System.Drawing.Point(0, 79);
-            this.dtgvCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtgvCategory.Location = new System.Drawing.Point(0, 64);
+            this.dtgvCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtgvCategory.Name = "dtgvCategory";
             this.dtgvCategory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -107,7 +106,7 @@
             this.dtgvCategory.RowHeadersWidth = 51;
             this.dtgvCategory.RowTemplate.Height = 24;
             this.dtgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvCategory.Size = new System.Drawing.Size(1384, 372);
+            this.dtgvCategory.Size = new System.Drawing.Size(829, 302);
             this.dtgvCategory.TabIndex = 10;
             this.dtgvCategory.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvCategory_CellValueChanged);
             // 
@@ -118,7 +117,7 @@
             this.btnAddCategory.AutoRoundedCorners = true;
             this.btnAddCategory.BackColor = System.Drawing.Color.Transparent;
             this.btnAddCategory.BorderColor = System.Drawing.Color.DimGray;
-            this.btnAddCategory.BorderRadius = 23;
+            this.btnAddCategory.BorderRadius = 18;
             this.btnAddCategory.BorderThickness = 1;
             this.btnAddCategory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddCategory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -129,10 +128,9 @@
             this.btnAddCategory.ForeColor = System.Drawing.Color.DimGray;
             this.btnAddCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCategory.Image")));
             this.btnAddCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnAddCategory.Location = new System.Drawing.Point(953, 17);
-            this.btnAddCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddCategory.Location = new System.Drawing.Point(506, 14);
             this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(191, 48);
+            this.btnAddCategory.Size = new System.Drawing.Size(143, 39);
             this.btnAddCategory.TabIndex = 9;
             this.btnAddCategory.Text = "Thêm";
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
@@ -144,7 +142,7 @@
             this.btnDelCategory.AutoRoundedCorners = true;
             this.btnDelCategory.BackColor = System.Drawing.Color.Transparent;
             this.btnDelCategory.BorderColor = System.Drawing.Color.DimGray;
-            this.btnDelCategory.BorderRadius = 23;
+            this.btnDelCategory.BorderRadius = 18;
             this.btnDelCategory.BorderThickness = 1;
             this.btnDelCategory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDelCategory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -155,10 +153,9 @@
             this.btnDelCategory.ForeColor = System.Drawing.Color.DimGray;
             this.btnDelCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnDelCategory.Image")));
             this.btnDelCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnDelCategory.Location = new System.Drawing.Point(1152, 17);
-            this.btnDelCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelCategory.Location = new System.Drawing.Point(655, 14);
             this.btnDelCategory.Name = "btnDelCategory";
-            this.btnDelCategory.Size = new System.Drawing.Size(191, 48);
+            this.btnDelCategory.Size = new System.Drawing.Size(143, 39);
             this.btnDelCategory.TabIndex = 8;
             this.btnDelCategory.Text = "Xóa";
             this.btnDelCategory.Click += new System.EventHandler(this.btnDelCategory_Click);
@@ -169,7 +166,7 @@
             this.txbSearchCategory.AutoRoundedCorners = true;
             this.txbSearchCategory.BackColor = System.Drawing.Color.Transparent;
             this.txbSearchCategory.BorderColor = System.Drawing.Color.DimGray;
-            this.txbSearchCategory.BorderRadius = 23;
+            this.txbSearchCategory.BorderRadius = 18;
             this.txbSearchCategory.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbSearchCategory.DefaultText = "";
             this.txbSearchCategory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -181,22 +178,23 @@
             this.txbSearchCategory.ForeColor = System.Drawing.Color.DimGray;
             this.txbSearchCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbSearchCategory.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbSearchCategory.IconLeft")));
-            this.txbSearchCategory.Location = new System.Drawing.Point(17, 17);
-            this.txbSearchCategory.Margin = new System.Windows.Forms.Padding(5);
+            this.txbSearchCategory.Location = new System.Drawing.Point(13, 14);
+            this.txbSearchCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbSearchCategory.Name = "txbSearchCategory";
             this.txbSearchCategory.PasswordChar = '\0';
             this.txbSearchCategory.PlaceholderText = "Tìm kiếm";
             this.txbSearchCategory.SelectedText = "";
-            this.txbSearchCategory.Size = new System.Drawing.Size(635, 48);
+            this.txbSearchCategory.Size = new System.Drawing.Size(476, 39);
             this.txbSearchCategory.TabIndex = 4;
             this.txbSearchCategory.TextChanged += new System.EventHandler(this.txbSearchCategory_TextChanged);
             // 
             // FormDanhMuc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 450);
+            this.ClientSize = new System.Drawing.Size(829, 366);
             this.Controls.Add(this.guna2GradientPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormDanhMuc";
             this.Text = "Danh Mục";
             this.guna2GradientPanel1.ResumeLayout(false);

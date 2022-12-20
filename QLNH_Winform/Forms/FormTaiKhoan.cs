@@ -44,6 +44,11 @@ namespace QLNH_Winform.Forms
         }
         void UpdateAccountNotify(string userName, string oldUserName, string displayName, string pass, string newpass)
         {
+            if (AccountDAO.Instance.GetAccountByUserName(userName) != null && userName != oldUserName)
+            {
+                MessageBox.Show("Tên tài khoản đã tồn tại, vui lòng chọn tên tài khoản khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (AccountDAO.Instance.UpdateAccount(userName, oldUserName, displayName, pass, newpass))
             {
                 MessageBox.Show("Cập nhật thông tin thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -51,7 +51,7 @@ namespace QLNH_Winform.Forms
         {
             if (AccountDAO.Instance.GetAccountByUserName(userName) != null)
             {
-                MessageBox.Show("Tên tài khoản bị trùng, vui lòng chọn tên tài khoản khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Tên tài khoản đã tồn tại, vui lòng chọn tên tài khoản khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if(AccountDAO.Instance.InsertAccount(userName, displayName, type))
@@ -67,6 +67,11 @@ namespace QLNH_Winform.Forms
 
         void EditAcount(string userName, string editingUserName, string displayName, int type)
         {
+            if (AccountDAO.Instance.GetAccountByUserName(userName) != null && userName != editingUserName)
+            {
+                MessageBox.Show("Tên tài khoản đã tồn tại, vui lòng chọn tên tài khoản khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (AccountDAO.Instance.UpdateAccount(userName, editingUserName, displayName, type))
             {
                 MessageBox.Show("Cập nhật tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

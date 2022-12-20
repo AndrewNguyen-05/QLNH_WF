@@ -160,7 +160,15 @@ namespace QLNH_Winform.Forms
 
         private void btnSwitchTable_Click(object sender, EventArgs e)
         {
-            int id1 = (lsvBill.Tag as Table).ID;
+            Table table = lsvBill.Tag as Table;
+            if (table is null)
+            {
+                MessageBox.Show("Vui lòng chọn bàn cần chuyển!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                return;
+            }
+            int id1 = (table).ID;
+
+            
 
             int id2 = (cbSwitchTable.SelectedItem as Table).ID;
 

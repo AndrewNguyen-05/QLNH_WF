@@ -173,9 +173,9 @@ namespace QLNH_Winform.Forms
         }
         private void btnResetPassword_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewCell dc in dtgvListAccount.SelectedCells)
+            foreach (DataGridViewRow dr in dtgvListAccount.SelectedRows)
             {
-                string userName = dc.OwningRow.Cells["UserName"].Value.ToString();
+                string userName = dr.Cells["UserName"].Value.ToString();
                 ResetPassword(userName);
                 if (updateAccount != null && loginAcc.UserName.Equals(userName))
                 {

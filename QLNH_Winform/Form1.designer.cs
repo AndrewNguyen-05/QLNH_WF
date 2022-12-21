@@ -48,9 +48,9 @@
             this.ControlMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ControlClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnTitleBar = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btnGeneral = new Guna.UI2.WinForms.Guna2Button();
-            this.lblGeneral = new System.Windows.Forms.Label();
             this.btnArrow = new Guna.UI2.WinForms.Guna2Button();
+            this.lblGeneral = new System.Windows.Forms.Label();
+            this.btnGeneral = new Guna.UI2.WinForms.Guna2Button();
             this.pnMenu.SuspendLayout();
             this.pnLogo.SuspendLayout();
             this.pnControl.SuspendLayout();
@@ -257,7 +257,7 @@
             this.lblCurentChildForm.BackColor = System.Drawing.Color.Transparent;
             this.lblCurentChildForm.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblCurentChildForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.lblCurentChildForm.Location = new System.Drawing.Point(223, 35);
+            this.lblCurentChildForm.Location = new System.Drawing.Point(204, 35);
             this.lblCurentChildForm.Name = "lblCurentChildForm";
             this.lblCurentChildForm.Size = new System.Drawing.Size(49, 17);
             this.lblCurentChildForm.TabIndex = 2;
@@ -337,6 +337,37 @@
             this.pnTitleBar.TabIndex = 3;
             this.pnTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTitleBar_MouseDown);
             // 
+            // btnArrow
+            // 
+            this.btnArrow.BackColor = System.Drawing.Color.Transparent;
+            this.btnArrow.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnArrow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnArrow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnArrow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnArrow.FillColor = System.Drawing.Color.Transparent;
+            this.btnArrow.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnArrow.ForeColor = System.Drawing.Color.White;
+            this.btnArrow.Image = ((System.Drawing.Image)(resources.GetObject("btnArrow.Image")));
+            this.btnArrow.Location = new System.Drawing.Point(147, 21);
+            this.btnArrow.Name = "btnArrow";
+            this.btnArrow.PressedColor = System.Drawing.Color.Transparent;
+            this.btnArrow.Size = new System.Drawing.Size(51, 45);
+            this.btnArrow.TabIndex = 7;
+            this.btnArrow.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.btnArrow.UseTransparentBackground = true;
+            // 
+            // lblGeneral
+            // 
+            this.lblGeneral.AutoSize = true;
+            this.lblGeneral.BackColor = System.Drawing.Color.Transparent;
+            this.lblGeneral.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblGeneral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.lblGeneral.Location = new System.Drawing.Point(76, 35);
+            this.lblGeneral.Name = "lblGeneral";
+            this.lblGeneral.Size = new System.Drawing.Size(65, 17);
+            this.lblGeneral.TabIndex = 6;
+            this.lblGeneral.Text = "QUẢN LÝ";
+            // 
             // btnGeneral
             // 
             this.btnGeneral.BackColor = System.Drawing.Color.Transparent;
@@ -355,37 +386,6 @@
             this.btnGeneral.TabIndex = 5;
             this.btnGeneral.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.btnGeneral.UseTransparentBackground = true;
-            // 
-            // lblGeneral
-            // 
-            this.lblGeneral.AutoSize = true;
-            this.lblGeneral.BackColor = System.Drawing.Color.Transparent;
-            this.lblGeneral.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblGeneral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            this.lblGeneral.Location = new System.Drawing.Point(76, 35);
-            this.lblGeneral.Name = "lblGeneral";
-            this.lblGeneral.Size = new System.Drawing.Size(84, 17);
-            this.lblGeneral.TabIndex = 6;
-            this.lblGeneral.Text = "DANH MỤC";
-            // 
-            // btnArrow
-            // 
-            this.btnArrow.BackColor = System.Drawing.Color.Transparent;
-            this.btnArrow.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnArrow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnArrow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnArrow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnArrow.FillColor = System.Drawing.Color.Transparent;
-            this.btnArrow.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnArrow.ForeColor = System.Drawing.Color.White;
-            this.btnArrow.Image = ((System.Drawing.Image)(resources.GetObject("btnArrow.Image")));
-            this.btnArrow.Location = new System.Drawing.Point(166, 21);
-            this.btnArrow.Name = "btnArrow";
-            this.btnArrow.PressedColor = System.Drawing.Color.Transparent;
-            this.btnArrow.Size = new System.Drawing.Size(51, 45);
-            this.btnArrow.TabIndex = 7;
-            this.btnArrow.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.btnArrow.UseTransparentBackground = true;
             // 
             // FormMainMenu
             // 

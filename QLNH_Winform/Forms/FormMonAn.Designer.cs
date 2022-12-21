@@ -29,230 +29,201 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMonAn));
             this.dtgvFood = new System.Windows.Forms.DataGridView();
-            this.txbSearchFood = new System.Windows.Forms.TextBox();
-            this.cbFoodCategory = new System.Windows.Forms.ComboBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnAddFood = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btnDelFood = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbFoodCategory = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txbSearchFood = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnDelFood = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddFood = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnEditCategory = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.btnEditCategory = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.lblTableName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.guna2GradientPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtgvFood
             // 
             this.dtgvFood.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(183)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dtgvFood.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dtgvFood.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvFood.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvFood.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgvFood.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.dtgvFood.BackgroundColor = System.Drawing.Color.White;
             this.dtgvFood.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvFood.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtgvFood.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(87)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(87)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvFood.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(183)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvFood.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dtgvFood.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvFood.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvFood.EnableHeadersVisualStyles = false;
-            this.dtgvFood.Location = new System.Drawing.Point(0, 0);
+            this.dtgvFood.Location = new System.Drawing.Point(11, 115);
+            this.dtgvFood.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvFood.Name = "dtgvFood";
             this.dtgvFood.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvFood.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvFood.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvFood.RowHeadersWidth = 51;
             this.dtgvFood.RowTemplate.Height = 24;
             this.dtgvFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvFood.Size = new System.Drawing.Size(1535, 366);
+            this.dtgvFood.Size = new System.Drawing.Size(1068, 348);
             this.dtgvFood.TabIndex = 1;
             this.dtgvFood.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgvFood_CellFormatting);
             this.dtgvFood.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvFood_CellValueChanged);
             this.dtgvFood.SelectionChanged += new System.EventHandler(this.dtgvFood_SelectionChanged);
             // 
-            // txbSearchFood
+            // guna2GradientPanel2
             // 
-            this.txbSearchFood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbSearchFood.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSearchFood.Location = new System.Drawing.Point(793, 155);
-            this.txbSearchFood.Name = "txbSearchFood";
-            this.txbSearchFood.Size = new System.Drawing.Size(696, 39);
-            this.txbSearchFood.TabIndex = 3;
-            this.txbSearchFood.TextChanged += new System.EventHandler(this.txbSearchFood_TextChanged);
+            this.guna2GradientPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.guna2GradientPanel2.Controls.Add(this.lblTableName);
+            this.guna2GradientPanel2.Controls.Add(this.btnEditCategory);
+            this.guna2GradientPanel2.Controls.Add(this.cbFoodCategory);
+            this.guna2GradientPanel2.Controls.Add(this.txbSearchFood);
+            this.guna2GradientPanel2.Controls.Add(this.dtgvFood);
+            this.guna2GradientPanel2.Controls.Add(this.btnDelFood);
+            this.guna2GradientPanel2.Controls.Add(this.btnAddFood);
+            this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(1091, 474);
+            this.guna2GradientPanel2.TabIndex = 9;
             // 
             // cbFoodCategory
             // 
-            this.cbFoodCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbFoodCategory.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbFoodCategory.FormattingEnabled = true;
-            this.cbFoodCategory.Location = new System.Drawing.Point(792, 50);
-            this.cbFoodCategory.Margin = new System.Windows.Forms.Padding(0);
+            this.cbFoodCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbFoodCategory.BackColor = System.Drawing.Color.Transparent;
+            this.cbFoodCategory.BorderColor = System.Drawing.Color.DimGray;
+            this.cbFoodCategory.BorderRadius = 8;
+            this.cbFoodCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbFoodCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFoodCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbFoodCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbFoodCategory.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbFoodCategory.ForeColor = System.Drawing.Color.DimGray;
+            this.cbFoodCategory.ItemHeight = 38;
+            this.cbFoodCategory.Location = new System.Drawing.Point(622, 12);
             this.cbFoodCategory.Name = "cbFoodCategory";
-            this.cbFoodCategory.Size = new System.Drawing.Size(372, 39);
-            this.cbFoodCategory.TabIndex = 5;
+            this.cbFoodCategory.Size = new System.Drawing.Size(218, 44);
+            this.cbFoodCategory.TabIndex = 15;
             this.cbFoodCategory.SelectionChangeCommitted += new System.EventHandler(this.cbFoodCategory_SelectionChangeCommitted);
             // 
-            // guna2GradientPanel2
+            // txbSearchFood
             // 
-            this.guna2GradientPanel2.Controls.Add(this.btnEditCategory);
-            this.guna2GradientPanel2.Controls.Add(this.pictureBox3);
-            this.guna2GradientPanel2.Controls.Add(this.pictureBox2);
-            this.guna2GradientPanel2.Controls.Add(this.btnAddFood);
-            this.guna2GradientPanel2.Controls.Add(this.btnDelFood);
-            this.guna2GradientPanel2.Controls.Add(this.txbSearchFood);
-            this.guna2GradientPanel2.Controls.Add(this.pictureBox1);
-            this.guna2GradientPanel2.Controls.Add(this.cbFoodCategory);
-            this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(1535, 218);
-            this.guna2GradientPanel2.TabIndex = 9;
+            this.txbSearchFood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbSearchFood.Animated = true;
+            this.txbSearchFood.BackColor = System.Drawing.Color.Transparent;
+            this.txbSearchFood.BorderColor = System.Drawing.Color.DimGray;
+            this.txbSearchFood.BorderRadius = 8;
+            this.txbSearchFood.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbSearchFood.DefaultText = "";
+            this.txbSearchFood.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbSearchFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbSearchFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbSearchFood.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbSearchFood.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbSearchFood.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txbSearchFood.ForeColor = System.Drawing.Color.DimGray;
+            this.txbSearchFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbSearchFood.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbSearchFood.IconLeft")));
+            this.txbSearchFood.Location = new System.Drawing.Point(371, 64);
+            this.txbSearchFood.Margin = new System.Windows.Forms.Padding(5);
+            this.txbSearchFood.Name = "txbSearchFood";
+            this.txbSearchFood.PasswordChar = '\0';
+            this.txbSearchFood.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txbSearchFood.PlaceholderText = "Tìm kiếm";
+            this.txbSearchFood.SelectedText = "";
+            this.txbSearchFood.Size = new System.Drawing.Size(469, 44);
+            this.txbSearchFood.TabIndex = 14;
+            this.txbSearchFood.TextChanged += new System.EventHandler(this.txbSearchFood_TextChanged);
             // 
-            // pictureBox3
+            // btnDelFood
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(49, 137);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(89, 79);
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(699, 34);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(83, 65);
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.btnDelFood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelFood.Animated = true;
+            this.btnDelFood.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelFood.BorderColor = System.Drawing.Color.DimGray;
+            this.btnDelFood.BorderRadius = 8;
+            this.btnDelFood.BorderThickness = 1;
+            this.btnDelFood.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelFood.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelFood.FillColor = System.Drawing.Color.White;
+            this.btnDelFood.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.btnDelFood.Image = ((System.Drawing.Image)(resources.GetObject("btnDelFood.Image")));
+            this.btnDelFood.Location = new System.Drawing.Point(1019, 64);
+            this.btnDelFood.Name = "btnDelFood";
+            this.btnDelFood.Size = new System.Drawing.Size(44, 44);
+            this.btnDelFood.TabIndex = 13;
+            this.btnDelFood.Click += new System.EventHandler(this.btnDelFood_Click);
             // 
             // btnAddFood
             // 
-            this.btnAddFood.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddFood.BorderColor = System.Drawing.Color.Chocolate;
-            this.btnAddFood.BorderRadius = 5;
-            this.btnAddFood.BorderThickness = 2;
+            this.btnAddFood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddFood.Animated = true;
+            this.btnAddFood.BackColor = System.Drawing.Color.White;
+            this.btnAddFood.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
+            this.btnAddFood.BorderRadius = 8;
             this.btnAddFood.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddFood.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAddFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAddFood.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAddFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddFood.FillColor = System.Drawing.Color.Transparent;
-            this.btnAddFood.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnAddFood.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFood.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnAddFood.Image = global::QLNH_Winform.Properties.Resources.Plus;
+            this.btnAddFood.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.btnAddFood.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.btnAddFood.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddFood.ForeColor = System.Drawing.Color.White;
+            this.btnAddFood.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.btnAddFood.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFood.Image")));
             this.btnAddFood.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnAddFood.ImageOffset = new System.Drawing.Point(0, 28);
-            this.btnAddFood.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnAddFood.Location = new System.Drawing.Point(11, 34);
-            this.btnAddFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddFood.Location = new System.Drawing.Point(848, 64);
             this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(244, 85);
-            this.btnAddFood.TabIndex = 7;
-            this.btnAddFood.Text = "Thêm món ";
-            this.btnAddFood.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddFood.TextFormatNoPrefix = true;
-            this.btnAddFood.TextOffset = new System.Drawing.Point(0, -25);
+            this.btnAddFood.Size = new System.Drawing.Size(165, 44);
+            this.btnAddFood.TabIndex = 12;
+            this.btnAddFood.Text = "Thêm món";
             this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
-            // 
-            // btnDelFood
-            // 
-            this.btnDelFood.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelFood.BorderColor = System.Drawing.Color.Chocolate;
-            this.btnDelFood.BorderRadius = 5;
-            this.btnDelFood.BorderThickness = 2;
-            this.btnDelFood.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelFood.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelFood.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelFood.FillColor = System.Drawing.Color.Transparent;
-            this.btnDelFood.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnDelFood.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelFood.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnDelFood.Image = global::QLNH_Winform.Properties.Resources.Minus;
-            this.btnDelFood.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnDelFood.ImageOffset = new System.Drawing.Point(0, 28);
-            this.btnDelFood.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnDelFood.Location = new System.Drawing.Point(292, 34);
-            this.btnDelFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDelFood.Name = "btnDelFood";
-            this.btnDelFood.Size = new System.Drawing.Size(244, 85);
-            this.btnDelFood.TabIndex = 7;
-            this.btnDelFood.Text = "Xóa món";
-            this.btnDelFood.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDelFood.TextOffset = new System.Drawing.Point(10, -27);
-            this.btnDelFood.Click += new System.EventHandler(this.btnDelFood_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::QLNH_Winform.Properties.Resources.Search;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(701, 144);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 58);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // guna2GradientPanel3
             // 
-            this.guna2GradientPanel3.Controls.Add(this.dtgvFood);
             this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(0, 218);
-            this.guna2GradientPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2GradientPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(1535, 366);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(1091, 474);
             this.guna2GradientPanel3.TabIndex = 10;
             // 
             // toolTip1
@@ -262,67 +233,68 @@
             // 
             // btnEditCategory
             // 
-            this.btnEditCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditCategory.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditCategory.BorderColor = System.Drawing.Color.Chocolate;
-            this.btnEditCategory.BorderRadius = 5;
-            this.btnEditCategory.BorderThickness = 2;
+            this.btnEditCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditCategory.Animated = true;
+            this.btnEditCategory.BackColor = System.Drawing.Color.White;
+            this.btnEditCategory.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(213)))));
+            this.btnEditCategory.BorderRadius = 8;
             this.btnEditCategory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnEditCategory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnEditCategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnEditCategory.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnEditCategory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditCategory.FillColor = System.Drawing.Color.Transparent;
-            this.btnEditCategory.FillColor2 = System.Drawing.Color.Transparent;
-            this.btnEditCategory.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditCategory.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnEditCategory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.btnEditCategory.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.btnEditCategory.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEditCategory.ForeColor = System.Drawing.Color.White;
+            this.btnEditCategory.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.btnEditCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnEditCategory.Image")));
             this.btnEditCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnEditCategory.ImageOffset = new System.Drawing.Point(0, 28);
-            this.btnEditCategory.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnEditCategory.Location = new System.Drawing.Point(1208, 50);
-            this.btnEditCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditCategory.Location = new System.Drawing.Point(848, 12);
             this.btnEditCategory.Name = "btnEditCategory";
-            this.btnEditCategory.Size = new System.Drawing.Size(239, 49);
-            this.btnEditCategory.TabIndex = 11;
+            this.btnEditCategory.Size = new System.Drawing.Size(215, 44);
+            this.btnEditCategory.TabIndex = 16;
             this.btnEditCategory.Text = "Sửa danh mục";
-            this.btnEditCategory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditCategory.TextOffset = new System.Drawing.Point(1, 1);
+            // 
+            // lblTableName
+            // 
+            this.lblTableName.AutoSize = true;
+            this.lblTableName.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTableName.ForeColor = System.Drawing.Color.DimGray;
+            this.lblTableName.Location = new System.Drawing.Point(12, 73);
+            this.lblTableName.Name = "lblTableName";
+            this.lblTableName.Size = new System.Drawing.Size(203, 25);
+            this.lblTableName.TabIndex = 13;
+            this.lblTableName.Text = "DANH MỤC MÓN ĂN";
             // 
             // FormMonAn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1535, 584);
-            this.Controls.Add(this.guna2GradientPanel3);
+            this.ClientSize = new System.Drawing.Size(1091, 474);
             this.Controls.Add(this.guna2GradientPanel2);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Controls.Add(this.guna2GradientPanel3);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMonAn";
             this.Text = "Món ăn";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.guna2GradientPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.DataGridView dtgvFood;
-        private System.Windows.Forms.TextBox txbSearchFood;
-        private System.Windows.Forms.ComboBox cbFoodCategory;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnDelFood;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnAddFood;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.ToolTip toolTip1;
-        internal Guna.UI2.WinForms.Guna2GradientTileButton btnEditCategory;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAddFood;
+        private Guna.UI2.WinForms.Guna2Button btnDelFood;
+        private Guna.UI2.WinForms.Guna2TextBox txbSearchFood;
+        private Guna.UI2.WinForms.Guna2ComboBox cbFoodCategory;
+        internal Guna.UI2.WinForms.Guna2GradientButton btnEditCategory;
+        private System.Windows.Forms.Label lblTableName;
     }
 }

@@ -147,6 +147,5 @@ namespace QLNH_Winform.Forms
                 dgv[e.ColumnIndex, e.RowIndex].ReadOnly = true;
             }
         }
-
     }
 }

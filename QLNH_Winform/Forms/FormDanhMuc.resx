@@ -118,19 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnAddCategory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAIlJREFUaEPt
-        10EKwCAMRFGPV+lF1GPb3qMVSUFca2PkPwiFbMyshjoAAACMF2M8y9whhKt8vaztkMMfmSxrO5rj68ja
-        DgJoI4A2AmhbNkA5pjZse9yI+a2xu4YdPfMb23yA8oifFCKnlA55Rl9/oKztIIA2AmgjgDbzAXb4qf8a
-        e62GBQAA2IZzL7/pgGzQUE1FAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btnDelCategory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAEBJREFUaEPt
-        zqENAEAIBEHapf8C/g0SgQMxk6y9XAAAAADckpnvUnVrrhvZrG7NdSOb1a25bmSzugUAAABwQsQHSJZA
-        sAJIIYYAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAARBJREFUaEPt
+        k0sKwjAURbMJTak6dgPa6A4UN+XQrejEPVWHIuoGNIU4aS8i9N764R04s/LOS0KdYRhEstna+XB/bbFJ
+        X38Zby3/tMtDZMUqRo/NJcT2wyFeyjJt0YJqEAp0Y5m2aMHPH6B6xs8conS9+SJtYRhGa/CPppMOiiil
+        gyJK6aCIUjooopQOiiilgyJK6aCIUjooopQOiiilgyJK6aCIUjooopQOiiilgyJK6aCIUjooopQOiiil
+        gyJK6aCIUjooopQOiiilgyJK6aCIUjooopQOiiil48OtEdF5SVUiPuxrEaHFNlWJ5JNxHH5uxuie3CAM
+        U5VMPh05P9vFyLUWZRhnxpuXLW8Y/4hzDxsY+qHahdUXAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnAddCategory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAFZJREFUSEvt
+        kzEOACAIA/n/szS+C0G7GQYVJ3uJA1GvSxGSiqo2OxVjPiYfYMwHfgbEwP9zgP31nt8S74lfzjdXFOj2
+        gYAtioGfATHwPw3wPTnvOVkR6cwNDSKt0QgZAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="txbSearchCategory.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

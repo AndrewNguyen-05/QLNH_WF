@@ -47,10 +47,10 @@
             this.colTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnPay = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblVND = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.lblVND = new System.Windows.Forms.Label();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
@@ -105,10 +105,10 @@
             this.guna2GradientPanel4.Controls.Add(this.lsvBill);
             this.guna2GradientPanel4.Controls.Add(this.btnPay);
             this.guna2GradientPanel4.Controls.Add(this.label4);
-            this.guna2GradientPanel4.Controls.Add(this.lblVND);
             this.guna2GradientPanel4.Controls.Add(this.lblTotalPrice);
             this.guna2GradientPanel4.Controls.Add(this.lblDiscount);
             this.guna2GradientPanel4.Controls.Add(this.lblTotal);
+            this.guna2GradientPanel4.Controls.Add(this.lblVND);
             this.guna2GradientPanel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2GradientPanel4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel4.Location = new System.Drawing.Point(575, 45);
@@ -190,7 +190,7 @@
             this.cbFood.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFood.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbFood.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbFood.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbFood.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.cbFood.ItemHeight = 30;
             this.cbFood.Location = new System.Drawing.Point(37, 51);
@@ -207,7 +207,7 @@
             this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbCategory.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbCategory.Font = new System.Drawing.Font("Cambria", 12F);
             this.cbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.cbCategory.ItemHeight = 30;
             this.cbCategory.Location = new System.Drawing.Point(37, 5);
@@ -339,24 +339,13 @@
             this.label4.Text = "%";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblVND
-            // 
-            this.lblVND.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblVND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.lblVND.Location = new System.Drawing.Point(517, 509);
-            this.lblVND.Name = "lblVND";
-            this.lblVND.Size = new System.Drawing.Size(62, 38);
-            this.lblVND.TabIndex = 4;
-            this.lblVND.Text = "VND";
-            this.lblVND.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // lblTotalPrice
             // 
             this.lblTotalPrice.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.lblTotalPrice.Location = new System.Drawing.Point(405, 509);
+            this.lblTotalPrice.Location = new System.Drawing.Point(416, 508);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(106, 38);
+            this.lblTotalPrice.Size = new System.Drawing.Size(117, 38);
             this.lblTotalPrice.TabIndex = 4;
             this.lblTotalPrice.Text = "0";
             this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -381,6 +370,17 @@
             this.lblTotal.Text = "Tổng tiền :";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lblVND
+            // 
+            this.lblVND.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblVND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.lblVND.Location = new System.Drawing.Point(517, 509);
+            this.lblVND.Name = "lblVND";
+            this.lblVND.Size = new System.Drawing.Size(62, 38);
+            this.lblVND.TabIndex = 4;
+            this.lblVND.Text = "VND";
+            this.lblVND.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // flpTable
             // 
             this.flpTable.AutoScroll = true;
@@ -388,7 +388,7 @@
             this.flpTable.Location = new System.Drawing.Point(12, 45);
             this.flpTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(549, 741);
+            this.flpTable.Size = new System.Drawing.Size(549, 671);
             this.flpTable.TabIndex = 1;
             // 
             // FormGoiMon

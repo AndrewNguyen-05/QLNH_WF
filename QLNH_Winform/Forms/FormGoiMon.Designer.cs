@@ -86,7 +86,7 @@
             this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(12, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 25);
+            this.label1.Size = new System.Drawing.Size(266, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "DANH MỤC GỌI MÓN";
             // 
@@ -353,7 +353,7 @@
             // lblDiscount
             // 
             this.lblDiscount.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDiscount.Location = new System.Drawing.Point(324, 451);
+            this.lblDiscount.Location = new System.Drawing.Point(294, 450);
             this.lblDiscount.Name = "lblDiscount";
             this.lblDiscount.Size = new System.Drawing.Size(113, 49);
             this.lblDiscount.TabIndex = 3;
@@ -363,7 +363,7 @@
             // lblTotal
             // 
             this.lblTotal.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotal.Location = new System.Drawing.Point(323, 504);
+            this.lblTotal.Location = new System.Drawing.Point(293, 503);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(124, 49);
             this.lblTotal.TabIndex = 3;

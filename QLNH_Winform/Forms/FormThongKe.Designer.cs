@@ -93,9 +93,9 @@
             this.btnViewBill.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnViewBill.ForeColor = System.Drawing.Color.White;
             this.btnViewBill.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.btnViewBill.Location = new System.Drawing.Point(938, 17);
+            this.btnViewBill.Location = new System.Drawing.Point(892, 17);
             this.btnViewBill.Name = "btnViewBill";
-            this.btnViewBill.Size = new System.Drawing.Size(193, 62);
+            this.btnViewBill.Size = new System.Drawing.Size(239, 62);
             this.btnViewBill.TabIndex = 6;
             this.btnViewBill.Text = "Xem thống kê";
             // 
@@ -111,9 +111,9 @@
             this.guna2GradientPanel2.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(556, 51);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(431, 51);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(365, 28);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(442, 28);
             this.guna2GradientPanel2.TabIndex = 5;
             // 
             // label2
@@ -123,7 +123,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.label2.Location = new System.Drawing.Point(4, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 19);
+            this.label2.Size = new System.Drawing.Size(94, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Đến ngày";
             // 
@@ -143,7 +143,7 @@
             this.dtpkToDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpkToDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpkToDate.Name = "dtpkToDate";
-            this.dtpkToDate.Size = new System.Drawing.Size(268, 28);
+            this.dtpkToDate.Size = new System.Drawing.Size(345, 28);
             this.dtpkToDate.TabIndex = 1;
             this.dtpkToDate.UseTransparentBackground = true;
             this.dtpkToDate.Value = new System.DateTime(2022, 12, 17, 16, 7, 29, 372);
@@ -160,9 +160,9 @@
             this.guna2GradientPanel1.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(556, 17);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(431, 17);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(365, 28);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(442, 28);
             this.guna2GradientPanel1.TabIndex = 4;
             // 
             // label1
@@ -172,7 +172,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.label1.Location = new System.Drawing.Point(5, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 19);
+            this.label1.Size = new System.Drawing.Size(84, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Từ ngày";
             // 
@@ -192,7 +192,7 @@
             this.dtpkFromDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpkFromDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpkFromDate.Name = "dtpkFromDate";
-            this.dtpkFromDate.Size = new System.Drawing.Size(268, 28);
+            this.dtpkFromDate.Size = new System.Drawing.Size(345, 28);
             this.dtpkFromDate.TabIndex = 0;
             this.dtpkFromDate.UseTransparentBackground = true;
             this.dtpkFromDate.Value = new System.DateTime(2022, 12, 17, 16, 7, 29, 372);

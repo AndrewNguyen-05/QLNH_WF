@@ -105,7 +105,7 @@ namespace QLNH_Winform.Forms
         {
             if (AccountDAO.Instance.ResetPassWord(userName))
             {
-                MessageBox.Show("Đặt lại mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đặt lại mật khẩu thành công! Mật khẩu mặc định là ST1", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

@@ -62,6 +62,12 @@ namespace QLNH_Winform
             remove { this.cuurrentFormMonAn.btnEditCategory.Click -= value; }
         }
 
+        private FormDonHang currentFormDonHang;
+        event EventHandler btnNewOrderClicked
+        {
+            add { this.currentFormDonHang.btnNewOrder.Click += value; }
+            remove { this.currentFormDonHang.btnNewOrder.Click -= value; }
+        }
         void ChangeAccount(int type)
         {
             btnNhanVien.Visible = (type == 1);
@@ -136,6 +142,10 @@ namespace QLNH_Winform
             {
                 //Chi mo form
                 currentChildForm.Close();
+                if (currentChildForm.IsHandleCreated)
+                {
+                    return;
+                }
             }
             //ActivateButton(btnSender);
             currentChildForm = childForm;
@@ -154,7 +164,14 @@ namespace QLNH_Winform
         private void btnOrder_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
-            OpenChildForm(new Forms.FormGoiMon());
+            currentFormDonHang = new FormDonHang();
+            btnNewOrderClicked += btnNewOrder_Click;
+            OpenChildForm(currentFormDonHang);
+        }
+
+        private void btnNewOrder_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormTaoDon());
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)

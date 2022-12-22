@@ -70,6 +70,7 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\FoodDAO.cs" />
     <Compile Include="DAO\MenuFoodDAO.cs" />
+    <Compile Include="DAO\OrderFoodDAO.cs" />
     <Compile Include="DAO\TableDAO.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Bill.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="DTO\FoodCategory.cs" />
     <Compile Include="DTO\Food.cs" />
     <Compile Include="DTO\MenuFood.cs" />
+    <Compile Include="DTO\OrderFood.cs" />
     <Compile Include="DTO\Table.cs" />
     <Compile Include="FoodCard.cs">
       <SubType>UserControl</SubType>
@@ -96,11 +98,23 @@
     <Compile Include="Forms\FormBanAn.designer.cs">
       <DependentUpon>FormBanAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormTaoDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTaoDon.Designer.cs">
+      <DependentUpon>FormTaoDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormDanhMuc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormDanhMuc.Designer.cs">
       <DependentUpon>FormDanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDonHang.Designer.cs">
+      <DependentUpon>FormDonHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormGoiMon.cs">
       <SubType>Form</SubType>
@@ -156,8 +170,14 @@
     <EmbeddedResource Include="Forms\FormBanAn.resx">
       <DependentUpon>FormBanAn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTaoDon.resx">
+      <DependentUpon>FormTaoDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormDanhMuc.resx">
       <DependentUpon>FormDanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDonHang.resx">
+      <DependentUpon>FormDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormGoiMon.resx">
       <DependentUpon>FormGoiMon.cs</DependentUpon>

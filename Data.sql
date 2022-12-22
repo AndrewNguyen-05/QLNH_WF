@@ -54,9 +54,10 @@ CREATE TABLE Bill
 	DateCheckIn DATE NOT NULL DEFAULT GETDATE(),
 	DateCheckOut DATE,
 	idTable INT NOT NULL,
+	isServed INT NOT NULL DEFAULT 0,
 	status INT NOT NULL DEFAULT 0, --1: Đã thanh toán && 0: Chưa thanh toán
 	discount INT NOT NULL DEFAULT 0,
-	totalPrice FLOAT,
+	totalPrice DOUBLE,
 
 	FOREIGN KEY (idTable) REFERENCES dbo.TableFood(id)
 )
@@ -410,11 +411,46 @@ BEGIN
 END 
 GO 
 
+CREATE TRIGGER UTG_DeleteBill
+ON Bill FOR DELETE
+AS
+BEGIN
+	DECLARE @idTable INT
+	SELECT @idTable = idTable FROM deleted
 
+	UPDATE TableFood SET status = N'Trống' WHERE id = @idTable
+END
+GO
+
+CREATE PROC USP_NewInsertBillInfo
+@idBill INT, @idFood INT, @count INT
+AS
+BEGIN
+	DECLARE @isExitsBillInfo INT
+	SELECT @isExitsBillInfo = id
+	FROM dbo.BillInfo
+	WHERE idBill = @idBill AND idFood = @idFood
+
+	IF (@isExitsBillInfo > 0)
+	BEGIN
+		IF (@count > 0)
+			UPDATE dbo.BillInfo SET count = @count WHERE idBill = @idBill AND idFood = @idFood
+		ELSE
+			DELETE dbo.BillInfo WHERE idBill = @idBill AND idFood = @idFood
+	END 
+	ELSE
+	BEGIN
+		IF (@count > 0)
+		BEGIN
+			INSERT dbo.BillInfo (idBill, idFood, count)
+			VALUES (@idBill, @idFood, @count)
+		END
+	END
+END 
+GO
 SELECT * FROM Account
 SELECT * FROM Bill
 SELECT * FROM BillInfo
 SELECT * FROM Food
 SELECT * FROM FoodCategory
 SELECT * FROM TableFood
-

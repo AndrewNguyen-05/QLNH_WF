@@ -28,6 +28,7 @@ namespace QLNH_Winform.DTO
                 this.DateCheckOut = (DateTime?)row["DateCheckOut"];
             this.Status = (int)row["status"];
             this.Discount = (int)row["discount"];
+            this.IsServed = (int)row["isServed"];
         }
         private int discount;
         public int Discount { get => discount; set => discount = value; }
@@ -44,6 +45,11 @@ namespace QLNH_Winform.DTO
 
         private int status;
         public int Status { get => status; set => status = value; }
+
+        private int isServed;        
+        public int IsServed { get => isServed; set => isServed = value; }
+
+        
 
     }
 }

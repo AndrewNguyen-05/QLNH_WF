@@ -20,11 +20,25 @@ namespace QLNH_Winform.DAO
         {
 
         }
+        public Food GetFoodByID(int id)
+        {
+            List<Food> list = new List<Food>();
+            string query = "SELECT * FROM Food WHERE isHidden = 0 AND id = " + id;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
+            foreach (DataRow item in data.Rows)
+            {
+                Food food = new Food(item);
+                return food;
+            }
+            return null;
+        }
         public List<Food> GetFoodByCategoryID(int id)
         {
             List<Food> list = new List<Food>();
-            string query = "SELECT * FROM Food WHERE isHidden = 0 AND idCategory = " + id;
+            string query;
+            if (id == 0) query = "SELECT * FROM Food WHERE isHidden = 0";
+            else query = "SELECT * FROM Food WHERE isHidden = 0 AND idCategory = " + id;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)
@@ -33,6 +47,21 @@ namespace QLNH_Winform.DAO
                 list.Add(food);
             }
 
+            return list;
+        }
+        public List<Food> GetFoodByCategoryID(int id, string name)
+        {
+            List<Food> list = new List<Food>();
+            string query;
+            if (id == 0) return GetListFood(name);
+            else query = string.Format("SELECT * FROM Food WHERE isHidden = 0 AND idCategory = {0} AND name like N'%{1}%'", id, name);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Food food = new Food(item);
+                list.Add(food);
+            }
             return list;
         }
 

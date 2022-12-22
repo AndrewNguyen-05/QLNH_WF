@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using QLNH_Winform.DTO;
 
 namespace QLNH_Winform.DAO
@@ -58,6 +59,20 @@ namespace QLNH_Winform.DAO
                 tableList.Add(table);
             }
 
+            return tableList;
+        }
+        public List<Table> LoadFreeTableList()
+        {
+            List<Table> tableList = new List<Table>();
+
+            string query = string.Format("SELECT * FROM TableFood WHERE isHidden = 0 AND status = N'Trống'");
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Table table = new Table(item);
+                tableList.Add(table);
+            }
             return tableList;
         }
         public bool InsertTable(string name)

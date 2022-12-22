@@ -455,5 +455,3 @@ SELECT * FROM Food
 SELECT * FROM FoodCategory
 SELECT * FROM TableFood
 
-DELETE BillInfo
-DELETE Bill

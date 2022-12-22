@@ -22,31 +22,40 @@ namespace QLNH_Winform.Forms
         public FormTaoDon()
         {
             InitializeComponent();
-            LoadForm(); 
+
             FoodOrderData = new List<OrderFood>();
+            lsvBill.Tag = null;
+            lblBillNumber.Text = lblBillNumber.Text + (BillDAO.Instance.GetMaxIDBill() + 1).ToString();
             statustext = "tạo";
-            checkClikableBtnCreate();
+
+            LoadForm();
         }
-        internal FormTaoDon(Table Table, List<OrderFood> ListOrder)
+        internal FormTaoDon(int idTable, int idBill)
         {
             InitializeComponent();
-            LoadForm();
-            cbCategory.Items.Insert(0, Table);
-            TableOrderData = Table;
-            FoodOrderData = ListOrder;
+            Table table = TableDAO.Instance.getTableByID(idTable);
+            TableOrderData = table;
+            FoodOrderData = OrderFoodDAO.Instance.GetListMenuByTable(TableOrderData.ID);
+
+            lsvBill.Tag = table;
+            lblBillNumber.Text = lblBillNumber.Text + idBill.ToString();
             btnCreate.Text = "Sửa";
             this.Text = "Sửa Đơn";
             statustext = "sửa";
-            checkClikableBtnCreate();
+
+            LoadForm(table);
         }
 
-        void LoadForm()
+        void LoadForm(Table tbl = null)
         {
             txbSearchFood.Text = "";
             LoadCategory();
             LoadFoodListByCategoryID(0, "");
-            LoadComboboxTable(cbTable);
-            created = 0;
+            LoadComboboxTable(cbTable, tbl);
+            ShowBill();
+            checkClikableBtnCreate();
+
+            created = 1;
             if (cbTable.Items.Count < 1)
             {
                 lblTable.Text = "Hết bàn";
@@ -79,12 +88,50 @@ namespace QLNH_Winform.Forms
                 flpTable.Controls.Add(btn);
             }
         }
-        void LoadComboboxTable(ComboBox cb)
+        void LoadComboboxTable(ComboBox cb, Table initTbl = null)
         {
-            cb.DataSource = TableDAO.Instance.LoadFreeTableList();
+            List<Table> tmp = TableDAO.Instance.LoadFreeTableList();
+            if (initTbl != null)
+            {
+                tmp.Insert(0, initTbl);
+            }
+            cb.DataSource = tmp;
             cb.DisplayMember = "Name";
         }
-
+        bool IsOrderChanged()
+        {
+            //Check if table created
+            if (lsvBill.Tag is null)
+            {
+                return (FoodOrderData.Count > 0);
+            }
+            Table oldTable = lsvBill.Tag as Table;
+            //Check if table changed
+            if (oldTable.ID != TableOrderData.ID)
+            {
+                return true;
+            }
+            //Check if food changed
+            List<OrderFood> tmp = OrderFoodDAO.Instance.GetListMenuByTable(oldTable.ID);
+            if (tmp.Count != FoodOrderData.Count)
+            {
+                return true;
+            }
+            for (int i = 0; i < tmp.Count; i++)
+            {
+                if (tmp[i].Count != FoodOrderData[i].Count || tmp[i].FoodId != FoodOrderData[i].FoodId)
+                {
+                    return true;
+                }
+            }
+            //Check if discount changed
+            int oldDiscount = BillDAO.Instance.GetBillbyTableID(oldTable.ID).Discount;
+            if ((int)nmDiscount.Value != oldDiscount)
+            { 
+                return true; 
+            }
+            return false;
+        }
         void checkClikableBtnCreate()
         {
             Table table = TableOrderData;
@@ -93,16 +140,16 @@ namespace QLNH_Winform.Forms
                 btnCreate.Enabled = false;
                 return;
             }
-            if (FoodOrderData.Count < 1)
-            {
-                btnCreate.Enabled = false;
-            }
-            else
+            if (IsOrderChanged())
             {
                 btnCreate.Enabled = true;
             }
+            else
+            {
+                btnCreate.Enabled = false;
+            }
         }
-        void ShowBill(int id)
+        void ShowBill()
         {
             lsvBill.Items.Clear();
             double totalPrice = 0;
@@ -225,19 +272,20 @@ namespace QLNH_Winform.Forms
             id = selected.ID;
             LoadFoodListByCategoryID(id, txbSearchFood.Text);
         }
-
-        private void cbTable_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TableOrderData = (sender as ComboBox).SelectedItem as Table;
-        }
         private void txbSearchFood_TextChanged(object sender, EventArgs e)
         {
             int id = (cbCategory.SelectedItem as FoodCategory).ID;
             string text = txbSearchFood.Text;
             LoadFoodListByCategoryID(id, text);
         }
+        private void cbTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TableOrderData = (sender as ComboBox).SelectedItem as Table;
+            checkClikableBtnCreate();
+        }
         private void nmFoodCount_ValueChanged(object sender, EventArgs e)
         {
+            created = 0;
             Table table = TableOrderData;
             Food food = lblCurrentFood.Tag as Food;
             if (table is null)
@@ -260,24 +308,28 @@ namespace QLNH_Winform.Forms
                 if (count == 0) FoodOrderData.RemoveAt(exists);
             }
             checkClikableBtnCreate();
-            ShowBill(table.ID);
+            ShowBill();
         }
         private void nmDiscount_ValueChanged(object sender, EventArgs e)
         {
-            ShowBill(TableOrderData.ID);
+            created = 0;
+            checkClikableBtnCreate();
+            ShowBill();
         }
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            updateTable(lsvBill.Tag as Table, TableOrderData);
+            updateTable(lsvBill.Tag as Table, TableOrderData); 
+            Table table = lsvBill.Tag as Table;
+            int idBill = -1;
             foreach (OrderFood data in FoodOrderData)
             {
-                Table table = lsvBill.Tag as Table;
-                int idBill = BillDAO.Instance.GetUncheckBillIDbyTableID(table.ID);
                 int foodID = data.FoodId;
-                int count = data.Count;
+                int count = data.Count; 
+                idBill = BillDAO.Instance.NewGetUncheckBillIDbyTableID(table.ID);
                 if (idBill == -1)
                 {
-                    BillDAO.Instance.InsertBill(table.ID);
+                    BillDAO.Instance.InsertBill(table.ID); 
+                    idBill = BillDAO.Instance.NewGetUncheckBillIDbyTableID(table.ID);
                     BillInfoDAO.Instance.NewInsertBillInfo(BillDAO.Instance.GetMaxIDBill(), foodID, count);
                 }
                 else
@@ -285,8 +337,14 @@ namespace QLNH_Winform.Forms
                     BillInfoDAO.Instance.NewInsertBillInfo(idBill, foodID, count);
                 }
             }
+
+            if (idBill != -1)
+            {
+                BillDAO.Instance.UpdatePrice(idBill, (int)nmDiscount.Value, double.Parse(lblTotalPrice.Text));
+            }
             created = 1;
             MessageBox.Show("Đơn hàng đã được " + statustext);
+            checkClikableBtnCreate();
         }
         private void FormTaoDon_FormClosing(object sender, FormClosingEventArgs e)
         {

@@ -37,7 +37,26 @@ namespace QLNH_Winform.DAO
             }
             return -1;
         }
-
+        public int NewGetUncheckBillIDbyTableID(int id)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Bill WHERE idTable = " + id + " AND (status = 0 or isServed = 0)");
+            if (data.Rows.Count > 0)
+            {
+                Bill bill = new Bill(data.Rows[0]);
+                return bill.ID;
+            }
+            return -1;
+        }
+        public Bill GetBillbyTableID(int id)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Bill WHERE idTable = " + id + " AND (status = 0 OR isServed = 0)");
+            if (data.Rows.Count > 0)
+            {
+                Bill bill = new Bill(data.Rows[0]);
+                return bill;
+            }
+            return null;
+        }
         public void CheckOut(int id, int discount, double totalPrice)
         {
             string query = "UPDATE Bill SET DateCheckOut = GETDATE(), status = 1, " + "discount = " + discount + ", totalPrice = " + totalPrice +" WHERE id = " + id.ToString();
@@ -62,10 +81,10 @@ namespace QLNH_Winform.DAO
             }
             catch
             {
-                return 1;
+                return 0;
             }
         }
-        public DataTable GetListBill()
+        public DataTable GetListBillUnprocessed()
         {
             return DataProvider.Instance.ExecuteQuery("SELECT * FROM Bill WHERE status = 0 OR isServed = 0");
         }
@@ -75,7 +94,18 @@ namespace QLNH_Winform.DAO
             string query = string.Format("UPDATE Bill SET status = {1}, isServed = {2} WHERE id = {0}", id, status, isServed); 
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-
+        public void UpdatePrice(int id, int discount, double totalPrice)
+        {
+            string query = "UPDATE Bill SET " + "discount = " + discount + ", totalPrice = " + totalPrice + " WHERE id = " + id.ToString();
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public void DeleteBill(int id)
+        {
+            string query = "DELETE BillInfo WHERE idBill = " + id;
+            DataProvider.Instance.ExecuteNonQuery(query);
+            query = "DELETE Bill WHERE id = " + id;
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
         //public void updateBillStatus(int id, int idTable)
         //{
         //    string query = string.Format("UPDATE Bill SET idTable = {1} WHERE id = {0}", id, idTable);

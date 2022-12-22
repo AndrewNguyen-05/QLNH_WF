@@ -27,7 +27,21 @@ namespace QLNH_Winform.DAO
         {
             List<OrderFood> listMenu = new List<OrderFood>();
 
-            string query = "SELECT f.name, bi.count, f.price, f.price * bi.count AS totalPrice, f.id\r\nFROM BillInfo bi, Bill b, Food f\r\nWHERE bi.idBill = b.id AND bi.idFood = f.id AND b.status = 0 AND b.idTable = " + id;
+            string query = "SELECT f.name, bi.count, f.price, f.price * bi.count AS totalPrice, f.id\r\nFROM BillInfo bi, Bill b, Food f\r\nWHERE bi.idBill = b.id AND bi.idFood = f.id AND (b.status = 0 or b.isServed = 0) AND b.idTable = " + id;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                OrderFood menu = new OrderFood(item);
+                listMenu.Add(menu);
+            }
+            return listMenu;
+        }
+        public List<OrderFood> GetListMenuByBill(int id)
+        {
+            List<OrderFood> listMenu = new List<OrderFood>();
+
+            string query = "SELECT f.name, bi.count, f.price, f.price * bi.count AS totalPrice, f.id\r\nFROM BillInfo bi, Bill b, Food f\r\nWHERE bi.idBill = b.id AND bi.idFood = f.id AND (b.status = 0 or b.isServed = 0) AND b.id = " + id;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)

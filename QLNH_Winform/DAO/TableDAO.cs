@@ -27,7 +27,18 @@ namespace QLNH_Winform.DAO
         public static int TableHeight = 120;
 
         private TableDAO() { }
+        public Table getTableByID(int ID)
+        {
 
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM TableFood WHERE id = " + ID);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Table table = new Table(item);
+                return table;
+            }
+            return null;
+        }
         public void SwitchTable(int id1, int id2)
         {
             DataProvider.Instance.ExecuteQuery("EXEC USP_SwitchTable @idTable1 , @idTable2", new object[] { id1, id2 });

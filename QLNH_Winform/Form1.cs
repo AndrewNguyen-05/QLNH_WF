@@ -62,11 +62,17 @@ namespace QLNH_Winform
             remove { this.cuurrentFormMonAn.btnEditCategory.Click -= value; }
         }
 
-        private FormDonHang currentFormDonHang;
+        private FormDatHang currentFormDonHang;
         event EventHandler btnNewOrderClicked
         {
             add { this.currentFormDonHang.btnNewOrder.Click += value; }
             remove { this.currentFormDonHang.btnNewOrder.Click -= value; }
+        }
+
+        event EventHandler btnEditOrderClicked
+        {
+            add { this.currentFormDonHang.btnEditOrder.Click += value; }
+            remove { this.currentFormDonHang.btnEditOrder.Click -= value; }
         }
         void ChangeAccount(int type)
         {
@@ -164,14 +170,24 @@ namespace QLNH_Winform
         private void btnOrder_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
-            currentFormDonHang = new FormDonHang();
+            currentFormDonHang = new FormDatHang();
             btnNewOrderClicked += btnNewOrder_Click;
+            btnEditOrderClicked += btnEditOrder_Click;
             OpenChildForm(currentFormDonHang);
         }
 
         private void btnNewOrder_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormTaoDon());
+        }
+
+        private void btnEditOrder_Click(object sender, EventArgs e)
+        {
+            if (currentFormDonHang.dtgvPrcsBill.SelectedRows.Count < 1) return;
+            DataGridViewRow tmp = currentFormDonHang.dtgvPrcsBill.SelectedRows[0];
+            int idTable = (int)tmp.Cells["idTable"].Value;
+            int idBill = (int)tmp.Cells["id"].Value;
+            OpenChildForm(new Forms.FormTaoDon(idTable, idBill));
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)

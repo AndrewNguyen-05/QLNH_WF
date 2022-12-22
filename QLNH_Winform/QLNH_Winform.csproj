@@ -110,11 +110,11 @@
     <Compile Include="Forms\FormDanhMuc.Designer.cs">
       <DependentUpon>FormDanhMuc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormDonHang.cs">
+    <Compile Include="Forms\FormDatHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormDonHang.Designer.cs">
-      <DependentUpon>FormDonHang.cs</DependentUpon>
+    <Compile Include="Forms\FormDatHang.Designer.cs">
+      <DependentUpon>FormDatHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormGoiMon.cs">
       <SubType>Form</SubType>
@@ -176,8 +176,8 @@
     <EmbeddedResource Include="Forms\FormDanhMuc.resx">
       <DependentUpon>FormDanhMuc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormDonHang.resx">
-      <DependentUpon>FormDonHang.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormDatHang.resx">
+      <DependentUpon>FormDatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormGoiMon.resx">
       <DependentUpon>FormGoiMon.cs</DependentUpon>

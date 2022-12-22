@@ -39,6 +39,7 @@
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lsvBill = new System.Windows.Forms.ListView();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblTable = new System.Windows.Forms.Label();
             this.btnCreate = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
@@ -51,7 +52,7 @@
             this.txbSearchFood = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.lblTable = new System.Windows.Forms.Label();
+            this.lblBillNumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             this.guna2GradientPanel4.SuspendLayout();
@@ -199,6 +200,16 @@
             this.guna2GradientPanel4.Size = new System.Drawing.Size(610, 635);
             this.guna2GradientPanel4.TabIndex = 6;
             // 
+            // lblTable
+            // 
+            this.lblTable.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTable.Location = new System.Drawing.Point(33, 5);
+            this.lblTable.Name = "lblTable";
+            this.lblTable.Size = new System.Drawing.Size(113, 35);
+            this.lblTable.TabIndex = 19;
+            this.lblTable.Text = "Bàn:";
+            this.lblTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // btnCreate
             // 
             this.btnCreate.Animated = true;
@@ -344,6 +355,7 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
+            this.guna2GradientPanel1.Controls.Add(this.lblBillNumber);
             this.guna2GradientPanel1.Controls.Add(this.guna2GradientPanel2);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
@@ -352,15 +364,15 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1167, 45);
             this.guna2GradientPanel1.TabIndex = 4;
             // 
-            // lblTable
+            // lblBillNumber
             // 
-            this.lblTable.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTable.Location = new System.Drawing.Point(33, 5);
-            this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(113, 35);
-            this.lblTable.TabIndex = 19;
-            this.lblTable.Text = "Bàn:";
-            this.lblTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblBillNumber.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblBillNumber.Location = new System.Drawing.Point(15, 4);
+            this.lblBillNumber.Name = "lblBillNumber";
+            this.lblBillNumber.Size = new System.Drawing.Size(539, 41);
+            this.lblBillNumber.TabIndex = 19;
+            this.lblBillNumber.Text = "Đơn hàng số: ";
+            this.lblBillNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormTaoDon
             // 
@@ -410,5 +422,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label lblTable;
+        private System.Windows.Forms.Label lblBillNumber;
     }
 }

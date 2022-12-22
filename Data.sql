@@ -57,7 +57,7 @@ CREATE TABLE Bill
 	isServed INT NOT NULL DEFAULT 0,
 	status INT NOT NULL DEFAULT 0, --1: Đã thanh toán && 0: Chưa thanh toán
 	discount INT NOT NULL DEFAULT 0,
-	totalPrice DOUBLE,
+	totalPrice FLOAT NOT NULL DEFAULT 0,
 
 	FOREIGN KEY (idTable) REFERENCES dbo.TableFood(id)
 )
@@ -454,3 +454,6 @@ SELECT * FROM BillInfo
 SELECT * FROM Food
 SELECT * FROM FoodCategory
 SELECT * FROM TableFood
+
+DELETE BillInfo
+DELETE Bill

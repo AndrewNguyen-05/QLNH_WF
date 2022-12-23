@@ -92,7 +92,7 @@
             this.lblLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.lblLogo.Location = new System.Drawing.Point(49, 9);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(169, 65);
+            this.lblLogo.Size = new System.Drawing.Size(210, 81);
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "QLNH";
             // 
@@ -259,7 +259,7 @@
             this.lblCurentChildForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
             this.lblCurentChildForm.Location = new System.Drawing.Point(204, 35);
             this.lblCurentChildForm.Name = "lblCurentChildForm";
-            this.lblCurentChildForm.Size = new System.Drawing.Size(49, 17);
+            this.lblCurentChildForm.Size = new System.Drawing.Size(62, 22);
             this.lblCurentChildForm.TabIndex = 2;
             this.lblCurentChildForm.Text = "Home";
             // 
@@ -364,7 +364,7 @@
             this.lblGeneral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.lblGeneral.Location = new System.Drawing.Point(76, 35);
             this.lblGeneral.Name = "lblGeneral";
-            this.lblGeneral.Size = new System.Drawing.Size(65, 17);
+            this.lblGeneral.Size = new System.Drawing.Size(83, 22);
             this.lblGeneral.TabIndex = 6;
             this.lblGeneral.Text = "QUẢN LÝ";
             // 
@@ -399,6 +399,7 @@
             this.MinimizeBox = false;
             this.Name = "FormMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMainMenu_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMainMenu_FormClosed);
             this.pnMenu.ResumeLayout(false);
             this.pnLogo.ResumeLayout(false);
@@ -422,7 +423,6 @@
         private FontAwesome.Sharp.IconButton btnNhanVien;
         private FontAwesome.Sharp.IconButton btnMonAn;
         private FontAwesome.Sharp.IconButton btnBanAn;
-        private FontAwesome.Sharp.IconButton btnOrder;
         private FontAwesome.Sharp.IconButton btnThongKe;
         private FontAwesome.Sharp.IconButton btnTaiKhoan;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
@@ -434,6 +434,7 @@
         private Guna.UI2.WinForms.Guna2Button btnGeneral;
         private Guna.UI2.WinForms.Guna2Button btnArrow;
         private System.Windows.Forms.Label lblGeneral;
+        internal FontAwesome.Sharp.IconButton btnOrder;
     }
 }
 

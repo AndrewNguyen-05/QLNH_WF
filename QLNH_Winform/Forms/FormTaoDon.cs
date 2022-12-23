@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using QLNH_Winform.DAO;
 using QLNH_Winform.DTO;
+using QLNH_Winform;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -345,7 +346,14 @@ namespace QLNH_Winform.Forms
             created = 1;
             MessageBox.Show("Đơn hàng đã được " + statustext);
             checkClikableBtnCreate();
-            this.Close();
+            //return to Form Order
+            Control MainForm = this.Parent;
+            while (MainForm.Name != "FormMainMenu")
+            {
+                MainForm = MainForm.Parent;
+            }
+            FormMainMenu fmm = MainForm as FormMainMenu;
+            fmm.btnOrder_Click(fmm.btnOrder, new EventArgs());
         }
         private void FormTaoDon_FormClosing(object sender, FormClosingEventArgs e)
         {

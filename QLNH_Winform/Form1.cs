@@ -167,7 +167,7 @@ namespace QLNH_Winform
 
         }
 
-        private void btnOrder_Click(object sender, EventArgs e)
+        internal void btnOrder_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
             currentFormDonHang = new FormDatHang();
@@ -280,6 +280,16 @@ namespace QLNH_Winform
         private void FormMainMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
+        }
+
+        private void FormMainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            currentChildForm.Close();
+            if (currentChildForm.IsHandleCreated)
+            {
+                e.Cancel = true;
+                return;
+            }
         }
     }
 }

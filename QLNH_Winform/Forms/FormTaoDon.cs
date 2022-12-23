@@ -25,7 +25,7 @@ namespace QLNH_Winform.Forms
 
             FoodOrderData = new List<OrderFood>();
             lsvBill.Tag = null;
-            lblBillNumber.Text = lblBillNumber.Text + (BillDAO.Instance.GetMaxIDBill() + 1).ToString();
+            lblBillNumber.Text = "Đơn hàng mới";
             statustext = "tạo";
 
             LoadForm();
@@ -345,6 +345,7 @@ namespace QLNH_Winform.Forms
             created = 1;
             MessageBox.Show("Đơn hàng đã được " + statustext);
             checkClikableBtnCreate();
+            this.Close();
         }
         private void FormTaoDon_FormClosing(object sender, FormClosingEventArgs e)
         {

@@ -92,7 +92,7 @@
             this.lblLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.lblLogo.Location = new System.Drawing.Point(49, 9);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(169, 65);
+            this.lblLogo.Size = new System.Drawing.Size(210, 81);
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "QLNH";
             // 

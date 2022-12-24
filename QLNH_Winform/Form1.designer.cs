@@ -259,7 +259,7 @@
             this.lblCurentChildForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
             this.lblCurentChildForm.Location = new System.Drawing.Point(204, 35);
             this.lblCurentChildForm.Name = "lblCurentChildForm";
-            this.lblCurentChildForm.Size = new System.Drawing.Size(49, 17);
+            this.lblCurentChildForm.Size = new System.Drawing.Size(62, 22);
             this.lblCurentChildForm.TabIndex = 2;
             this.lblCurentChildForm.Text = "Home";
             // 
@@ -364,7 +364,7 @@
             this.lblGeneral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.lblGeneral.Location = new System.Drawing.Point(76, 35);
             this.lblGeneral.Name = "lblGeneral";
-            this.lblGeneral.Size = new System.Drawing.Size(65, 17);
+            this.lblGeneral.Size = new System.Drawing.Size(83, 22);
             this.lblGeneral.TabIndex = 6;
             this.lblGeneral.Text = "QUẢN LÝ";
             // 
@@ -422,7 +422,6 @@
         private FontAwesome.Sharp.IconButton btnNhanVien;
         private FontAwesome.Sharp.IconButton btnMonAn;
         private FontAwesome.Sharp.IconButton btnBanAn;
-        private FontAwesome.Sharp.IconButton btnOrder;
         private FontAwesome.Sharp.IconButton btnThongKe;
         private FontAwesome.Sharp.IconButton btnTaiKhoan;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
@@ -434,6 +433,7 @@
         private Guna.UI2.WinForms.Guna2Button btnGeneral;
         private Guna.UI2.WinForms.Guna2Button btnArrow;
         private System.Windows.Forms.Label lblGeneral;
+        internal FontAwesome.Sharp.IconButton btnOrder;
     }
 }
 

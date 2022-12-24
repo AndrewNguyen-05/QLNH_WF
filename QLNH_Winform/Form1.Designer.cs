@@ -399,6 +399,7 @@
             this.MinimizeBox = false;
             this.Name = "FormMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMainMenu_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMainMenu_FormClosed);
             this.pnMenu.ResumeLayout(false);
             this.pnLogo.ResumeLayout(false);

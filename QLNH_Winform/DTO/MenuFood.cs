@@ -9,7 +9,7 @@ namespace QLNH_Winform.DTO
 {
     internal class MenuFood
     {
-        public MenuFood(string name, int count, float price, float totalPrice)
+        public MenuFood(string name, int count, double price, double totalPrice)
         {
             this.FoodName = name;
             this.Count = count;
@@ -21,17 +21,17 @@ namespace QLNH_Winform.DTO
         {
             this.FoodName = row["name"].ToString();
             this.Count = (int)row["count"];
-            this.Price = (float)Convert.ToDouble(row["price"].ToString());
-            this.TotalPrice = (float)Convert.ToDouble(row["totalPrice"].ToString());
+            this.Price = (double)Convert.ToDouble(row["price"].ToString());
+            this.TotalPrice = (double)Convert.ToDouble(row["totalPrice"].ToString());
         }
-        private float price;
-        public float Price
+        private double price;
+        public double Price
         {
             get { return price; }
             set { price = value; }
         }
-        private float totalPrice;
-        public float TotalPrice
+        private double totalPrice;
+        public double TotalPrice
         {
             get { return totalPrice; }
             set { totalPrice = value; }

@@ -78,7 +78,7 @@ namespace QLNH_Winform.Forms
             int idFood = (int)dgvr.Cells["ID"].Value;
             string Name = dgvr.Cells["Name"].Value.ToString();
             int id = (int)dgvr.Cells["CategoryID"].Value;
-            float price = (float)dgvr.Cells["Price"].Value;
+            double price = (double)dgvr.Cells["Price"].Value;
 
             if (FoodDAO.Instance.UpdateFood(idFood, Name, id, price))
             {
@@ -131,7 +131,7 @@ namespace QLNH_Winform.Forms
                     int idFood = (int)dgvr.Cells["ID"].Value;
                     string Name = dgvr.Cells["Name"].Value.ToString();
                     int id = (cbFoodCategory.SelectedItem as FoodCategory).ID;
-                    float price = (float)dgvr.Cells["Price"].Value;
+                    double price = (double)dgvr.Cells["Price"].Value;
                     FoodDAO.Instance.UpdateFood(idFood, Name, id, price);
                 }
             }

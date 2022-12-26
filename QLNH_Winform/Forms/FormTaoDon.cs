@@ -251,7 +251,7 @@ namespace QLNH_Winform.Forms
         //{
         //    lsvBill.Items.Clear();
         //    List<OrderFood> listBillInfo = OrderFoodDAO.Instance.GetListMenuByTable(id);
-        //    float totalPrice = 0;
+        //     totalPrice = 0;
         //    foreach (OrderFood item in listBillInfo)
         //    {
         //        ListViewItem lsvitem = new ListViewItem(item.FoodName.ToString());
@@ -463,7 +463,7 @@ namespace QLNH_Winform.Forms
         //        DialogResult res = MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0} ?\nHóa đơn đã được giảm {2}%\nTổng tiền cần thanh toán là: {1} VND", table.Name, finalTotalPrice, discount), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
         //        if (res == DialogResult.OK)
         //        {
-        //            BillDAO.Instance.CheckOut(idBill, discount, (float)finalTotalPrice);
+        //            BillDAO.Instance.CheckOut(idBill, discount, ()finalTotalPrice);
         //            ShowBill(table.ID);
         //        }
         //    }

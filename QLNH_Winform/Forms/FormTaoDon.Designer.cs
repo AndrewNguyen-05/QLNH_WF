@@ -113,7 +113,6 @@
             this.nmFoodCount.Size = new System.Drawing.Size(150, 42);
             this.nmFoodCount.TabIndex = 13;
             this.nmFoodCount.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.nmFoodCount.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.nmFoodCount.ValueChanged += new System.EventHandler(this.nmFoodCount_ValueChanged);
             // 
             // cbTable
@@ -399,6 +398,7 @@
             // FormTaoDon
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1167, 680);
             this.Controls.Add(this.lblDGvalue);
             this.Controls.Add(this.lblDG);

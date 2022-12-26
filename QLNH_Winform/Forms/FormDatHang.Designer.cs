@@ -67,7 +67,7 @@
             this.dtgvPrcsBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgvPrcsBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dtgvPrcsBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvPrcsBill.BackgroundColor = System.Drawing.Color.White;
             this.dtgvPrcsBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvPrcsBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;

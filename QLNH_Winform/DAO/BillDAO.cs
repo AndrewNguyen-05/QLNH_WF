@@ -84,9 +84,10 @@ namespace QLNH_Winform.DAO
                 return 0;
             }
         }
-        public DataTable GetListBillUnprocessed()
+
+        public DataTable GetListProcessingBill()
         {
-            return DataProvider.Instance.ExecuteQuery("SELECT * FROM Bill WHERE status = 0 OR isServed = 0");
+            return DataProvider.Instance.ExecuteQuery("EXEC USP_GetListProcessingBill", new object[] { });
         }
 
         public void updateBillStatus(int id, int status, int isServed)

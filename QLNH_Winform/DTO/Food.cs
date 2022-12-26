@@ -10,7 +10,7 @@ namespace QLNH_Winform.DTO
 {
     public class Food
     {
-        public Food(int id, string name, int categoryID, float price)
+        public Food(int id, string name, int categoryID, double price)
         {
             this.ID = id;
             this.Name = name;
@@ -23,12 +23,12 @@ namespace QLNH_Winform.DTO
             this.ID = (int)row["id"];
             this.Name = row["name"].ToString();
             this.CategoryID = (int)row["idcategory"];
-            this.Price = (float)Convert.ToDouble(row["price"].ToString());
+            this.Price = (double)Convert.ToDouble(row["price"].ToString());
         }
         private string name;
         private int id;
         private int categoryID;
-        private float price;
+        private double price;
 
         [DisplayName("Tên Món")]
         public string Name { get => name; set => name = value; }
@@ -36,6 +36,6 @@ namespace QLNH_Winform.DTO
         [DisplayName("Danh Mục")]
         public int CategoryID { get => categoryID; set => categoryID = value; }
         [DisplayName("Giá Tiền")]
-        public float Price { get => price; set => price = value; }
+        public double Price { get => price; set => price = value; }
     }
 }

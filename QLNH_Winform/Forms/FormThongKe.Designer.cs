@@ -199,6 +199,8 @@
             // 
             // dtgvBill
             // 
+            this.dtgvBill.AllowUserToAddRows = false;
+            this.dtgvBill.AllowUserToDeleteRows = false;
             this.dtgvBill.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));

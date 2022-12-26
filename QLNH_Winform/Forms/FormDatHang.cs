@@ -19,17 +19,38 @@ namespace QLNH_Winform.Forms
         {
             InitializeComponent();
             LoadDonHang();
+            checkSelection();
         }
         void LoadDonHang()
         {
-            dtgvPrcsBill.DataSource = BillDAO.Instance.GetListBillUnprocessed();
-            dtgvPrcsBill.Columns["DateCheckIn"].Visible = false;
-            dtgvPrcsBill.Columns["DateCheckOut"].Visible = false;
-            dtgvPrcsBill.Columns["idTable"].HeaderText = "Mã bàn";
-            dtgvPrcsBill.Columns["isServed"].HeaderText = "Đã phục vụ";
-            dtgvPrcsBill.Columns["status"].HeaderText = "Đã thanh toán";
-            dtgvPrcsBill.Columns["discount"].HeaderText = "Giảm giá (%)";
+            dtgvPrcsBill.DataSource = BillDAO.Instance.GetListProcessingBill();
+            dtgvPrcsBill.Columns["id"].HeaderText = "Mã đơn";
+            dtgvPrcsBill.Columns["tableName"].HeaderText = "Tên bàn";
+            dtgvPrcsBill.Columns["isServed"].Visible = false;
+            dtgvPrcsBill.Columns["status"].Visible = false;
+            dtgvPrcsBill.Columns["discount"].Visible = false;
             dtgvPrcsBill.Columns["totalPrice"].HeaderText = "Tổng tiền";
+            dtgvPrcsBill.Columns["idTable"].Visible = false;
+            for (int i = 0; i < dtgvPrcsBill.Rows.Count; i++)
+            {
+                DataGridViewCell currentCell = dtgvPrcsBill.Rows[i].Cells["Trạng Thái"];
+                if ((int)currentCell.OwningRow.Cells["isServed"].Value == 1)
+                {
+                    currentCell.Value = "Đã phục vụ/";
+                }
+                else
+                {
+                    currentCell.Value = "Chưa phục vụ/";
+                }
+                if ((int)currentCell.OwningRow.Cells["status"].Value == 1)
+                {
+                    currentCell.Value += "Đã thanh toán";
+                }
+                else
+                {
+                    currentCell.Value += "Chưa thanh toán";
+                }
+            }
             //for (int i = 0; i < dtgvPrcsBill.Rows.Count; i++)
             //{
             //    int idTable = (int)dtgvPrcsBill.Rows[i].Cells["idTable"].Value;
@@ -41,7 +62,44 @@ namespace QLNH_Winform.Forms
         {
             LoadDonHang();
         }
+        void ShowBill(DataGridViewRow dgvr)
+        {
+            lsvBill.Items.Clear();
+            double totalPrice = 0;
+            List<OrderFood> tmp = OrderFoodDAO.Instance.GetListMenuByBill((int)dgvr.Cells["id"].Value);
+            foreach (OrderFood item in tmp)
+            {
+                ListViewItem lsvitem = new ListViewItem(item.FoodName.ToString());
+                lsvitem.SubItems.Add(item.Count.ToString());
+                lsvitem.SubItems.Add(item.Price.ToString());
+                lsvitem.SubItems.Add(item.TotalPrice.ToString());
+                lsvitem.Tag = FoodDAO.Instance.GetFoodByID(item.FoodId);
+                totalPrice += item.TotalPrice;
+                lsvBill.Items.Add(lsvitem);
+            }
+            lblBillNumber.Text = "Đơn hàng số: " + dgvr.Cells["id"].Value.ToString();
+            lblDiscountValue.Text = dgvr.Cells["discount"].Value.ToString();
+            lblTotalPrice.Text = (totalPrice * (100 - (int)dgvr.Cells["discount"].Value) / 100).ToString();
+        }
+        void checkSelection()
+        {
+            if (dtgvPrcsBill.SelectedRows.Count == 1)
+            {
+                btnEditOrder.Enabled = true;
+                btnServeBill.Enabled = true;
+                btnCheckout.Enabled = true;
+                btnDeleteBill.Enabled = true;
+                ShowBill(dtgvPrcsBill.SelectedRows[0]);
+            }
+            else
+            {
+                btnEditOrder.Enabled = false;
+                btnServeBill.Enabled = false;
+                btnCheckout.Enabled = false;
+                btnDeleteBill.Enabled = false;
+            }
 
+        }
         void UpdateStatus(int id, int status, int isServed)
         {
             BillDAO.Instance.updateBillStatus(id, status, isServed);
@@ -86,21 +144,7 @@ namespace QLNH_Winform.Forms
         }
         private void dtgvPrcsBill_SelectionChanged(object sender, EventArgs e)
         {
-            if (dtgvPrcsBill.SelectedRows.Count == 1)
-            {
-                btnEditOrder.Enabled = true;
-                btnServeBill.Enabled = true;  
-                btnCheckout.Enabled = true;
-                btnDeleteBill.Enabled = true;
-            }
-            else
-            {
-                btnEditOrder.Enabled = false;
-                btnServeBill.Enabled = false;
-                btnCheckout.Enabled = false;
-                btnDeleteBill.Enabled = false;
-            }    
-
+            checkSelection();
         }
 
         private void dtgvPrcsBill_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -111,20 +155,8 @@ namespace QLNH_Winform.Forms
             {
                 DataGridViewCell currentCell = dtgv[e.ColumnIndex, e.RowIndex];
                 string columnName = currentCell.OwningColumn.Name;
-                if (columnName == "isServed" || columnName == "status")
+                if (columnName == "Trạng Thái")
                 {
-                    if (currentCell.Value is null)
-                    {
-                        currentCell.Style.BackColor = Color.Pink;
-                    }
-                    else if ((int)currentCell.Value != 0)
-                    {
-                        currentCell.Style.BackColor = Color.Lime;
-                    }
-                    else
-                    {
-                        currentCell.Style.BackColor = Color.Pink;
-                    }
                 }
             }
         }

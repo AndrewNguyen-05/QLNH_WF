@@ -91,13 +91,29 @@ namespace QLNH_Winform.Forms
         }
         void LoadComboboxTable(ComboBox cb, Table initTbl = null)
         {
-            List<Table> tmp = TableDAO.Instance.LoadFreeTableList();
+            int tblID;
             if (initTbl != null)
             {
-                tmp.Insert(0, initTbl);
+                tblID = initTbl.ID;
             }
+            else
+            {
+                tblID = -1;
+            }
+            List<Table> tmp = TableDAO.Instance.LoadFreeTableListWithCurrentTableID(tblID);
             cb.DataSource = tmp;
             cb.DisplayMember = "Name";
+            if (initTbl != null)
+            {
+                foreach (Table tbl in cb.Items)
+                {
+                    if (tbl.ID == initTbl.ID)
+                    {
+                        cb.SelectedItem = tbl;
+                        return;
+                    }
+                }
+            }
         }
         bool IsOrderChanged()
         {
@@ -171,6 +187,7 @@ namespace QLNH_Winform.Forms
         {
             lblCurrentFood.Text = food.Name;
             lblCurrentFood.Tag = food;
+            lblDGvalue.Text = food.Price.ToString();
             if (lblCurrentFood.Tag != null)
             {
                 int index = FindFoodIndexInOrder(food.ID);

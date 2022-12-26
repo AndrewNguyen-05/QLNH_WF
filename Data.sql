@@ -546,7 +546,7 @@ GO
 CREATE PROC USP_GetListProcessingBill
 AS
 BEGIN
-	SELECT b.id , t.name 'tableName' , N'' 'Trạng Thái' , b.totalPrice , discount, t.id 'idTable', b.isServed, b.status
+	SELECT b.id , t.name 'tableName' , b.totalPrice , N'' 'Trạng Thái'  , discount, t.id 'idTable', b.isServed, b.status
 	FROM Bill b, TableFood t
 	WHERE (b.status = 0 OR b.isServed = 0) AND t.id = b.idTable
 END

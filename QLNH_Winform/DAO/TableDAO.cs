@@ -72,11 +72,18 @@ namespace QLNH_Winform.DAO
 
             return tableList;
         }
-        public List<Table> LoadFreeTableList()
+        public List<Table> LoadFreeTableListWithCurrentTableID(int id)
         {
             List<Table> tableList = new List<Table>();
-
-            string query = string.Format("SELECT * FROM TableFood WHERE isHidden = 0 AND status = N'Trống'");
+            string query;
+            if (id != -1)
+            {
+                query = string.Format("SELECT * FROM TableFood WHERE (isHidden = 0 AND status = N'Trống') OR id = " + id);
+            }
+            else
+            {
+                query = string.Format("SELECT * FROM TableFood WHERE isHidden = 0 AND status = N'Trống'");
+            }
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             foreach (DataRow item in data.Rows)

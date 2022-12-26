@@ -53,6 +53,8 @@
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblBillNumber = new System.Windows.Forms.Label();
+            this.lblDG = new System.Windows.Forms.Label();
+            this.lblDGvalue = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             this.guna2GradientPanel4.SuspendLayout();
@@ -66,7 +68,7 @@
             // 
             // colPrice
             // 
-            this.colPrice.Text = "GIÁ TIỀN";
+            this.colPrice.Text = "ĐƠN GIÁ";
             this.colPrice.Width = 100;
             // 
             // colCount
@@ -98,9 +100,9 @@
             this.nmFoodCount.BorderRadius = 8;
             this.nmFoodCount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nmFoodCount.Enabled = false;
-            this.nmFoodCount.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
+            this.nmFoodCount.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmFoodCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            this.nmFoodCount.Location = new System.Drawing.Point(136, 597);
+            this.nmFoodCount.Location = new System.Drawing.Point(137, 602);
             this.nmFoodCount.Margin = new System.Windows.Forms.Padding(5);
             this.nmFoodCount.Maximum = new decimal(new int[] {
             1000,
@@ -108,7 +110,7 @@
             0,
             0});
             this.nmFoodCount.Name = "nmFoodCount";
-            this.nmFoodCount.Size = new System.Drawing.Size(150, 36);
+            this.nmFoodCount.Size = new System.Drawing.Size(150, 42);
             this.nmFoodCount.TabIndex = 13;
             this.nmFoodCount.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.nmFoodCount.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
@@ -123,7 +125,7 @@
             this.cbTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTable.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbTable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbTable.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbTable.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.cbTable.ItemHeight = 30;
             this.cbTable.Location = new System.Drawing.Point(259, 4);
@@ -163,7 +165,7 @@
             this.colCount,
             this.colPrice,
             this.colTotal});
-            this.lsvBill.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lsvBill.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lsvBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.lsvBill.FullRowSelect = true;
             this.lsvBill.HideSelection = false;
@@ -292,13 +294,13 @@
             this.flpTable.Location = new System.Drawing.Point(15, 91);
             this.flpTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(539, 453);
+            this.flpTable.Size = new System.Drawing.Size(539, 407);
             this.flpTable.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(15, 597);
+            this.label2.Location = new System.Drawing.Point(18, 604);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 41);
             this.label2.TabIndex = 16;
@@ -307,8 +309,8 @@
             // 
             // lblCurrentFood
             // 
-            this.lblCurrentFood.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblCurrentFood.Location = new System.Drawing.Point(15, 556);
+            this.lblCurrentFood.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblCurrentFood.Location = new System.Drawing.Point(15, 503);
             this.lblCurrentFood.Name = "lblCurrentFood";
             this.lblCurrentFood.Size = new System.Drawing.Size(539, 41);
             this.lblCurrentFood.TabIndex = 17;
@@ -374,10 +376,32 @@
             this.lblBillNumber.Text = "Đơn hàng số: ";
             this.lblBillNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lblDG
+            // 
+            this.lblDG.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDG.Location = new System.Drawing.Point(16, 556);
+            this.lblDG.Name = "lblDG";
+            this.lblDG.Size = new System.Drawing.Size(113, 41);
+            this.lblDG.TabIndex = 19;
+            this.lblDG.Text = "Đơn giá:";
+            this.lblDG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDGvalue
+            // 
+            this.lblDGvalue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDGvalue.Location = new System.Drawing.Point(135, 556);
+            this.lblDGvalue.Name = "lblDGvalue";
+            this.lblDGvalue.Size = new System.Drawing.Size(113, 41);
+            this.lblDGvalue.TabIndex = 20;
+            this.lblDGvalue.Text = "0";
+            this.lblDGvalue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FormTaoDon
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1167, 680);
+            this.Controls.Add(this.lblDGvalue);
+            this.Controls.Add(this.lblDG);
             this.Controls.Add(this.txbSearchFood);
             this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.lblCurrentFood);
@@ -423,5 +447,7 @@
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label lblTable;
         private System.Windows.Forms.Label lblBillNumber;
+        private System.Windows.Forms.Label lblDG;
+        private System.Windows.Forms.Label lblDGvalue;
     }
 }

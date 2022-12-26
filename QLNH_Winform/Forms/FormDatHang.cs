@@ -87,7 +87,7 @@ namespace QLNH_Winform.Forms
             {
                 btnEditOrder.Enabled = true;
                 btnServeBill.Enabled = true;
-                btnCheckout.Enabled = true;
+                btnCheckout.Enabled = ((int)(dtgvPrcsBill.SelectedRows[0].Cells["status"].Value)) == 0;
                 btnDeleteBill.Enabled = true;
                 ShowBill(dtgvPrcsBill.SelectedRows[0]);
             }

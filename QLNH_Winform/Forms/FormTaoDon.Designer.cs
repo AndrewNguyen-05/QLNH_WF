@@ -184,8 +184,10 @@
             this.cbTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbTable.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.cbTable.IntegralHeight = false;
             this.cbTable.ItemHeight = 27;
             this.cbTable.Location = new System.Drawing.Point(259, 4);
+            this.cbTable.MaxDropDownItems = 10;
             this.cbTable.Name = "cbTable";
             this.cbTable.Size = new System.Drawing.Size(320, 35);
             this.cbTable.TabIndex = 12;
@@ -389,8 +391,10 @@
             this.cbCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbCategory.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.cbCategory.IntegralHeight = false;
             this.cbCategory.ItemHeight = 27;
             this.cbCategory.Location = new System.Drawing.Point(22, 49);
+            this.cbCategory.MaxDropDownItems = 10;
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(254, 35);
             this.cbCategory.TabIndex = 11;

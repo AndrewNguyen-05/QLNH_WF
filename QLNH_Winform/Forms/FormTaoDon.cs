@@ -61,6 +61,7 @@ namespace QLNH_Winform.Forms
             {
                 lblTable.Text = "Hết bàn";
                 lblTable.ForeColor = Color.Red;
+                cbTable.Enabled = false;
             }
         }
         #region Method
@@ -308,11 +309,11 @@ namespace QLNH_Winform.Forms
             created = 0;
             Table table = TableOrderData;
             Food food = lblCurrentFood.Tag as Food;
-            if (table is null)
-            {
-                MessageBox.Show("Không còn bàn trống!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                return;
-            }
+            //if (table is null)
+            //{
+            //    MessageBox.Show("Không còn bàn trống!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            //    return;
+            //}
             int foodID = food.ID;
             int count = (int)nmFoodCount.Value;
             int exists = FindFoodIndexInOrder(foodID); 

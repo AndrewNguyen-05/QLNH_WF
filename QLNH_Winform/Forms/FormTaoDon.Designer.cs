@@ -39,13 +39,14 @@
             this.lsvBill = new System.Windows.Forms.ListView();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblTable = new System.Windows.Forms.Label();
-            this.cbTable = new System.Windows.Forms.ComboBox();
             this.btnCreate = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblVND = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbTable = new System.Windows.Forms.ComboBox();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCurrentFood = new System.Windows.Forms.Label();
@@ -59,13 +60,12 @@
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             this.guna2GradientPanel4.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // colTotal
@@ -182,21 +182,6 @@
             this.lblTable.Text = "Bàn:";
             this.lblTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cbTable
-            // 
-            this.cbTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbTable.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            this.cbTable.IntegralHeight = false;
-            this.cbTable.ItemHeight = 32;
-            this.cbTable.Location = new System.Drawing.Point(1, 1);
-            this.cbTable.MaxDropDownItems = 10;
-            this.cbTable.Name = "cbTable";
-            this.cbTable.Size = new System.Drawing.Size(320, 40);
-            this.cbTable.TabIndex = 12;
-            this.cbTable.SelectedIndexChanged += new System.EventHandler(this.cbTable_SelectedIndexChanged);
-            // 
             // btnCreate
             // 
             this.btnCreate.Animated = true;
@@ -272,6 +257,32 @@
             this.lblVND.TabIndex = 4;
             this.lblVND.Text = "VND";
             this.lblVND.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BorderColor = System.Drawing.Color.DimGray;
+            this.guna2Panel2.BorderRadius = 8;
+            this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.cbTable);
+            this.guna2Panel2.Location = new System.Drawing.Point(257, 3);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(322, 37);
+            this.guna2Panel2.TabIndex = 20;
+            // 
+            // cbTable
+            // 
+            this.cbTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbTable.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.cbTable.IntegralHeight = false;
+            this.cbTable.ItemHeight = 32;
+            this.cbTable.Location = new System.Drawing.Point(1, 1);
+            this.cbTable.MaxDropDownItems = 10;
+            this.cbTable.Name = "cbTable";
+            this.cbTable.Size = new System.Drawing.Size(320, 40);
+            this.cbTable.TabIndex = 12;
+            this.cbTable.SelectedIndexChanged += new System.EventHandler(this.cbTable_SelectedIndexChanged);
             // 
             // flpTable
             // 
@@ -420,17 +431,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(256, 37);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BorderColor = System.Drawing.Color.DimGray;
-            this.guna2Panel2.BorderRadius = 8;
-            this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.cbTable);
-            this.guna2Panel2.Location = new System.Drawing.Point(257, 3);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(322, 37);
-            this.guna2Panel2.TabIndex = 20;
-            // 
             // FormTaoDon
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -453,9 +453,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).EndInit();
             this.guna2GradientPanel4.ResumeLayout(false);
+            this.guna2Panel2.ResumeLayout(false);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

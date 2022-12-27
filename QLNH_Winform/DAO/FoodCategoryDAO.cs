@@ -64,6 +64,16 @@ namespace QLNH_Winform.DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+        public bool InsertEmptyCategory(string name)
+        {
+            string query = string.Format("INSERT FoodCategory (name) VALUES (N'{0}')", name);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            query = "SELECT MAX(ID) MAXID FROM FoodCategory";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            int id = (int)data.Rows[0]["MAXID"];
+            UpdateCategory(id, name + id.ToString());
+            return result > 0;
+        }
         public bool UpdateCategory(int id, string name)
         {
             string query = string.Format("UPDATE FoodCategory SET name = N'{1}' WHERE id = {0}", id, name);

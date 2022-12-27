@@ -50,7 +50,11 @@ namespace QLNH_Winform.Forms
         private void btnAddFood_Click(object sender, EventArgs e)
         {
             List<FoodCategory> tmp = FoodCategoryDAO.Instance.GetListCategory();
-            if (tmp.Count <= 0) return;
+            if (tmp.Count <= 0)
+            {
+                FoodCategoryDAO.Instance.InsertEmptyCategory("Danh mục không tên "); 
+                tmp = FoodCategoryDAO.Instance.GetListCategory();
+            }
             if (FoodDAO.Instance.InsertFood("", tmp[0].ID, 0))
             {
                 LoadListFood();

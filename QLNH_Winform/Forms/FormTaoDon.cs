@@ -273,7 +273,7 @@ namespace QLNH_Winform.Forms
         private void btn_Click(object sender, EventArgs e)
         {
             if (sender is null) return;
-            Food food = ((sender as Guna2Button).Tag as Food);
+            Food food = ((sender as Guna2GradientButton).Tag as Food);
             ChangeFoodSelection(food);
         }
         private void lsvBill_SelectedIndexChanged(object sender, EventArgs e)

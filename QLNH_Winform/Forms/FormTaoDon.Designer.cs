@@ -58,10 +58,14 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             this.guna2GradientPanel4.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // colTotal
@@ -152,7 +156,6 @@
             this.guna2GradientPanel4.BorderRadius = 3;
             this.guna2GradientPanel4.Controls.Add(this.lblTable);
             this.guna2GradientPanel4.Controls.Add(this.nmDiscount);
-            this.guna2GradientPanel4.Controls.Add(this.cbTable);
             this.guna2GradientPanel4.Controls.Add(this.lsvBill);
             this.guna2GradientPanel4.Controls.Add(this.btnCreate);
             this.guna2GradientPanel4.Controls.Add(this.label4);
@@ -160,6 +163,7 @@
             this.guna2GradientPanel4.Controls.Add(this.lblDiscount);
             this.guna2GradientPanel4.Controls.Add(this.lblTotal);
             this.guna2GradientPanel4.Controls.Add(this.lblVND);
+            this.guna2GradientPanel4.Controls.Add(this.guna2Panel2);
             this.guna2GradientPanel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2GradientPanel4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.guna2GradientPanel4.Location = new System.Drawing.Point(557, 45);
@@ -182,14 +186,14 @@
             // 
             this.cbTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbTable.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbTable.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.cbTable.IntegralHeight = false;
-            this.cbTable.ItemHeight = 27;
-            this.cbTable.Location = new System.Drawing.Point(259, 4);
+            this.cbTable.ItemHeight = 32;
+            this.cbTable.Location = new System.Drawing.Point(1, 1);
             this.cbTable.MaxDropDownItems = 10;
             this.cbTable.Name = "cbTable";
-            this.cbTable.Size = new System.Drawing.Size(320, 35);
+            this.cbTable.Size = new System.Drawing.Size(320, 40);
             this.cbTable.TabIndex = 12;
             this.cbTable.SelectedIndexChanged += new System.EventHandler(this.cbTable_SelectedIndexChanged);
             // 
@@ -389,14 +393,14 @@
             this.cbCategory.BackColor = System.Drawing.Color.White;
             this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCategory.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategory.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.cbCategory.IntegralHeight = false;
-            this.cbCategory.ItemHeight = 27;
-            this.cbCategory.Location = new System.Drawing.Point(22, 49);
+            this.cbCategory.ItemHeight = 32;
+            this.cbCategory.Location = new System.Drawing.Point(1, 1);
             this.cbCategory.MaxDropDownItems = 10;
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(254, 35);
+            this.cbCategory.Size = new System.Drawing.Size(254, 40);
             this.cbCategory.TabIndex = 11;
             this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
@@ -405,12 +409,33 @@
             this.guna2Elipse2.BorderRadius = 15;
             this.guna2Elipse2.TargetControl = this.cbCategory;
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderColor = System.Drawing.Color.DimGray;
+            this.guna2Panel1.BorderRadius = 8;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.cbCategory);
+            this.guna2Panel1.Location = new System.Drawing.Point(15, 47);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(256, 37);
+            this.guna2Panel1.TabIndex = 0;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BorderColor = System.Drawing.Color.DimGray;
+            this.guna2Panel2.BorderRadius = 8;
+            this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.cbTable);
+            this.guna2Panel2.Location = new System.Drawing.Point(257, 3);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(322, 37);
+            this.guna2Panel2.TabIndex = 20;
+            // 
             // FormTaoDon
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1167, 680);
-            this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.lblDGvalue);
             this.Controls.Add(this.lblDG);
             this.Controls.Add(this.txbSearchFood);
@@ -420,6 +445,7 @@
             this.Controls.Add(this.guna2GradientPanel4);
             this.Controls.Add(this.nmFoodCount);
             this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTaoDon";
             this.Text = "Tạo Đơn";
@@ -428,6 +454,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).EndInit();
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -461,5 +489,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.ComboBox cbCategory;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }

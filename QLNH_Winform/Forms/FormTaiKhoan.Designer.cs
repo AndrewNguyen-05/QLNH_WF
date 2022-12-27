@@ -97,7 +97,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 38);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Nhập lại";
+            this.label6.Text = "Xác nhận";
             // 
             // guna2GradientPanel2
             // 

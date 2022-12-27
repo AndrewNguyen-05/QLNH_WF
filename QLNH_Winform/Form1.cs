@@ -101,8 +101,8 @@ namespace QLNH_Winform
                     leftBorderBtn.Size = new Size(9, currentButton.Size.Height);
 
                     //Left Border Button
-                    //leftBorderBtn.FillColor = Color.FromArgb(244, 237, 146);
-                    //leftBorderBtn.FillColor2 = Color.FromArgb(25, 104, 143);
+                    leftBorderBtn.FillColor = Color.FromArgb(98, 182, 183);
+                    leftBorderBtn.FillColor2 = Color.FromArgb(28, 49, 94);
                     leftBorderBtn.BackColor = Color.FromArgb(57, 213, 213);
                     leftBorderBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
                     leftBorderBtn.Location = new Point(0, currentButton.Location.Y);

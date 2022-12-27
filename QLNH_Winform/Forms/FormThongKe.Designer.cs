@@ -98,6 +98,7 @@
             this.btnViewBill.Size = new System.Drawing.Size(239, 62);
             this.btnViewBill.TabIndex = 6;
             this.btnViewBill.Text = "Xem thống kê";
+            this.btnViewBill.Click += new System.EventHandler(this.btnViewBill_Click);
             // 
             // guna2GradientPanel2
             // 

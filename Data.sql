@@ -475,13 +475,13 @@ END
 GO
 
 
-CREATE PROC USP_GetListBillByDate
+ALTER PROC USP_GetListBillByDate
 @checkIn date, @checkOut date
 AS
 BEGIN
-	SELECT t.name AS [Tên bàn], b.totalPrice AS [Tổng tiền], DateCheckIn AS [Ngày vào], DateCheckOut AS [Ngày ra], discount AS [Giảm giá]
+	SELECT b.id 'Mã đơn', t.name AS [Tên bàn], discount AS [Giảm giá], b.totalPrice AS [Tổng tiền], DateCheckOut AS [Ngày]
 	FROM Bill AS b, TableFood AS t
-	WHERE DateCheckIn >= @checkIn AND DateCheckOut <= @checkOut AND b.status = 1
+	WHERE DateCheckOut >= @checkIn AND DateCheckOut <= @checkOut AND b.status = 1
 	AND t.id = b.idTable
 END
 GO

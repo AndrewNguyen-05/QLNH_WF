@@ -124,7 +124,10 @@
             // 
             // cbFoodCategory
             // 
+            this.cbFoodCategory.AllowDrop = true;
             this.cbFoodCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbFoodCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFoodCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbFoodCategory.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFoodCategory.FormattingEnabled = true;
             this.cbFoodCategory.Location = new System.Drawing.Point(785, 22);

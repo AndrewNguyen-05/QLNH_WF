@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTaoDon));
             this.colTotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colCount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nmDiscount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.nmFoodCount = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.cbTable = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbCategory = new Guna.UI2.WinForms.Guna2ComboBox();
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lsvBill = new System.Windows.Forms.ListView();
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblTable = new System.Windows.Forms.Label();
+            this.cbTable = new System.Windows.Forms.ComboBox();
             this.btnCreate = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
@@ -55,6 +55,9 @@
             this.lblBillNumber = new System.Windows.Forms.Label();
             this.lblDG = new System.Windows.Forms.Label();
             this.lblDGvalue = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             this.guna2GradientPanel4.SuspendLayout();
@@ -82,9 +85,9 @@
             this.nmDiscount.BorderColor = System.Drawing.Color.DimGray;
             this.nmDiscount.BorderRadius = 8;
             this.nmDiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nmDiscount.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
+            this.nmDiscount.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            this.nmDiscount.Location = new System.Drawing.Point(454, 457);
+            this.nmDiscount.Location = new System.Drawing.Point(459, 472);
             this.nmDiscount.Margin = new System.Windows.Forms.Padding(5);
             this.nmDiscount.Name = "nmDiscount";
             this.nmDiscount.Size = new System.Drawing.Size(93, 36);
@@ -102,7 +105,7 @@
             this.nmFoodCount.Enabled = false;
             this.nmFoodCount.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmFoodCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            this.nmFoodCount.Location = new System.Drawing.Point(137, 602);
+            this.nmFoodCount.Location = new System.Drawing.Point(137, 610);
             this.nmFoodCount.Margin = new System.Windows.Forms.Padding(5);
             this.nmFoodCount.Maximum = new decimal(new int[] {
             1000,
@@ -114,42 +117,6 @@
             this.nmFoodCount.TabIndex = 13;
             this.nmFoodCount.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
             this.nmFoodCount.ValueChanged += new System.EventHandler(this.nmFoodCount_ValueChanged);
-            // 
-            // cbTable
-            // 
-            this.cbTable.BackColor = System.Drawing.Color.Transparent;
-            this.cbTable.BorderColor = System.Drawing.Color.DimGray;
-            this.cbTable.BorderRadius = 8;
-            this.cbTable.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTable.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbTable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbTable.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            this.cbTable.ItemHeight = 30;
-            this.cbTable.Location = new System.Drawing.Point(259, 4);
-            this.cbTable.Name = "cbTable";
-            this.cbTable.Size = new System.Drawing.Size(320, 36);
-            this.cbTable.TabIndex = 12;
-            this.cbTable.SelectedIndexChanged += new System.EventHandler(this.cbTable_SelectedIndexChanged);
-            // 
-            // cbCategory
-            // 
-            this.cbCategory.BackColor = System.Drawing.Color.Transparent;
-            this.cbCategory.BorderColor = System.Drawing.Color.DimGray;
-            this.cbCategory.BorderRadius = 8;
-            this.cbCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbCategory.Font = new System.Drawing.Font("Cambria", 12F);
-            this.cbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            this.cbCategory.ItemHeight = 30;
-            this.cbCategory.Location = new System.Drawing.Point(15, 49);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(254, 36);
-            this.cbCategory.TabIndex = 11;
-            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // colName
             // 
@@ -211,6 +178,19 @@
             this.lblTable.Text = "Bàn:";
             this.lblTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // cbTable
+            // 
+            this.cbTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbTable.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.cbTable.ItemHeight = 27;
+            this.cbTable.Location = new System.Drawing.Point(259, 4);
+            this.cbTable.Name = "cbTable";
+            this.cbTable.Size = new System.Drawing.Size(320, 35);
+            this.cbTable.TabIndex = 12;
+            this.cbTable.SelectedIndexChanged += new System.EventHandler(this.cbTable_SelectedIndexChanged);
+            // 
             // btnCreate
             // 
             this.btnCreate.Animated = true;
@@ -225,7 +205,7 @@
             this.btnCreate.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
             this.btnCreate.ForeColor = System.Drawing.Color.White;
             this.btnCreate.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.btnCreate.Location = new System.Drawing.Point(36, 564);
+            this.btnCreate.Location = new System.Drawing.Point(37, 559);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(545, 60);
@@ -237,7 +217,7 @@
             // 
             this.label4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            this.label4.Location = new System.Drawing.Point(555, 455);
+            this.label4.Location = new System.Drawing.Point(560, 470);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 38);
             this.label4.TabIndex = 4;
@@ -246,9 +226,9 @@
             // 
             // lblTotalPrice
             // 
-            this.lblTotalPrice.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTotalPrice.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.lblTotalPrice.Location = new System.Drawing.Point(314, 508);
+            this.lblTotalPrice.Location = new System.Drawing.Point(296, 513);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(219, 38);
             this.lblTotalPrice.TabIndex = 4;
@@ -258,7 +238,7 @@
             // lblDiscount
             // 
             this.lblDiscount.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDiscount.Location = new System.Drawing.Point(33, 450);
+            this.lblDiscount.Location = new System.Drawing.Point(35, 465);
             this.lblDiscount.Name = "lblDiscount";
             this.lblDiscount.Size = new System.Drawing.Size(113, 49);
             this.lblDiscount.TabIndex = 3;
@@ -267,21 +247,22 @@
             // 
             // lblTotal
             // 
-            this.lblTotal.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotal.Location = new System.Drawing.Point(32, 503);
+            this.lblTotal.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.lblTotal.Location = new System.Drawing.Point(32, 508);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(124, 49);
+            this.lblTotal.Size = new System.Drawing.Size(168, 49);
             this.lblTotal.TabIndex = 3;
             this.lblTotal.Text = "Tổng tiền :";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblVND
             // 
-            this.lblVND.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblVND.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.lblVND.Location = new System.Drawing.Point(517, 509);
+            this.lblVND.Location = new System.Drawing.Point(505, 513);
             this.lblVND.Name = "lblVND";
-            this.lblVND.Size = new System.Drawing.Size(62, 38);
+            this.lblVND.Size = new System.Drawing.Size(77, 38);
             this.lblVND.TabIndex = 4;
             this.lblVND.Text = "VND";
             this.lblVND.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -299,7 +280,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(18, 604);
+            this.label2.Location = new System.Drawing.Point(18, 612);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 41);
             this.label2.TabIndex = 16;
@@ -309,7 +290,8 @@
             // lblCurrentFood
             // 
             this.lblCurrentFood.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblCurrentFood.Location = new System.Drawing.Point(15, 503);
+            this.lblCurrentFood.ForeColor = System.Drawing.Color.Blue;
+            this.lblCurrentFood.Location = new System.Drawing.Point(15, 517);
             this.lblCurrentFood.Name = "lblCurrentFood";
             this.lblCurrentFood.Size = new System.Drawing.Size(539, 41);
             this.lblCurrentFood.TabIndex = 17;
@@ -334,14 +316,14 @@
             this.txbSearchFood.ForeColor = System.Drawing.Color.DimGray;
             this.txbSearchFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbSearchFood.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbSearchFood.IconLeft")));
-            this.txbSearchFood.Location = new System.Drawing.Point(279, 50);
+            this.txbSearchFood.Location = new System.Drawing.Point(279, 47);
             this.txbSearchFood.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txbSearchFood.Name = "txbSearchFood";
             this.txbSearchFood.PasswordChar = '\0';
             this.txbSearchFood.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txbSearchFood.PlaceholderText = "Tìm kiếm";
             this.txbSearchFood.SelectedText = "";
-            this.txbSearchFood.Size = new System.Drawing.Size(275, 36);
+            this.txbSearchFood.Size = new System.Drawing.Size(275, 37);
             this.txbSearchFood.TabIndex = 18;
             this.txbSearchFood.TextChanged += new System.EventHandler(this.txbSearchFood_TextChanged);
             // 
@@ -370,7 +352,7 @@
             this.lblBillNumber.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblBillNumber.Location = new System.Drawing.Point(15, 4);
             this.lblBillNumber.Name = "lblBillNumber";
-            this.lblBillNumber.Size = new System.Drawing.Size(539, 41);
+            this.lblBillNumber.Size = new System.Drawing.Size(539, 40);
             this.lblBillNumber.TabIndex = 19;
             this.lblBillNumber.Text = "Đơn hàng số: ";
             this.lblBillNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -378,7 +360,7 @@
             // lblDG
             // 
             this.lblDG.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDG.Location = new System.Drawing.Point(16, 556);
+            this.lblDG.Location = new System.Drawing.Point(18, 564);
             this.lblDG.Name = "lblDG";
             this.lblDG.Size = new System.Drawing.Size(113, 41);
             this.lblDG.TabIndex = 19;
@@ -388,22 +370,45 @@
             // lblDGvalue
             // 
             this.lblDGvalue.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDGvalue.Location = new System.Drawing.Point(135, 556);
+            this.lblDGvalue.Location = new System.Drawing.Point(137, 564);
             this.lblDGvalue.Name = "lblDGvalue";
             this.lblDGvalue.Size = new System.Drawing.Size(113, 41);
             this.lblDGvalue.TabIndex = 20;
             this.lblDGvalue.Text = "0";
             this.lblDGvalue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this.cbTable;
+            // 
+            // cbCategory
+            // 
+            this.cbCategory.BackColor = System.Drawing.Color.White;
+            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCategory.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.cbCategory.ItemHeight = 27;
+            this.cbCategory.Location = new System.Drawing.Point(22, 49);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(254, 35);
+            this.cbCategory.TabIndex = 11;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.TargetControl = this.cbCategory;
+            // 
             // FormTaoDon
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1167, 680);
+            this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.lblDGvalue);
             this.Controls.Add(this.lblDG);
             this.Controls.Add(this.txbSearchFood);
-            this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.lblCurrentFood);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.flpTable);
@@ -428,8 +433,6 @@
         private System.Windows.Forms.ColumnHeader colCount;
         private Guna.UI2.WinForms.Guna2NumericUpDown nmDiscount;
         private Guna.UI2.WinForms.Guna2NumericUpDown nmFoodCount;
-        private Guna.UI2.WinForms.Guna2ComboBox cbTable;
-        private Guna.UI2.WinForms.Guna2ComboBox cbCategory;
         private System.Windows.Forms.ColumnHeader colName;
         private System.Windows.Forms.ListView lsvBill;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
@@ -449,5 +452,9 @@
         private System.Windows.Forms.Label lblBillNumber;
         private System.Windows.Forms.Label lblDG;
         private System.Windows.Forms.Label lblDGvalue;
+        private System.Windows.Forms.ComboBox cbTable;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.ComboBox cbCategory;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }

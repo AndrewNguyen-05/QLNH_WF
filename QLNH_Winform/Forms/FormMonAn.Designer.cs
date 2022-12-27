@@ -99,7 +99,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvFood.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvFood.RowHeadersWidth = 51;
-            this.dtgvFood.RowTemplate.Height = 24;
+            this.dtgvFood.RowTemplate.Height = 50;
             this.dtgvFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvFood.Size = new System.Drawing.Size(1424, 428);
             this.dtgvFood.TabIndex = 1;

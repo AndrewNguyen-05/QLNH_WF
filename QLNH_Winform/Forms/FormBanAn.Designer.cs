@@ -60,14 +60,14 @@
             this.txbSearchTable.ForeColor = System.Drawing.Color.DimGray;
             this.txbSearchTable.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbSearchTable.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbSearchTable.IconLeft")));
-            this.txbSearchTable.Location = new System.Drawing.Point(229, 18);
-            this.txbSearchTable.Margin = new System.Windows.Forms.Padding(4);
+            this.txbSearchTable.Location = new System.Drawing.Point(305, 22);
+            this.txbSearchTable.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txbSearchTable.Name = "txbSearchTable";
             this.txbSearchTable.PasswordChar = '\0';
             this.txbSearchTable.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txbSearchTable.PlaceholderText = "Tìm kiếm";
             this.txbSearchTable.SelectedText = "";
-            this.txbSearchTable.Size = new System.Drawing.Size(383, 44);
+            this.txbSearchTable.Size = new System.Drawing.Size(511, 54);
             this.txbSearchTable.TabIndex = 4;
             this.txbSearchTable.TextChanged += new System.EventHandler(this.txbSearchTable_TextChanged);
             // 
@@ -87,9 +87,10 @@
             this.btnDelTable.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
             this.btnDelTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.btnDelTable.Image = ((System.Drawing.Image)(resources.GetObject("btnDelTable.Image")));
-            this.btnDelTable.Location = new System.Drawing.Point(768, 18);
+            this.btnDelTable.Location = new System.Drawing.Point(1024, 22);
+            this.btnDelTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelTable.Name = "btnDelTable";
-            this.btnDelTable.Size = new System.Drawing.Size(44, 44);
+            this.btnDelTable.Size = new System.Drawing.Size(59, 54);
             this.btnDelTable.TabIndex = 8;
             this.btnDelTable.Click += new System.EventHandler(this.btnDelTable_Click);
             // 
@@ -103,8 +104,9 @@
             this.guna2GradientPanel1.Controls.Add(this.txbSearchTable);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(840, 417);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1120, 513);
             this.guna2GradientPanel1.TabIndex = 9;
             // 
             // lblTableName
@@ -112,9 +114,10 @@
             this.lblTableName.AutoSize = true;
             this.lblTableName.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTableName.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTableName.Location = new System.Drawing.Point(12, 28);
+            this.lblTableName.Location = new System.Drawing.Point(16, 34);
+            this.lblTableName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTableName.Name = "lblTableName";
-            this.lblTableName.Size = new System.Drawing.Size(198, 25);
+            this.lblTableName.Size = new System.Drawing.Size(251, 32);
             this.lblTableName.TabIndex = 12;
             this.lblTableName.Text = "DANH MỤC BÀN ĂN";
             // 
@@ -137,9 +140,10 @@
             this.btnAddTable.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.btnAddTable.Image = ((System.Drawing.Image)(resources.GetObject("btnAddTable.Image")));
             this.btnAddTable.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnAddTable.Location = new System.Drawing.Point(619, 18);
+            this.btnAddTable.Location = new System.Drawing.Point(825, 22);
+            this.btnAddTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddTable.Name = "btnAddTable";
-            this.btnAddTable.Size = new System.Drawing.Size(143, 44);
+            this.btnAddTable.Size = new System.Drawing.Size(191, 54);
             this.btnAddTable.TabIndex = 11;
             this.btnAddTable.Text = "Thêm";
             this.btnAddTable.Click += new System.EventHandler(this.btnAddTable_Click);
@@ -179,8 +183,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvTable.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvTable.EnableHeadersVisualStyles = false;
-            this.dtgvTable.Location = new System.Drawing.Point(13, 83);
-            this.dtgvTable.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dtgvTable.Location = new System.Drawing.Point(17, 102);
+            this.dtgvTable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtgvTable.Name = "dtgvTable";
             this.dtgvTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -192,22 +196,22 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvTable.RowHeadersWidth = 51;
-            this.dtgvTable.RowTemplate.Height = 24;
+            this.dtgvTable.RowTemplate.Height = 50;
             this.dtgvTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvTable.Size = new System.Drawing.Size(815, 322);
+            this.dtgvTable.Size = new System.Drawing.Size(1087, 396);
             this.dtgvTable.TabIndex = 10;
             this.dtgvTable.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgvTable_CellFormatting);
             this.dtgvTable.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvTable_CellValueChanged);
             // 
             // FormBanAn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(840, 417);
+            this.ClientSize = new System.Drawing.Size(1120, 513);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormBanAn";
             this.Text = "Bàn ăn";
             this.guna2GradientPanel1.ResumeLayout(false);

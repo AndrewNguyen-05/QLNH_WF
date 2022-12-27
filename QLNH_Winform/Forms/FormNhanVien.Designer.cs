@@ -240,7 +240,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvListAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvListAccount.RowHeadersWidth = 51;
-            this.dtgvListAccount.RowTemplate.Height = 24;
+            this.dtgvListAccount.RowTemplate.Height = 50;
             this.dtgvListAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvListAccount.Size = new System.Drawing.Size(1308, 726);
             this.dtgvListAccount.TabIndex = 11;

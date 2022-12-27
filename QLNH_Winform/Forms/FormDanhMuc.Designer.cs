@@ -171,7 +171,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvCategory.RowHeadersWidth = 51;
-            this.dtgvCategory.RowTemplate.Height = 24;
+            this.dtgvCategory.RowTemplate.Height = 50;
             this.dtgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvCategory.Size = new System.Drawing.Size(1076, 357);
             this.dtgvCategory.TabIndex = 10;

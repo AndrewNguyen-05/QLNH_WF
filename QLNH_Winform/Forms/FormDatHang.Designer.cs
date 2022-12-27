@@ -105,7 +105,7 @@
             this.dtgvPrcsBill.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvPrcsBill.RowHeadersVisible = false;
             this.dtgvPrcsBill.RowHeadersWidth = 51;
-            this.dtgvPrcsBill.RowTemplate.Height = 24;
+            this.dtgvPrcsBill.RowTemplate.Height = 50;
             this.dtgvPrcsBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvPrcsBill.Size = new System.Drawing.Size(572, 580);
             this.dtgvPrcsBill.TabIndex = 1;

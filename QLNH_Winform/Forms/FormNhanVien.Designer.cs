@@ -56,9 +56,9 @@
             this.guna2GradientPanel1.Controls.Add(this.txtUserName);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1003, 84);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1337, 103);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // lblEmployeeName
@@ -66,9 +66,10 @@
             this.lblEmployeeName.AutoSize = true;
             this.lblEmployeeName.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblEmployeeName.ForeColor = System.Drawing.Color.DimGray;
-            this.lblEmployeeName.Location = new System.Drawing.Point(12, 29);
+            this.lblEmployeeName.Location = new System.Drawing.Point(16, 36);
+            this.lblEmployeeName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(231, 25);
+            this.lblEmployeeName.Size = new System.Drawing.Size(294, 32);
             this.lblEmployeeName.TabIndex = 15;
             this.lblEmployeeName.Text = "DANH MỤC NHÂN VIÊN";
             // 
@@ -91,9 +92,10 @@
             this.btnResetPassword.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.btnResetPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnResetPassword.Image")));
             this.btnResetPassword.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnResetPassword.Location = new System.Drawing.Point(728, 19);
+            this.btnResetPassword.Location = new System.Drawing.Point(971, 23);
+            this.btnResetPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnResetPassword.Name = "btnResetPassword";
-            this.btnResetPassword.Size = new System.Drawing.Size(213, 44);
+            this.btnResetPassword.Size = new System.Drawing.Size(284, 54);
             this.btnResetPassword.TabIndex = 14;
             this.btnResetPassword.Text = "Đặt lại mật khẩu";
             this.btnResetPassword.UseTransparentBackground = true;
@@ -115,9 +117,10 @@
             this.btnDelTable.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
             this.btnDelTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.btnDelTable.Image = ((System.Drawing.Image)(resources.GetObject("btnDelTable.Image")));
-            this.btnDelTable.Location = new System.Drawing.Point(947, 19);
+            this.btnDelTable.Location = new System.Drawing.Point(1263, 23);
+            this.btnDelTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelTable.Name = "btnDelTable";
-            this.btnDelTable.Size = new System.Drawing.Size(44, 44);
+            this.btnDelTable.Size = new System.Drawing.Size(59, 54);
             this.btnDelTable.TabIndex = 13;
             this.btnDelTable.Click += new System.EventHandler(this.btnDeleteStaff_Click);
             // 
@@ -140,9 +143,10 @@
             this.btnAddStaff.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.btnAddStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStaff.Image")));
             this.btnAddStaff.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnAddStaff.Location = new System.Drawing.Point(579, 19);
+            this.btnAddStaff.Location = new System.Drawing.Point(772, 23);
+            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddStaff.Name = "btnAddStaff";
-            this.btnAddStaff.Size = new System.Drawing.Size(143, 44);
+            this.btnAddStaff.Size = new System.Drawing.Size(191, 54);
             this.btnAddStaff.TabIndex = 12;
             this.btnAddStaff.Text = "Thêm";
             this.btnAddStaff.UseTransparentBackground = true;
@@ -165,14 +169,14 @@
             this.txtUserName.ForeColor = System.Drawing.Color.DimGray;
             this.txtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUserName.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUserName.IconLeft")));
-            this.txtUserName.Location = new System.Drawing.Point(284, 19);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserName.Location = new System.Drawing.Point(379, 23);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PasswordChar = '\0';
             this.txtUserName.PlaceholderForeColor = System.Drawing.Color.DimGray;
             this.txtUserName.PlaceholderText = "Nhập tên tài khoản mới";
             this.txtUserName.SelectedText = "";
-            this.txtUserName.Size = new System.Drawing.Size(288, 44);
+            this.txtUserName.Size = new System.Drawing.Size(384, 54);
             this.txtUserName.TabIndex = 2;
             // 
             // panel1
@@ -180,14 +184,16 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
             this.panel1.Controls.Add(this.dtgvListAccount);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 84);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 103);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1003, 593);
+            this.panel1.Size = new System.Drawing.Size(1337, 730);
             this.panel1.TabIndex = 1;
             // 
             // dtgvListAccount
             // 
+            this.dtgvListAccount.AllowUserToAddRows = false;
+            this.dtgvListAccount.AllowUserToDeleteRows = false;
             this.dtgvListAccount.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -221,8 +227,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvListAccount.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvListAccount.EnableHeadersVisualStyles = false;
-            this.dtgvListAccount.Location = new System.Drawing.Point(11, 0);
-            this.dtgvListAccount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dtgvListAccount.Location = new System.Drawing.Point(15, 0);
+            this.dtgvListAccount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtgvListAccount.Name = "dtgvListAccount";
             this.dtgvListAccount.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -236,21 +242,21 @@
             this.dtgvListAccount.RowHeadersWidth = 51;
             this.dtgvListAccount.RowTemplate.Height = 24;
             this.dtgvListAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvListAccount.Size = new System.Drawing.Size(981, 590);
+            this.dtgvListAccount.Size = new System.Drawing.Size(1308, 726);
             this.dtgvListAccount.TabIndex = 11;
             this.dtgvListAccount.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dtgvListAccount_CellBeginEdit);
             this.dtgvListAccount.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvListAccount_CellValueChanged);
             // 
             // FormNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1003, 677);
+            this.ClientSize = new System.Drawing.Size(1337, 833);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FormNhanVien";
             this.Text = "Nhân viên";
             this.guna2GradientPanel1.ResumeLayout(false);

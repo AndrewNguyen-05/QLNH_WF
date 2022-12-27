@@ -402,6 +402,7 @@
             // 
             // guna2Elipse2
             // 
+            this.guna2Elipse2.BorderRadius = 15;
             this.guna2Elipse2.TargetControl = this.cbCategory;
             // 
             // FormTaoDon

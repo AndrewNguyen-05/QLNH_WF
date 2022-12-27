@@ -237,6 +237,7 @@
             this.dtgvBill.Location = new System.Drawing.Point(12, 103);
             this.dtgvBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgvBill.Name = "dtgvBill";
+            this.dtgvBill.ReadOnly = true;
             this.dtgvBill.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;

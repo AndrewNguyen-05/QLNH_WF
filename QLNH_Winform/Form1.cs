@@ -228,12 +228,6 @@ namespace QLNH_Winform
             loginAccount = e.Acc;
         }
 
-        private void btnKhoHang_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, Color.FromArgb(178, 8, 55));
-            OpenChildForm(new Forms.FormKhoHang());
-        }
-
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(178, 8, 55));

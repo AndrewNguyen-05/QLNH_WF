@@ -35,6 +35,10 @@ namespace QLNH_Winform.Forms
 
         private void btnDelTable_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa bàn ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+            {
+                return;
+            }
             if (dtgvTable.SelectedCells.Count <= 0) return;
             foreach (DataGridViewCell dgvc in dtgvTable.SelectedCells)
             {

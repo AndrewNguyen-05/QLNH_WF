@@ -116,12 +116,6 @@
     <Compile Include="Forms\FormBanAn.designer.cs">
       <DependentUpon>FormBanAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormReport.Designer.cs">
-      <DependentUpon>FormReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FormTaoDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,12 +139,6 @@
     </Compile>
     <Compile Include="Forms\FormGoiMon.Designer.cs">
       <DependentUpon>FormGoiMon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormKhoHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormKhoHang.designer.cs">
-      <DependentUpon>FormKhoHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormLogin.cs">
       <SubType>Form</SubType>
@@ -199,9 +187,6 @@
     <EmbeddedResource Include="Forms\FormBanAn.resx">
       <DependentUpon>FormBanAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormReport.resx">
-      <DependentUpon>FormReport.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTaoDon.resx">
       <DependentUpon>FormTaoDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,9 +198,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormGoiMon.resx">
       <DependentUpon>FormGoiMon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormKhoHang.resx">
-      <DependentUpon>FormKhoHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

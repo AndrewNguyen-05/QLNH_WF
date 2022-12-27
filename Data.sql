@@ -475,7 +475,7 @@ END
 GO
 
 
-ALTER PROC USP_GetListBillByDate
+CREATE PROC USP_GetListBillByDate
 @checkIn date, @checkOut date
 AS
 BEGIN

@@ -79,12 +79,14 @@ namespace QLNH_Winform.Forms
             List<Food> listFood = FoodDAO.Instance.GetFoodByCategoryID(id, name);
             foreach (Food item in listFood)
             {
-                Guna2Button btn = new Guna2Button() { Width = 240, Height = 120 };
+                Guna2GradientButton btn = new Guna2GradientButton() { Width = 240, Height = 120 };
                 btn.Text = item.Name;
                 btn.Click += btn_Click;
                 btn.Tag = item;
                 btn.BorderRadius = 8;
                 btn.ForeColor = Color.White;
+                btn.FillColor = Color.CadetBlue;
+                btn.FillColor2 = Color.Chocolate;
                 btn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
                 flpTable.Controls.Add(btn);
             }

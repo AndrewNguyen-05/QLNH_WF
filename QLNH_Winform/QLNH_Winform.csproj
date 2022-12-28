@@ -177,6 +177,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLNHDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLNHDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNHDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="FoodCard.resx">
       <DependentUpon>FoodCard.cs</DependentUpon>
@@ -227,6 +232,7 @@
     <EmbeddedResource Include="rptHoaDon.rdlc" />
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\QLNH_Winform.DTO.BillInfo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -248,6 +254,17 @@
     </None>
     <None Include="QLNHDataSet.xss">
       <DependentUpon>QLNHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLNHDataSet1.xsc">
+      <DependentUpon>QLNHDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLNHDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLNHDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLNHDataSet1.xss">
+      <DependentUpon>QLNHDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Resources\Search.png" />
   </ItemGroup>

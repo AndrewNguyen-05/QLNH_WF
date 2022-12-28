@@ -552,6 +552,23 @@ BEGIN
 END
 GO
 
+--CREATE PROC USP_GetDetailBillByDate
+--@checkIn date, @checkOut date
+--AS 
+--SELECT f.Name AS [Tên món], f.price AS [Giá], fc.name [Danh mục], bf.count [Số lượng]
+--FROM Food f JOIN BillInfo bf ON f.id = bf.idFood
+--			JOIN FoodCategory fc ON fc.id = f.idCategory
+--			JOIN Bill b ON bf.idBill = b.id
+--WHERE DateCheckOut >= @checkIn AND DateCheckOut <= @checkOut AND b.status = 1
+--GO
+
+--DROP PROC USP_GetDetailBillByDate
+--SET DATEFORMAT DMY
+--EXEC USP_GetListBillByDate '28/12/2022', '28/12/2022'
+--EXEC USP_GetDetailBillByDate '28/12/2022', '28/12/2022'
+--SELECT * FROM BillInfo
+--EXEC USP_GetListProcessingBill
+
 SELECT * FROM Account
 SELECT * FROM Bill
 SELECT * FROM BillInfo

@@ -138,6 +138,10 @@ namespace QLNH_Winform.Forms
 
         private void btnDeleteBill_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Bạn có chắc chắn muốn hủy đơn?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+            {
+                return;
+            }
             DataGridViewRow selectedRow = dtgvPrcsBill.SelectedRows[0];
             BillDAO.Instance.DeleteBill((int)selectedRow.Cells["id"].Value);
             LoadDonHang();

@@ -364,7 +364,7 @@ namespace QLNH_Winform.Forms
                 BillDAO.Instance.UpdatePrice(idBill, (int)nmDiscount.Value, double.Parse(lblTotalPrice.Text));
             }
             created = 1;
-            MessageBox.Show("Đơn hàng đã được " + statustext);
+            MessageBox.Show("Đơn hàng đã được " + statustext,"Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             checkClikableBtnCreate();
             //return to Form Order
             Control MainForm = this.Parent;

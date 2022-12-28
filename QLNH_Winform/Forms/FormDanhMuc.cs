@@ -44,6 +44,10 @@ namespace QLNH_Winform.Forms
 
         private void btnDelCategory_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa danh mục món?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+            {
+                return;
+            }
             if (dtgvCategory.SelectedCells.Count <= 0) return;
             foreach (DataGridViewCell dgvc in dtgvCategory.SelectedCells)
             {

@@ -16,9 +16,8 @@ namespace QLNH_Winform.Forms
         public FormThongKe()
         {
             InitializeComponent();
-            cbDateSelection.SelectedIndex = 0;
             LoadDateTimePickerBill();
-            LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
+            cbDateSelection.SelectedIndex = 0;
         }
 
         #region Methods

@@ -157,17 +157,22 @@ namespace QLNH_Winform.Forms
         }
         private void btnDeleteStaff_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewCell dc in dtgvListAccount.SelectedCells)
+            foreach (DataGridViewRow dc in dtgvListAccount.SelectedRows)
             {
-                string userName = dc.OwningRow.Cells["UserName"].Value.ToString();
+                string userName = dc.Cells["UserName"].Value.ToString();
                 if (loginAcc.UserName.Equals(userName))
                 {
-                    DeleteAcount(userName); return;
+                    MessageBox.Show("Không thể xóa tài khoản đang đăng nhập hiện tại");
+                    return;
                 }
             }
-            foreach (DataGridViewCell dc in dtgvListAccount.SelectedCells)
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa tài khoản?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
             {
-                string userName = dc.OwningRow.Cells["UserName"].Value.ToString();
+                return;
+            }
+            foreach (DataGridViewRow dc in dtgvListAccount.SelectedRows)
+            {
+                string userName = dc.Cells["UserName"].Value.ToString();
                 DeleteAcount(userName);
             }
         }

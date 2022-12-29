@@ -107,6 +107,11 @@ namespace QLNH_Winform.DAO
             query = "DELETE Bill WHERE id = " + id;
             DataProvider.Instance.ExecuteNonQuery(query);
         }
+
+        public DataTable GetDetailBillByID(int id)
+        {
+            return DataProvider.Instance.ExecuteQuery("EXEC USP_GetDetailBillByID @idBill", new object[] { id });
+        }
         //public void updateBillStatus(int id, int idTable)
         //{
         //    string query = string.Format("UPDATE Bill SET idTable = {1} WHERE id = {0}", id, idTable);

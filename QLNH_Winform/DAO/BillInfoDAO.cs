@@ -53,5 +53,7 @@ namespace QLNH_Winform.DAO
                 DataProvider.Instance.ExcuteScalar("DELETE Bill WHERE id = " + idBill);
             }
         }
+
+
     }
 }

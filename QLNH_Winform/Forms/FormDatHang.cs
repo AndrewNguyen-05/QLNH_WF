@@ -128,8 +128,8 @@ namespace QLNH_Winform.Forms
                 DialogResult res = MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn số {0} ?\nHóa đơn đã được giảm {2}%\nTổng tiền cần thanh toán là: {1} VND", idBill, totalPrice, discount), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (res == DialogResult.OK)
                 {
-                    //FormReport formReport = new FormReport();
-                    //formReport.ShowDialog();
+                    //FormXuatHD fXuatHD = new FormXuatHD();
+                    //fXuatHD.ShowDialog();
                     BillDAO.Instance.CheckOut(idBill, discount, totalPrice);
                 }
             }

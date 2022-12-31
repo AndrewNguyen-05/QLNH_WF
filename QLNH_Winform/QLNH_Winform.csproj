@@ -170,6 +170,12 @@
     <Compile Include="Forms\FormThongKe.designer.cs">
       <DependentUpon>FormThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormTaoHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTaoHD.Designer.cs">
+      <DependentUpon>FormTaoHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormXuatHD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTaoHD.resx">
+      <DependentUpon>FormTaoHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormXuatHD.resx">
       <DependentUpon>FormXuatHD.cs</DependentUpon>

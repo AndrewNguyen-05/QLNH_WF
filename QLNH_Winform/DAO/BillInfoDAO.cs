@@ -54,6 +54,40 @@ namespace QLNH_Winform.DAO
             }
         }
 
+        public DataTable GetDetailBillByID(int id)
+        {
+            return DataProvider.Instance.ExecuteQuery("EXEC USP_GetDetailBillByID @idBill", new object[] {id});
+        }
 
+        public List<BillInfo> LoadDetailBillByID(int id)
+        {
+            List<BillInfo> billInfos = new List<BillInfo>();
+
+            DataTable data =  DataProvider.Instance.ExecuteQuery("EXEC USP_GetDetailBillByID @idBill", new object[] { 41 });
+            
+            //string query = "SELECT f.Name AS [Tên món], f.price AS [Giá], fc.name [Danh mục], bf.count [Số lượng]\r\nFROM Food f JOIN BillInfo bf ON f.id = bf.idFood\r\n\t\t\tJOIN FoodCategory fc ON fc.id = f.idCategory\r\n\t\t\tJOIN Bill b ON bf.idBill = b.id\r\nWHERE b.status = 1 AND b.id = " + 40;
+            //DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                BillInfo billInfo = new BillInfo(item);
+                billInfos.Add(billInfo);
+            }
+
+            return billInfos;
+        }
+        public List<Table> LoadTableList()
+        {
+            List<Table> tableList = new List<Table>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("EXEC USP_GetTableList");
+
+            foreach (DataRow item in data.Rows)
+            {
+                Table table = new Table(item);
+                tableList.Add(table);
+            }
+            return tableList;
+        }
     }
 }

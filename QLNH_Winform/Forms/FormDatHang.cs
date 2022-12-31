@@ -120,6 +120,7 @@ namespace QLNH_Winform.Forms
         {
             DataGridViewRow selectedRow = dtgvPrcsBill.SelectedRows[0];
             int idBill = (int)selectedRow.Cells["id"].Value;
+            string tableName = selectedRow.Cells["tableName"].Value.ToString();
             int discount = (int)selectedRow.Cells["discount"].Value;
             double totalPrice = (double)selectedRow.Cells["totalPrice"].Value;
 
@@ -128,8 +129,11 @@ namespace QLNH_Winform.Forms
                 DialogResult res = MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn số {0} ?\nHóa đơn đã được giảm {2}%\nTổng tiền cần thanh toán là: {1} VND", idBill, totalPrice, discount), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (res == DialogResult.OK)
                 {
-                    //FormXuatHD fXuatHD = new FormXuatHD();
-                    //fXuatHD.ShowDialog();
+                    FormTaoHD fXuatHD = new FormTaoHD(idBill);
+                    fXuatHD.discountVal = discount;
+                    fXuatHD.totalPrice = totalPrice;
+                    fXuatHD.tableName = tableName;
+                    fXuatHD.ShowDialog();
                     BillDAO.Instance.CheckOut(idBill, discount, totalPrice);
                 }
             }

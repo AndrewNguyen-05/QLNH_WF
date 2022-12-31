@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLNH_Winform.DAO
@@ -57,6 +58,8 @@ namespace QLNH_Winform.DAO
             }
             return null;
         }
+
+
         public void CheckOut(int id, int discount, double totalPrice)
         {
             string query = "UPDATE Bill SET DateCheckOut = GETDATE(), status = 1, " + "discount = " + discount + ", totalPrice = " + totalPrice +" WHERE id = " + id.ToString();
@@ -108,10 +111,6 @@ namespace QLNH_Winform.DAO
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
-        public DataTable GetDetailBillByID(int id)
-        {
-            return DataProvider.Instance.ExecuteQuery("EXEC USP_GetDetailBillByID @idBill", new object[] { id });
-        }
         //public void updateBillStatus(int id, int idTable)
         //{
         //    string query = string.Format("UPDATE Bill SET idTable = {1} WHERE id = {0}", id, idTable);

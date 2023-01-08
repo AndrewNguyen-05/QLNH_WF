@@ -30,8 +30,11 @@ namespace QLNH_Winform.Forms
         }    
         void LoadListBillByDate(DateTime checkIn, DateTime checkOut)
         {
-            dtgvBill.DataSource = BillDAO.Instance.GetBillListByDate(checkIn, checkOut);
+            dtgvBill.DataSource = BillDAO.Instance.GetBillListByDate(checkIn, checkOut); 
+            lblTotalMoney.Text = BillDAO.Instance.GetTotalPriceByDate(checkIn, checkOut).ToString();
+
         }
+
         #endregion
 
         #region Events

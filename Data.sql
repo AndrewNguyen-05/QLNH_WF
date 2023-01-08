@@ -486,6 +486,17 @@ BEGIN
 END
 GO
 
+CREATE PROC USP_GetTotalMoneyByDate
+@checkIn date, @checkOut date
+AS
+BEGIN
+	SELECT SUM(cast(b.TotalPrice as float)) 'totalMoney'
+	FROM Bill AS b, TableFood AS t
+	WHERE DateCheckOut >= @checkIn AND DateCheckOut <= @checkOut AND b.status = 1
+	AND t.id = b.idTable
+END
+GO
+
 CREATE PROC USP_UpdateAccount
 @userName NVARCHAR(100), @displayName NVARCHAR(100), @password NVARCHAR(100), @newPassword NVARCHAR(100)
 AS 

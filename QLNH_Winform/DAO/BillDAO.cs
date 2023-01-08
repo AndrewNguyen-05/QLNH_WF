@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -76,6 +77,18 @@ namespace QLNH_Winform.DAO
             return DataProvider.Instance.ExecuteQuery("EXEC USP_GetListBillByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
         }
 
+        public double GetTotalPriceByDate(DateTime checkIn, DateTime checkOut)
+        {
+            DataTable tmp = DataProvider.Instance.ExecuteQuery("EXEC USP_GetTotalMoneyByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
+            try
+            {
+                return (double)tmp.Rows[0]["totalMoney"];
+            }
+            catch
+            {
+                return 0;
+            }
+        }
         public int GetMaxIDBill()
         { 
             try

@@ -93,7 +93,7 @@
             this.btnResetPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnResetPassword.Image")));
             this.btnResetPassword.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnResetPassword.Location = new System.Drawing.Point(971, 23);
-            this.btnResetPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnResetPassword.Margin = new System.Windows.Forms.Padding(4);
             this.btnResetPassword.Name = "btnResetPassword";
             this.btnResetPassword.Size = new System.Drawing.Size(284, 54);
             this.btnResetPassword.TabIndex = 14;
@@ -118,7 +118,7 @@
             this.btnDelTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.btnDelTable.Image = ((System.Drawing.Image)(resources.GetObject("btnDelTable.Image")));
             this.btnDelTable.Location = new System.Drawing.Point(1263, 23);
-            this.btnDelTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelTable.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelTable.Name = "btnDelTable";
             this.btnDelTable.Size = new System.Drawing.Size(59, 54);
             this.btnDelTable.TabIndex = 13;
@@ -144,7 +144,7 @@
             this.btnAddStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnAddStaff.Image")));
             this.btnAddStaff.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnAddStaff.Location = new System.Drawing.Point(772, 23);
-            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddStaff.Name = "btnAddStaff";
             this.btnAddStaff.Size = new System.Drawing.Size(191, 54);
             this.btnAddStaff.TabIndex = 12;
@@ -170,7 +170,7 @@
             this.txtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUserName.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUserName.IconLeft")));
             this.txtUserName.Location = new System.Drawing.Point(379, 23);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(5);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PasswordChar = '\0';
             this.txtUserName.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -245,6 +245,7 @@
             this.dtgvListAccount.Size = new System.Drawing.Size(1308, 726);
             this.dtgvListAccount.TabIndex = 11;
             this.dtgvListAccount.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dtgvListAccount_CellBeginEdit);
+            this.dtgvListAccount.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgvListAccount_CellMouseDoubleClick);
             this.dtgvListAccount.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvListAccount_CellValueChanged);
             // 
             // FormNhanVien

@@ -54,7 +54,7 @@ namespace QLNH_Winform.DAO
 
         public DataTable GetListAccount()
         {
-            return DataProvider.Instance.ExecuteQuery("SELECT UserName, DisplayName, Type FROM Account");
+            return DataProvider.Instance.ExecuteQuery("SELECT UserName, DisplayName, Type, N'' Perm FROM Account");
         }
 
         public Account GetAccountByUserName(string userName)

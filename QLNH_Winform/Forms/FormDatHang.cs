@@ -85,10 +85,10 @@ namespace QLNH_Winform.Forms
         {
             if (dtgvPrcsBill.SelectedRows.Count == 1)
             {
-                btnEditOrder.Enabled = true;
+                btnEditOrder.Enabled = ((int)(dtgvPrcsBill.SelectedRows[0].Cells["status"].Value)) == 0;
                 btnServeBill.Enabled = true;
                 btnCheckout.Enabled = ((int)(dtgvPrcsBill.SelectedRows[0].Cells["status"].Value)) == 0;
-                btnDeleteBill.Enabled = true;
+                btnDeleteBill.Enabled = ((int)(dtgvPrcsBill.SelectedRows[0].Cells["status"].Value)) == 0;
                 ShowBill(dtgvPrcsBill.SelectedRows[0]);
             }
             else
@@ -167,6 +167,20 @@ namespace QLNH_Winform.Forms
                 {
                 }
             }
+        }
+
+        private void btnPrintBill_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = dtgvPrcsBill.SelectedRows[0];
+            int idBill = (int)selectedRow.Cells["id"].Value;
+            string tableName = selectedRow.Cells["tableName"].Value.ToString();
+            int discount = (int)selectedRow.Cells["discount"].Value;
+            double totalPrice = (double)selectedRow.Cells["totalPrice"].Value;
+            FormTaoHD fXuatHD = new FormTaoHD(idBill);
+            fXuatHD.discountVal = discount;
+            fXuatHD.totalPrice = totalPrice;
+            fXuatHD.tableName = tableName;
+            fXuatHD.ShowDialog();
         }
     }
 }

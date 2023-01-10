@@ -6,15 +6,23 @@ namespace QLNH_Winform.Forms
 {
     public partial class FormBanAn : Form
     {
+        bool ReadOnly;
         BindingSource tableList = new BindingSource();
-        public FormBanAn()
+        public FormBanAn(bool readOnly)
         {
             InitializeComponent();
+            ReadOnly = readOnly;
+            checkReadOnly();
             LoadListTable();
             dtgvTable.DataSource = tableList;
             dtgvTable.Columns["ID"].Visible = false;
         }
-        
+        void checkReadOnly()
+        {
+            dtgvTable.ReadOnly = ReadOnly;
+            btnAddTable.Enabled = !ReadOnly;
+            btnDelTable.Enabled = !ReadOnly;
+        }
         void LoadListTable()
         {
             tableList.DataSource = TableDAO.Instance.LoadTableList();

@@ -16,10 +16,13 @@ namespace QLNH_Winform.Forms
 {
     public partial class FormMonAn : Form
     {
+        bool ReadOnly;
         BindingSource foodList = new BindingSource();
-        public FormMonAn()
+        public FormMonAn(bool readOnly)
         {
             InitializeComponent();
+            ReadOnly = readOnly;
+            CheckReadOnly();
             LoadListFood();
             LoadCategoryIntoCombobox(cbFoodCategory);
             dtgvFood.DataSource = foodList;
@@ -27,7 +30,14 @@ namespace QLNH_Winform.Forms
             // Tool tip 
             toolTip1.SetToolTip(cbFoodCategory, "Chọn để sửa");
         }
-
+        void CheckReadOnly()
+        {
+            dtgvFood.ReadOnly = ReadOnly;
+            btnAddFood.Enabled = !ReadOnly;
+            btnDelFood.Enabled = !ReadOnly;
+            btnEditCategory.Enabled = !ReadOnly;
+            cbFoodCategory.Enabled = !ReadOnly;
+        }
         void AddFoodBinding()
         {
 

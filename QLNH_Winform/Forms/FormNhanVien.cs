@@ -20,11 +20,21 @@ namespace QLNH_Winform.Forms
 
         public Account loginAcc;
         string editingUserName;
-
-        public FormNhanVien()
+        bool ReadOnly;
+        public FormNhanVien(bool readOnly)
         {
             InitializeComponent();
+            ReadOnly = readOnly;
             LoadNhanVien();
+            checkReadOnly();
+        }
+
+        void checkReadOnly()
+        {
+            dtgvListAccount.ReadOnly = ReadOnly;
+            btnAddStaff.Enabled = !ReadOnly;
+            btnDelStaff.Enabled = !ReadOnly;
+            btnResetPassword.Enabled = !ReadOnly;
         }
 
         #region Methods
@@ -232,7 +242,7 @@ namespace QLNH_Winform.Forms
         }
         private void dtgvListAccount_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == dtgvListAccount.Columns["Perm"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dtgvListAccount.Columns["Perm"].Index && e.RowIndex >= 0 && !ReadOnly)
             {
                 string usrName = dtgvListAccount.Rows[e.RowIndex].Cells["UserName"].Value.ToString();
                 int type = (int)dtgvListAccount.Rows[e.RowIndex].Cells["Type"].Value;

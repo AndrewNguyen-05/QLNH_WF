@@ -33,7 +33,7 @@ namespace QLNH_Winform.DTO
         [DisplayName("Tên Món")]
         public string Name { get => name; set => name = value; }
         public int ID { get => id; set => id = value; }
-        [DisplayName("Danh Mục")]
+        [DisplayName("Loại")]
         public int CategoryID { get => categoryID; set => categoryID = value; }
         [DisplayName("Giá Tiền")]
         public double Price { get => price; set => price = value; }

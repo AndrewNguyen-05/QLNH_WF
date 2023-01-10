@@ -29,23 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMonAn));
             this.dtgvFood = new System.Windows.Forms.DataGridView();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.cbFoodCategory = new System.Windows.Forms.ComboBox();
-            this.lblTableName = new System.Windows.Forms.Label();
             this.btnEditCategory = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txbSearchFood = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnDelFood = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddFood = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbFoodCategory = new System.Windows.Forms.ComboBox();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -56,12 +55,12 @@
             this.dtgvFood.AllowUserToAddRows = false;
             this.dtgvFood.AllowUserToDeleteRows = false;
             this.dtgvFood.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dtgvFood.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(233)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dtgvFood.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvFood.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -70,36 +69,36 @@
             this.dtgvFood.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvFood.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtgvFood.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvFood.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvFood.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvFood.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvFood.EnableHeadersVisualStyles = false;
             this.dtgvFood.Location = new System.Drawing.Point(15, 142);
             this.dtgvFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgvFood.Name = "dtgvFood";
             this.dtgvFood.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvFood.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvFood.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvFood.RowHeadersWidth = 51;
             this.dtgvFood.RowTemplate.Height = 50;
             this.dtgvFood.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -112,7 +111,6 @@
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.guna2GradientPanel2.Controls.Add(this.lblTableName);
             this.guna2GradientPanel2.Controls.Add(this.btnEditCategory);
             this.guna2GradientPanel2.Controls.Add(this.txbSearchFood);
             this.guna2GradientPanel2.Controls.Add(this.dtgvFood);
@@ -125,32 +123,6 @@
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(1455, 583);
             this.guna2GradientPanel2.TabIndex = 9;
-            // 
-            // cbFoodCategory
-            // 
-            this.cbFoodCategory.AllowDrop = true;
-            this.cbFoodCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbFoodCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFoodCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbFoodCategory.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbFoodCategory.FormattingEnabled = true;
-            this.cbFoodCategory.Location = new System.Drawing.Point(1, 1);
-            this.cbFoodCategory.Name = "cbFoodCategory";
-            this.cbFoodCategory.Size = new System.Drawing.Size(335, 38);
-            this.cbFoodCategory.TabIndex = 17;
-            this.cbFoodCategory.SelectionChangeCommitted += new System.EventHandler(this.cbFoodCategory_SelectionChangeCommitted);
-            // 
-            // lblTableName
-            // 
-            this.lblTableName.AutoSize = true;
-            this.lblTableName.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTableName.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTableName.Location = new System.Drawing.Point(16, 90);
-            this.lblTableName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTableName.Name = "lblTableName";
-            this.lblTableName.Size = new System.Drawing.Size(257, 32);
-            this.lblTableName.TabIndex = 13;
-            this.lblTableName.Text = "DANH MỤC MÓN ĂN";
             // 
             // btnEditCategory
             // 
@@ -176,7 +148,7 @@
             this.btnEditCategory.Name = "btnEditCategory";
             this.btnEditCategory.Size = new System.Drawing.Size(287, 54);
             this.btnEditCategory.TabIndex = 16;
-            this.btnEditCategory.Text = "Sửa danh mục";
+            this.btnEditCategory.Text = "Sửa loại";
             // 
             // txbSearchFood
             // 
@@ -257,6 +229,32 @@
             this.btnAddFood.Text = "Thêm món";
             this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel1.BorderColor = System.Drawing.Color.DimGray;
+            this.guna2Panel1.BorderRadius = 9;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.cbFoodCategory);
+            this.guna2Panel1.Location = new System.Drawing.Point(783, 22);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(337, 40);
+            this.guna2Panel1.TabIndex = 18;
+            // 
+            // cbFoodCategory
+            // 
+            this.cbFoodCategory.AllowDrop = true;
+            this.cbFoodCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbFoodCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFoodCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbFoodCategory.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFoodCategory.FormattingEnabled = true;
+            this.cbFoodCategory.Location = new System.Drawing.Point(1, 1);
+            this.cbFoodCategory.Name = "cbFoodCategory";
+            this.cbFoodCategory.Size = new System.Drawing.Size(335, 38);
+            this.cbFoodCategory.TabIndex = 17;
+            this.cbFoodCategory.SelectionChangeCommitted += new System.EventHandler(this.cbFoodCategory_SelectionChangeCommitted);
+            // 
             // guna2GradientPanel3
             // 
             this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -276,18 +274,6 @@
             this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this.cbFoodCategory;
             // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel1.BorderColor = System.Drawing.Color.DimGray;
-            this.guna2Panel1.BorderRadius = 9;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.cbFoodCategory);
-            this.guna2Panel1.Location = new System.Drawing.Point(783, 22);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(337, 40);
-            this.guna2Panel1.TabIndex = 18;
-            // 
             // FormMonAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -301,7 +287,6 @@
             this.Text = "Món ăn";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
-            this.guna2GradientPanel2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -316,7 +301,6 @@
         private Guna.UI2.WinForms.Guna2Button btnDelFood;
         private Guna.UI2.WinForms.Guna2TextBox txbSearchFood;
         internal Guna.UI2.WinForms.Guna2GradientButton btnEditCategory;
-        private System.Windows.Forms.Label lblTableName;
         private System.Windows.Forms.ComboBox cbFoodCategory;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;

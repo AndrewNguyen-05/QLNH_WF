@@ -188,7 +188,7 @@ namespace QLNH_Winform
         internal void btnOrder_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
-            currentFormDonHang = new FormDatHang();
+            currentFormDonHang = new FormDatHang(((loginAccount.Type >> 1) & 1) == 0);
             btnNewOrderClicked += btnNewOrder_Click;
             btnEditOrderClicked += btnEditOrder_Click;
             OpenChildForm(currentFormDonHang);
@@ -217,13 +217,13 @@ namespace QLNH_Winform
         private void btnBanAn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
-            OpenChildForm(new Forms.FormBanAn());
+            OpenChildForm(new Forms.FormBanAn(((loginAccount.Type >> 8) & 1) == 0));
         }
 
         private void btnMonAn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
-            cuurrentFormMonAn = new Forms.FormMonAn();
+            cuurrentFormMonAn = new Forms.FormMonAn(((loginAccount.Type >> 5) & 1) == 0);
             btnEditCategoryClicked += btnDanhMuc_Click;
             OpenChildForm(cuurrentFormMonAn);
         }
@@ -234,7 +234,7 @@ namespace QLNH_Winform
         }
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            FormNhanVien form = new FormNhanVien();
+            FormNhanVien form = new FormNhanVien(((loginAccount.Type >> 14) & 1) == 0);
             form.loginAcc = loginAccount;
             form.UpdateAccount += Form_UpdateAccount;
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
@@ -249,7 +249,7 @@ namespace QLNH_Winform
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(178, 8, 55));
-            FormTaiKhoan f = new FormTaiKhoan(LoginAccount);
+            FormTaiKhoan f = new FormTaiKhoan(LoginAccount, ((loginAccount.Type >> 11) & 1) == 0);
             f.UpdateAccount += F_UpdateAccount;
             OpenChildForm(f);
         }

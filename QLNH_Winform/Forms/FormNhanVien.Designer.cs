@@ -34,9 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.lblEmployeeName = new System.Windows.Forms.Label();
             this.btnResetPassword = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnDelTable = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelStaff = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddStaff = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,9 +48,8 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.guna2GradientPanel1.Controls.Add(this.lblEmployeeName);
             this.guna2GradientPanel1.Controls.Add(this.btnResetPassword);
-            this.guna2GradientPanel1.Controls.Add(this.btnDelTable);
+            this.guna2GradientPanel1.Controls.Add(this.btnDelStaff);
             this.guna2GradientPanel1.Controls.Add(this.btnAddStaff);
             this.guna2GradientPanel1.Controls.Add(this.txtUserName);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -60,18 +58,6 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1337, 103);
             this.guna2GradientPanel1.TabIndex = 0;
-            // 
-            // lblEmployeeName
-            // 
-            this.lblEmployeeName.AutoSize = true;
-            this.lblEmployeeName.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblEmployeeName.ForeColor = System.Drawing.Color.DimGray;
-            this.lblEmployeeName.Location = new System.Drawing.Point(16, 36);
-            this.lblEmployeeName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(294, 32);
-            this.lblEmployeeName.TabIndex = 15;
-            this.lblEmployeeName.Text = "DANH MỤC NHÂN VIÊN";
             // 
             // btnResetPassword
             // 
@@ -103,26 +89,26 @@
             // 
             // btnDelTable
             // 
-            this.btnDelTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelTable.Animated = true;
-            this.btnDelTable.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelTable.BorderColor = System.Drawing.Color.DimGray;
-            this.btnDelTable.BorderRadius = 8;
-            this.btnDelTable.BorderThickness = 1;
-            this.btnDelTable.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelTable.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelTable.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelTable.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelTable.FillColor = System.Drawing.Color.White;
-            this.btnDelTable.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDelTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            this.btnDelTable.Image = ((System.Drawing.Image)(resources.GetObject("btnDelTable.Image")));
-            this.btnDelTable.Location = new System.Drawing.Point(1263, 23);
-            this.btnDelTable.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelTable.Name = "btnDelTable";
-            this.btnDelTable.Size = new System.Drawing.Size(59, 54);
-            this.btnDelTable.TabIndex = 13;
-            this.btnDelTable.Click += new System.EventHandler(this.btnDeleteStaff_Click);
+            this.btnDelStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelStaff.Animated = true;
+            this.btnDelStaff.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelStaff.BorderColor = System.Drawing.Color.DimGray;
+            this.btnDelStaff.BorderRadius = 8;
+            this.btnDelStaff.BorderThickness = 1;
+            this.btnDelStaff.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelStaff.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelStaff.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelStaff.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelStaff.FillColor = System.Drawing.Color.White;
+            this.btnDelStaff.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.btnDelStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnDelTable.Image")));
+            this.btnDelStaff.Location = new System.Drawing.Point(1263, 23);
+            this.btnDelStaff.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelStaff.Name = "btnDelTable";
+            this.btnDelStaff.Size = new System.Drawing.Size(59, 54);
+            this.btnDelStaff.TabIndex = 13;
+            this.btnDelStaff.Click += new System.EventHandler(this.btnDeleteStaff_Click);
             // 
             // btnAddStaff
             // 
@@ -261,7 +247,6 @@
             this.Name = "FormNhanVien";
             this.Text = "Nhân viên";
             this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2GradientPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvListAccount)).EndInit();
             this.ResumeLayout(false);
@@ -276,7 +261,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddStaff;
         private Guna.UI2.WinForms.Guna2GradientButton btnResetPassword;
-        private Guna.UI2.WinForms.Guna2Button btnDelTable;
-        private System.Windows.Forms.Label lblEmployeeName;
+        private Guna.UI2.WinForms.Guna2Button btnDelStaff;
     }
 }

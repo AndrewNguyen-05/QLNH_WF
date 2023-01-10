@@ -17,20 +17,30 @@ namespace QLNH_Winform.Forms
     public partial class FormTaiKhoan : Form
     {
         private Account loginAccount;
-
+        bool ReadOnly;
         public Account LoginAccount
         {
             get { return loginAccount; }
             set { loginAccount = value; ChangeAccount(loginAccount); }
         }
 
-        public FormTaiKhoan(Account acc)
+        public FormTaiKhoan(Account acc, bool readOnly)
         {
             InitializeComponent();
+            ReadOnly = readOnly;
+            checkReadOnly();
             LoginAccount = acc;
             this.UpdateAccount += FormTaiKhoan_UpdateAccount;
         }
-
+        void checkReadOnly()
+        {
+            txtUserName.Enabled = !ReadOnly;
+            txtDisplayName.Enabled = !ReadOnly;
+            txtPassWord.Enabled = !ReadOnly;
+            txtNewPassWord.Enabled = !ReadOnly;
+            txtConfirmPW.Enabled = !ReadOnly;
+            btnUpdate.Enabled = !ReadOnly;
+        }
         private void FormTaiKhoan_UpdateAccount(object sender, AccountEvent e)
         {
             lblDisplayName.Text = e.Acc.DisplayName;

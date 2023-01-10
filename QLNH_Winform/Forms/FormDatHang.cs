@@ -15,9 +15,11 @@ namespace QLNH_Winform.Forms
 {
     public partial class FormDatHang : Form
     {
-        public FormDatHang()
+        public bool ReadOnly;
+        public FormDatHang(bool readOnly)
         {
             InitializeComponent();
+            ReadOnly = readOnly;
             LoadDonHang();
             checkSelection();
         }
@@ -83,7 +85,8 @@ namespace QLNH_Winform.Forms
         }
         void checkSelection()
         {
-            if (dtgvPrcsBill.SelectedRows.Count == 1)
+            btnNewOrder.Enabled = !ReadOnly;
+            if (dtgvPrcsBill.SelectedRows.Count == 1 && (!ReadOnly))
             {
                 btnEditOrder.Enabled = ((int)(dtgvPrcsBill.SelectedRows[0].Cells["status"].Value)) == 0;
                 btnServeBill.Enabled = true;

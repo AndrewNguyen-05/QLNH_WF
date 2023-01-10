@@ -48,7 +48,7 @@ namespace QLNH_Winform
 
             leftBorderBtn = new Guna2GradientPanel();
             pnMenu.Controls.Add(leftBorderBtn);
-            btnOrder_Click(btnOrder, EventArgs.Empty);
+            //btnOrder_Click(btnOrder, EventArgs.Empty);
             //OpenChildForm(new Forms.FormThongKe());
 
             //Form

@@ -17,13 +17,17 @@ namespace QLNH_Winform
             public QLNHApplicationContext()
             {
                 formMainMenu = new FormMainMenu[2];
-                formLogin = new FormLogin();
                 formNumber = 0;
+                formLogin = new FormLogin();
                 if (formLogin.ShowDialog() == DialogResult.OK)
                 {
                     formMainMenu[formNumber] = new FormMainMenu(formLogin.loginAccount);
                     formMainMenu[formNumber].Show();
                     this.formMainMenuClosed += QLNHApplicationContext_formMainMenuClosed;
+                }
+                else
+                {
+                    throw new Exception("exit");
                 }
             }
             private void QLNHApplicationContext_formMainMenuClosed(object sender, FormClosedEventArgs e)
@@ -36,6 +40,10 @@ namespace QLNH_Winform
                     formMainMenu[formNumber] = new FormMainMenu(formLogin.loginAccount);
                     formMainMenu[formNumber].Show();
                     this.formMainMenuClosed += QLNHApplicationContext_formMainMenuClosed;
+                }
+                else
+                {
+                    Application.Exit();
                 }
             }
 
@@ -54,7 +62,14 @@ namespace QLNH_Winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QLNHApplicationContext());
+            try
+            {
+                Application.Run(new QLNHApplicationContext());
+            }
+            catch
+            {
+                Application.Exit();
+            }
         }
     }
 }

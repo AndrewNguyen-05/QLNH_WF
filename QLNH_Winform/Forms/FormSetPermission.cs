@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLNH_Winform.DAO;
+using QLNH_Winform.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +14,8 @@ namespace QLNH_Winform.Forms
 {
     public partial class FormSetPermission : Form
     {
-        public int retPerm;
+        public Account modifyingAccount;
+        public Account editorAccount;
         DataGridViewRow createListPermRow(string s, bool a, bool d, bool m)
         {
             DataGridViewRow listPermRow = new DataGridViewRow();
@@ -27,15 +30,22 @@ namespace QLNH_Winform.Forms
             listPermRow.Height = 40;
             return listPermRow;
         }
-        public FormSetPermission(int code)
+        public FormSetPermission(Account modifying, ref Account editor)
         {
             InitializeComponent();
-            retPerm = code;
-            string[] ls = { "Gọi Món", 
-                            "Món Ăn", 
-                            "Bàn Ăn", 
-                            "Tài Khoản", 
-                            "Nhân Viên",    
+            //show setting
+            modifyingAccount = modifying;
+            loadData(modifying.Type);
+        }
+
+        void loadData(int code)
+        {
+            dtgvAccPermission.Rows.Clear();
+            string[] ls = { "Gọi Món",
+                            "Món Ăn",
+                            "Bàn Ăn",
+                            "Tài Khoản",
+                            "Nhân Viên",
                             "Thống Kê" };
             for (int i = 0; i < 6; i++)
             {
@@ -56,6 +66,17 @@ namespace QLNH_Winform.Forms
                 code = code >> 3;
             }
         }
+        void reloadPerm()
+        {
+            editorAccount = AccountDAO.Instance.GetAccountByUserName(editorAccount.UserName);
+        }
+        bool isAllowToChange(int row)
+        {
+            bool allowToEdit = ((editorAccount.Type >> (row * 3 + 2)) & 1) != 0;
+            bool notSamePerm = ((modifyingAccount.Type >> (row * 3 + 2)) & 1) == 0;
+            bool isOwner = (((editorAccount.Type >> 18) & 1) != 0);
+            return (allowToEdit && notSamePerm) || isOwner;
+        }
         private void dtgvAccPermission_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
             if (1 <= e.ColumnIndex && e.ColumnIndex <= 3 && e.RowIndex >= 0)
@@ -63,17 +84,34 @@ namespace QLNH_Winform.Forms
                 e.PaintBackground(e.CellBounds, true);
                 ControlPaint.DrawCheckBox(e.Graphics, e.CellBounds.X + 20, e.CellBounds.Y + 1,
                     e.CellBounds.Width - 2, e.CellBounds.Height - 2,
-                    e.FormattedValue.ToString() == true.ToString() ? ButtonState.Checked : ButtonState.Normal);
+                    (e.FormattedValue.ToString() == true.ToString() ? ButtonState.Checked : ButtonState.Normal) 
+                  | (isAllowToChange(e.RowIndex)? ButtonState.Normal : ButtonState.Inactive));
                 e.Handled = true;
             }
         }
         private void dtgvAccPermission_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
+            reloadPerm();
+            if (!isAllowToChange(e.RowIndex)) return;
             DataGridView dgv = (DataGridView)sender;
             if (1 <= e.ColumnIndex && e.ColumnIndex <= 3 && e.RowIndex >= 0)
             {
                 DataGridViewCell cell = dgv.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                cell.Value = !(bool)cell.Value;
+                if ((bool)cell.Value == false)
+                {
+                    for (int i = e.ColumnIndex - 1; i > 0; i--)
+                    {
+                        DataGridViewCell tmp = dgv.Rows[e.RowIndex].Cells[i];
+                        tmp.Value = true;
+                    }
+                }    
+                bool flg = false;
+                for (int i = e.ColumnIndex + 1; i <= 3; i++)
+                {
+                    DataGridViewCell tmp = dgv.Rows[e.RowIndex].Cells[i];
+                    flg = flg || (bool)tmp.Value;
+                }
+                cell.Value = ((!(bool)cell.Value) || flg);
             }
             if (e.ColumnIndex == 0)
             {
@@ -126,14 +164,14 @@ namespace QLNH_Winform.Forms
         private void btnSave_Click(object sender, EventArgs e)
         {
             int x = 1;
-            retPerm = 0;
+            modifyingAccount.Type = 0;
             for (int i = 0; i < 6; i++)
             {
                 for (int j = 1; j <= 3; j++)
                 {
                     if ((bool)dtgvAccPermission[j, i].Value)
                     {
-                        retPerm |= x;
+                        modifyingAccount.Type |= x;
                     }
                     x <<= 1;
                 }

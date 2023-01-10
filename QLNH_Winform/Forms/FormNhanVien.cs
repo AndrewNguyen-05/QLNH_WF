@@ -49,11 +49,17 @@ namespace QLNH_Winform.Forms
          * 9 10 11: TaiKhoan
          * 12 13 14: NhanVien
          * 15 16 17: ThongKe
+         * 18: Owner
+         * 19: LoggedIn
          */
         string showPerm(int code)
         {
             string s = "";
-            int cnt = 0;
+            if (((code >> 18) & 1 )!= 0)
+            {
+                return "Owner";
+            }
+            int[] cnt = { 0, 0, 0, 0 };
             int flg = 0;
             //GoiMon
             string[] ls = { "GM", "MA", "BA", "TKh", "NV", "ThKe" };
@@ -62,36 +68,39 @@ namespace QLNH_Winform.Forms
                 string tmp = "";
                 if (((code >> 0) & 1) != 0)
                 {
-                    tmp += "1";
+                    tmp += "R";
+                    cnt[1]++;
                 }
                 if (((code >> 1) & 1) != 0)
                 {
-                    tmp += "2";
+                    tmp += "W";
+                    cnt[2]++;
                 }
                 if (((code >> 2) & 1) != 0)
                 {
-                    tmp += "3";
+                    tmp += "C";
+                    cnt[3]++;
                 }
                 if (tmp != "")
                 {
                     if (flg == 1) s += " | ";
-                    if (tmp == "123")
-                    {
-                        s += ls[i] + "_All";
-                        cnt++;
-                    }
-                    else
-                    {
-                        s += ls[i] + "_" + tmp;
-                    }
+                    s += ls[i] + "_" + tmp;
                     flg = 1;
                 }
                 code = code >> 3;
             }
-            if (cnt == 6)
+            if (cnt[3] == 6)
             {
-                s = "All";
+                s = "All_RWC";
             }
+            //else if (cnt[2] == 6)
+            //{
+            //    s = "All_RW";
+            //}
+            //else if (cnt[1] == 6)
+            //{
+            //    s = "All_R";
+            //}
             else if (flg == 0)
             {
                 s = "None";
@@ -225,11 +234,23 @@ namespace QLNH_Winform.Forms
         {
             if (e.ColumnIndex == dtgvListAccount.Columns["Perm"].Index && e.RowIndex >= 0)
             {
+                string usrName = dtgvListAccount.Rows[e.RowIndex].Cells["UserName"].Value.ToString();
                 int type = (int)dtgvListAccount.Rows[e.RowIndex].Cells["Type"].Value;
-                FormSetPermission fsp = new FormSetPermission(type);
+                if (usrName == loginAcc.UserName)
+                {
+                    MessageBox.Show("Không thể chỉnh quyền bản thân");
+                    return;
+                }
+                if (((type >> 18) & 1) != 0)
+                {
+                    MessageBox.Show("Không thể chỉnh quyền chủ");
+                    return;
+                }
+                FormSetPermission fsp = new FormSetPermission(AccountDAO.Instance.GetAccountByUserName(usrName), ref loginAcc);
+                fsp.editorAccount = loginAcc;
                 fsp.ShowDialog();
                 editingUserName = dtgvListAccount.Rows[e.RowIndex].Cells["UserName"].Value.ToString();
-                dtgvListAccount.Rows[e.RowIndex].Cells["Type"].Value = fsp.retPerm;
+                dtgvListAccount.Rows[e.RowIndex].Cells["Type"].Value = fsp.modifyingAccount.Type;
             }
         }
         private void btnDeleteStaff_Click(object sender, EventArgs e)

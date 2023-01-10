@@ -13,13 +13,16 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Windows.Media.Animation;
+using QLNH_Winform.DAO;
 
 namespace QLNH_Winform
 {
     public partial class FormMainMenu : Form
     {
         private Account loginAccount;
+        private Timer t;
 
         public Account LoginAccount
         {
@@ -53,7 +56,9 @@ namespace QLNH_Winform
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
         }
+
         //Event bubble
         private FormMonAn cuurrentFormMonAn;
         event EventHandler btnEditCategoryClicked
@@ -74,10 +79,23 @@ namespace QLNH_Winform
             add { this.currentFormDonHang.btnEditOrder.Click += value; }
             remove { this.currentFormDonHang.btnEditOrder.Click -= value; }
         }
+        void reloadAccount()
+        {
+            LoginAccount = AccountDAO.Instance.GetAccountByUserName(LoginAccount.UserName);
+        }
         void ChangeAccount(int type)
         {
-            btnNhanVien.Visible = (type == 1);
-            btnThongKe.Visible = (type == 1);
+            btnOrder.Visible = (type & 1 | (type >> 1) & 1 | (type >> 2) & 1) != 0;
+            type >>= 3;
+            btnMonAn.Visible = (type & 1 | (type >> 1) & 1 | (type >> 2) & 1) != 0;
+            type >>= 3;
+            btnBanAn.Visible = (type & 1 | (type >> 1) & 1 | (type >> 2) & 1) != 0;
+            type >>= 3;
+            btnTaiKhoan.Visible = (type & 1 | (type >> 1) & 1 | (type >> 2) & 1) != 0;
+            type >>= 3;
+            btnNhanVien.Visible = (type & 1 | (type >> 1) & 1 | (type >> 2) & 1) != 0;
+            type >>= 3;
+            btnThongKe.Visible = (type & 1 | (type >> 1) & 1 | (type >> 2) & 1) != 0;
         }
 
         private void ActivateButton(object btnSender, Color color)
@@ -284,6 +302,10 @@ namespace QLNH_Winform
                 e.Cancel = true;
                 return;
             }
+        }
+        private void ReloadPerm(object sender, EventArgs e)
+        {
+            reloadAccount();
         }
     }
 }

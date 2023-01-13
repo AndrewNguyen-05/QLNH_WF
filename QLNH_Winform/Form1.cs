@@ -116,7 +116,7 @@ namespace QLNH_Winform
                     pnTitleBar.BackColor = Color.White;
                     //pnTitleBar.ForeColor = Color.White;
                     //pnLogo.BackColor = ThemeColor.ChangeColorBrightness(Color.FromArgb(128, 128, 255), 0.3);
-                    leftBorderBtn.Size = new Size(9, currentButton.Size.Height);
+                    leftBorderBtn.Size = new Size(12, currentButton.Size.Height);
 
                     //Left Border Button
                     leftBorderBtn.FillColor = Color.FromArgb(98, 182, 183);

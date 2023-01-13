@@ -38,11 +38,11 @@
             this.btnDelStaff = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddStaff = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvListAccount = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2GradientPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvListAccount)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -87,7 +87,7 @@
             this.btnResetPassword.UseTransparentBackground = true;
             this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
             // 
-            // btnDelTable
+            // btnDelStaff
             // 
             this.btnDelStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelStaff.Animated = true;
@@ -102,10 +102,10 @@
             this.btnDelStaff.FillColor = System.Drawing.Color.White;
             this.btnDelStaff.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold);
             this.btnDelStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
-            this.btnDelStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnDelTable.Image")));
+            this.btnDelStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnDelStaff.Image")));
             this.btnDelStaff.Location = new System.Drawing.Point(1263, 23);
             this.btnDelStaff.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelStaff.Name = "btnDelTable";
+            this.btnDelStaff.Name = "btnDelStaff";
             this.btnDelStaff.Size = new System.Drawing.Size(59, 54);
             this.btnDelStaff.TabIndex = 13;
             this.btnDelStaff.Click += new System.EventHandler(this.btnDeleteStaff_Click);
@@ -165,17 +165,6 @@
             this.txtUserName.Size = new System.Drawing.Size(384, 54);
             this.txtUserName.TabIndex = 2;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
-            this.panel1.Controls.Add(this.dtgvListAccount);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 103);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1337, 730);
-            this.panel1.TabIndex = 1;
-            // 
             // dtgvListAccount
             // 
             this.dtgvListAccount.AllowUserToAddRows = false;
@@ -225,21 +214,33 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvListAccount.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgvListAccount.RowHeadersVisible = false;
             this.dtgvListAccount.RowHeadersWidth = 51;
             this.dtgvListAccount.RowTemplate.Height = 50;
             this.dtgvListAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvListAccount.Size = new System.Drawing.Size(1308, 726);
+            this.dtgvListAccount.Size = new System.Drawing.Size(1308, 397);
             this.dtgvListAccount.TabIndex = 11;
             this.dtgvListAccount.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dtgvListAccount_CellBeginEdit);
             this.dtgvListAccount.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgvListAccount_CellMouseDoubleClick);
             this.dtgvListAccount.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvListAccount_CellValueChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(234)))));
+            this.panel1.Controls.Add(this.dtgvListAccount);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 103);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1337, 580);
+            this.panel1.TabIndex = 1;
             // 
             // FormNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1337, 833);
+            this.ClientSize = new System.Drawing.Size(1337, 683);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -247,8 +248,8 @@
             this.Name = "FormNhanVien";
             this.Text = "Nhân viên";
             this.guna2GradientPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvListAccount)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -256,11 +257,11 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dtgvListAccount;
         private Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddStaff;
         private Guna.UI2.WinForms.Guna2GradientButton btnResetPassword;
         private Guna.UI2.WinForms.Guna2Button btnDelStaff;
+        private System.Windows.Forms.DataGridView dtgvListAccount;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -212,6 +212,13 @@ namespace QLNH_Winform.Forms
         {
             if (sender is null) return;
             DataGridViewRow dgvr = (sender as DataGridView).Rows[e.RowIndex];
+            int type = (int)dgvr.Cells["Type"].Value;
+            if (((type >> 18) & 1) != 0 && ((loginAcc.Type >> 18) & 1) == 0)
+            {
+                MessageBox.Show("Không thể sửa thông tin chủ");
+                e.Cancel = true;
+                return;
+            }
             if (e.ColumnIndex == dgvr.Cells["Perm"].ColumnIndex) return;
             editingUserName = dgvr.Cells["UserName"].Value.ToString();
         }
@@ -273,6 +280,11 @@ namespace QLNH_Winform.Forms
                     MessageBox.Show("Không thể xóa tài khoản đang đăng nhập hiện tại");
                     return;
                 }
+                if (((((int)dc.Cells["Type"].Value) >> 18) & 1) != 0)
+                {
+                    MessageBox.Show("Không thể xóa chủ");
+                    return;
+                }
             }
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa tài khoản?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
             {
@@ -289,6 +301,12 @@ namespace QLNH_Winform.Forms
             foreach (DataGridViewRow dr in dtgvListAccount.SelectedRows)
             {
                 string userName = dr.Cells["UserName"].Value.ToString();
+                int type = (int)dr.Cells["Type"].Value;
+                if (((type >> 18) & 1) != 0 && ((loginAcc.Type >> 18) & 1) == 0)
+                {
+                    MessageBox.Show("Không thể đặt lại mật khẩu chủ");
+                    return;
+                }
                 ResetPassword(userName);
                 if (updateAccount != null && loginAcc.UserName.Equals(userName))
                 {

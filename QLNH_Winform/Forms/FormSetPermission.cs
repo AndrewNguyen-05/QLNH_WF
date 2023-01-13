@@ -163,6 +163,10 @@ namespace QLNH_Winform.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Bạn có chắc chắn muốn lưu các quyền?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+            {
+                return;
+            }
             int x = 1;
             modifyingAccount.Type = 0;
             for (int i = 0; i < 6; i++)

@@ -175,6 +175,7 @@ namespace QLNH_Winform.Forms
             double totalPrice = 0;
             foreach (OrderFood item in FoodOrderData)
             {
+                if (item.Count <= 0) { continue; }
                 ListViewItem lsvitem = new ListViewItem(item.FoodName.ToString());
                 lsvitem.SubItems.Add(item.Count.ToString());
                 lsvitem.SubItems.Add(item.Price.ToString());
@@ -326,7 +327,7 @@ namespace QLNH_Winform.Forms
                 FoodOrderData[exists].Count = count;
                 FoodOrderData[exists].Price = food.Price;
                 FoodOrderData[exists].TotalPrice = food.Price * count;
-                if (count == 0) FoodOrderData.RemoveAt(exists);
+                //if (count == 0) FoodOrderData.RemoveAt(exists);
             }
             checkClikableBtnCreate();
             ShowBill();

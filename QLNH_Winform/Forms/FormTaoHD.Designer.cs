@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTaoHD));
             this.pnBill = new System.Windows.Forms.Panel();
-            this.lblBillTitle = new System.Windows.Forms.Label();
             this.lblDiscountValue = new System.Windows.Forms.Label();
             this.lblTable = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnGenerateBill = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblBillTitle = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.pnBill.SuspendLayout();
@@ -70,30 +70,18 @@
             this.pnBill.Controls.Add(this.lblBillTitle);
             this.pnBill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnBill.Location = new System.Drawing.Point(0, 0);
-            this.pnBill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnBill.Name = "pnBill";
-            this.pnBill.Size = new System.Drawing.Size(799, 647);
+            this.pnBill.Size = new System.Drawing.Size(1065, 796);
             this.pnBill.TabIndex = 0;
-            // 
-            // lblBillTitle
-            // 
-            this.lblBillTitle.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblBillTitle.Location = new System.Drawing.Point(170, 128);
-            this.lblBillTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBillTitle.Name = "lblBillTitle";
-            this.lblBillTitle.Size = new System.Drawing.Size(471, 77);
-            this.lblBillTitle.TabIndex = 46;
-            this.lblBillTitle.Text = "HÓA ĐƠN";
-            this.lblBillTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDiscountValue
             // 
             this.lblDiscountValue.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDiscountValue.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDiscountValue.Location = new System.Drawing.Point(653, 567);
-            this.lblDiscountValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDiscountValue.Location = new System.Drawing.Point(871, 698);
             this.lblDiscountValue.Name = "lblDiscountValue";
-            this.lblDiscountValue.Size = new System.Drawing.Size(68, 30);
+            this.lblDiscountValue.Size = new System.Drawing.Size(91, 37);
             this.lblDiscountValue.TabIndex = 45;
             this.lblDiscountValue.Text = "0";
             this.lblDiscountValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -102,10 +90,9 @@
             // 
             this.lblTable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTable.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTable.Location = new System.Drawing.Point(11, 191);
-            this.lblTable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTable.Location = new System.Drawing.Point(15, 235);
             this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(126, 23);
+            this.lblTable.Size = new System.Drawing.Size(168, 28);
             this.lblTable.TabIndex = 44;
             this.lblTable.Text = "Bàn: ";
             this.lblTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -114,10 +101,9 @@
             // 
             this.lblID.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblID.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblID.Location = new System.Drawing.Point(668, 191);
-            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblID.Location = new System.Drawing.Point(891, 235);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(47, 28);
+            this.lblID.Size = new System.Drawing.Size(63, 34);
             this.lblID.TabIndex = 43;
             this.lblID.Text = "0";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,10 +112,9 @@
             // 
             this.lblTotalPrice.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTotalPrice.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(602, 608);
-            this.lblTotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotalPrice.Location = new System.Drawing.Point(803, 748);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(119, 28);
+            this.lblTotalPrice.Size = new System.Drawing.Size(159, 34);
             this.lblTotalPrice.TabIndex = 43;
             this.lblTotalPrice.Text = "0";
             this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -138,10 +123,9 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(470, 608);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(627, 748);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 34);
+            this.label3.Size = new System.Drawing.Size(177, 42);
             this.label3.TabIndex = 43;
             this.label3.Text = "Tổng tiền:";
             // 
@@ -150,10 +134,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(470, 570);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(627, 702);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 25);
+            this.label2.Size = new System.Drawing.Size(121, 32);
             this.label2.TabIndex = 43;
             this.label2.Text = "Giảm giá:";
             // 
@@ -161,10 +144,9 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(528, 191);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(704, 235);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 28);
+            this.label1.Size = new System.Drawing.Size(209, 34);
             this.label1.TabIndex = 43;
             this.label1.Text = "Số hóa đơn:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,12 +166,12 @@
             this.lsvBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.lsvBill.FullRowSelect = true;
             this.lsvBill.HideSelection = false;
-            this.lsvBill.Location = new System.Drawing.Point(12, 228);
-            this.lsvBill.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.lsvBill.Location = new System.Drawing.Point(16, 281);
+            this.lsvBill.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.lsvBill.MultiSelect = false;
             this.lsvBill.Name = "lsvBill";
             this.lsvBill.Scrollable = false;
-            this.lsvBill.Size = new System.Drawing.Size(775, 338);
+            this.lsvBill.Size = new System.Drawing.Size(1032, 415);
             this.lsvBill.TabIndex = 42;
             this.lsvBill.UseCompatibleStateImageBehavior = false;
             this.lsvBill.View = System.Windows.Forms.View.Details;
@@ -220,10 +202,10 @@
             this.guna2HtmlLabel7.AutoSize = false;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(725, 608);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(967, 748);
+            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(62, 28);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(83, 34);
             this.guna2HtmlLabel7.TabIndex = 41;
             this.guna2HtmlLabel7.Text = "VND";
             this.guna2HtmlLabel7.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
@@ -234,10 +216,10 @@
             this.guna2HtmlLabel6.AutoSize = false;
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(751, 569);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(1001, 700);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(37, 28);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(49, 34);
             this.guna2HtmlLabel6.TabIndex = 40;
             this.guna2HtmlLabel6.Text = "%";
             this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
@@ -247,10 +229,10 @@
             this.btnGenerateBill.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGenerateBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateBill.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerateBill.Image")));
-            this.btnGenerateBill.Location = new System.Drawing.Point(734, 182);
-            this.btnGenerateBill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGenerateBill.Location = new System.Drawing.Point(979, 224);
+            this.btnGenerateBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerateBill.Name = "btnGenerateBill";
-            this.btnGenerateBill.Size = new System.Drawing.Size(54, 43);
+            this.btnGenerateBill.Size = new System.Drawing.Size(72, 53);
             this.btnGenerateBill.TabIndex = 36;
             this.btnGenerateBill.UseVisualStyleBackColor = true;
             this.btnGenerateBill.Click += new System.EventHandler(this.btnGenerateBill_Click_1);
@@ -260,12 +242,22 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(799, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(1065, 155);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
+            // 
+            // lblBillTitle
+            // 
+            this.lblBillTitle.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblBillTitle.Location = new System.Drawing.Point(227, 158);
+            this.lblBillTitle.Name = "lblBillTitle";
+            this.lblBillTitle.Size = new System.Drawing.Size(628, 95);
+            this.lblBillTitle.TabIndex = 46;
+            this.lblBillTitle.Text = "HÓA ĐƠN";
+            this.lblBillTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // printDocument1
             // 
@@ -283,12 +275,12 @@
             // 
             // FormTaoHD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(799, 647);
+            this.ClientSize = new System.Drawing.Size(1065, 796);
             this.Controls.Add(this.pnBill);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormTaoHD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xuất hóa đơn";

@@ -92,6 +92,7 @@ namespace QLNH_Winform.Forms
                 btnServeBill.Enabled = true;
                 btnCheckout.Enabled = ((int)(dtgvPrcsBill.SelectedRows[0].Cells["status"].Value)) == 0;
                 btnDeleteBill.Enabled = ((int)(dtgvPrcsBill.SelectedRows[0].Cells["status"].Value)) == 0;
+                btnPrintBill.Enabled = true;
                 ShowBill(dtgvPrcsBill.SelectedRows[0]);
             }
             else
@@ -100,6 +101,7 @@ namespace QLNH_Winform.Forms
                 btnServeBill.Enabled = false;
                 btnCheckout.Enabled = false;
                 btnDeleteBill.Enabled = false;
+                btnPrintBill.Enabled = false;
             }
 
         }

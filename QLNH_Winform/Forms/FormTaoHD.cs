@@ -48,10 +48,12 @@ namespace QLNH_Winform.Forms
         }
         private void FormXuatHD_Load(object sender, EventArgs e)
         {
+            Bill tmp = BillDAO.Instance.GetBillbyBillID(idBill);
             lblID.Text = idBill.ToString();
             lblTable.Text = tableName;
             lblDiscountValue.Text = discountVal.ToString();
             lblTotalPrice.Text = totalPrice.ToString();
+            lblDateCheckOut.Text = tmp.DateCheckOut.ToString();
             ShowBill(idBill);
         }
         void ShowBill(int id)

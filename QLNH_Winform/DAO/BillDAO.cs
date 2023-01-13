@@ -60,6 +60,16 @@ namespace QLNH_Winform.DAO
             return null;
         }
 
+        public Bill GetBillbyBillID(int id)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Bill WHERE id = " + id + " AND (status = 0 OR isServed = 0)");
+            if (data.Rows.Count > 0)
+            {
+                Bill bill = new Bill(data.Rows[0]);
+                return bill;
+            }
+            return null;
+        }
 
         public void CheckOut(int id, int discount, double totalPrice)
         {

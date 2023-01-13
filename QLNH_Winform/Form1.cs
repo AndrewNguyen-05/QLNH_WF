@@ -296,6 +296,7 @@ namespace QLNH_Winform
 
         private void FormMainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (currentChildForm is null) return;
             currentChildForm.Close();
             if (currentChildForm.IsHandleCreated)
             {

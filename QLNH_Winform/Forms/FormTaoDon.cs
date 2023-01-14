@@ -389,6 +389,11 @@ namespace QLNH_Winform.Forms
             }
         }
 
+        private void btnDeleteFood_Click(object sender, EventArgs e)
+        {
+            nmFoodCount.Value = 0;
+        }
+
         #region graveyard
         //private void cbTable_SelectedIndexChanged(object sender, EventArgs e)
         //{

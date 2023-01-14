@@ -60,6 +60,7 @@
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnDeleteFood = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
             this.guna2GradientPanel4.SuspendLayout();
@@ -431,11 +432,32 @@
             this.guna2Panel1.Size = new System.Drawing.Size(256, 37);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // btnDeleteFood
+            // 
+            this.btnDeleteFood.BorderRadius = 12;
+            this.btnDeleteFood.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteFood.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteFood.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteFood.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.btnDeleteFood.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
+            this.btnDeleteFood.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteFood.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteFood.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.btnDeleteFood.Location = new System.Drawing.Point(354, 596);
+            this.btnDeleteFood.Name = "btnDeleteFood";
+            this.btnDeleteFood.Size = new System.Drawing.Size(136, 56);
+            this.btnDeleteFood.TabIndex = 21;
+            this.btnDeleteFood.Text = "Xóa món";
+            this.btnDeleteFood.Click += new System.EventHandler(this.btnDeleteFood_Click);
+            // 
             // FormTaoDon
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1167, 680);
+            this.Controls.Add(this.btnDeleteFood);
             this.Controls.Add(this.lblDGvalue);
             this.Controls.Add(this.lblDG);
             this.Controls.Add(this.txbSearchFood);
@@ -491,5 +513,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        internal Guna.UI2.WinForms.Guna2GradientButton btnDeleteFood;
     }
 }

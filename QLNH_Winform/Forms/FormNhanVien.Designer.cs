@@ -218,7 +218,7 @@
             this.dtgvListAccount.RowHeadersWidth = 51;
             this.dtgvListAccount.RowTemplate.Height = 50;
             this.dtgvListAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvListAccount.Size = new System.Drawing.Size(1308, 397);
+            this.dtgvListAccount.Size = new System.Drawing.Size(1308, 557);
             this.dtgvListAccount.TabIndex = 11;
             this.dtgvListAccount.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dtgvListAccount_CellBeginEdit);
             this.dtgvListAccount.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgvListAccount_CellMouseDoubleClick);

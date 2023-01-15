@@ -244,10 +244,10 @@
             // 
             this.pnDesktop.AutoSize = true;
             this.pnDesktop.BackColor = System.Drawing.Color.White;
-            this.pnDesktop.Location = new System.Drawing.Point(287, 84);
+            this.pnDesktop.Location = new System.Drawing.Point(287, 86);
             this.pnDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnDesktop.Name = "pnDesktop";
-            this.pnDesktop.Size = new System.Drawing.Size(1150, 861);
+            this.pnDesktop.Size = new System.Drawing.Size(1150, 711);
             this.pnDesktop.TabIndex = 2;
             // 
             // guna2Elipse1

@@ -34,6 +34,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lblTotalMoney = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblVND = new System.Windows.Forms.Label();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblStaticAs = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -47,9 +50,6 @@
             this.dtpkFromDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtgvBill = new System.Windows.Forms.DataGridView();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lblTotalMoney = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblVND = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -76,6 +76,42 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1163, 600);
             this.guna2CustomGradientPanel1.TabIndex = 0;
+            // 
+            // lblTotalMoney
+            // 
+            this.lblTotalMoney.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotalMoney.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTotalMoney.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.lblTotalMoney.Location = new System.Drawing.Point(972, 545);
+            this.lblTotalMoney.Name = "lblTotalMoney";
+            this.lblTotalMoney.Size = new System.Drawing.Size(117, 38);
+            this.lblTotalMoney.TabIndex = 9;
+            this.lblTotalMoney.Text = "0";
+            this.lblTotalMoney.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotal.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.lblTotal.Location = new System.Drawing.Point(710, 541);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(229, 49);
+            this.lblTotal.TabIndex = 8;
+            this.lblTotal.Text = "Tổng doanh thu:";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblVND
+            // 
+            this.lblVND.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVND.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblVND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
+            this.lblVND.Location = new System.Drawing.Point(1079, 548);
+            this.lblVND.Name = "lblVND";
+            this.lblVND.Size = new System.Drawing.Size(62, 38);
+            this.lblVND.TabIndex = 10;
+            this.lblVND.Text = "VND";
+            this.lblVND.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // guna2GradientPanel3
             // 
@@ -316,42 +352,6 @@
             // 
             this.guna2Elipse1.BorderRadius = 15;
             this.guna2Elipse1.TargetControl = this.cbDateSelection;
-            // 
-            // lblTotalMoney
-            // 
-            this.lblTotalMoney.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotalMoney.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotalMoney.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.lblTotalMoney.Location = new System.Drawing.Point(972, 545);
-            this.lblTotalMoney.Name = "lblTotalMoney";
-            this.lblTotalMoney.Size = new System.Drawing.Size(117, 38);
-            this.lblTotalMoney.TabIndex = 9;
-            this.lblTotalMoney.Text = "0";
-            this.lblTotalMoney.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotal.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.lblTotal.Location = new System.Drawing.Point(710, 541);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(229, 49);
-            this.lblTotal.TabIndex = 8;
-            this.lblTotal.Text = "Tổng doanh thu:";
-            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblVND
-            // 
-            this.lblVND.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVND.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblVND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(82)))), ((int)(((byte)(255)))));
-            this.lblVND.Location = new System.Drawing.Point(1079, 548);
-            this.lblVND.Name = "lblVND";
-            this.lblVND.Size = new System.Drawing.Size(62, 38);
-            this.lblVND.TabIndex = 10;
-            this.lblVND.Text = "VND";
-            this.lblVND.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FormThongKe
             // 

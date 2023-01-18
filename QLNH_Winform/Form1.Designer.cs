@@ -224,7 +224,7 @@
             this.btnOrder.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnOrder.Size = new System.Drawing.Size(287, 73);
             this.btnOrder.TabIndex = 27;
-            this.btnOrder.Text = "Gọi món";
+            this.btnOrder.Text = "Đặt hàng";
             this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrder.UseVisualStyleBackColor = true;

@@ -427,14 +427,14 @@
             // lblAccount
             // 
             this.lblAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblAccount.AutoSize = true;
             this.lblAccount.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblAccount.Location = new System.Drawing.Point(43, 765);
+            this.lblAccount.Location = new System.Drawing.Point(12, 635);
             this.lblAccount.Name = "lblAccount";
-            this.lblAccount.Size = new System.Drawing.Size(144, 23);
+            this.lblAccount.Size = new System.Drawing.Size(253, 153);
             this.lblAccount.TabIndex = 5;
             this.lblAccount.Text = "currentAccount";
+            this.lblAccount.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // FormMainMenu
             // 

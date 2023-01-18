@@ -40,9 +40,9 @@ namespace QLNH_Winform
         {
             InitializeComponent();
 
-            this.LoginAccount = acc; 
-            
-            
+            this.LoginAccount = acc;
+
+            lblAccount.Text = LoginAccount.DisplayName + " - " + LoginAccount.UserName;
 
             this.ClientSize = new System.Drawing.Size(1440, 800);
 

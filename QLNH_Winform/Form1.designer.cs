@@ -53,6 +53,8 @@
             this.btnCurrentChildForm = new FontAwesome.Sharp.IconButton();
             this.pnMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.pnLogo = new System.Windows.Forms.Panel();
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.lblAccount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnControl.SuspendLayout();
             this.pnTitleBar.SuspendLayout();
@@ -389,11 +391,10 @@
             this.pnMenu.Controls.Add(this.btnNhanVien);
             this.pnMenu.Controls.Add(this.btnThongKe);
             this.pnMenu.Controls.Add(this.btnTaiKhoan);
-            this.pnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnMenu.Location = new System.Drawing.Point(0, 0);
             this.pnMenu.Margin = new System.Windows.Forms.Padding(0);
             this.pnMenu.Name = "pnMenu";
-            this.pnMenu.Size = new System.Drawing.Size(287, 797);
+            this.pnMenu.Size = new System.Drawing.Size(287, 608);
             this.pnMenu.TabIndex = 0;
             // 
             // pnLogo
@@ -408,11 +409,39 @@
             this.pnLogo.Size = new System.Drawing.Size(287, 86);
             this.pnLogo.TabIndex = 0;
             // 
+            // guna2ContextMenuStrip1
+            // 
+            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // lblAccount
+            // 
+            this.lblAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblAccount.AutoSize = true;
+            this.lblAccount.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAccount.Location = new System.Drawing.Point(43, 765);
+            this.lblAccount.Name = "lblAccount";
+            this.lblAccount.Size = new System.Drawing.Size(144, 23);
+            this.lblAccount.TabIndex = 5;
+            this.lblAccount.Text = "currentAccount";
+            // 
             // FormMainMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1437, 797);
+            this.Controls.Add(this.lblAccount);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.pnTitleBar);
             this.Controls.Add(this.pnDesktop);
@@ -460,6 +489,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel pnMenu;
         private System.Windows.Forms.Panel pnLogo;
+        private System.Windows.Forms.Label lblAccount;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
     }
 }
 

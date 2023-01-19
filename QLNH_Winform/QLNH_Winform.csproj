@@ -87,7 +87,6 @@
     <Compile Include="DAO\FoodCategoryDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\FoodDAO.cs" />
-    <Compile Include="DAO\MenuFoodDAO.cs" />
     <Compile Include="DAO\OrderFoodDAO.cs" />
     <Compile Include="DAO\TableDAO.cs" />
     <Compile Include="DTO\Account.cs" />
@@ -95,7 +94,6 @@
     <Compile Include="DTO\BillInfo.cs" />
     <Compile Include="DTO\FoodCategory.cs" />
     <Compile Include="DTO\Food.cs" />
-    <Compile Include="DTO\MenuFood.cs" />
     <Compile Include="DTO\OrderFood.cs" />
     <Compile Include="DTO\Table.cs" />
     <Compile Include="FoodCard.cs">

@@ -347,11 +347,11 @@ namespace QLNH_Winform.Forms
             {
                 int foodID = data.FoodId;
                 int count = data.Count; 
-                idBill = BillDAO.Instance.NewGetUncheckBillIDbyTableID(table.ID);
+                idBill = BillDAO.Instance.GetUncheckBillIDbyTableID(table.ID);
                 if (idBill == -1)
                 {
                     BillDAO.Instance.InsertBill(table.ID); 
-                    idBill = BillDAO.Instance.NewGetUncheckBillIDbyTableID(table.ID);
+                    idBill = BillDAO.Instance.GetUncheckBillIDbyTableID(table.ID);
                     BillInfoDAO.Instance.NewInsertBillInfo(BillDAO.Instance.GetMaxIDBill(), foodID, count);
                 }
                 else

@@ -31,16 +31,6 @@ namespace QLNH_Winform.DAO
         //Thất bại: -1
         public int GetUncheckBillIDbyTableID(int id)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Bill WHERE idTable = " + id + " AND status = 0");
-            if (data.Rows.Count > 0)
-            {
-                Bill bill = new Bill(data.Rows[0]);
-                return bill.ID;
-            }
-            return -1;
-        }
-        public int NewGetUncheckBillIDbyTableID(int id)
-        {
             DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Bill WHERE idTable = " + id + " AND (status = 0 or isServed = 0)");
             if (data.Rows.Count > 0)
             {

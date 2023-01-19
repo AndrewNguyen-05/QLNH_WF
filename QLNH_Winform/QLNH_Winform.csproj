@@ -140,12 +140,6 @@
     <Compile Include="Forms\FormDatHang.Designer.cs">
       <DependentUpon>FormDatHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormGoiMon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormGoiMon.Designer.cs">
-      <DependentUpon>FormGoiMon.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,12 +176,6 @@
     <Compile Include="Forms\FormTaoHD.Designer.cs">
       <DependentUpon>FormTaoHD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormXuatHD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormXuatHD.Designer.cs">
-      <DependentUpon>FormXuatHD.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
@@ -213,9 +201,6 @@
     <EmbeddedResource Include="Forms\FormDatHang.resx">
       <DependentUpon>FormDatHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormGoiMon.resx">
-      <DependentUpon>FormGoiMon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,9 +218,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormTaoHD.resx">
       <DependentUpon>FormTaoHD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormXuatHD.resx">
-      <DependentUpon>FormXuatHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

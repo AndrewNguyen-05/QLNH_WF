@@ -95,7 +95,7 @@ namespace QLNH_Winform.Forms
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
             Rectangle pagearea = e.PageBounds;
-            e.Graphics.DrawImage(memoryimg, (pagearea.Width / 2) - (this.pnBill.Width / 2), this.pnBill.Location.Y);
+            e.Graphics.DrawImage(memoryimg, 0, this.pnBill.Location.Y);
         }
 
         private void btnGenerateBill_Click_1(object sender, EventArgs e)

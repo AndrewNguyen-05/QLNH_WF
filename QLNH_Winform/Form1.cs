@@ -40,9 +40,9 @@ namespace QLNH_Winform
         {
             InitializeComponent();
 
-            this.LoginAccount = acc; 
-            
-            
+            this.LoginAccount = acc;
+
+            lblAccount.Text = LoginAccount.DisplayName + " - " + LoginAccount.UserName;
 
             this.ClientSize = new System.Drawing.Size(1440, 800);
 
@@ -82,6 +82,7 @@ namespace QLNH_Winform
         void reloadAccount()
         {
             LoginAccount = AccountDAO.Instance.GetAccountByUserName(LoginAccount.UserName);
+            lblAccount.Text = LoginAccount.DisplayName + " - " + LoginAccount.UserName;
         }
         void ChangeAccount(int type)
         {
@@ -96,6 +97,7 @@ namespace QLNH_Winform
             btnNhanVien.Visible = (type & 1 | (type >> 1) & 1 | (type >> 2) & 1) != 0;
             type >>= 3;
             btnThongKe.Visible = (type & 1 | (type >> 1) & 1 | (type >> 2) & 1) != 0;
+            lblAccount.Text = LoginAccount.DisplayName + " - " + LoginAccount.UserName;
         }
 
         private void ActivateButton(object btnSender, Color color)
@@ -256,7 +258,7 @@ namespace QLNH_Winform
 
         private void F_UpdateAccount(object sender, AccountEvent e)
         {
-            loginAccount = e.Acc;
+            LoginAccount = e.Acc;
         }
 
         private void Reset()

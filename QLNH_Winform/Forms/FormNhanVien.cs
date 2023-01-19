@@ -269,6 +269,15 @@ namespace QLNH_Winform.Forms
                 editingUserName = dtgvListAccount.Rows[e.RowIndex].Cells["UserName"].Value.ToString();
                 dtgvListAccount.Rows[e.RowIndex].Cells["Type"].Value = fsp.modifyingAccount.Type;
             }
+            else
+            {
+                string usrName = dtgvListAccount.Rows[e.RowIndex].Cells["UserName"].Value.ToString();
+                if (usrName == loginAcc.UserName)
+                {
+                    MessageBox.Show("Vui lòng sửa thông tin bản thân ở phần Tài Khoản");
+                    return;
+                }
+            }
         }
         private void btnDeleteStaff_Click(object sender, EventArgs e)
         {

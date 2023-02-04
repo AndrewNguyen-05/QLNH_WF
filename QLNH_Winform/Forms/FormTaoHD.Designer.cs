@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTaoHD));
             this.pnBill = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblDateCheckOut = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblDiscountValue = new System.Windows.Forms.Label();
@@ -49,8 +51,6 @@
             this.lblBillTitle = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pnBill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -79,12 +79,34 @@
             this.pnBill.Size = new System.Drawing.Size(1015, 1006);
             this.pnBill.TabIndex = 0;
             // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(935, 955);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 37);
+            this.label5.TabIndex = 50;
+            this.label5.Text = "VND";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Location = new System.Drawing.Point(954, 909);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 37);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "%";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // lblDate
             // 
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDate.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblDate.Location = new System.Drawing.Point(21, 279);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(220, 33);
             this.lblDate.TabIndex = 48;
@@ -96,7 +118,7 @@
             this.lblDateCheckOut.BackColor = System.Drawing.Color.Transparent;
             this.lblDateCheckOut.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblDateCheckOut.Location = new System.Drawing.Point(267, 278);
-            this.lblDateCheckOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblDateCheckOut.Margin = new System.Windows.Forms.Padding(4);
             this.lblDateCheckOut.Name = "lblDateCheckOut";
             this.lblDateCheckOut.Size = new System.Drawing.Size(276, 34);
             this.lblDateCheckOut.TabIndex = 47;
@@ -128,7 +150,7 @@
             this.lblID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblID.Location = new System.Drawing.Point(895, 282);
+            this.lblID.Location = new System.Drawing.Point(802, 280);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(30, 32);
             this.lblID.TabIndex = 43;
@@ -274,28 +296,6 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(954, 909);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 37);
-            this.label4.TabIndex = 49;
-            this.label4.Text = "%";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(935, 955);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 37);
-            this.label5.TabIndex = 50;
-            this.label5.Text = "VND";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FormTaoHD
             // 

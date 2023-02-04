@@ -4,13 +4,6 @@ GO
 USE QLNH
 GO
 
--- Food
--- Table
--- FoodCategory
--- Account
--- Bill
--- BillInfo
-
 CREATE TABLE TableFood
 (
 	id INT IDENTITY PRIMARY KEY,
@@ -160,23 +153,6 @@ INSERT INTO Food (name, idCategory, price) VALUES (N'Nước chanh', 6, 20000)
 INSERT INTO Food (name, idCategory, price) VALUES (N'Chanh dây', 6, 15000)
 GO
 
-----Thêm bill
---INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 55, 0)
---INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 60, 0)
---INSERT INTO Bill (DateCheckIn, DateCheckOut, idTable, status) VALUES (GETDATE(), null, 59, 1)
---GO
-----Thêm Bill Info
---INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 2, 3)
---INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 3, 4)
---INSERT INTO BillInfo (idBill, idFood, count) VALUES (1, 4, 2)
---INSERT INTO BillInfo (idBill, idFood, count) VALUES (2, 3, 1)
---INSERT INTO BillInfo (idBill, idFood, count) VALUES (2, 5, 2)
---INSERT INTO BillInfo (idBill, idFood, count) VALUES (2, 1, 2)
---INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 2, 3)
---INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 4, 5)
---INSERT INTO BillInfo (idBill, idFood, count) VALUES (3, 5, 2)
---GO
-
 -- Thêm tài khoản
 INSERT INTO Account (UserName, DisplayName, PassWord, Type) VALUES (N'Admin', N'Trương Văn Bình', '225130235188221091155411012113412958127197241', 524287)
 INSERT INTO Account VALUES (N'Phuoc', N'Phan Ngọc Phước', '4229125024382100611251781583929172146215', 0)
@@ -245,133 +221,6 @@ BEGIN
 	END
 END 
 GO
-
---CREATE TRIGGER UTG_UpdateBillInfo
---ON BillInfo FOR INSERT, UPDATE
---AS 
---BEGIN
---DECLARE @idBill INT
-	
---	SELECT @idBill = idBill FROM Inserted
-	
---	DECLARE @idTable INT
-	
---	SELECT @idTable = idTable FROM dbo.Bill WHERE id = @idBill AND status = 0	
-	
---	DECLARE @count INT
---	SELECT @count = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idBill
-	
---	IF (@count > 0)
---	BEGIN
-	
---		PRINT @idTable
---		PRINT @idBill
---		PRINT @count
-		
---		UPDATE dbo.TableFood SET status = N'Có người' WHERE id = @idTable		
-		
---	END		
---	ELSE
---	BEGIN
---	PRINT @idTable
---		PRINT @idBill
---		PRINT @count
---	UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable	
---	END
-	
---END
---GO
-
---CREATE TRIGGER UTG_UpdateBill
---ON Bill FOR UPDATE
---AS 
---BEGIN
---	DECLARE @idBill INT
-	
---	SELECT @idBill = id FROM Inserted	
-	
---	DECLARE @idTable INT
-	
---	SELECT @idTable = idTable FROM dbo.Bill WHERE id = @idBill
-	
---	DECLARE @count int = 0
-	
---	SELECT @count = COUNT(*) FROM dbo.Bill WHERE idTable = @idTable AND status = 0
-	
---	IF (@count = 0)
---		UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable
---END
---GO
-
-
---CREATE PROC USP_SwitchTable
---@idTable1 INT, @idTable2 int
---AS BEGIN
-
---	DECLARE @idFirstBill int
---	DECLARE @idSecondBill INT
-	
---	DECLARE @isFirstTablEmpty INT = 1
---	DECLARE @isSecondTablEmpty INT = 1
-	
-	
---	SELECT @idSecondBill = id FROM dbo.Bill WHERE idTable = @idTable2 AND status = 0
---	SELECT @idFirstBill = id FROM dbo.Bill WHERE idTable = @idTable1 AND status = 0
-	
---	IF (@idFirstBill IS NULL)
---	BEGIN
---		INSERT dbo.Bill
---		        ( DateCheckIn ,
---		          DateCheckOut ,
---		          idTable ,
---		          status
---		        )
---		VALUES  ( GETDATE() , -- DateCheckIn - date
---		          NULL , -- DateCheckOut - date
---		          @idTable1 , -- idTable - int
---		          0  -- status - int
---		        )
-		        
---		SELECT @idFirstBill = MAX(id) FROM dbo.Bill WHERE idTable = @idTable1 AND status = 0
-		
---	END
-	
---	SELECT @isFirstTablEmpty = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idFirstBill
-	
---	IF (@idSecondBill IS NULL)
---	BEGIN
---		INSERT dbo.Bill
---		        ( DateCheckIn ,
---		          DateCheckOut ,
---		          idTable ,
---		          status
---		        )
---		VALUES  ( GETDATE() , -- DateCheckIn - date
---		          NULL , -- DateCheckOut - date
---		          @idTable2 , -- idTable - int
---		          0  -- status - int
---		        )
---		SELECT @idSecondBill = MAX(id) FROM dbo.Bill WHERE idTable = @idTable2 AND status = 0
-		
---	END
-	
---	SELECT @isSecondTablEmpty = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idSecondBill
-
---	SELECT id INTO IDBillInfoTable FROM dbo.BillInfo WHERE idBill = @idSecondBill
-	
---	UPDATE dbo.BillInfo SET idBill = @idSecondBill WHERE idBill = @idFirstBill
-	
---	UPDATE dbo.BillInfo SET idBill = @idFirstBill WHERE id IN (SELECT * FROM IDBillInfoTable)
-	
---	DROP TABLE IDBillInfoTable
-	
---	IF (@isFirstTablEmpty = 0)
---		UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable2
-		
---	IF (@isSecondTablEmpty= 0)
---		UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable1
---END
---GO
 
 CREATE TRIGGER UTG_UpdateBillInfo
 ON BillInfo FOR INSERT, UPDATE

@@ -227,7 +227,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="rptHoaDon.rdlc" />
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\QLNH_Winform.DTO.BillInfo.datasource" />

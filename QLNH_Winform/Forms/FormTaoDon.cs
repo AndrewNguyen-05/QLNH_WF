@@ -232,43 +232,6 @@ namespace QLNH_Winform.Forms
             }
             lsvBill.Tag = newTable;
         }
-            #region graveyard
-        //void checkClikableBtnCreate()
-        //{
-        //    Table table = lsvBill.Tag as Table;
-        //    if (table is null)
-        //    {
-        //        btnCreate.Enabled = false;
-        //        return;
-        //    }
-        //    int Billstatus = BillDAO.Instance.GetUncheckBillIDbyTableID(table.ID);
-        //    if (Billstatus == -1)
-        //    {
-        //        btnCreate.Enabled = false;
-        //    }
-        //    else
-        //    {
-        //        btnCreate.Enabled = true;
-        //    }
-        //}
-        //void ShowBill(int id)
-        //{
-        //    lsvBill.Items.Clear();
-        //    List<OrderFood> listBillInfo = OrderFoodDAO.Instance.GetListMenuByTable(id);
-        //     totalPrice = 0;
-        //    foreach (OrderFood item in listBillInfo)
-        //    {
-        //        ListViewItem lsvitem = new ListViewItem(item.FoodName.ToString());
-        //        lsvitem.SubItems.Add(item.Count.ToString());
-        //        lsvitem.SubItems.Add(item.Price.ToString());
-        //        lsvitem.SubItems.Add(item.TotalPrice.ToString());
-        //        lsvitem.Tag = FoodDAO.Instance.GetFoodByID(item.FoodId);
-        //        totalPrice += item.TotalPrice;
-        //        lsvBill.Items.Add(lsvitem);
-        //    }
-        //    lblTotalPrice.Text = totalPrice.ToString();
-        //}
-        #endregion
         #endregion
 
         #region Events
@@ -394,89 +357,7 @@ namespace QLNH_Winform.Forms
             nmFoodCount.Value = 0;
         }
 
-        #region graveyard
-        //private void cbTable_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //Table oldTable = lsvBill.Tag as Table;
-        //Table newTable = (sender as ComboBox).SelectedItem as Table;
-        //updateTable(oldTable, newTable);
-        //checkClikableBtnCreate();
-        //}
-        //private void btnAddFood_Click(object sender, EventArgs e)
-        //{
-        //    Table table = lsvBill.Tag as Table;
-        //    Food food = lblCurrentFood.Tag as Food;
-        //    if (table is null)
-        //    {
-        //        MessageBox.Show("Không còn bàn trống!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-        //    int idBill = BillDAO.Instance.GetUncheckBillIDbyTableID(table.ID);
-        //    int foodID = food.ID;
-        //    int count = (int)nmFoodCount.Value;
-        //    if (idBill == -1)
-        //    {
-        //        BillDAO.Instance.InsertBill(table.ID);
-        //        BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), foodID, count);
-        //    }
-        //    else
-        //    {
-        //        BillInfoDAO.Instance.InsertBillInfo(idBill, foodID, count);
-        //    }
-        //    checkClikableBtnCreate();
-        //    ShowBill(table.ID);
-        //}
-        //private void FormTaoDon_FormClosing(object sender, FormClosingEventArgs e)
-        //{
-        //    if (created == 0 && btnCreate.Enabled == true)
-        //    {
-        //        DialogResult tmp = MessageBox.Show("Đơn hàng chưa được tạo, thoát?", "Thoát", MessageBoxButtons.YesNo);
-        //        if (tmp == DialogResult.Yes)
-        //        {
-        //            Table table = lsvBill.Tag as Table;
-        //            List<OrderFood> listBillInfo = OrderFoodDAO.Instance.GetListMenuByTable(table.ID);
-        //            foreach (OrderFood item in listBillInfo)
-        //            {
-        //                BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), item.FoodId, -item.Count);
-        //            }
-
-        //        }
-        //        else
-        //        {
-        //            e.Cancel = true;
-        //            return;
-        //        }
-        //    }
-        //}
         #endregion
-
-        #endregion
-
-        //private void btnPay_Click(object sender, EventArgs e)
-        //{
-        //    Table table = lsvBill.Tag as Table;
-        //    if (table is null)
-        //    {
-        //        MessageBox.Show("Vui lòng chọn bàn cần thanh toán!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-        //    int idBill = BillDAO.Instance.GetUncheckBillIDbyTableID(table.ID);
-        //    int discount = (int)nmDiscount.Value;
-        //    //double totalPrice = Convert.ToDouble(lblTotalPrice.Text.Split(',')[0]);
-        //    //double totalPrice = double.Parse(lblTotalPrice.Text, NumberStyles.Currency, new CultureInfo("vi-VN"));
-        //    double totalPrice = Convert.ToDouble(lblTotalPrice.Text);
-        //    double finalTotalPrice = totalPrice - (totalPrice / 100) * discount;
-
-        //    if (idBill != -1)
-        //    {
-        //        DialogResult res = MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0} ?\nHóa đơn đã được giảm {2}%\nTổng tiền cần thanh toán là: {1} VND", table.Name, finalTotalPrice, discount), "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-        //        if (res == DialogResult.OK)
-        //        {
-        //            BillDAO.Instance.CheckOut(idBill, discount, ()finalTotalPrice);
-        //            ShowBill(table.ID);
-        //        }
-        //    }
-        //}
 
     }
 }

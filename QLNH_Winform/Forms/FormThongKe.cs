@@ -67,7 +67,8 @@ namespace QLNH_Winform.Forms
             //today.AddMinutes(-today.Minute);
             //today.AddHours(-today.Hour);
             double tmp = (double)(7 + (DateTime.Today.DayOfWeek - DayOfWeek.Monday)) % 7;
-            DateTime firstDayOfWeek = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.AddDays(-tmp).Day);
+            DateTime firstDayOfWeek = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day);
+            firstDayOfWeek.AddDays(-tmp);
             DateTime lastDayOfWeek = firstDayOfWeek.AddDays(7).AddMilliseconds(-1);
             DateTime firstDayOfMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
             DateTime lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddMilliseconds(-1);

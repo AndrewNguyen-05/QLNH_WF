@@ -53,12 +53,6 @@ namespace QLNH_Winform.Forms
                     currentCell.Value += "Chưa thanh toán";
                 }
             }
-            //for (int i = 0; i < dtgvPrcsBill.Rows.Count; i++)
-            //{
-            //    int idTable = (int)dtgvPrcsBill.Rows[i].Cells["idTable"].Value;
-            //    dtgvPrcsBill.Rows[i].Cells["idTable"] = new DataGridViewTextBoxCell();
-            //    dtgvPrcsBill.Rows[i].Cells["idTable"].Value = TableDAO.Instance.getTableByID(idTable).Name;
-            //}
         }
         private void FormDonHang_Shown(object sender, EventArgs e)
         {

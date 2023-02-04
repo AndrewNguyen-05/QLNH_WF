@@ -38,10 +38,7 @@ namespace QLNH_Winform.Forms
             btnEditCategory.Enabled = !ReadOnly;
             cbFoodCategory.Enabled = !ReadOnly;
         }
-        void AddFoodBinding()
-        {
 
-        }
         void LoadCategoryIntoCombobox(ComboBox cb)
         {
             cb.DataSource = FoodCategoryDAO.Instance.GetListCategory();

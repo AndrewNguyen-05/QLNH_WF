@@ -32,8 +32,6 @@
             this.pnBill = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblDateCheckOut = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblDiscountValue = new System.Windows.Forms.Label();
             this.lblTable = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
@@ -59,8 +57,6 @@
             // 
             this.pnBill.Controls.Add(this.label5);
             this.pnBill.Controls.Add(this.label4);
-            this.pnBill.Controls.Add(this.lblDate);
-            this.pnBill.Controls.Add(this.lblDateCheckOut);
             this.pnBill.Controls.Add(this.lblDiscountValue);
             this.pnBill.Controls.Add(this.lblTable);
             this.pnBill.Controls.Add(this.lblID);
@@ -76,14 +72,14 @@
             this.pnBill.Location = new System.Drawing.Point(0, 0);
             this.pnBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnBill.Name = "pnBill";
-            this.pnBill.Size = new System.Drawing.Size(1015, 1006);
+            this.pnBill.Size = new System.Drawing.Size(1015, 725);
             this.pnBill.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(935, 955);
+            this.label5.Location = new System.Drawing.Point(932, 633);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 37);
             this.label5.TabIndex = 50;
@@ -94,41 +90,18 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(954, 909);
+            this.label4.Location = new System.Drawing.Point(951, 587);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 37);
             this.label4.TabIndex = 49;
             this.label4.Text = "%";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblDate
-            // 
-            this.lblDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblDate.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDate.Location = new System.Drawing.Point(21, 279);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(4);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(220, 33);
-            this.lblDate.TabIndex = 48;
-            this.lblDate.Text = "Ngày xuất hóa đơn:";
-            // 
-            // lblDateCheckOut
-            // 
-            this.lblDateCheckOut.AutoSize = false;
-            this.lblDateCheckOut.BackColor = System.Drawing.Color.Transparent;
-            this.lblDateCheckOut.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDateCheckOut.Location = new System.Drawing.Point(267, 278);
-            this.lblDateCheckOut.Margin = new System.Windows.Forms.Padding(4);
-            this.lblDateCheckOut.Name = "lblDateCheckOut";
-            this.lblDateCheckOut.Size = new System.Drawing.Size(276, 34);
-            this.lblDateCheckOut.TabIndex = 47;
-            this.lblDateCheckOut.Text = null;
-            // 
             // lblDiscountValue
             // 
             this.lblDiscountValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDiscountValue.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDiscountValue.Location = new System.Drawing.Point(821, 908);
+            this.lblDiscountValue.Location = new System.Drawing.Point(818, 586);
             this.lblDiscountValue.Name = "lblDiscountValue";
             this.lblDiscountValue.Size = new System.Drawing.Size(91, 37);
             this.lblDiscountValue.TabIndex = 45;
@@ -138,7 +111,7 @@
             // lblTable
             // 
             this.lblTable.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTable.Location = new System.Drawing.Point(15, 235);
+            this.lblTable.Location = new System.Drawing.Point(15, 238);
             this.lblTable.Name = "lblTable";
             this.lblTable.Size = new System.Drawing.Size(168, 28);
             this.lblTable.TabIndex = 44;
@@ -150,9 +123,9 @@
             this.lblID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblID.Location = new System.Drawing.Point(802, 280);
+            this.lblID.Location = new System.Drawing.Point(802, 234);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(30, 32);
+            this.lblID.Size = new System.Drawing.Size(24, 25);
             this.lblID.TabIndex = 43;
             this.lblID.Text = "0";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -161,7 +134,7 @@
             // 
             this.lblTotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotalPrice.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(753, 958);
+            this.lblTotalPrice.Location = new System.Drawing.Point(750, 636);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(159, 34);
             this.lblTotalPrice.TabIndex = 43;
@@ -172,7 +145,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(577, 958);
+            this.label3.Location = new System.Drawing.Point(574, 636);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(177, 42);
             this.label3.TabIndex = 43;
@@ -183,9 +156,9 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(577, 912);
+            this.label2.Location = new System.Drawing.Point(574, 590);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 32);
+            this.label2.Size = new System.Drawing.Size(95, 25);
             this.label2.TabIndex = 43;
             this.label2.Text = "Giảm giá:";
             // 
@@ -193,7 +166,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(658, 278);
+            this.label1.Location = new System.Drawing.Point(658, 232);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 34);
             this.label1.TabIndex = 43;
@@ -215,12 +188,12 @@
             this.lsvBill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(23)))), ((int)(((byte)(55)))));
             this.lsvBill.FullRowSelect = true;
             this.lsvBill.HideSelection = false;
-            this.lsvBill.Location = new System.Drawing.Point(21, 324);
+            this.lsvBill.Location = new System.Drawing.Point(20, 278);
             this.lsvBill.Margin = new System.Windows.Forms.Padding(4, 1, 4, 1);
             this.lsvBill.MultiSelect = false;
             this.lsvBill.Name = "lsvBill";
             this.lsvBill.Scrollable = false;
-            this.lsvBill.Size = new System.Drawing.Size(982, 582);
+            this.lsvBill.Size = new System.Drawing.Size(982, 301);
             this.lsvBill.TabIndex = 42;
             this.lsvBill.UseCompatibleStateImageBehavior = false;
             this.lsvBill.View = System.Windows.Forms.View.Details;
@@ -250,7 +223,7 @@
             this.btnGenerateBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenerateBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateBill.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerateBill.Image")));
-            this.btnGenerateBill.Location = new System.Drawing.Point(933, 267);
+            this.btnGenerateBill.Location = new System.Drawing.Point(933, 221);
             this.btnGenerateBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerateBill.Name = "btnGenerateBill";
             this.btnGenerateBill.Size = new System.Drawing.Size(72, 53);
@@ -301,7 +274,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(1015, 1006);
+            this.ClientSize = new System.Drawing.Size(1015, 725);
             this.Controls.Add(this.pnBill);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -337,8 +310,6 @@
         private System.Windows.Forms.Label lblTable;
         private System.Windows.Forms.Label lblBillTitle;
         private System.Windows.Forms.Label lblID;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblDateCheckOut;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblDate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
     }

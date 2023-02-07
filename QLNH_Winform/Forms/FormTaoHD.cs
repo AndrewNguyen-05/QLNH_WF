@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,7 @@ namespace QLNH_Winform.Forms
     public partial class FormTaoHD : Form
     {
         BindingSource billinfos = new BindingSource();
+        //public Table idTable;
         public int idBill;
         public string tableName;
         public int discountVal;
@@ -28,6 +30,7 @@ namespace QLNH_Winform.Forms
         public FormTaoHD(int id) : this()
         {
             idBill = id;
+            
         }
         public string TableName
         {
@@ -48,10 +51,12 @@ namespace QLNH_Winform.Forms
         }
         private void FormXuatHD_Load(object sender, EventArgs e)
         {
+            Bill bill = BillDAO.Instance.GetUnCheckBillwithtable(idBill);
             lblID.Text = idBill.ToString();
             lblTable.Text = tableName;
             lblDiscountValue.Text = discountVal.ToString();
             lblTotalPrice.Text = totalPrice.ToString();
+            lblDate.Text = bill.DateCheckIn.ToString();
             ShowBill(idBill);
         }
         void ShowBill(int id)

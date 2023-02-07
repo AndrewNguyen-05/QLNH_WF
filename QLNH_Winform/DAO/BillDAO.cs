@@ -129,5 +129,16 @@ namespace QLNH_Winform.DAO
         //    string query = string.Format("UPDATE Bill SET idTable = {1} WHERE id = {0}", id, idTable);
         //    DataProvider.Instance.ExecuteNonQuery(query);
         //}
+        public Bill GetUnCheckBillwithtable(int id)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Bill WHERE id ='" + id + "'");
+            if (data.Rows.Count == 0)
+            {
+                return null;
+            }
+            Bill bill = new Bill(data.Rows[0]);
+
+            return bill;
+        }
     }
 }

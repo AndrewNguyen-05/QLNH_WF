@@ -49,12 +49,16 @@
             this.lblBillTitle = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.pnBill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnBill
             // 
+            this.pnBill.Controls.Add(this.lblDate);
+            this.pnBill.Controls.Add(this.label6);
             this.pnBill.Controls.Add(this.label5);
             this.pnBill.Controls.Add(this.label4);
             this.pnBill.Controls.Add(this.lblDiscountValue);
@@ -125,7 +129,7 @@
             this.lblID.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblID.Location = new System.Drawing.Point(802, 234);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(24, 25);
+            this.lblID.Size = new System.Drawing.Size(36, 37);
             this.lblID.TabIndex = 43;
             this.lblID.Text = "0";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -158,7 +162,7 @@
             this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.Location = new System.Drawing.Point(574, 590);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 25);
+            this.label2.Size = new System.Drawing.Size(145, 37);
             this.label2.TabIndex = 43;
             this.label2.Text = "Giảm giá:";
             // 
@@ -270,6 +274,26 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.Location = new System.Drawing.Point(15, 633);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(168, 28);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "Ngày bán: ";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDate
+            // 
+            this.lblDate.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDate.Location = new System.Drawing.Point(231, 636);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(316, 28);
+            this.lblDate.TabIndex = 52;
+            this.lblDate.Text = "Ngày bán: ";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FormTaoHD
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -312,5 +336,7 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label label6;
     }
 }

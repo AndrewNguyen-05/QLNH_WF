@@ -122,6 +122,7 @@ namespace QLNH_Winform.Forms
             string tableName = selectedRow.Cells["tableName"].Value.ToString();
             int discount = (int)selectedRow.Cells["discount"].Value;
             double totalPrice = (double)selectedRow.Cells["totalPrice"].Value;
+            //int idTable = dtgvPrcsBill.Columns["idTable"].Value;
 
             if (idBill != -1)
             {

@@ -51,7 +51,7 @@ namespace QLNH_Winform.Forms
         }
         private void FormXuatHD_Load(object sender, EventArgs e)
         {
-            Bill bill = BillDAO.Instance.GetUnCheckBillwithID(idBill);
+            Bill bill = BillDAO.Instance.GetBillbyBillID(idBill);
             lblID.Text = idBill.ToString();
             lblTable.Text = tableName;
             lblDiscountValue.Text = discountVal.ToString();

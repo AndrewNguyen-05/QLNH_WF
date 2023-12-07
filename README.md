@@ -102,22 +102,13 @@ Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao �
 
 ### Cài đặt
 <a name="installation"></a>
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
+Để có thể chạy được ứng dụng, yêu cầu cài đặt những thứ sau:
+* <a src="https://visualstudio.microsoft.com/downloads/">Visual Studio 2022</a> để chạy mã nguồn
+* SQL Server 2019, Express Edition
+* SMSS để thao tác với database
+* 
+1. Đầu tiên, hãy clone dự án này về máy và mở bằng Visual Studio 2022
+2. Mở file Data.sql bằng SSMS 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 

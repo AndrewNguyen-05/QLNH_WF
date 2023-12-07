@@ -103,75 +103,41 @@ Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao �
 ### Cài đặt
 <a name="installation"></a>
 Để có thể chạy được ứng dụng, yêu cầu cài đặt những thứ sau:
-* <a src="https://visualstudio.microsoft.com/downloads/">Visual Studio 2022</a> để chạy mã nguồn
-* SQL Server 2019, Express Edition
-* SMSS để thao tác với database
-* 
+* <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2022</a>, Community Edition để chạy mã nguồn
+* <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL Server 2019</a>, Express Edition (Lưu ý, phải đúng phiên bản Express Edition, nếu tải Developer Edition thì hãy tự chỉnh lại đường dẫn kết nối - connectionSTR trong DataProvider.cs nằm trong thư mục DAO)
+* <a href="https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16">SMSS</a> để thao tác với database
+
 1. Đầu tiên, hãy clone dự án này về máy và mở bằng Visual Studio 2022
-2. Mở file Data.sql bằng SSMS 
+2. Mở file Data.sql bằng SSMS, và nhấn F5 để SMSS chạy và tạo 1 database mới có tên là QLNH với đầy đủ dữ liệu
+3. Vì ứng dụng này sử dụng 1 số thư viện Nuget ngoài để chạy, phụ thuộc vào thời điểm clone ứng dụng mà các thư viện sẽ có những thay đổi khác nhau, dẫn đến lỗi. Để giải quyết:
+    * Đầu tiên, hãy chuột phải vào solution QLNH_Winform và chọn vào mục Manage Nuget Packages
+   <img src="QLNH_Winform/Resources/screenshots/install_1.png" alt="installation 1"/>
+   
+    * Sau đó, hãy trỏ vào mục Updates, nhấn chọn select all và cuối cùng là update các thư viện Nuget
+   <img src="QLNH_Winform/Resources/screenshots/install_2.png" alt="installation 2"/>
+
+4. Bây giờ ứng dụng đã có thể chạy được, chỉ cần ấn nút Start và ứng dụng sẽ được khởi chạy. Tài khoản mật khẩu cho admin là: Admin - AD, mật khẩu cho nhân viên là ST1. Tài khoản cho nhân viên nằm trong database, mật khẩu trong database đã được mã hóa.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+## Hướng dẫn sử dụng
+<a name="usage"></a>
+Có 5 màn hình chính, đặt hàng, bàn ăn, món ăn, nhân viên, thống kê, tài khoản
+1. Màn hình đặt hàng
+2. Màn hình bàn ăn
+3. Màn hình món ăn
+4. Màn hình nhân viên
+5. Màn hình thống kê
+6. Màn hình tài khoản
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
-## Contact
+## Liên hệ
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Nguyễn Văn Hoàng ANh - [Facebook](https://www.facebook.com/cua.vosi/) - [Gmail](21520144@gm.uit.edu.vn)
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 

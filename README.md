@@ -125,29 +125,64 @@ Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao �
 ## Hướng dẫn sử dụng
 <a name="usage"></a>
 Có 5 màn hình chính, đặt hàng, bàn ăn, món ăn, nhân viên, thống kê, tài khoản
-1. Màn hình đặt hàng
-2. Màn hình bàn ăn
-3. Màn hình món ăn
-4. Màn hình nhân viên
-5. Màn hình thống kê
-6. Màn hình tài khoản
+1. Màn hình đăng nhập
+   * Sử dụng tài khoản, mật khẩu đã được cung cấp để đăng nhập, có thể là admin hoặc nhân viên
+   <img src="QLNH_Winform/Resources/screenshots/login.png"/>
+   
+2. Màn hình đặt hàng
+   * Trong màn hình này sẽ hiển thị các đơn đã được ghi nhận, có thể thay đổi, xóa, thanh toán, phục vụ
+   <img src="QLNH_Winform/Resources/screenshots/order.png"/>
+   <img src="QLNH_Winform/Resources/screenshots/order_payment.png"/>
+   <img src="QLNH_Winform/Resources/screenshots/order_bill.png"/>
+   
+3. Màn hình thêm món
+   * Màn hình này sẽ tạo 1 đơn hàng mới, có thể thêm sửa xóa các món ăn trong đơn đó, cũng như áp % giảm giá vào đơn bàn này, và chọn bàn. Ngoài ra cũng có thể tìm kiếm tên món ăn, hoặc lọc theo loại món.
+   <img src="QLNH_Winform/Resources/screenshots/new_order.png"/>
+   <img src="QLNH_Winform/Resources/screenshots/new_order2.png"/>
+   
+4. Màn hình sửa đơn
+   * Tương tự như thêm món, giao diện này giúp sửa những đơn đã được tạo
+   <img src="QLNH_Winform/Resources/screenshots/edit_order.png"/>
+   
+5. Màn hình bàn ăn
+   * Quản lý các bàn hiện đang có trong nhà hàng
+   <img src="QLNH_Winform/Resources/screenshots/table.png"/>
+   
+6. Màn hình món ăn
+   * Quản lý các món ăn, cũng như loại món ăn trong nhà hàng
+   <img src="QLNH_Winform/Resources/screenshots/food.png"/>
+   <img src="QLNH_Winform/Resources/screenshots/food_category.png"/>
+     
+7. Màn hình nhân viên
+   * Quản lý tài khoản các nhân viên và admin trong nhà hàng, có thể thêm xóa sửa tài khoản mới, cũng như đặt lại mật khẩu mặc định
+   <img src="QLNH_Winform/Resources/screenshots/staff.png"/>
+     
+8. Màn hình thống kê
+   * Quản lý thu chi, có thể sắp xếp theo ngày, tháng, năm
+   <img src="QLNH_Winform/Resources/screenshots/analysis.png"/>
+     
+9. Màn hình tài khoản
+   * Giúp đổi mật khẩu
+   <img src="QLNH_Winform/Resources/screenshots/account.png"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Liên hệ
+<a name="contact"></a>
+* Nguyễn Văn Hoàng Anh - [Facebook](https://www.facebook.com/cua.vosi/) - 21520144@gm.uit.edu.vn (Chủ repo)
+* Hoàng Đức Mạnh - [Facebook](https://www.facebook.com/hoangducmanh254) - 21520062@gm.uit.edu.vn
+* Phan Ngọc Phước - [Facebook](https://www.facebook.com/profile.php?id=100010709087664) - 21520405@gm.uit.edu.vn
 
-Nguyễn Văn Hoàng ANh - [Facebook](https://www.facebook.com/cua.vosi/) - [Gmail](21520144@gm.uit.edu.vn)
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [QLNH_Winform](https://github.com/AndrewNguyen-05/QLNH_WF)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
+## Nguồn tài liệu tham khảo
+<a name="acknowledgements"></a>
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 * [Choose an Open Source License](https://choosealicense.com)

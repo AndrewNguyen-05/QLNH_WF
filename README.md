@@ -116,70 +116,28 @@ Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao �
     * Sau đó, hãy trỏ vào mục Updates, nhấn chọn select all và cuối cùng là update các thư viện Nuget
    <img src="QLNH_Winform/Resources/screenshots/install_2.png" alt="installation 2"/>
 
-4. Bây giờ ứng dụng đã có thể chạy được, chỉ cần ấn nút Start và ứng dụng sẽ được khởi chạy
+4. Bây giờ ứng dụng đã có thể chạy được, chỉ cần ấn nút Start và ứng dụng sẽ được khởi chạy. Tài khoản mật khẩu cho admin là: Admin - AD, mật khẩu cho nhân viên là ST1. Tài khoản cho nhân viên nằm trong database, mật khẩu trong database đã được mã hóa.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+## Hướng dẫn sử dụng
+<a name="usage"></a>
+Có 5 màn hình chính, đặt hàng, bàn ăn, món ăn, nhân viên, thống kê, tài khoản
+1. Màn hình đặt hàng
+2. Màn hình bàn ăn
+3. Màn hình món ăn
+4. Màn hình nhân viên
+5. Màn hình thống kê
+6. Màn hình tài khoản
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTACT -->
-## Contact
+## Liên hệ
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Nguyễn Văn Hoàng ANh - [Facebook](https://www.facebook.com/cua.vosi/) - [Gmail](21520144@gm.uit.edu.vn)
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 

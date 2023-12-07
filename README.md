@@ -1,4 +1,3 @@
-
 <a name="readme-top"></a>
 <!-- PROJECT LOGO -->
 <div align="center">
@@ -9,14 +8,14 @@
   <p align="center">
     Đây là 1 ứng dụng quản lý nhà hàng chạy trên hệ điều hành window, sử dụng .NET WindowForm để xây dựng !
     <br />
-    <a href="https://github.com/AndrewNguyen-05/QLNH_WF"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/AndrewNguyen-05/QLNH_WF"><strong>Khám phá ứng dụng này »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/AndrewNguyen-05/QLNH_WF">View Demo</a>
+    <a href="https://github.com/AndrewNguyen-05/QLNH_WF">Xem demo</a>
     ·
-    <a href="https://github.com/AndrewNguyen-05/QLNH_WF/issues">Report Bug</a>
+    <a href="https://github.com/AndrewNguyen-05/QLNH_WF/issues">Báo lỗi</a>
     ·
-    <a href="https://github.com/AndrewNguyen-05/QLNH_WF/issues">Request Feature</a>
+    <a href="https://github.com/AndrewNguyen-05/QLNH_WF/issues">Yêu cầu tính năng</a>
   </p>
 </div>
 
@@ -24,101 +23,92 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Nội dung</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">Về ứng dụng này</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Xây dựng với</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">Bắt đầu sử dụng</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation">Cài đặt</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#usage">Hướng dẫn sử dụng</a></li>
+    <li><a href="#contact">Liên hệ</a></li>
+    <li><a href="#acknowledgments">Nguồn tham khảo</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+<a name="about-the-project"></a>
+## Về ứng dụng này
+<div align="center">
+<img src="QLNH_Winform/Resources/screenshots/order.png" alt="Restaurant management application"/></div>
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Đây là ứng dụng giúp các nhà hàng quản lý công việc dễ dàng hơn. Ứng dụng Quản lý Nhà Hàng là một giải pháp toàn diện giúp các doanh nghiệp trong ngành dịch vụ nhà hàng tối ưu hóa quy trình quản lý và cung cấp trải nghiệm tốt nhất cho khách hàng. 
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
+Dưới đây là mô tả chi tiết về các tính năng chính của ứng dụng:
+1. Đặt Món và Tạo Đơn
+    * Chọn Thức Ăn và Số Lượng:
+      * Người dùng có thể dễ dàng chọn từ danh sách thực đơn đa dạng, đi kèm với mô tả chi tiết và hình ảnh hấp dẫn.
+      * Mỗi món ăn có thể được tùy chỉnh với số lượng mong muốn.
+    * % Giảm Giá:
+      * Khách hàng có khả năng chọn % giảm giá cho đơn hàng của mình, tạo ưu đãi linh hoạt.
+2. Giao Diện Đặt Hàng và Phục Vụ
+    * Quản lý Đơn Hàng:
+      * Nhân viên nhà hàng có thể theo dõi và quản lý các đơn hàng dễ dàng.
+    * Giao diện phục vụ giúp nhân viên theo dõi tình trạng của mỗi đơn hàng, từ việc xác nhận đến giao hàng.
+    * Thanh Toán và Xuất Hóa Đơn:
+      * Người dùng có thể thanh toán trực tiếp từ ứng dụng và nhận hóa đơn điện tử chi tiết về đơn hàng của mình.
+3. Quản Lý Bàn và Thực Đơn
+    * Giao Diện Bàn:
+      * Quản lý bàn dễ dàng với khả năng thêm, xóa, và sửa thông tin bàn.
+      * Trực quan hóa tình trạng của bàn để nhân viên dễ dàng xác định bàn cần phục vụ.
+    * Quản Lý Thực Đơn:
+      * Thêm, xóa, và sửa thông tin về thực đơn một cách linh hoạt.
+      * Loại bỏ hoặc thêm món ăn mới một cách dễ dàng để cập nhật thực đơn.
+4. Giao Diện Tài Khoản và Đổi Mật Khẩu
+    * Quản Lý Tài Khoản:
+      * Người dùng có thể quản lý thông tin cá nhân, địa chỉ và thông tin thanh toán của mình.
+      * Chức năng thêm, xóa, và sửa tài khoản đơn giản và tiện lợi.
+5. Giao diện thống kê
+    * Thống kê doanh thu theo ngày, tháng, năm giúp chủ doanh nghiệp dễ dàng quản lý thu nhập
+6. Giao diện tài khoản
+    * Đổi Mật Khẩu:
+      * Bảo vệ thông tin cá nhân với khả năng đổi mật khẩu định kỳ.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+### Xây dựng với
+<a name="built-with"></a>
+### Frameworks và thư viện
+<img src="QLNH_Winform/Resources/screenshots/logos/ado.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/winform.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/csharp.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/.net.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/sql.jpg" width="70" height="50"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+<a name="getting-started"></a>
+## Bắt đầu sử dụng
+Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao ứng dụng có thể chạy được, làm theo những bước đơn giản sau đây:
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
+### Cài đặt
+<a name="installation"></a>
+Để có thể chạy được ứng dụng, yêu cầu cài đặt những thứ sau:
+* <a src="https://visualstudio.microsoft.com/downloads/">Visual Studio 2022</a> để chạy mã nguồn
+* SQL Server 2019, Express Edition
+* SMSS để thao tác với database
+* 
+1. Đầu tiên, hãy clone dự án này về máy và mở bằng Visual Studio 2022
+2. Mở file Data.sql bằng SSMS 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 

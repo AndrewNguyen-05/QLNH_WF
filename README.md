@@ -182,7 +182,7 @@ Project Link: [QLNH_Winform](https://github.com/AndrewNguyen-05/QLNH_WF)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Nguồn tài liệu tham khảo
-<a name="acknowledgements"></a>
+<a name="acknowledgments"></a>
 Đây là những nguồn tài liệu nhóm chúng mình đã sử dụng để có thể thực hiện được đồ án này!
 
 * [Learn C#](https://learn.microsoft.com/vi-vn/dotnet/csharp/)

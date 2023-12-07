@@ -103,12 +103,20 @@ Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao �
 ### Cài đặt
 <a name="installation"></a>
 Để có thể chạy được ứng dụng, yêu cầu cài đặt những thứ sau:
-* <a src="https://visualstudio.microsoft.com/downloads/">Visual Studio 2022</a> để chạy mã nguồn
-* SQL Server 2019, Express Edition
-* SMSS để thao tác với database
-* 
+* <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2022</a>, Community Edition để chạy mã nguồn
+* <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL Server 2019</a>, Express Edition (Lưu ý, phải đúng phiên bản Express Edition, nếu tải Developer Edition thì hãy tự chỉnh lại đường dẫn kết nối - connectionSTR trong DataProvider.cs nằm trong thư mục DAO)
+* <a href="https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16">SMSS</a> để thao tác với database
+
 1. Đầu tiên, hãy clone dự án này về máy và mở bằng Visual Studio 2022
-2. Mở file Data.sql bằng SSMS 
+2. Mở file Data.sql bằng SSMS, và nhấn F5 để SMSS chạy và tạo 1 database mới có tên là QLNH với đầy đủ dữ liệu
+3. Vì ứng dụng này sử dụng 1 số thư viện Nuget ngoài để chạy, phụ thuộc vào thời điểm clone ứng dụng mà các thư viện sẽ có những thay đổi khác nhau, dẫn đến lỗi. Để giải quyết:
+    * Đầu tiên, hãy chuột phải vào solution QLNH_Winform và chọn vào mục Manage Nuget Packages
+   <img src="QLNH_Winform/Resources/screenshots/install_1.png" alt="installation 1"/>
+   
+    * Sau đó, hãy trỏ vào mục Updates, nhấn chọn select all và cuối cùng là update các thư viện Nuget
+   <img src="QLNH_Winform/Resources/screenshots/install_2.png" alt="installation 2"/>
+
+4. Bây giờ ứng dụng đã có thể chạy được, chỉ cần ấn nút Start và ứng dụng sẽ được khởi chạy
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 

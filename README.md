@@ -46,6 +46,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
+<a name="about-the-project"></a>
 ## Về ứng dụng này
 <div align="center">
 <img src="QLNH_Winform/Resources/screenshots/order.png" alt="Restaurant management application"/></div>
@@ -86,7 +87,7 @@ Dưới đây là mô tả chi tiết về các tính năng chính của ứng d
 
 
 ### Xây dựng với
-
+<a name="built-with"></a>
 ### Frameworks và thư viện
 <img src="QLNH_Winform/Resources/screenshots/logos/ado.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/winform.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/csharp.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/.net.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/sql.jpg" width="70" height="50"/>
 
@@ -95,11 +96,12 @@ Dưới đây là mô tả chi tiết về các tính năng chính của ứng d
 
 
 <!-- GETTING STARTED -->
+<a name="getting-started"></a>
 ## Bắt đầu sử dụng
 Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao ứng dụng có thể chạy được, làm theo những bước đơn giản sau đây:
 
 ### Cài đặt
-
+<a name="installation"></a>
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Get a free API Key at [https://example.com](https://example.com)

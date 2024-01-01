@@ -192,7 +192,7 @@ Có 5 màn hình chính, đặt hàng, bàn ăn, món ăn, nhân viên, thống 
 <!-- CONTACT -->
 ## Liên hệ
 <a name="contact"></a>
-* Nguyễn Văn Hoàng Anh - [Facebook](https://www.facebook.com/cua.vosi/) - 21520144@gm.uit.edu.vn (Chủ repo)
+* Nguyễn Văn Hoàng Anh - [Facebook](https://www.facebook.com/andrew.nguyen0505/) - 21520144@gm.uit.edu.vn (Chủ repo)
 * Hoàng Đức Mạnh - [Facebook](https://www.facebook.com/hoangducmanh254) - 21520062@gm.uit.edu.vn
 * Phan Ngọc Phước - [Facebook](https://www.facebook.com/profile.php?id=100010709087664) - 21520405@gm.uit.edu.vn
 * Trương Hoàng Bảo Duy - [Facebook](https://www.facebook.com/baoduy.truonghoang.581) - 21520789@gm.uit.edu.vn

@@ -50,6 +50,7 @@
 ## Về ứng dụng này
 <div align="center">
 <img src="QLNH_Winform/Resources/screenshots/order.png" alt="Restaurant management application"/></div>
+<p align="center"><i>Ứng dụng quản lý nhà hàng</i></p>
 
 Đây là ứng dụng giúp các nhà hàng quản lý công việc dễ dàng hơn. Ứng dụng Quản lý Nhà Hàng là một giải pháp toàn diện giúp các doanh nghiệp trong ngành dịch vụ nhà hàng tối ưu hóa quy trình quản lý và cung cấp trải nghiệm tốt nhất cho khách hàng. 
 
@@ -89,7 +90,9 @@ Dưới đây là mô tả chi tiết về các tính năng chính của ứng d
 ### Xây dựng với
 <a name="built-with"></a>
 ### Frameworks và thư viện
-<img src="QLNH_Winform/Resources/screenshots/logos/ado.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/winform.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/csharp.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/.net.png" width="50" height="50"/> <img src="QLNH_Winform/Resources/screenshots/logos/sql.jpg" width="70" height="50"/>
+<div align="center"><img src="QLNH_Winform/Resources/screenshots/logos/ado.png" width="100" height="100"/> <img src="QLNH_Winform/Resources/screenshots/logos/winform.png" width="100" height="100"/> <img src="QLNH_Winform/Resources/screenshots/logos/csharp.png" width="100" height="100"/> <img src="QLNH_Winform/Resources/screenshots/logos/.net.png" width="100" height="100"/> <img src="QLNH_Winform/Resources/screenshots/logos/sql.jpg" width="100" height="90"/></div>
+<p align="center"><i>Những công nghệ sử dụng</i></p>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -112,9 +115,11 @@ Hướng dẫn cách cài đặt dự án về máy. Để có một bản sao �
 3. Vì ứng dụng này sử dụng 1 số thư viện Nuget ngoài để chạy, phụ thuộc vào thời điểm clone ứng dụng mà các thư viện sẽ có những thay đổi khác nhau, dẫn đến lỗi. Để giải quyết:
     * Đầu tiên, hãy chuột phải vào solution QLNH_Winform và chọn vào mục Manage Nuget Packages
    <img src="QLNH_Winform/Resources/screenshots/install_1.png" alt="installation 1"/>
+   <p align="center"><i>Lưu ý cập nhật các thư viện Nuget cần thiết cho ứng dụng</i></p>
    
     * Sau đó, hãy trỏ vào mục Updates, nhấn chọn select all và cuối cùng là update các thư viện Nuget
    <img src="QLNH_Winform/Resources/screenshots/install_2.png" alt="installation 2"/>
+   <p align="center"><i>Cập nhật tất cả thư viện Nuget</i></p>
 
 4. Bây giờ ứng dụng đã có thể chạy được, chỉ cần ấn nút Start và ứng dụng sẽ được khởi chạy. Tài khoản mật khẩu cho admin là: Admin - AD, mật khẩu cho nhân viên là ST1. Tài khoản cho nhân viên nằm trong database, mật khẩu trong database đã được mã hóa.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -128,42 +133,59 @@ Có 5 màn hình chính, đặt hàng, bàn ăn, món ăn, nhân viên, thống 
 1. Màn hình đăng nhập
    * Sử dụng tài khoản, mật khẩu đã được cung cấp để đăng nhập, có thể là admin hoặc nhân viên
    <img src="QLNH_Winform/Resources/screenshots/login.png"/>
+   <p align="center"><i>Màn hình đăng nhập</i></p>
    
 2. Màn hình đặt hàng
    * Trong màn hình này sẽ hiển thị các đơn đã được ghi nhận, có thể thay đổi, xóa, thanh toán, phục vụ
    <img src="QLNH_Winform/Resources/screenshots/order.png"/>
+   <p align="center"><i>Giao diện đặt món</i></p>
+   
    <img src="QLNH_Winform/Resources/screenshots/order_payment.png"/>
+   <p align="center"><i>Giao diện thanh toán đơn hàng</i></p>
+   
    <img src="QLNH_Winform/Resources/screenshots/order_bill.png"/>
+   <p align="center"><i>Giao diện hóa đơn</i></p>
    
 3. Màn hình thêm món
    * Màn hình này sẽ tạo 1 đơn hàng mới, có thể thêm sửa xóa các món ăn trong đơn đó, cũng như áp % giảm giá vào đơn bàn này, và chọn bàn. Ngoài ra cũng có thể tìm kiếm tên món ăn, hoặc lọc theo loại món.
    <img src="QLNH_Winform/Resources/screenshots/new_order.png"/>
+   <p align="center"><i>Giao diện thêm đơn hàng mới</i></p>
+   
    <img src="QLNH_Winform/Resources/screenshots/new_order2.png"/>
+   <p align="center"><i>Giao diện thêm món ăn, bằng cách lọc theo loại món</i></p>
    
 4. Màn hình sửa đơn
    * Tương tự như thêm món, giao diện này giúp sửa những đơn đã được tạo
    <img src="QLNH_Winform/Resources/screenshots/edit_order.png"/>
+   <p align="center"><i>Giao diện chỉnh sửa đơn hàng</i></p>
    
 5. Màn hình bàn ăn
    * Quản lý các bàn hiện đang có trong nhà hàng
    <img src="QLNH_Winform/Resources/screenshots/table.png"/>
+   <p align="center"><i>Giao diện quản lý các bàn ăn trong nhà hàng</i></p>
    
 6. Màn hình món ăn
    * Quản lý các món ăn, cũng như loại món ăn trong nhà hàng
    <img src="QLNH_Winform/Resources/screenshots/food.png"/>
+   <p align="center"><i>Giao diện quản lý món ăn trong nhà hàng</i></p>
+   
    <img src="QLNH_Winform/Resources/screenshots/food_category.png"/>
+   <p align="center"><i>Giao diện quản lý loại món ăn</i></p>
      
 7. Màn hình nhân viên
    * Quản lý tài khoản các nhân viên và admin trong nhà hàng, có thể thêm xóa sửa tài khoản mới, cũng như đặt lại mật khẩu mặc định
    <img src="QLNH_Winform/Resources/screenshots/staff.png"/>
+   <p align="center"><i>Giao diện quản lý nhân viên trong nhà hàng</i></p>
      
 8. Màn hình thống kê
    * Quản lý thu chi, có thể sắp xếp theo ngày, tháng, năm
    <img src="QLNH_Winform/Resources/screenshots/analysis.png"/>
+   <p align="center"><i>Giao diện quản lý thống kê thu chi trong nhà hàng</i></p>
      
 9. Màn hình tài khoản
    * Giúp đổi mật khẩu
    <img src="QLNH_Winform/Resources/screenshots/account.png"/>
+   <p align="center"><i>Giao diện quản lý tài khoản trong hệ thống</i></p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

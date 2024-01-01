@@ -173,6 +173,8 @@ Có 5 màn hình chính, đặt hàng, bàn ăn, món ăn, nhân viên, thống 
 * Nguyễn Văn Hoàng Anh - [Facebook](https://www.facebook.com/cua.vosi/) - 21520144@gm.uit.edu.vn (Chủ repo)
 * Hoàng Đức Mạnh - [Facebook](https://www.facebook.com/hoangducmanh254) - 21520062@gm.uit.edu.vn
 * Phan Ngọc Phước - [Facebook](https://www.facebook.com/profile.php?id=100010709087664) - 21520405@gm.uit.edu.vn
+* Trương Hoàng Bảo Duy - [Facebook](https://www.facebook.com/baoduy.truonghoang.581) - 21520789@gm.uit.edu.vn
+* Nguyễn Quốc Thái Dương - [Facebook](https://www.facebook.com/profile.php?id=100010982231797) - 21520758@gm.uit.edu.vn
 
 Project Link: [QLNH_Winform](https://github.com/AndrewNguyen-05/QLNH_WF)
 
